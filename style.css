@@ -1,22 +1,77 @@
+/* ✅ Police plus moderne */
 body {
-    padding-top: 60px; /* Ajuste cet espace selon la hauteur de ta navbar */
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(-45deg, #1E3C72, #2A5298, #00c6ff, #0072ff);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
-    color: white;
 }
 
-@keyframes scroll {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
+/* ✅ Amélioration des titres */
+h1, h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+h1 {
+    font-size: 2.5rem;
+    color: #1E3C72;
+}
+
+h2 {
+    font-size: 2rem;
+    background: linear-gradient(to right, #1E3C72, #2A5298, #00c6ff);
+    background-clip: text; /* Standard */
+    -webkit-background-clip: text; /* Compatibilité Safari */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Assure que le texte est bien masqué et utilise le dégradé */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✅ Style des paragraphes */
+p {
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ✅ Style amélioré pour la section "À propos de moi" */
+#about {
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#about:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Animation subtile sur les sous-titres */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Animation du fond en gradient */
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
 
 section {
     color: black; /* Assure que le texte est bien visible */
@@ -113,14 +168,14 @@ header {
 
 .tech-logos img {
     position: absolute;
-    width: 60px;
+    width: 80px; /* Augmenté de 60px à 80px */
     height: auto;
     opacity: 0.9;
-    transition: transform 0.3s ease-in-out; /* Smooth hover */
+    transition: transform 0.3s ease-in-out;
 }
 
 .tech-logos img:hover {
-    transform: scale(1.2);
+    transform: scale(1.4); /* Zoom augmenté pour un effet plus stylé */
 }
 
 .profil-img {

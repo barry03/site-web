@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const logos = document.querySelectorAll(".tech-logos img");
 
     logos.forEach(logo => {
-        let posX = Math.random() * 90; // Position initiale X (évite d’être trop collé aux bords)
+        let posX = Math.random() * 90; // Position initiale X
         let posY = Math.random() * 90; // Position initiale Y
-        let speedX = (Math.random() - 0.5) * 2; // Vitesse X aléatoire
-        let speedY = (Math.random() - 0.5) * 2; // Vitesse Y aléatoire
+        let speedX = (Math.random() - 0.5) * 1; // Réduction de la vitesse X
+        let speedY = (Math.random() - 0.5) * 1; // Réduction de la vitesse Y
 
-        // ✅ Définition d'une position initiale aléatoire
+        // ✅ Position initiale aléatoire
         logo.style.position = "absolute";
         logo.style.left = `${posX}%`;
         logo.style.top = `${posY}%`;
@@ -56,10 +56,9 @@ document.addEventListener("DOMContentLoaded", function() {
             logo.style.left = `${posX}%`;
             logo.style.top = `${posY}%`;
 
-            requestAnimationFrame(moveLogo);
+            setTimeout(() => requestAnimationFrame(moveLogo), 20); // Ajout d’un léger délai pour ralentir
         }
 
         moveLogo();
     });
-
-}); // <== ✅ ACCOLADE FERMANTE AJOUTÉE ICI
+});
