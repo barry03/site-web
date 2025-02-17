@@ -18,7 +18,7 @@ h1, h2 {
 h1 {
     font-size: 2.8rem;
     color: #ffffff; /* Remplace le bleu par du blanc pour plus de lisibilité */
-    margin-top: 80px;
+    margin-top: 75px;
 }
 
 h2 {
@@ -93,7 +93,7 @@ section.visible {
 header {
     background: #222; /* Un gris plus clair que le noir */
     color: white;
-    padding: 20px 0; /* Augmente l’espace interne du header */
+    padding: 10px 0; /* Augmente l’espace interne du header */
 }
 
 .navbar {
