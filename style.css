@@ -40,3 +40,43 @@ section {
     margin-bottom: 15px;
     padding-left: 10px;
 }
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tech-logos img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tech-logos img:hover {
+    transform: scale(1.2);
+}
+
+.profil-img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cv-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #0056b3;
+}
