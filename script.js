@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll(".tech-logos img");
+    const sections = document.querySelectorAll("section:not(#skills)"); // Exclut la section des technos
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -7,13 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 entry.target.classList.add("visible");
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
 
-    images.forEach(image => {
-        observer.observe(image);
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });
 
+// Bouton "Retour en haut"
 const backToTopButton = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {

@@ -7,6 +7,11 @@ body {
     color: white;
 }
 
+@keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -14,6 +19,7 @@ body {
 }
 
 section {
+    color: black; /* Assure que le texte est bien visible */
     max-width: 900px;
     margin: 20px auto;
     background: white;
@@ -78,8 +84,6 @@ header {
     color: #00c6ff;
 }
 
-
-
 .project {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px;
@@ -94,13 +98,28 @@ header {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
+#projects {
+    min-height: 300px; /* Empêche la section de disparaître */
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+.tech-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.tech-logos {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
 
 .tech-logos img {
-    width: auto;
     height: 50px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px);
+    margin: 0 15px;
 }
 
 .tech-logos img.visible {
@@ -135,6 +154,13 @@ header {
 
 .cv-button:hover {
     background-color: #0056b3;
+}
+
+#cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px; /* Réduit la hauteur */
 }
 
 #backToTop {
