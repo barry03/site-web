@@ -91,20 +91,22 @@ section.visible {
 
 
 header {
-    margin-top: 100px;
     background: #222; /* Un gris plus clair que le noir */
     color: white;
     padding: 20px 0; /* Augmente l’espace interne du header */
-    text-align: center;
 }
 
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    text-align: center;
     z-index: 1000;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding-bottom: 10px;
 }
 
 .navbar.scrolled {
@@ -229,7 +231,6 @@ header {
     background: #0056b3;
 }
 
-
 .background-container {
     position: absolute;
     width: 100%;
@@ -245,10 +246,3 @@ header {
     border-radius: 50%;
     animation: float 6s infinite ease-in-out;
 }
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
-}
-
