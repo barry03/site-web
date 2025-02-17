@@ -104,17 +104,11 @@ header {
     transform: translateY(0) !important;
 }
 
-
 .tech-container {
     position: relative;
     width: 100%;
-    height: 250px; /* Ajuste la hauteur pour bien contenir l'effet */
+    height: 250px; /* Ajuste selon le besoin */
     overflow: hidden;
-}
-
-.tech-logos {
-    display: flex;
-    animation: scroll 10s linear infinite;
 }
 
 .tech-logos img {
@@ -122,30 +116,7 @@ header {
     width: 60px;
     height: auto;
     opacity: 0.9;
-    animation: moveRandom 8s infinite linear;
-}
-
-@keyframes moveRandom {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(calc(100px - 50%), calc(100px - 50%));
-    }
-    50% {
-        transform: translate(calc(-100px + 50%), calc(-100px + 50%));
-    }
-    75% {
-        transform: translate(calc(100px - 50%), calc(-100px + 50%));
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-.tech-logos img.visible {
-    opacity: 1;
-    transform: translateY(0);
+    transition: transform 0.3s ease-in-out; /* Smooth hover */
 }
 
 .tech-logos img:hover {

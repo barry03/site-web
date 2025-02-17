@@ -35,24 +35,31 @@ document.addEventListener("DOMContentLoaded", function() {
     const logos = document.querySelectorAll(".tech-logos img");
 
     logos.forEach(logo => {
-        let posX = Math.random() * 80; // Position initiale X
-        let posY = Math.random() * 80; // Position initiale Y
-        let speedX = (Math.random() - 0.5) * 1.5; // Vitesse X
-        let speedY = (Math.random() - 0.5) * 1.5; // Vitesse Y
+        let posX = Math.random() * 90; // Position initiale X (évite d’être trop collé aux bords)
+        let posY = Math.random() * 90; // Position initiale Y
+        let speedX = (Math.random() - 0.5) * 2; // Vitesse X aléatoire
+        let speedY = (Math.random() - 0.5) * 2; // Vitesse Y aléatoire
+
+        // ✅ Définition d'une position initiale aléatoire
+        logo.style.position = "absolute";
+        logo.style.left = `${posX}%`;
+        logo.style.top = `${posY}%`;
 
         function moveLogo() {
             posX += speedX;
             posY += speedY;
 
-            // ✅ Ajout de rebonds aux bords du cadre
-            if (posX <= 0 || posX >= 80) speedX *= -1;
-            if (posY <= 0 || posY >= 80) speedY *= -1;
+            // ✅ Empêcher les logos de sortir du cadre avec un rebond fluide
+            if (posX <= 5 || posX >= 90) speedX *= -1;
+            if (posY <= 5 || posY >= 90) speedY *= -1;
 
-            logo.style.transform = `translate(${posX}%, ${posY}%)`;
+            logo.style.left = `${posX}%`;
+            logo.style.top = `${posY}%`;
 
             requestAnimationFrame(moveLogo);
         }
 
         moveLogo();
     });
-});
+
+}); // <== ✅ ACCOLADE FERMANTE AJOUTÉE ICI
