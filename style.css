@@ -252,10 +252,11 @@ header {
 
 .wave {
     position: absolute;
-    bottom: -5px; /* Ajuste pour qu’elle touche bien le bas du header */
+    bottom: 0px; /* Place bien la vague sous le header */
     left: 0;
     width: 100%;
-    height: 100px; /* Augmente la taille si nécessaire */
+    height: 120px; /* Augmente un peu la hauteur pour test */
     z-index: 2;
-    background: red;
+    background: transparent; /* Assure qu'elle n'est pas cachée */
+    border: 2px solid red; /* TEMPORAIRE */
 }
