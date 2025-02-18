@@ -33,29 +33,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ✅ Animation aléatoire des logos techs
     const logos = document.querySelectorAll(".tech-logos img");
-    const container = document.querySelector(".tech-logos");
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
 
-    logos.forEach((logo) => {
-        let posX = Math.random() * (containerWidth - 80); 
-        let posY = Math.random() * (containerHeight - 80);
-        let speedX = (Math.random() - 0.5) * 1.2;
-        let speedY = (Math.random() - 0.5) * 1.2;
-
-        logo.style.left = `${posX}%`;
-        logo.style.top = `${posY}%`;
+    logos.forEach((logo, index) => {
+        let angle = index * (360 / logos.length);
+        let radius = 150; // Ajustement de la taille du cercle
+        let centerX = 50;
+        let centerY = 50;
 
         function moveLogo() {
-            posX += speedX;
-            posY += speedY;
-
-            if (posX <= 0 || posX >= (containerWidth - 80)) speedX *= -1;
-            if (posY <= 0 || posY >= (containerHeight - 80)) speedY *= -1;
-
-            logo.style.left = `${posX}%`;
-            logo.style.top = `${posY}%`;
-
+            angle += 1;
+            let x = centerX + radius * Math.cos(angle * Math.PI / 180);
+            let y = centerY + radius * Math.sin(angle * Math.PI / 180);
+            
+            logo.style.transform = `translate(${x}px, ${y}px)`;
             requestAnimationFrame(moveLogo);
         }
 
