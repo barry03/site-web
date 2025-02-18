@@ -33,14 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ✅ Animation aléatoire des logos techs
     const logos = document.querySelectorAll(".tech-logos img");
+    const container = document.querySelector(".tech-logos");
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
 
     logos.forEach((logo) => {
-        let posX = Math.random() * 80; // Position aléatoire X
-        let posY = Math.random() * 50 + 20; // Position aléatoire Y
-        let speedX = (Math.random() - 0.5) * 1.2; // Réduction vitesse X
-        let speedY = (Math.random() - 0.5) * 1.2; // Réduction vitesse Y
+        let posX = Math.random() * (containerWidth - 80); 
+        let posY = Math.random() * (containerHeight - 80);
+        let speedX = (Math.random() - 0.5) * 1.2;
+        let speedY = (Math.random() - 0.5) * 1.2;
 
-        logo.style.position = "absolute";
         logo.style.left = `${posX}%`;
         logo.style.top = `${posY}%`;
 
@@ -48,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
             posX += speedX;
             posY += speedY;
 
-            if (posX <= 5 || posX >= 90) speedX *= -1;
-            if (posY <= 10 || posY >= 90) speedY *= -1;
+            if (posX <= 0 || posX >= (containerWidth - 80)) speedX *= -1;
+            if (posY <= 0 || posY >= (containerHeight - 80)) speedY *= -1;
 
             logo.style.left = `${posX}%`;
             logo.style.top = `${posY}%`;
