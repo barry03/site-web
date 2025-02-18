@@ -185,7 +185,7 @@ body {
     display: flex;
     justify-content: flex-end; /* Déplace vers la droite */
     align-items: center;
-    margin-top: -50px; /* Ajuste l’espace par rapport à la photo */
+    margin-top: -40px; /* Ajuste l’espace par rapport à la photo */
     padding-right: 8%;
 }
 
@@ -221,7 +221,11 @@ body {
 }
 
 .stack-technique h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #444A6D; /* Une couleur plus douce */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
 }
