@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     logos.forEach((logo) => {
         let posX = Math.random() * 80; // Position aléatoire X
-        let posY = Math.random() * 40; // Position aléatoire Y
-        let speedX = (Math.random() - 0.5) * 0.8; // Réduction vitesse X
-        let speedY = (Math.random() - 0.5) * 0.8; // Réduction vitesse Y
+        let posY = Math.random() * 50; // Position aléatoire Y
+        let speedX = (Math.random() - 0.5) * 1.5; // Réduction vitesse X
+        let speedY = (Math.random() - 0.5) * 1.5; // Réduction vitesse Y
 
         logo.style.left = `${posX}%`;
         logo.style.top = `${posY}%`;
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
             posX += speedX;
             posY += speedY;
 
-            if (posX <= 0 || posX >= 80) speedX *= -1;
-            if (posY <= 0 || posY >= 40) speedY *= -1;
+            if (posX <= 5 || posX >= 90) speedX *= -1;
+            if (posY <= 5 || posY >= 90) speedY *= -1;
 
             logo.style.left = `${posX}%`;
             logo.style.top = `${posY}%`;
