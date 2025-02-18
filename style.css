@@ -4,179 +4,106 @@ body {
     background: linear-gradient(-45deg, #1E3C72, #2A5298, #00c6ff, #0072ff);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
+    margin: 0;
+    padding: 0;
 }
 
-/* ✅ Amélioration des titres */
-h1, h2 {
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour améliorer le contraste */
-}
-
-h1 {
-    font-size: 2.8rem;
-    color: #ffffff; /* Remplace le bleu par du blanc pour plus de lisibilité */
-    margin-top: 75px;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #00c6ff; /* Bleu plus clair pour être visible sur le fond */
-}
-
-
-/* ✅ Style des paragraphes */
-p {
-    font-size: 1.1rem;
-    text-align: left;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* ✅ Style amélioré pour la section "À propos de moi" */
-#about {
-    text-align: center;
-    padding: 40px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-#about:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* ✅ Animation subtile sur les sous-titres */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ✅ Animation du fond en gradient */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-
-section {
-    color: black; /* Assure que le texte est bien visible */
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    display: block !important;
-    min-height: 400px; /* Pour éviter qu'elles disparaissent */
-    border: 1px solid red; /* Debug : Voir si elles existent */
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-header {
-    background: #222; /* Un gris plus clair que le noir */
-    color: white;
-    padding: 10px 0; /* Augmente l’espace interne du header */
-    position: relative;
-    z-index: 2;
-    padding-bottom: 50px;
-}
-
+/* ✅ Style de la barre de navigation */
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
-    text-align: center;
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
-    padding-bottom: 10px;
 }
 
-.navbar.scrolled {
-    background: rgba(0, 0, 0, 0.9);
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
 }
 
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
 
-.navbar ul {
+.nav-links {
     list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
     padding: 0;
 }
 
-.navbar ul li {
+.nav-links li {
     display: inline;
-    margin: 0 15px;
 }
 
-.navbar a {
-    color: white;
+.nav-links a {
     text-decoration: none;
-    font-weight: bold;
+    color: #333;
+    font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
 
-.navbar a:hover {
-    color: #00c6ff; /* Bleu clair au survol */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #007bff;
 }
 
-.project {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+/* ✅ Bouton "Let's Talk" */
+.cta-button {
+    background: #6c63ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out;
 }
 
-.project:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+.cta-button:hover {
+    background: #524bff;
 }
 
-#projects {
-    min-height: 300px; /* Empêche la section de disparaître */
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+/* ✅ Style du header */
+header {
+    text-align: center;
+    padding: 100px 20px 60px;
+    background: #222;
+    color: white;
 }
 
-.tech-container {
-    position: relative;
-    width: 100%;
-    height: 250px; /* Ajuste selon le besoin */
-    overflow: hidden;
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
 }
 
-.tech-logos img {
-    position: absolute;
-    width: 80px; /* Augmenté de 60px à 80px */
-    height: auto;
-    opacity: 0.9;
-    transition: transform 0.3s ease-in-out;
+h2 {
+    font-size: 1.8rem;
+    color: #00c6ff;
 }
 
-.tech-logos img:hover {
-    transform: scale(1.4); /* Zoom augmenté pour un effet plus stylé */
+/* ✅ Section principale */
+section {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* ✅ Profil */
 .profil-img {
     display: block;
     width: 150px;
@@ -186,6 +113,39 @@ header {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* ✅ Compétences */
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tech-logos img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tech-logos img:hover {
+    transform: scale(1.2);
+}
+
+/* ✅ Projets */
+.project {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    margin: 0 0 10px;
+    color: #007bff;
+}
+
+/* ✅ CV */
 .cv-button {
     display: inline-block;
     background-color: #007bff;
@@ -193,22 +153,14 @@ header {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    transition-property: background-color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
+    transition: background 0.3s ease;
 }
 
 .cv-button:hover {
     background-color: #0056b3;
 }
 
-#cv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 150px; /* Réduit la hauteur */
-}
-
+/* ✅ Bouton Retour en haut */
 #backToTop {
     position: fixed;
     bottom: 20px;
@@ -222,7 +174,7 @@ header {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #backToTop.visible {
@@ -234,27 +186,9 @@ header {
     background: #0056b3;
 }
 
-.background-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* ⬅️ Met les décorations derrière le contenu */
-}
-
-.bg-decoration {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: float 6s infinite ease-in-out;
-}
-
-.wave {
-    position: absolute;
-    bottom: 0; /* Place la vague juste sous le header */
-    left: 0;
-    width: 100%;
-    height: 100px; /* Ajuste la hauteur */
-    z-index: 1; /* Doit être sous le contenu */
+/* ✅ Animation du fond en gradient */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

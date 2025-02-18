@@ -7,66 +7,55 @@
     
     <title>Djouldé Barry - Data Engineer</title>
 
-    <!-- Optimisation de Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- Lien vers le CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Icône du site -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div class="background-container">
-        <div class="bg-decoration" style="top: 10%; left: 20%;"></div>
-        <div class="bg-decoration" style="top: 50%; left: 80%;"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
-        <ul>
-            <li><a href="#about">À propos</a></li>
+        <div class="logo">
+            <img src="images/logo.png" alt="Portfolio Logo">
+            <span>Djouldé Barry</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#services">Compétences</a></li>
+            <li><a href="#stack">Stack Technique</a></li>
             <li><a href="#projects">Projets</a></li>
-            <li><a href="#cv">CV</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <a href="#contact" class="cta-button">Contactez-moi</a>
     </nav>
-
+    
+    <!-- En-tête -->
     <header>
         <h1>Djouldé Barry</h1>
         <h2>Data Engineer | Spécialiste ETL & Big Data</h2>
     </header>
-    <!-- Ajout de la vague sous le header -->
-    <svg class="wave" viewBox="0 0 1440 320">
-        <path fill="#1E3C72" fill-opacity="1"
-              d="M0,224L60,192C120,160,240,96,360,96C480,96,600,160,720,181.3C840,203,960,181,1080,176C1200,171,1320,181,1380,186.7L1440,192V0H0Z">
-        </path>
-    </svg>
-      
-
-    <!-- Section À propos -->
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <img src="images/profil.jpg" alt="Djouldé Barry" class="profil-img">
-        <p>Je suis un ingénieur data passionné, spécialisé en pipelines ETL, Big Data et Cloud. Fort d’une expérience dans le secteur de la santé et du retail (IQVIA, Aristid, Oncopole), je conçois des solutions data optimisées.</p>
-    </section>
 
     <!-- Section Compétences -->
-    <section id="skills">
-        <h2>Compétences Techniques</h2>
+    <section id="services">
+        <h2>Compétences</h2>
+        <p>Expertise en pipelines ETL, traitement Big Data et solutions Cloud.</p>
+    </section>
+
+    <!-- Section Stack Technique -->
+    <section id="stack">
+        <h2>Stack Technique</h2>
         <div class="tech-container">
             <div class="tech-logos">
                 <img src="images/tech/python.svg" alt="Python">
                 <img src="images/tech/sql.png" alt="SQL">
                 <img src="images/tech/postgresql.svg" alt="PostgreSQL">
-                <img src="images/tech/sql-server.png" alt="SQL Server">
-                <img src="images/tech/oracle.png" alt="Oracle">
-                <img src="images/tech/apacheairflow.svg" alt="Airflow">
-                <img src="images/tech/apachenifi.svg" alt="Nifi">
-                <img src="images/tech/powerbi.jpg" alt="Power BI">
                 <img src="images/tech/aws.png" alt="AWS">
                 <img src="images/tech/gcp.png" alt="GCP">
                 <img src="images/tech/databricks.png" alt="Databricks">
@@ -74,18 +63,18 @@
                 <img src="images/tech/gitlab.png" alt="GitLab CI/CD">
             </div>
         </div>
-    </section>    
+    </section>
 
     <!-- Section Projets -->
     <section id="projects">
-        <h2>Expériences Professionnelles</h2>
+        <h2>Projets</h2>
         <div class="project">
             <h3>Oncopole - Data Engineer</h3>
-            <p>Développement et monitoring des pipelines de données sur GCP.</p>
+            <p>Automatisation et monitoring des pipelines de données sur GCP.</p>
         </div>
         <div class="project">
             <h3>Aristid - Data Engineer</h3>
-            <p>Optimisation des pipelines sur BigQuery et Airflow.</p>
+            <p>Optimisation des flux de données sur BigQuery et Airflow.</p>
         </div>
     </section>
 
@@ -93,7 +82,7 @@
     <section id="cv">
         <h2>Mon CV</h2>
         <a href="files/CV_Barry.pdf" download class="cv-button">Télécharger mon CV</a>
-    </section>    
+    </section>
 
     <!-- Section Contact -->
     <section id="contact">
@@ -106,7 +95,7 @@
     <!-- Bouton Retour en haut -->
     <button id="backToTop">↑</button>
 
-    <!-- Lien vers le fichier JavaScript -->
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
