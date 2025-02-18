@@ -183,18 +183,29 @@ body {
 
 .stack-container {
     display: flex;
-    justify-content: flex-end; /* Déplace vers la droite */
-    align-items: center;
-    margin-top: -50px; /* Ajuste l’espace par rapport à la photo */
-    padding-right: 8%;
+    justify-content: flex-end; /* Aligné à droite */
+    align-items: flex-start;
+    margin-top: -50px; /* Ajuste la hauteur sous la photo */
+    padding-right: 10%; /* Décalage à droite */
+    max-width: 550px; /* Limite la dispersion des icônes */
+    position: relative;
 }
 
 /* ✅ Section STACK TECHNIQUE en bas à droite */
 .stack-technique {
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+}
+
+.tech-logos {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Augmente la hauteur pour éviter le chevauchement */
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin-top: -40px; /* Réduction de l’espace entre la photo et les icônes */
 }
 
 .stack-technique h2 {
@@ -204,22 +215,13 @@ body {
 }
 
 /* ✅ Assurer que les logos restent bien sous le texte */
-.tech-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-}
+
 
 .tech-logos img {
-    width: 70px; /* Augmente la taille des logos */
+    width: 60px; /* Taille ajustée pour éviter l’encombrement */
     height: auto;
     margin: 10px;
     transition: transform 0.3s ease-in-out;
-    position: absolute;
 }
 
 .tech-logos img:hover {
