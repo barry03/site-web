@@ -35,28 +35,31 @@ document.addEventListener("DOMContentLoaded", function() {
     const logos = document.querySelectorAll(".tech-logos img");
 
     logos.forEach(logo => {
-        let posX = Math.random() * 50 + 30; // Évite le débordement à gauche
-        let posY = Math.random() * 40; // Empêche chevauchement du footer
-        let speedX = (Math.random() - 0.5) * 1.2; // Animation fluide
-        let speedY = (Math.random() - 0.5) * 1.2; 
+        let posX = Math.random() * 90; // Position initiale X (évite d’être trop collé aux bords)
+        let posY = Math.random() * 90; // Position initiale Y
+        let speedX = (Math.random() - 0.5) * 0.8; // Vitesse X aléatoire
+        let speedY = (Math.random() - 0.5) * 0.8; // Vitesse Y aléatoire
 
+        // ✅ Définition d'une position initiale aléatoire
         logo.style.position = "absolute";
         logo.style.left = `${posX}%`;
-        logo.style.top = `${posY}px`;
+        logo.style.top = `${posY}%`;
 
         function moveLogo() {
             posX += speedX;
             posY += speedY;
 
-            if (posX <= 30 || posX >= 80) speedX *= -1; // Bloque la zone de dispersion
-            if (posY <= 0 || posY >= 80) speedY *= -1;
+            // ✅ Empêcher les logos de sortir du cadre avec un rebond fluide
+            if (posX <= 5 || posX >= 90) speedX *= -1;
+            if (posY <= 5 || posY >= 90) speedY *= -1;
 
             logo.style.left = `${posX}%`;
-            logo.style.top = `${posY}px`;
+            logo.style.top = `${posY}%`;
 
             requestAnimationFrame(moveLogo);
         }
 
         moveLogo();
     });
-});
+
+}); // <== ✅ ACCOLADE FERMANTE AJOUTÉE ICI
