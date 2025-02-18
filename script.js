@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const logos = document.querySelectorAll(".tech-logos img");
 
     logos.forEach(logo => {
-        let posX = Math.random() * 60 + 20; // Position limitée pour éviter débordement
-        let posY = Math.random() * 40; // Évite que ça chevauche le footer
-        let speedX = (Math.random() - 0.5) * 1.5; // Animation plus fluide
-        let speedY = (Math.random() - 0.5) * 1.5; 
+        let posX = Math.random() * 50 + 30; // Évite le débordement à gauche
+        let posY = Math.random() * 40; // Empêche chevauchement du footer
+        let speedX = (Math.random() - 0.5) * 1.2; // Animation fluide
+        let speedY = (Math.random() - 0.5) * 1.2; 
 
         logo.style.position = "absolute";
         logo.style.left = `${posX}%`;
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
             posX += speedX;
             posY += speedY;
 
-            if (posX <= 10 || posX >= 80) speedX *= -1;
+            if (posX <= 30 || posX >= 80) speedX *= -1; // Bloque la zone de dispersion
             if (posY <= 0 || posY >= 80) speedY *= -1;
 
             logo.style.left = `${posX}%`;
