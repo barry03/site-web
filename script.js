@@ -34,14 +34,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // ✅ Animation aléatoire des logos techs
     const logos = document.querySelectorAll(".tech-logos img");
 
-    logos.forEach(logo => {
-        let posX = Math.random() * 90; // Position initiale X
-        let posY = Math.random() * 90; // Position initiale Y
-        let speedX = (Math.random() - 0.5) * 1; // Réduction de la vitesse X
-        let speedY = (Math.random() - 0.5) * 1; // Réduction de la vitesse Y
+    logos.forEach((logo) => {
+        let posX = Math.random() * 80; // Position aléatoire X
+        let posY = Math.random() * 40; // Position aléatoire Y
+        let speedX = (Math.random() - 0.5) * 0.8; // Réduction vitesse X
+        let speedY = (Math.random() - 0.5) * 0.8; // Réduction vitesse Y
 
-        // ✅ Position initiale aléatoire
-        logo.style.position = "absolute";
         logo.style.left = `${posX}%`;
         logo.style.top = `${posY}%`;
 
@@ -49,14 +47,13 @@ document.addEventListener("DOMContentLoaded", function() {
             posX += speedX;
             posY += speedY;
 
-            // ✅ Empêcher les logos de sortir du cadre avec un rebond fluide
-            if (posX <= 5 || posX >= 90) speedX *= -1;
-            if (posY <= 5 || posY >= 90) speedY *= -1;
+            if (posX <= 0 || posX >= 80) speedX *= -1;
+            if (posY <= 0 || posY >= 40) speedY *= -1;
 
             logo.style.left = `${posX}%`;
             logo.style.top = `${posY}%`;
 
-            setTimeout(() => requestAnimationFrame(moveLogo), 20); // Ajout d’un léger délai pour ralentir
+            requestAnimationFrame(moveLogo);
         }
 
         moveLogo();
