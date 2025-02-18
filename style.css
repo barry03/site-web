@@ -1,133 +1,124 @@
 /* ✅ Police plus moderne */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f9f9f9;
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(to right, #e3eaf8, #ffffff);
+    background-size: cover;
+    overflow-x: hidden;
 }
 
-/* ✅ Barre de navigation */
+/* ✅ Styles de la navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 20px 50px;
     background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
-/* ✅ Logo */
-.logo {
+.navbar .logo {
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    width: 40px;
-    height: auto;
+.navbar .logo img {
+    height: 40px;
     margin-right: 10px;
 }
 
-.logo span {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-}
-
-/* ✅ Menu de navigation */
-.nav-links {
+.navbar .nav-links {
     display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    gap: 30px;
 }
 
-.nav-links li {
-    margin: 0 20px;
-}
-
-.nav-links a {
+.navbar .nav-links a {
     text-decoration: none;
     color: #333;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.navbar .nav-links a:hover {
     color: #007bff;
 }
 
-/* ✅ Bouton Contact */
-.cta-button {
-    background: #7b5bff;
+.navbar .cta-button {
+    background: #a085ff;
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
-    font-weight: bold;
     text-decoration: none;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-.cta-button:hover {
-    background: #5a3ebf;
+.navbar .cta-button:hover {
+    background: #7a5aff;
 }
 
-/* ✅ Section Hero */
+/* ✅ Hero section */
 .hero {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 90vh;
-    background: #222;
-    color: white;
-    padding: 80px 100px;
+    padding: 100px 10%;
+    position: relative;
 }
 
-/* ✅ Texte Hero */
-.hero-text {
-    max-width: 50%;
-    text-align: left;
+.hero-content {
+    max-width: 500px;
 }
 
-.hero-text h1 {
+.hero h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
-.hero-text h2 {
+.hero h1 .highlight {
+    color: #a085ff;
+}
+
+.hero h2 {
     font-size: 1.5rem;
-    color: #00c6ff;
-    margin-bottom: 20px;
+    font-weight: 400;
+    color: #555;
 }
 
 .btn-primary {
     display: inline-block;
-    padding: 12px 20px;
+    margin-top: 20px;
     background: #007bff;
     color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
     text-decoration: none;
-    border-radius: 8px;
     font-weight: bold;
-    transition: background 0.3s ease;
 }
 
 .btn-primary:hover {
     background: #0056b3;
 }
 
-/* ✅ Image Hero */
 .hero-image img {
-    width: 350px;
-    border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.hero-image img:hover {
-    transform: scale(1.05);
+/* ✅ Fond avec graphe et points */
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/graph-background.png');
+    background-size: cover;
+    z-index: -1;
 }
