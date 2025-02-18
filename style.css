@@ -114,10 +114,23 @@ body {
     background: #0056b3;
 }
 
+.hero-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .hero-image img {
-    width: 300px;
+    width: 250px;
     border-radius: 50%;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05); /* ✅ Effet subtil de zoom au survol */
 }
 
 /* ✅ Fond avec graphe et points */
@@ -168,6 +181,7 @@ body {
 
 /* ✅ Section STACK TECHNIQUE en bas à droite */
 .stack-technique {
+    margin-top: 20px;
     position: absolute;
     bottom: -50px;  /* Ajustement pour bien le placer */
     right: 100px;   /* Décalage vers la droite */
