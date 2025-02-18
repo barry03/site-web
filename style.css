@@ -96,6 +96,7 @@ header {
     padding: 10px 0; /* Augmente l’espace interne du header */
     position: relative;
     z-index: 3;
+    padding-bottom: 50px;
 }
 
 .navbar {
@@ -251,9 +252,10 @@ header {
 
 .wave {
     position: absolute;
-    bottom: -2px; /* Ajuste la position de la vague */
+    bottom: -5px; /* Ajuste pour qu’elle touche bien le bas du header */
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 100px; /* Augmente la taille si nécessaire */
     z-index: 2;
+    background: red;
 }
