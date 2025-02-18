@@ -199,11 +199,8 @@ body {
 /* ✅ Logos en mouvement */
 .tech-logos {
     position: relative;
-    width: 100%;
-    height: 250px; /* 🔥 Augmente cette valeur pour plus d’espace */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 300px; /* Ajuste selon la largeur que tu veux */
+    height: 150px;
     overflow: hidden;
 }
 
