@@ -1,9 +1,13 @@
 /* ✅ Police plus moderne */
 body {
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e3eaf8, #ffffff);
     background-size: cover;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
 }
 
 /* ✅ Styles de la navigation */
@@ -173,7 +177,7 @@ body {
     background: #f4f4fc; /* Fond doux et harmonieux */
     text-align: center;
     padding: 20px 0;
-    margin-top: 30px;
+    margin-top: auto;
     border-top: 2px solid #d3d3ea;
 }
 
@@ -221,15 +225,14 @@ body {
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
 .tech-logos {
     position: relative;
-    width: 400px; /* Définit un bloc limité */
-    height: 300px; /* Hauteur restreinte */
+    width: 500px; /* Définit un bloc limité */
+    height: 600px; /* Hauteur restreinte */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
     overflow: hidden; /* Empêche les icônes de sortir */
-    margin-bottom: 40px;
 }
 
 /* ✅ Ajuste la taille et l’animation des icônes */
@@ -250,7 +253,7 @@ body {
     color: #444A6D; /* Une couleur plus douce */
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: -40px;
+    margin-top: 50px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
 }
 
