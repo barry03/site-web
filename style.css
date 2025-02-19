@@ -401,3 +401,100 @@ body {
     transform: scale(1.1);
     opacity: 0.7;
 }
+
+
+/* ✅ MEDIA QUERY POUR MOBILE */
+@media screen and (max-width: 768px) {
+    /* ✅ Ajustement de la Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+        padding-top: 10px;
+    }
+
+    .nav-right {
+        margin: 10px 0;
+    }
+
+    /* ✅ Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ✅ Ajustement de la photo */
+    .hero-image img {
+        width: 200px;
+        margin-top: 15px;
+    }
+
+    /* ✅ Section Compétences */
+    .competences-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 20px 5%;
+    }
+
+    .competences-list,
+    .stack-technique {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ✅ Stack Technique : Affichage en 2 colonnes */
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 90%;
+    }
+
+    /* ✅ Projets : Affichage en colonne */
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* ✅ Footer */
+    .footer-icons {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
