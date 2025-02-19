@@ -28,22 +28,31 @@
                 <span>Djouldé Barry</span>
             </div>
     
-            <!-- ✅ Menu burger -->
+            <!-- ✅ Bouton menu burger (s'affiche seulement sur mobile) -->
             <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    
-            <!-- ✅ Menu mobile caché par défaut -->
-            <ul class="nav-links" id="mobile-menu">
-                <li><a href="#home" onclick="toggleMenu()">Accueil</a></li>
-                <li><a href="#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
-                <li class="menu-close" onclick="toggleMenu()">✖</li>
-            </ul>
         </div>
+    
+        <!-- ✅ Menu normal pour ordinateur -->
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#competences">Compétences & Stack</a></li>
+            <li><a href="#projects">Projets</a></li>
+        </ul>
     
         <div class="nav-right">
             <a href="#contact" class="cta-button">Contactez-moi</a>
         </div>
-    </nav>
+    
+        <!-- ✅ Menu mobile (caché par défaut) -->
+        <div id="mobile-menu">
+            <div class="menu-close" onclick="toggleMenu()">✖</div>
+            <ul>
+                <li><a href="#home" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
+            </ul>
+        </div>
+    </nav>    
     
     
     <!-- Section Hero -->

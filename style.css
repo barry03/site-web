@@ -403,30 +403,40 @@ body {
 }
 
 
-/* ✅ MEDIA QUERY POUR MOBILE */
-@media screen and (max-width: 768px) {
 
-    /* ✅ Ajustement de la Navbar */
+/* ✅ Cacher le menu burger sur ordinateur */
+.menu-toggle {
+    display: none; /* Masqué par défaut */
+}
+
+/* ✅ Afficher le menu burger UNIQUEMENT sur mobile */
+@media screen and (max-width: 768px) {
+    /* ✅ Navbar */
     .navbar {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
         padding: 10px 20px;
     }
 
-    /* ✅ Bouton Menu Burger */
+    /* ✅ Afficher l'icône du menu burger */
     .menu-toggle {
-        display: block;
+        display: block; 
         font-size: 30px;
         cursor: pointer;
     }
 
-    /* ✅ Masquer le menu normal */
+    /* ✅ Masquer le menu principal sur mobile */
     .nav-links {
         display: none;
     }
 
-    /* ✅ Style du menu mobile */
+    /* ✅ Afficher le menu mobile lorsqu'il est activé */
+    #mobile-menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ✅ Ajustement du menu mobile */
     #mobile-menu {
         display: none;
         position: absolute;
@@ -438,19 +448,24 @@ body {
         text-align: center;
         z-index: 1000;
         padding: 15px 0;
-        flex-direction: column;
-        transition: all 0.3s ease-in-out;
     }
 
-    /* ✅ Affichage du menu lorsqu'il est activé */
-    #mobile-menu.show {
-        display: flex;
+    /* ✅ Style des liens dans le menu mobile */
+    #mobile-menu ul {
+        list-style: none;
+        padding: 0;
     }
 
-    /* ✅ Style des liens du menu mobile */
-    #mobile-menu li {
+    #mobile-menu ul li {
         padding: 12px;
         border-bottom: 1px solid #ddd;
+    }
+
+    #mobile-menu ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem;
+        display: block;
     }
 
     /* ✅ Style du bouton de fermeture */
@@ -462,11 +477,11 @@ body {
         background: #f8f8f8;
     }
 
-    /* ✅ Hero Section */
+    /* ✅ Ajustement du texte et des sections */
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 20px 5%;
+        padding: 30px 5%;
     }
 
     .hero-content {
@@ -474,11 +489,11 @@ body {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Ajustement pour mobile */
     }
 
     .hero h2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .button-group {
@@ -488,7 +503,7 @@ body {
 
     /* ✅ Ajustement de la photo */
     .hero-image img {
-        width: 200px;
+        width: 180px;
         margin-top: 15px;
     }
 
@@ -497,7 +512,7 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 30px;
+        gap: 20px;
         padding: 20px 5%;
     }
 
@@ -510,8 +525,8 @@ body {
     /* ✅ Stack Technique : Affichage en 2 colonnes */
     .tech-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        max-width: 90%;
+        gap: 8px;
+        max-width: 85%;
     }
 
     /* ✅ Projets : Affichage en colonne */
@@ -521,7 +536,7 @@ body {
     }
 
     .project-card {
-        width: 90%;
+        width: 85%;
         text-align: center;
     }
 
@@ -533,8 +548,8 @@ body {
 
     /* ✅ Ajustement du bouton CTA */
     .cta-button {
-        font-size: 14px;
-        padding: 8px 15px;
+        font-size: 13px;
+        padding: 8px 14px;
     }
 }
 
