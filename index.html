@@ -21,38 +21,40 @@
     <div class="background-container"></div>
 
     <!-- Navigation -->
+    <!-- ✅ Navigation -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="logo">
                 <img src="images/logo.png" alt="Portfolio Logo">
                 <span>Djouldé Barry</span>
             </div>
-    
-            <!-- ✅ Bouton menu burger (s'affiche seulement sur mobile) -->
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         </div>
-    
-        <!-- ✅ Menu normal pour ordinateur -->
+
+        <!-- ✅ Menu standard pour ordinateur -->
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#competences">Compétences & Stack</a></li>
             <li><a href="#projects">Projets</a></li>
         </ul>
-    
+
         <div class="nav-right">
             <a href="#contact" class="cta-button">Contactez-moi</a>
         </div>
-    
-        <!-- ✅ Menu mobile (caché par défaut) -->
+
+        <!-- ✅ Icône menu burger (visible sur mobile uniquement) -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <!-- ✅ Menu mobile -->
         <div id="mobile-menu">
-            <div class="menu-close" onclick="toggleMenu()">✖</div>
+            <span class="menu-close" onclick="toggleMenu()">✖</span>
             <ul>
                 <li><a href="#home" onclick="toggleMenu()">Accueil</a></li>
                 <li><a href="#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
             </ul>
         </div>
-    </nav>    
+    </nav>
+
     
     
     <!-- Section Hero -->
@@ -155,6 +157,7 @@
             menu.classList.toggle("show");
         }
     </script>
+    
 
 </body>
 </html>
