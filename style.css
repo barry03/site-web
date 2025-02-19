@@ -189,12 +189,14 @@ body {
 }
 
 .competences-list, .stack-technique {
+    flex: 1;
     width: 45%;
     text-align: left;
+    padding: 15px;
 }
 
 .competences-list h3, .stack-technique h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #3a3a70;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -218,18 +220,27 @@ body {
     color: #7D5FB2;
 }
 
+.competences-container, .projects-container {
+    max-width: 85%; /* Réduction de la largeur */
+    margin: auto;
+}
+
+.competences-section h2, .projects-section h2 {
+    font-size: 1.8rem; /* Au lieu de 2.2rem */
+}
+
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
 /* ✅ Stack technique logos */
 .tech-logos {
     position: relative;
-    width: 100%;
-    height: auto; /* Ajuste à la taille du contenu */
+    width: 400px;  /* Ajusté pour plus d’espace */
+    height: 350px; /* Augmenté pour donner plus de place à la rotation */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    padding-top: 20px; /* Ajoute un léger espace sous "Stack Technique" */
+    overflow: hidden;
 }
 
 .stack-technique {
@@ -240,8 +251,9 @@ body {
 
 /* ✅ Ajuste la taille et l’animation des icônes */
 .tech-logos img {
-    width: 60px;
+    width: 50px; /* Réduction pour éviter l’encombrement */
     height: auto;
+    position: absolute;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -280,11 +292,13 @@ body {
 }
 
 .project-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #3a3a70;
 }
 
 .project-card p {
+    width: 280px; /* Taille plus compacte */
+    padding: 15px;
     font-size: 1rem;
     color: #666;
     margin-bottom: 15px;
