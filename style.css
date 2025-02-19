@@ -207,8 +207,9 @@ body {
     display: flex;
     justify-content: flex-end; /* Déplace vers la droite */
     align-items: center;
-    margin-top: -40px; /* Ajuste l’espace par rapport à la photo */
+    margin-top: 40px; /* Ajuste l’espace par rapport à la photo */
     padding-right: 8%;
+    margin-bottom: 60px;
 }
 
 /* ✅ Centre le titre et réduit l’espace */
@@ -220,14 +221,15 @@ body {
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
 .tech-logos {
     position: relative;
-    width: 350px; /* Définit un bloc limité */
-    height: 250px; /* Hauteur restreinte */
+    width: 400px; /* Définit un bloc limité */
+    height: 300px; /* Hauteur restreinte */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     overflow: hidden; /* Empêche les icônes de sortir */
+    margin-bottom: 40px;
 }
 
 /* ✅ Ajuste la taille et l’animation des icônes */
@@ -250,4 +252,105 @@ body {
     letter-spacing: 1px;
     margin-bottom: 15px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
+}
+
+
+
+
+
+/* ✅ Responsive Design pour les écrans de moins de 768px (tablette et mobile) */
+@media screen and (max-width: 768px) {
+
+    /* 🔹 Navigation : Ajustement */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Masquer le menu sur mobile (on peut ajouter un menu burger plus tard) */
+    }
+
+    .cta-button {
+        width: 90%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* 🔹 Section Hero */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-image img {
+        width: 180px; /* Réduction de la taille de l’image */
+    }
+
+    /* 🔹 Boutons */
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+
+    /* 🔹 Stack Technique */
+    .stack-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .stack-technique h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .tech-logos {
+        width: 90%;
+        height: auto;
+        gap: 5px;
+    }
+
+    .tech-logos img {
+        width: 40px; /* Réduction des icônes */
+    }
+
+    /* 🔹 Pied de page */
+    .footer {
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .footer-icons img {
+        width: 24px; /* Réduction de la taille des icônes */
+    }
 }
