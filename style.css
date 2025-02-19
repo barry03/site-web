@@ -207,7 +207,7 @@ body {
     display: flex;
     justify-content: flex-end; /* Déplace vers la droite */
     align-items: center;
-    margin-top: 40px; /* Ajuste l’espace par rapport à la photo */
+    /*margin-top: 40px; Ajuste l’espace par rapport à la photo */
     padding-right: 8%;
     margin-bottom: -60px;
 }
