@@ -230,13 +230,15 @@ body {
 
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
 /* ✅ Stack technique logos */
+/* ✅ Style de la grille */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     justify-items: center;
     align-items: center;
     max-width: 500px;
+    position: relative;
 }
 
 .tech-grid img[alt="databricks"] {
@@ -254,6 +256,31 @@ body {
     width: 60px;
     height: auto;
     transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+/* ✅ Tooltip */
+.tech-grid img::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* ✅ Affichage du tooltip au survol */
+.tech-grid img:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .tech-grid img:hover {
@@ -265,7 +292,7 @@ body {
     text-align: center;
     padding: 80px 0;
     background-color: #f9f9f9;
-    margin-top: 30px; /* Ajoute un espace après Stack Technique */
+    margin-top: 10px; /* Ajoute un espace après Stack Technique */
     border-radius: 10px;
 }
 
