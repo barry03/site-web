@@ -165,43 +165,66 @@ body {
     transform: scale(1.05);
 }
 
-/* ✅ 6. Section Stack Technique */
-.stack-container {
+/* ✅ SECTION COMPÉTENCES & STACK TECHNIQUE */
+.competences-section {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
-    padding-right: 8%;
-    margin-bottom: 100px; /* Augmenté pour éloigner du footer */
-    margin-top: -30px;
-}
-
-/* ✅ Centre le titre et ajuste l’espace */
-.stack-technique {
+    justify-content: center;
     text-align: center;
-    max-width: 400px;
+    padding: 80px 0;
+    margin-top: 40px; /* Ajoute de l’espace sous la section Hero */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.stack-technique h2 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #444A6D;
+.competences-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.competences-list, .stack-technique {
+    width: 45%;
+    text-align: left;
+}
+
+.competences-list h3, .stack-technique h3 {
+    font-size: 1.8rem;
+    color: #3a3a70;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.competences-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.competences-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.competences-list li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: #7D5FB2;
 }
 
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
+/* ✅ Stack technique logos */
 .tech-logos {
-    position: relative;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    overflow: hidden;
+    justify-items: center;
+    align-items: center;
 }
 
 /* ✅ Ajuste la taille et l’animation des icônes */
@@ -209,11 +232,65 @@ body {
     width: 60px;
     height: auto;
     transition: transform 0.3s ease-in-out;
-    position: absolute;
 }
 
 .tech-logos img:hover {
     transform: scale(1.2);
+}
+
+/* ✅ SECTION PROJETS */
+.projects-section {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    margin-top: 50px; /* Ajoute un espace après Stack Technique */
+    border-radius: 10px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    color: #3a3a70;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-project {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-project:hover {
+    background-color: #0056b3;
 }
 
 /* ✅ 7. Footer Fixé en Bas */
