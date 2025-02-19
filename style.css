@@ -216,7 +216,6 @@ body {
 .stack-technique {
     text-align: center;
     max-width: 400px; /* Définit une largeur limitée */
-    max-height: 300px;
 }
 
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
@@ -251,7 +250,7 @@ body {
     color: #444A6D; /* Une couleur plus douce */
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: -30px;
+    margin-top: -40px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
 }
 
