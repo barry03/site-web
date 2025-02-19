@@ -1,4 +1,5 @@
 /* ✅ Police plus moderne */
+/* ✅ 1. Style Global */
 body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
@@ -7,10 +8,9 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-
 }
 
-/* ✅ Styles de la navigation */
+/* ✅ 2. Navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* Espace entre les éléments du menu */
+    gap: 30px;
     margin-left: 40px;
 }
 
@@ -49,8 +49,9 @@ body {
     font-size: 1rem;
     transition: color 0.3s ease-in-out;
 }
+
 .nav-links li a:hover {
-    color: #7D5FB2; /* Violet doux */
+    color: #7D5FB2;
 }
 
 .nav-right {
@@ -64,22 +65,21 @@ body {
     border-radius: 30px;
     font-weight: bold;
     text-decoration: none;
-    text-transform: capitalize;
     transition: background 0.3s ease;
-    margin-right: 20px; /* Reculer le bouton */
+    margin-right: 20px;
 }
 
 .cta-button:hover {
     background: #563d7c;
 }
 
-/* ✅ Hero section */
+/* ✅ 3. Hero Section */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 10%;
-    margin-top: -20px; /* Réduction de l'espace sous la barre de navigation */
+    padding: 40px 10%;
+    margin-top: -10px;
 }
 
 .hero-content {
@@ -103,9 +103,10 @@ body {
     color: #666;
 }
 
+/* ✅ 4. Boutons */
 .button-group {
     display: flex;
-    gap: 15px; /* Espace entre les boutons */
+    gap: 15px;
     justify-content: center;
     margin-top: 20px;
 }
@@ -120,11 +121,13 @@ body {
     transition: all 0.3s ease-in-out;
     text-decoration: none;
 }
+
 .btn-primary {
     background-color: #007bff;
     color: white;
     border: 2px solid #007bff;
 }
+
 .btn-primary:hover {
     background-color: white;
     color: #007bff;
@@ -141,6 +144,7 @@ body {
     color: white;
 }
 
+/* ✅ 5. Photo de Profil */
 .hero-image {
     position: relative;
     justify-content: center;
@@ -158,29 +162,70 @@ body {
 }
 
 .hero-image img:hover {
-    transform: scale(1.05); /* ✅ Effet subtil de zoom au survol */
+    transform: scale(1.05);
 }
 
-/* ✅ Fond avec graphe et points */
-.background-container {
+/* ✅ 6. Section Stack Technique */
+.stack-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 8%;
+    margin-bottom: 100px; /* Augmenté pour éloigner du footer */
+    margin-top: -60px;
+}
+
+/* ✅ Centre le titre et ajuste l’espace */
+.stack-technique {
+    text-align: center;
+    max-width: 400px;
+}
+
+.stack-technique h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #444A6D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Ajuste la zone où les icônes peuvent bouger */
+.tech-logos {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: hidden;
+}
+
+/* ✅ Ajuste la taille et l’animation des icônes */
+.tech-logos img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    /*background-image: url('images/graph-background.jpg');*/
-    background-size: cover;
-    z-index: -1;
 }
 
+.tech-logos img:hover {
+    transform: scale(1.2);
+}
+
+/* ✅ 7. Footer Fixé en Bas */
 .footer {
-    background: #f4f4fc; /* Fond doux et harmonieux */
+    background: #f4f4fc;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto;
     border-top: 2px solid #d3d3ea;
+    margin-top: auto; /* Fixe le footer en bas */
 }
 
+/* ✅ Styliser le texte du footer */
 .footer h2 {
     font-size: 1.2rem;
     font-weight: 500;
@@ -190,6 +235,7 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* ✅ Icônes du footer */
 .footer-icons {
     display: flex;
     justify-content: center;
@@ -205,155 +251,4 @@ body {
 .footer-icons a img:hover {
     transform: scale(1.1);
     opacity: 0.7;
-}
-
-.stack-container {
-    display: flex;
-    justify-content: flex-end; /* Déplace vers la droite */
-    align-items: center;
-    /*margin-top: 40px; Ajuste l’espace par rapport à la photo */
-    padding-right: 8%;
-    margin-bottom: 60px;
-}
-
-/* ✅ Centre le titre et réduit l’espace */
-.stack-technique {
-    text-align: center;
-    max-width: 400px; /* Définit une largeur limitée */
-}
-
-/* ✅ Ajuste la zone où les icônes peuvent bouger */
-.tech-logos {
-    position: relative;
-    width: 500px; /* Définit un bloc limité */
-    height: 600px; /* Hauteur restreinte */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    overflow: hidden; /* Empêche les icônes de sortir */
-}
-
-/* ✅ Ajuste la taille et l’animation des icônes */
-.tech-logos img {
-    width: 60px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    position: absolute;
-}
-
-.tech-logos img:hover {
-    transform: scale(1.2);
-}
-
-.stack-technique h2 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #444A6D; /* Une couleur plus douce */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 50px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
-}
-
-
-
-
-
-/* ✅ Responsive Design pour les écrans de moins de 768px (tablette et mobile) */
-@media screen and (max-width: 768px) {
-
-    /* 🔹 Navigation : Ajustement */
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .nav-links {
-        display: none; /* Masquer le menu sur mobile (on peut ajouter un menu burger plus tard) */
-    }
-
-    .cta-button {
-        width: 90%;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    /* 🔹 Section Hero */
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 5%;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero-image img {
-        width: 180px; /* Réduction de la taille de l’image */
-    }
-
-    /* 🔹 Boutons */
-    .button-group {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-    }
-
-    /* 🔹 Stack Technique */
-    .stack-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding-right: 0;
-        margin-top: 20px;
-    }
-
-    .stack-technique h2 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-    }
-
-    .tech-logos {
-        width: 90%;
-        height: auto;
-        gap: 5px;
-    }
-
-    .tech-logos img {
-        width: 40px; /* Réduction des icônes */
-    }
-
-    /* 🔹 Pied de page */
-    .footer {
-        text-align: center;
-        padding: 20px 10px;
-    }
-
-    .footer-icons {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    .footer-icons img {
-        width: 24px; /* Réduction de la taille des icônes */
-    }
 }
