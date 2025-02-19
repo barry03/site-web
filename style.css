@@ -71,17 +71,19 @@ body {
 
 .nav-right {
     margin-left: auto;
+    display: flex;
+    align-items: center; /* Centre verticalement */
 }
 
 .cta-button {
     background: #7D5FB2;
     color: white;
-    padding: 12px 22px;
+    padding: 10px 20px;
     border-radius: 30px;
     font-weight: bold;
     text-decoration: none;
-    transition: background 0.3s ease;
-    margin-right: 20px;
+    transition: background 0.3s;
+    margin-left: 20px; /* Espace avec le menu */
 }
 
 .cta-button:hover {
