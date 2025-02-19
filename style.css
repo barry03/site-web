@@ -405,28 +405,61 @@ body {
 
 /* ✅ MEDIA QUERY POUR MOBILE */
 @media screen and (max-width: 768px) {
+
     /* ✅ Ajustement de la Navbar */
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
-        padding: 10px 15px;
+        padding: 10px 20px;
     }
 
-    .nav-left {
-        flex-direction: column;
-        gap: 10px;
+    /* ✅ Bouton Menu Burger */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
     }
 
+    /* ✅ Masquer le menu normal */
     .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-left: 0;
-        padding-top: 10px;
+        display: none;
     }
 
-    .nav-right {
-        margin: 10px 0;
+    /* ✅ Style du menu mobile */
+    #mobile-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 1000;
+        padding: 15px 0;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* ✅ Affichage du menu lorsqu'il est activé */
+    #mobile-menu.show {
+        display: flex;
+    }
+
+    /* ✅ Style des liens du menu mobile */
+    #mobile-menu li {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* ✅ Style du bouton de fermeture */
+    .menu-close {
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+        background: #f8f8f8;
     }
 
     /* ✅ Hero Section */
@@ -497,4 +530,11 @@ body {
         flex-direction: row;
         gap: 10px;
     }
+
+    /* ✅ Ajustement du bouton CTA */
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
+

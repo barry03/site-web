@@ -27,16 +27,24 @@
                 <img src="images/logo.png" alt="Portfolio Logo">
                 <span>Djouldé Barry</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#competences">Compétences & Stack</a></li>
-                <li><a href="#projects">Projets</a></li>
+    
+            <!-- ✅ Menu burger -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+            <!-- ✅ Menu mobile caché par défaut -->
+            <ul class="nav-links" id="mobile-menu">
+                <li><a href="#home" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
+                <li class="menu-close" onclick="toggleMenu()">✖</li>
             </ul>
         </div>
+    
         <div class="nav-right">
             <a href="#contact" class="cta-button">Contactez-moi</a>
         </div>
-    </nav>    
+    </nav>
+    
     
     <!-- Section Hero -->
     <header class="hero">
@@ -132,8 +140,12 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 
 </body>
 </html>
