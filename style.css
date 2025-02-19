@@ -182,9 +182,10 @@ body {
 .competences-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Aligne les deux blocs en haut */
     max-width: 80%;
     margin: auto;
+    padding-top: 30px; /* Ajoute un léger espacement en haut */
 }
 
 .competences-list, .stack-technique {
@@ -220,11 +221,21 @@ body {
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
 /* ✅ Stack technique logos */
 .tech-logos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    justify-items: center;
+    position: relative;
+    width: 100%;
+    height: auto; /* Ajuste à la taille du contenu */
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 20px; /* Ajoute un léger espace sous "Stack Technique" */
+}
+
+.stack-technique {
+    width: 45%;
+    text-align: center;
+    position: relative; /* Pour que les logos restent dans ce bloc */
 }
 
 /* ✅ Ajuste la taille et l’animation des icônes */
