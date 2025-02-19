@@ -412,12 +412,13 @@ body {
 }
 
 /* ✅ MENU MOBILE (CACHÉ PAR DÉFAUT) */
+/* ✅ Affichage du menu burger */
 #mobile-menu {
     display: none;
     position: fixed;
     top: 0;
     right: 0;
-    width: 70%;
+    width: 75%;
     height: 100%;
     background: white;
     box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
@@ -425,7 +426,6 @@ body {
     padding-top: 50px;
     z-index: 1001;
 }
-
 /* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
 #mobile-menu.show {
     display: flex;
@@ -466,12 +466,24 @@ body {
 
 /* ✅ MEDIA QUERY POUR MOBILE */
 @media screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
     .nav-links {
         display: none; /* Cache le menu standard */
     }
 
+    /* ✅ Déplace le menu burger à droite */
     .menu-toggle {
-        display: block; /* Affiche l'icône burger */
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px; /* Positionne bien */
     }
 
     /* ✅ Ajustement du bouton CTA */
@@ -493,6 +505,14 @@ body {
 
     .hero h2 {
         font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center; /* Corrige l’alignement du texte */
+        max-width: 85%;
+        margin: 0 auto;
     }
 
     .button-group {
