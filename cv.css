@@ -1,0 +1,108 @@
+/* ✅ Police et mise en page générale */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4fc;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3a3a70;
+    margin: 0 auto;
+}
+
+.back-button {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #0056b3;
+}
+
+/* ✅ Conteneur des CV */
+.cv-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* ✅ Style des blocs de CV */
+.cv-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    text-align: center;
+}
+
+.cv-box h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3a3a70;
+    margin-bottom: 15px;
+}
+
+/* ✅ Style de l'aperçu du CV */
+.cv-frame {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Style du bouton de téléchargement */
+.btn-download {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #007bff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-download:hover {
+    background: #0056b3;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cv-box {
+        width: 80%;
+    }
+}
