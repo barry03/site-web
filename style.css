@@ -77,7 +77,9 @@ body {
     align-items: center; /* Centre verticalement */
 }
 
+
 .cta-button {
+    display: block;
     background: #7D5FB2;
     color: white;
     padding: 8px 16px;
@@ -440,26 +442,23 @@ body {
         border: none;
     }
 
-    
     #mobile-menu {
         display: none;
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
+        right: -100%; /* Cacher le menu au départ */
+        width: 75%;
         height: 100vh;
         background: white;
         text-align: center;
         z-index: 1400;
         padding-top: 60px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
     }
     /* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
     #mobile-menu.show {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transform: translateX(0);
+        right: 0; /* Faire glisser le menu */
     }
     
     /* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
@@ -485,6 +484,7 @@ body {
 
     /* ✅ Ajout du bouton "Contactez-moi" dans le menu */
     .menu-contact {
+        display: block;
         margin-top: 20px;
         padding: 10px 20px;
         background: #7D5FB2;
