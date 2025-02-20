@@ -411,13 +411,6 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: white;
-        z-index: 1000;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
     .nav-links {
         display: none; /* Cache le menu standard */
