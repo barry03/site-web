@@ -6,7 +6,7 @@
     <meta name="description" content="Portfolio de Djouldé Barry, Data Engineer spécialisé en ETL, Big Data et Cloud. Découvrez mes projets et compétences.">
     <title>Djouldé Barry - Data Engineer</title>
     
-    <!-- Optimisation de Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -18,9 +18,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 </head>
 <body>
-    <div class="background-container"></div>
 
-    <!-- Navigation -->
     <!-- ✅ Navigation -->
     <nav class="navbar">
         <div class="nav-left">
@@ -37,12 +35,8 @@
             <li><a href="#projects">Projets</a></li>
         </ul>
 
-        <div class="nav-right">
-            <a href="#contact" class="cta-button">Contactez-moi</a>
-        </div>
-
         <!-- ✅ Icône menu burger (visible sur mobile uniquement) -->
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
         <!-- ✅ Menu mobile -->
         <div id="mobile-menu">
@@ -52,11 +46,10 @@
                 <li><a href="#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
             </ul>
+            <a href="#contact" class="menu-contact" onclick="toggleMenu()">Contactez-moi</a>
         </div>
     </nav>
 
-    
-    
     <!-- Section Hero -->
     <header class="hero">
         <div class="hero-content">
@@ -76,40 +69,6 @@
             <img src="images/profil.jpg" alt="Djouldé Barry">
         </div>
     </header>
-
-    <!-- Section Compétences & Stack Technique -->
-    <section id="competences" class="competences-section">
-        <h2>Compétences & Stack Technique</h2>
-        <div class="competences-container">
-            <div class="competences-list">
-                <h3>Mes Compétences</h3>
-                <ul>
-                    <li>📊 Modélisation et traitement de données</li>
-                    <li>🔄 Développement de pipelines ETL</li>
-                    <li>📡 Big Data & Cloud (AWS, GCP)</li>
-                    <li>⚙️ Automatisation & CI/CD</li>
-                    <li>📈 Data Visualisation (Power BI, Metabase)</li>
-                </ul>
-            </div>
-            <div class="stack-technique">
-                <h3>Stack Technique</h3>
-                <div class="tech-grid">
-                    <img src="images/tech/python.png" alt="Python" title="Python">
-                    <img src="images/tech/sql.png" alt="SQL" title="SQL">
-                    <img src="images/tech/postgre.png" alt="PostgreSQL" title="PostgreSQL">
-                    <img src="images/tech/sparkbis.png" alt="spark" title="Spark">
-                    <img src="images/tech/google-cloud.png" alt="GCP" title="google-cloud GCP">
-                    <img src="images/tech/airflobis.png" alt="airflow" title="Airflow">
-                    <img src="images/tech/gitbis.png" alt="gitlab" title="GitLab">
-                    <img src="images/tech/dockerbis.png" alt="docker" title="Docker">
-                    <img src="images/tech/awsbis.png" alt="aws" title="Cloud AWS">
-                    <img src="images/tech/nifibis.png" alt="nifi" title="Nifi">
-                    <img src="images/tech/bricksbis.png" alt="databricks" title="Databricks">
-                    <img src="images/tech/powerbis.png" alt="powerbi" title="PowerBi">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Section Projets -->
     <section id="projects" class="projects-section">
@@ -132,6 +91,7 @@
             </div>
         </div>
     </section>
+
     <!-- Pied de page / Footer -->
     <footer id="contact" class="footer">
         <h2>Contactez-moi</h2>
@@ -156,7 +116,7 @@
             var menu = document.getElementById("mobile-menu");
             menu.classList.toggle("show");
         }
-    </script>   
+    </script>
 
 </body>
 </html>
