@@ -411,7 +411,8 @@ body {
     cursor: pointer;
 }
 
-/*
+/* ✅ MENU MOBILE (CACHÉ PAR DÉFAUT) */
+/* ✅ Affichage du menu burger */
 #mobile-menu {
     display: none;
     position: fixed;
@@ -425,14 +426,43 @@ body {
     padding-top: 50px;
     z-index: 1001;
 }
-
+/* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
 #mobile-menu.show {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-*/
+/* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
+#mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mobile-menu ul li {
+    padding: 15px;
+}
+
+#mobile-menu ul li a {
+    text-decoration: none;
+    color: #7D5FB2;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#mobile-menu ul li a:hover {
+    color: #563d7c;
+}
+
+/* ✅ BOUTON DE FERMETURE DU MENU MOBILE */
+.menu-close {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
 
 /* ✅ MEDIA QUERY POUR MOBILE */
 @media screen and (max-width: 768px) {
@@ -451,74 +481,22 @@ body {
         display: block;
         font-size: 32px;
         cursor: pointer;
-        position: relative;
+        position: absolute;
         top: 15px;
         right: 20px; /* Positionne bien */
     }
 
-    #mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 75%;
-        height: 100%;
-        background: white;
-        box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        padding-top: 50px;
-        z-index: 1001;
-    }
-
-    /* ✅ Affichage du menu burger ouvert */
-    #mobile-menu.show {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
-    #mobile-menu ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    #mobile-menu ul li {
-        padding: 15px;
-    }
-
-    #mobile-menu ul li a {
-        text-decoration: none;
-        color: #7D5FB2;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-    #mobile-menu ul li a:hover {
-        color: #563d7c;
-    }
-
-    /* ✅ BOUTON DE FERMETURE DU MENU MOBILE */
-    .menu-close {
-        font-size: 30px;
-        font-weight: bold;
-        cursor: pointer;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-    }
     /* ✅ Ajustement du bouton CTA */
     .cta-button {
-        display: none; /* Cache le bouton en dehors du menu */
+        font-size: 14px;
+        padding: 8px 15px;
     }
 
     /* ✅ Ajustement de la Hero Section */
     .hero {
-        display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Texte aligné à gauche */
-        text-align: left;
-        padding: 20px;
+        text-align: center;
+        padding: 30px 5%;
     }
 
     .hero h1 {
@@ -542,16 +520,9 @@ body {
         align-items: center;
     }
 
-    .hero-image {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-
     .hero-image img {
         width: 180px;
-        border-radius: 50%;
+        margin-top: 15px;
     }
 
     /* ✅ Section Compétences */
