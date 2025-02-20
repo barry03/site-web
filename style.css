@@ -419,14 +419,16 @@ body {
     /* ✅ Déplace le menu burger à droite */
     .menu-toggle {
         display: block;
-        font-size: 34px;  /* Plus visible */
+        font-size: 34px;  /* Taille du burger */
         cursor: pointer;
-        position: absolute;
+        position: fixed;  /* Fixé pour ne pas bouger */
         top: 15px;
-        right: 15px;  /* Ajuste bien à droite */
-        z-index: 2000;
+        right: 20px;  /* Légèrement plus visible */
+        z-index: 3000; /* Plus haut pour être toujours visible */
+        background: none; /* Supprime tout fond gênant */
+        border: none;
     }
-
+    
     #mobile-menu {
         display: none;
         position: fixed;
@@ -438,13 +440,16 @@ body {
         box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
         text-align: center;
         padding-top: 50px;
-        z-index: 1001;
+        z-index: 2500; /* S'assure qu'il passe devant */
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
     }
     /* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
     #mobile-menu.show {
         display: flex;
         flex-direction: column;
         align-items: center;
+        transform: translateX(0);
     }
     
     /* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
@@ -481,10 +486,11 @@ body {
 
     /* ✅ Ajustement du bouton CTA */
     .cta-button {
-        font-size: 12px;  /* Réduit la taille du texte */
-        padding: 6px 12px;  /* Réduit l'espace intérieur */
-        border-radius: 20px;
+        font-size: 11px;
+        padding: 5px 10px;
+        border-radius: 15px;
     }
+    
 
     /* ✅ Ajustement de la Hero Section */
     .hero {
@@ -502,12 +508,10 @@ body {
     }
 
     .hero-description {
-        font-size: 1rem;
-        line-height: 1.6;  /* Augmente l'espacement */
-        text-align: left;   /* Repositionne bien */
-        max-width: 85%;
-        margin: 0 auto;
-    }
+        text-align: left; /* Aligner à gauche */
+        max-width: 90%; /* Éviter trop d'étirement */
+        margin: auto;
+    }    
 
     .button-group {
         flex-direction: column;
