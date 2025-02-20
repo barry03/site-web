@@ -449,6 +449,22 @@ body {
         /*transition: transform 0.3s ease-in-out;*/
         /*transform: translateX(100%);*/
     }
+
+    .menu-contact {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #7D5FB2;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: background 0.3s;
+    }
+
+    .menu-contact:hover {
+        background: #563d7c;
+    }
     /* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
     #mobile-menu.show {
         display: flex;
@@ -470,7 +486,7 @@ body {
     #mobile-menu ul li a {
         text-decoration: none;
         color: #7D5FB2;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: bold;
     }
     
@@ -480,30 +496,13 @@ body {
     
     /* ✅ BOUTON DE FERMETURE DU MENU MOBILE */
     .menu-close {
-        font-size: 30px;
-        font-weight: bold;
-        cursor: pointer;
         position: absolute;
-        top: 15px;
+        top: 20px;
         right: 20px;
-    }
-    
-    /* ✅ Ajout du bouton "Contactez-moi" dans le menu */
-    .menu-contact {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #7D5FB2;
-        color: white;
-        border-radius: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: background 0.3s;
+        font-size: 30px;
+        cursor: pointer;
     }
 
-    .menu-contact:hover {
-        background: #563d7c;
-    }
 
     /* ✅ Ajustement du bouton CTA */
     .cta-button {
@@ -528,7 +527,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
-        padding: 80px 5% 30px;
+        padding: 20px;
     }
 
     .hero-content {
@@ -547,10 +546,10 @@ body {
     .hero-description {
         font-size: 1rem;
         line-height: 1.6;
-        text-align: left;
-        max-width: 85%;
+        text-align: left; /* Aligner à gauche */
+        max-width: 85%; /* Éviter trop d'étirement */
         margin: 0 auto;
-    }
+    }    
 
     .button-group {
         flex-direction: column;
@@ -560,6 +559,7 @@ body {
     .hero-image {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
         margin-top: 20px;
     }
