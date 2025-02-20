@@ -403,15 +403,6 @@ body {
 }
 
 
-
-/* ✅ MENU BURGER (PAR DÉFAUT CACHÉ SUR ORDINATEUR) */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-
 /* ✅ MEDIA QUERY POUR MOBILE */
 @media screen and (max-width: 768px) {
     .navbar {
@@ -468,7 +459,7 @@ body {
         text-decoration: none;
     }
 
-        /* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
+    /* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
     #mobile-menu ul {
         list-style: none;
         padding: 0;
