@@ -403,6 +403,37 @@ body {
 }
 
 
+
+/* ✅ MENU BURGER (PAR DÉFAUT CACHÉ SUR ORDINATEUR) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*
+#mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding-top: 50px;
+    z-index: 1001;
+}
+
+#mobile-menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*/
+
 /* ✅ MEDIA QUERY POUR MOBILE */
 @media screen and (max-width: 768px) {
     .navbar {
@@ -418,12 +449,11 @@ body {
     /* ✅ Déplace le menu burger à droite */
     .menu-toggle {
         display: block;
-        font-size: 28px;
+        font-size: 32px;
         cursor: pointer;
         position: relative;
         top: 15px;
-        right: 15px; /* Bien collé à droite */
-        z-index: 2000;
+        right: 20px; /* Positionne bien */
     }
 
     #mobile-menu {
@@ -445,18 +475,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    /* ✅ Ajout du bouton "Contactez-moi" dans le menu */
-    #mobile-menu .cta-button {
-        display: block; /* Réafficher ici */
-        font-size: 14px;
-        padding: 10px 20px;
-        background: #7D5FB2;
-        color: white;
-        border-radius: 20px;
-        margin-top: 20px;
-        text-decoration: none;
     }
 
     /* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
@@ -494,7 +512,7 @@ body {
         display: none; /* Cache le bouton en dehors du menu */
     }
 
-    /* ✅ Positionnement du texte */
+    /* ✅ Ajustement de la Hero Section */
     .hero {
         display: flex;
         flex-direction: column;
@@ -511,16 +529,12 @@ body {
         font-size: 1.1rem;
     }
 
-    .hero-content {
-        max-width: 90%;
-        text-align: left;
-    }
-
     .hero-description {
         font-size: 1rem;
-        line-height: 1.6;
-        text-align: left;
-        max-width: 100%;
+        line-height: 1.5;
+        text-align: center; /* Corrige l’alignement du texte */
+        max-width: 85%;
+        margin: 0 auto;
     }
 
     .button-group {
@@ -528,7 +542,6 @@ body {
         align-items: center;
     }
 
-     /* ✅ Centrer la photo */
     .hero-image {
         display: flex;
         justify-content: center;
