@@ -404,66 +404,6 @@ body {
 
 
 
-/* ✅ MENU BURGER (PAR DÉFAUT CACHÉ SUR ORDINATEUR) */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* ✅ MENU MOBILE (CACHÉ PAR DÉFAUT) */
-/* ✅ Affichage du menu burger */
-#mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 75%;
-    height: 100%;
-    background: white;
-    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding-top: 50px;
-    z-index: 1001;
-}
-/* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
-#mobile-menu.show {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
-#mobile-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#mobile-menu ul li {
-    padding: 15px;
-}
-
-#mobile-menu ul li a {
-    text-decoration: none;
-    color: #7D5FB2;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-#mobile-menu ul li a:hover {
-    color: #563d7c;
-}
-
-/* ✅ BOUTON DE FERMETURE DU MENU MOBILE */
-.menu-close {
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
-
 /* ✅ MEDIA QUERY POUR MOBILE */
 @media screen and (max-width: 768px) {
     .navbar {
@@ -479,17 +419,71 @@ body {
     /* ✅ Déplace le menu burger à droite */
     .menu-toggle {
         display: block;
-        font-size: 32px;
+        font-size: 34px;  /* Plus visible */
         cursor: pointer;
         position: absolute;
         top: 15px;
-        right: 20px; /* Positionne bien */
+        right: 15px;  /* Ajuste bien à droite */
+        z-index: 2000;
     }
+
+    #mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 100%;
+        background: white;
+        box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding-top: 50px;
+        z-index: 1001;
+    }
+    /* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
+    #mobile-menu.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
+    #mobile-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    #mobile-menu ul li {
+        padding: 15px;
+    }
+    
+    #mobile-menu ul li a {
+        text-decoration: none;
+        color: #7D5FB2;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+    #mobile-menu ul li a:hover {
+        color: #563d7c;
+    }
+    
+    /* ✅ BOUTON DE FERMETURE DU MENU MOBILE */
+    .menu-close {
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+    
 
     /* ✅ Ajustement du bouton CTA */
     .cta-button {
-        font-size: 14px;
-        padding: 8px 15px;
+        font-size: 12px;  /* Réduit la taille du texte */
+        padding: 6px 12px;  /* Réduit l'espace intérieur */
+        border-radius: 20px;
     }
 
     /* ✅ Ajustement de la Hero Section */
@@ -509,8 +503,8 @@ body {
 
     .hero-description {
         font-size: 1rem;
-        line-height: 1.5;
-        text-align: center; /* Corrige l’alignement du texte */
+        line-height: 1.6;  /* Augmente l'espacement */
+        text-align: left;   /* Repositionne bien */
         max-width: 85%;
         margin: 0 auto;
     }
@@ -539,11 +533,35 @@ body {
         text-align: center;
     }
 
+    .stack-technique {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrer horizontalement */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .stack-technique h3 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px; /* Ajoute un espace sous le titre */
+    }
+
     /* ✅ Stack Technique : Affichage en 2 colonnes */
     .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        max-width: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        max-width: 90%;
+    }
+
+    .tech-grid img {
+        width: 60px; /* Ajuste la taille des logos */
+        height: auto;
+        display: block;
+        margin: auto; /* Centre chaque image */
     }
 
     /* ✅ Projets : Affichage en colonne */
