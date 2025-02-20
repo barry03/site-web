@@ -411,58 +411,6 @@ body {
     cursor: pointer;
 }
 
-/* ✅ MENU MOBILE (CACHÉ PAR DÉFAUT) */
-/* ✅ Affichage du menu burger */
-#mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 75%;
-    height: 100%;
-    background: white;
-    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding-top: 50px;
-    z-index: 1001;
-}
-/* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
-#mobile-menu.show {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
-#mobile-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#mobile-menu ul li {
-    padding: 15px;
-}
-
-#mobile-menu ul li a {
-    text-decoration: none;
-    color: #7D5FB2;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-#mobile-menu ul li a:hover {
-    color: #563d7c;
-}
-
-/* ✅ BOUTON DE FERMETURE DU MENU MOBILE */
-.menu-close {
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
 
 /* ✅ MEDIA QUERY POUR MOBILE */
 @media screen and (max-width: 768px) {
@@ -479,24 +427,89 @@ body {
     /* ✅ Déplace le menu burger à droite */
     .menu-toggle {
         display: block;
-        font-size: 32px;
+        font-size: 28px;
+        cursor: pointer;
+        position: relative;
+        top: 15px;
+        right: 15px; /* Bien collé à droite */
+        z-index: 2000;
+    }
+
+    #mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 100%;
+        background: white;
+        box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding-top: 50px;
+        z-index: 1001;
+    }
+
+    /* ✅ Affichage du menu burger ouvert */
+    #mobile-menu.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ✅ Ajout du bouton "Contactez-moi" dans le menu */
+    #mobile-menu .cta-button {
+        display: block; /* Réafficher ici */
+        font-size: 14px;
+        padding: 10px 20px;
+        background: #7D5FB2;
+        color: white;
+        border-radius: 20px;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+
+        /* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
+    #mobile-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #mobile-menu ul li {
+        padding: 15px;
+    }
+
+    #mobile-menu ul li a {
+        text-decoration: none;
+        color: #7D5FB2;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    #mobile-menu ul li a:hover {
+        color: #563d7c;
+    }
+
+    /* ✅ BOUTON DE FERMETURE DU MENU MOBILE */
+    .menu-close {
+        font-size: 30px;
+        font-weight: bold;
         cursor: pointer;
         position: absolute;
         top: 15px;
-        right: 20px; /* Positionne bien */
+        right: 20px;
     }
-
     /* ✅ Ajustement du bouton CTA */
     .cta-button {
-        font-size: 14px;
-        padding: 8px 15px;
+        display: none; /* Cache le bouton en dehors du menu */
     }
 
-    /* ✅ Ajustement de la Hero Section */
+    /* ✅ Positionnement du texte */
     .hero {
+        display: flex;
         flex-direction: column;
-        text-align: center;
-        padding: 30px 5%;
+        align-items: flex-start; /* Texte aligné à gauche */
+        text-align: left;
+        padding: 20px;
     }
 
     .hero h1 {
@@ -507,12 +520,16 @@ body {
         font-size: 1.1rem;
     }
 
+    .hero-content {
+        max-width: 90%;
+        text-align: left;
+    }
+
     .hero-description {
         font-size: 1rem;
-        line-height: 1.5;
-        text-align: center; /* Corrige l’alignement du texte */
-        max-width: 85%;
-        margin: 0 auto;
+        line-height: 1.6;
+        text-align: left;
+        max-width: 100%;
     }
 
     .button-group {
@@ -520,9 +537,17 @@ body {
         align-items: center;
     }
 
+     /* ✅ Centrer la photo */
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
     .hero-image img {
         width: 180px;
-        margin-top: 15px;
+        border-radius: 50%;
     }
 
     /* ✅ Section Compétences */
