@@ -160,7 +160,38 @@
             </div>
         </div>
     </section>
-    <!-- Pied de page / Footer -->
+
+    <!-- 📌 Nouveau Footer -->
+    <footer id="contact" class="footer">
+        <h2>Envie de collaborer ? Discutons ensemble 🚀</h2>
+
+        <!-- ✅ Icônes de contact -->
+        <div class="footer-icons">
+            <a href="mailto:barrydjoulde15@gmail.com" target="_blank" class="contact-icon">
+                <img src="images/icons/env.svg" alt="Email">
+            </a>
+            <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank" class="contact-icon">
+                <img src="images/icons/link.svg" alt="LinkedIn">
+            </a>
+            <a href="https://gitlab.com/barrydjoulde" target="_blank" class="contact-icon">
+                <img src="images/icons/gitlab.svg" alt="GitLab">
+            </a>
+            <a href="https://twitter.com/tonprofil" target="_blank" class="contact-icon">
+                <img src="images/icons/tweet.svg" alt="Twitter">
+            </a>
+        </div>
+
+        <!-- ✅ Formulaire de contact rapide -->
+        <div class="contact-form">
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </div>
+    </footer>
+
+
+    <!--
     <footer id="contact" class="footer">
         <h2>Contactez-moi</h2>
         <div class="footer-icons">
@@ -178,6 +209,7 @@
             </a>
         </div>
     </footer>
+    -->
     <!--
     <script>
         function toggleMenu() {
@@ -187,12 +219,14 @@
     </script>   
     -->
     <script>
+        // ✅ Fonction pour ouvrir une modale
         function openModal(id) {
             var modal = document.getElementById(id);
             modal.classList.add("show");
             modal.style.display = "flex";
         }
     
+        // ✅ Fonction pour fermer une modale
         function closeModal(id) {
             var modal = document.getElementById(id);
             modal.classList.remove("show");
@@ -209,7 +243,20 @@
                 }
             });
         };
-    </script>    
+    
+        // ✅ Gestion du formulaire de contact
+        document.addEventListener("DOMContentLoaded", function() {
+            var contactButton = document.querySelector(".contact-form button");
+    
+            if (contactButton) {
+                contactButton.addEventListener("click", function(event) {
+                    event.preventDefault(); // Empêche le rechargement de la page
+                    alert("Merci pour votre message ! Je vous répondrai bientôt. 🚀");
+                });
+            }
+        });
+    </script>
+    
     
 </body>
 </html>
