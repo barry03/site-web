@@ -375,7 +375,7 @@ body {
 .footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 40px 10%;
     background-color: #f4f4f9;
     border-top: 2px solid #d3d3ea;
@@ -383,49 +383,56 @@ body {
 }
 
 .footer-left {
-    width: 30%;
-    font-size: 18px;
+    width: 40%;
+}
+
+.footer-left h3 {
+    font-size: 20px;
     font-weight: bold;
     color: #333;
+    margin-bottom: 5px;
 }
 
-.footer-middle {
-    width: 20%;
+.footer-left p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.footer-icons {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.footer-middle a img {
-    width: 30px;
-    height: 30px;
+.footer-icons a img {
+    width: 25px; /* Taille réduite */
     transition: transform 0.3s ease;
 }
 
-.footer-middle a img:hover {
+.footer-icons a img:hover {
     transform: scale(1.2);
 }
 
+/* ✅ Formulaire à droite */
 .footer-right {
-    width: 40%;
-    max-width: 350px; /* Évite que le formulaire s'étire trop */
+    width: 50%;
+    text-align: left;
 }
 
-.contact-icon img {
-    width: 40px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+/* ✅ Ajout d'un titre au formulaire */
+.contact-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.contact-icon:hover img {
-    transform: scale(1.2);
-    opacity: 0.8;
-}
-
-/* ✅ Formulaire de contact */
+/* ✅ Champs du formulaire */
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .contact-form input,
@@ -435,6 +442,21 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 14px;
+}
+
+/* ✅ Messages d'erreur sous chaque champ */
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin: 0; /* Empêche d'ajouter un espace inutile */
+    height: 14px; /* Fixe la hauteur pour éviter de décaler les champs */
+}
+
+/* ✅ Ajout d'une bordure rouge pour les erreurs */
+.contact-form input.error,
+.contact-form textarea.error {
+    border: 1px solid red;
 }
 
 .contact-form button {
@@ -449,7 +471,16 @@ body {
 
 .contact-form button:hover {
     background-color: #563d7c;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Message de succès */
+.success-message {
+    color: green;
+    font-size: 14px;
+    display: none;
+    height: 18px; /* Garde une hauteur fixe */
+    margin-top: 5px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 

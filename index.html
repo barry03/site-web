@@ -163,28 +163,37 @@
 
     <!-- 📌 Nouveau Footer -->
     <footer class="footer">
+        <!-- ✅ Partie gauche avec texte et icônes -->
         <div class="footer-left">
             <h3>Envie de collaborer ? 🚀</h3>
             <p>Contactez-moi pour discuter de vos projets en Data Engineering.</p>
+    
+            <div class="footer-icons">
+                <a href="mailto:barrydjoulde15@gmail.com"><img src="images/icons/env.svg" alt="Email"></a>
+                <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187"><img src="images/icons/link.svg" alt="LinkedIn"></a>
+                <a href="https://gitlab.com/barrydjoulde"><img src="images/icons/gitlab.svg" alt="GitLab"></a>
+                <a href="https://twitter.com/tonprofil"><img src="images/icons/tweet.svg" alt="Twitter"></a>
+            </div>
         </div>
     
-        <div class="footer-middle">
-            <a href="mailto:barrydjoulde15@gmail.com"><img src="images/icons/env.svg" alt="Email"></a>
-            <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank"><img src="images/icons/link.svg" alt="LinkedIn"></a>
-            <a href="https://gitlab.com/barrydjoulde" target="_blank"><img src="images/icons/gitlab.svg" alt="GitLab"></a>
-            <a href="https://twitter.com/tonprofil" target="_blank"><img src="images/icons/tweet.svg" alt="Twitter"></a>
-        </div>
-    
+        <!-- ✅ Partie droite avec le formulaire -->
         <div class="footer-right">
-            <form class="contact-form">
-                <input type="text" placeholder="Votre nom">
-                <input type="email" placeholder="Votre email">
-                <textarea placeholder="Votre message"></textarea>
+            <p class="contact-title">Envoyez-moi un message 📩</p>
+            <form id="contact-form" class="contact-form">
+                <input type="text" id="name" placeholder="Votre nom">
+                <p class="error-message" id="name-error">Veuillez entrer votre nom.</p>
+    
+                <input type="email" id="email" placeholder="Votre email">
+                <p class="error-message" id="email-error">Veuillez entrer un email valide.</p>
+    
+                <textarea id="message" placeholder="Votre message"></textarea>
+                <p class="error-message" id="message-error">Veuillez écrire un message.</p>
+    
                 <button type="submit">Envoyer</button>
+                <p class="success-message" id="success-message">✅ Message envoyé avec succès !</p>
             </form>
         </div>
     </footer>    
-
 
     <!--
     <footer id="contact" class="footer">
@@ -241,36 +250,68 @@
     
         // ✅ Gestion du formulaire de contact avec validation
         document.addEventListener("DOMContentLoaded", function() {
-            var form = document.getElementById("contact-form");
-    
-            if (form) {
-                form.addEventListener("submit", function(event) {
-                    event.preventDefault(); // Empêche l'envoi par défaut
-    
-                    // Récupération des valeurs
-                    var name = document.getElementById("name").value.trim();
-                    var email = document.getElementById("email").value.trim();
-                    var message = document.getElementById("message").value.trim();
-    
-                    // Vérification des champs vides
-                    if (name === "" || email === "" || message === "") {
-                        alert("❌ Veuillez remplir tous les champs avant d'envoyer le message.");
-                        return;
-                    }
-    
-                    // Vérification d'un email valide avec une regex
-                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailPattern.test(email)) {
-                        alert("❌ Veuillez entrer une adresse email valide.");
-                        return;
-                    }
-    
-                    // ✅ Si tout est bon, affichage d'un message et reset du formulaire
-                    alert("✅ Merci pour votre message ! Je vous répondrai bientôt. 🚀");
+        var form = document.getElementById("contact-form");
+
+        if (form) {
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Empêche le rechargement de la page
+
+                // Récupération des champs
+                var name = document.getElementById("name");
+                var email = document.getElementById("email");
+                var message = document.getElementById("message");
+
+                var nameError = document.getElementById("name-error");
+                var emailError = document.getElementById("email-error");
+                var messageError = document.getElementById("message-error");
+                var successMessage = document.getElementById("success-message");
+
+                // Réinitialisation des erreurs
+                name.classList.remove("error");
+                email.classList.remove("error");
+                message.classList.remove("error");
+
+                nameError.style.display = "none";
+                emailError.style.display = "none";
+                messageError.style.display = "none";
+                successMessage.style.display = "none";
+
+                var isValid = true;
+
+                // Vérifications
+                if (name.value.trim() === "") {
+                    name.classList.add("error");
+                    nameError.style.display = "block";
+                    isValid = false;
+                }
+
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email.value.trim())) {
+                    email.classList.add("error");
+                    emailError.style.display = "block";
+                    isValid = false;
+                }
+
+                if (message.value.trim() === "") {
+                    message.classList.add("error");
+                    messageError.style.display = "block";
+                    isValid = false;
+                }
+
+                // ✅ Affichage du message de succès si tout est bon
+                if (isValid) {
+                    successMessage.style.display = "block";
+                    successMessage.style.opacity = "1"; // Transition fluide
+                    setTimeout(() => {
+                        successMessage.style.opacity = "0"; // Disparition en douceur
+                    }, 3000); // Disparaît après 3 secondes
                     form.reset();
-                });
-            }
-        });
+                }
+
+            });
+        }
+    });
+
     </script>        
 </body>
 </html>
