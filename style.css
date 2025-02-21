@@ -403,7 +403,7 @@ body {
 }
 
 
-/* ✅ Modales cachées par défaut */
+/* ✅ Modale cachée par défaut */
 .modal {
     display: none; /* Caché par défaut */
     position: fixed;
@@ -412,30 +412,52 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(5px); /* Effet flou sur l’arrière-plan */
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* ✅ Contenu des modales */
+/* ✅ Contenu de la modale */
 .modal-content {
     background: white;
     padding: 20px;
-    width: 60%;
-    max-width: 500px;
-    text-align: center;
-    border-radius: 10px;
+    width: 90%;
+    max-width: 450px; /* Réduit la taille */
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     position: relative;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* ✅ Affichage progressif */
+.modal.show {
+    display: flex;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+    opacity: 1;
 }
 
 /* ✅ Bouton de fermeture */
 .close {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 15px;
     font-size: 24px;
     cursor: pointer;
     font-weight: bold;
+}
+
+/* ✅ Animation d’ouverture */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 
