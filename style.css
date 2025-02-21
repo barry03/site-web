@@ -1,6 +1,7 @@
 /* ✅ Police plus moderne */
 /* ✅ 1. Style Global */
 body {
+    font-size: 14px;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e3eaf8, #ffffff);
@@ -9,6 +10,23 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 80px;
+}
+
+h1 {
+    font-size: 32px; /* Réduction des titres principaux */
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6; /* Meilleur espacement pour lisibilité */
 }
 
 /* ✅ Style du texte descriptif */
@@ -176,8 +194,10 @@ body {
 }
 
 .hero-image img {
-    width: 280px;
+    width: 150px;
     border-radius: 50%;
+    height: 150px;
+    object-fit: cover;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
@@ -228,7 +248,7 @@ body {
 }
 
 .competences-list li {
-    font-size: 1.1rem;
+    font-size: 14px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -246,7 +266,7 @@ body {
 }
 
 .competences-section h2, .projects-section h2 {
-    font-size: 1.8rem; /* Au lieu de 2.2rem */
+    font-size: 22px; /* Au lieu de 2.2rem */
 }
 
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
@@ -270,6 +290,11 @@ body {
     width: 45%;
     text-align: center;
     position: relative; /* Pour que les logos restent dans ce bloc */
+}
+
+.stack-technique img {
+    width: 40px; /* Réduction des logos */
+    height: auto;
 }
 
 /* ✅ Ajuste la taille et l’animation des icônes */
@@ -345,14 +370,14 @@ body {
 }
 
 .project-card h3 {
-    font-size: 1.3rem;
+    font-size: 16px;
     color: #3a3a70;
 }
 
 .project-card p {
     width: 280px; /* Taille plus compacte */
     padding: 15px;
-    font-size: 1rem;
+    font-size: 13px;
     color: #666;
     margin-bottom: 15px;
 }
@@ -376,7 +401,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 10%;
+    padding: 20px 10%;
+    font-size: 14px;
     background-color: #f4f4f9;
     border-top: 2px solid #d3d3ea;
     margin-top: auto;
