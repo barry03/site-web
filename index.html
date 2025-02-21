@@ -162,33 +162,28 @@
     </section>
 
     <!-- 📌 Nouveau Footer -->
-    <footer id="contact" class="footer">
-        <h2>Envie de collaborer ? Discutons ensemble 🚀</h2>
-
-        <!-- ✅ Icônes de contact -->
-        <div class="footer-icons">
-            <a href="mailto:barrydjoulde15@gmail.com" target="_blank" class="contact-icon">
-                <img src="images/icons/env.svg" alt="Email">
-            </a>
-            <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank" class="contact-icon">
-                <img src="images/icons/link.svg" alt="LinkedIn">
-            </a>
-            <a href="https://gitlab.com/barrydjoulde" target="_blank" class="contact-icon">
-                <img src="images/icons/gitlab.svg" alt="GitLab">
-            </a>
-            <a href="https://twitter.com/tonprofil" target="_blank" class="contact-icon">
-                <img src="images/icons/tweet.svg" alt="Twitter">
-            </a>
+    <footer class="footer">
+        <div class="footer-left">
+            <h3>Envie de collaborer ? 🚀</h3>
+            <p>Contactez-moi pour discuter de vos projets en Data Engineering.</p>
         </div>
-
-        <!-- ✅ Formulaire de contact rapide -->
-        <div class="contact-form">
-            <input type="text" placeholder="Votre nom" required>
-            <input type="email" placeholder="Votre email" required>
-            <textarea placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
+    
+        <div class="footer-middle">
+            <a href="mailto:barrydjoulde15@gmail.com"><img src="images/icons/env.svg" alt="Email"></a>
+            <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank"><img src="images/icons/link.svg" alt="LinkedIn"></a>
+            <a href="https://gitlab.com/barrydjoulde" target="_blank"><img src="images/icons/gitlab.svg" alt="GitLab"></a>
+            <a href="https://twitter.com/tonprofil" target="_blank"><img src="images/icons/tweet.svg" alt="Twitter"></a>
         </div>
-    </footer>
+    
+        <div class="footer-right">
+            <form class="contact-form">
+                <input type="text" placeholder="Votre nom">
+                <input type="email" placeholder="Votre email">
+                <textarea placeholder="Votre message"></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </footer>    
 
 
     <!--
@@ -244,19 +239,38 @@
             });
         };
     
-        // ✅ Gestion du formulaire de contact
+        // ✅ Gestion du formulaire de contact avec validation
         document.addEventListener("DOMContentLoaded", function() {
-            var contactButton = document.querySelector(".contact-form button");
+            var form = document.getElementById("contact-form");
     
-            if (contactButton) {
-                contactButton.addEventListener("click", function(event) {
-                    event.preventDefault(); // Empêche le rechargement de la page
-                    alert("Merci pour votre message ! Je vous répondrai bientôt. 🚀");
+            if (form) {
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault(); // Empêche l'envoi par défaut
+    
+                    // Récupération des valeurs
+                    var name = document.getElementById("name").value.trim();
+                    var email = document.getElementById("email").value.trim();
+                    var message = document.getElementById("message").value.trim();
+    
+                    // Vérification des champs vides
+                    if (name === "" || email === "" || message === "") {
+                        alert("❌ Veuillez remplir tous les champs avant d'envoyer le message.");
+                        return;
+                    }
+    
+                    // Vérification d'un email valide avec une regex
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(email)) {
+                        alert("❌ Veuillez entrer une adresse email valide.");
+                        return;
+                    }
+    
+                    // ✅ Si tout est bon, affichage d'un message et reset du formulaire
+                    alert("✅ Merci pour votre message ! Je vous répondrai bientôt. 🚀");
+                    form.reset();
                 });
             }
         });
-    </script>
-    
-    
+    </script>        
 </body>
 </html>
