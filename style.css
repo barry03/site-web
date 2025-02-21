@@ -605,14 +605,26 @@ body {
 
     /* ✅ Projets : Affichage en colonne */
     .projects-container {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centre les projets */
+        gap: 20px; /* Espacement entre les blocs */
+        max-width: 1200px; /* Pour éviter un étalement trop large */
+        margin: auto; /* Centre le tout */
     }
 
+    /* ✅ Assure que les cartes prennent 30% de largeur pour afficher 3 en ligne */
     .project-card {
-        width: 85%;
-        text-align: center;
-    }
+        flex: 1 1 calc(33.333% - 20px); /* 3 par ligne, ajustement pour le gap */
+        max-width: 380px; /* Empêche qu'elles deviennent trop larges */
+        min-width: 280px; /* Assure un bon rendu sur PC portable */
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.3s ease-in-out;
+}
 
     /* ✅ Footer */
     .footer-icons {
