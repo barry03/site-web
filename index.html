@@ -115,21 +115,50 @@
         <h2>Projets</h2>
         <div class="projects-container">
             <div class="project-card">
-                <h3>Projet 1: ETL Automatisé</h3>
-                <p>Pipeline ETL pour l'extraction et transformation de données...</p>
-                <button class="btn-project">Voir plus</button>
+                <h3>Oncopole Claudis Rigaud</h3>
+                <p>Optimisation et structuration des données pour la recherche en oncologie.</p>
+                <button class="btn-project" onclick="openModal('oncopoleModal')">Voir plus</button>
             </div>
             <div class="project-card">
-                <h3>Projet 2: Data Lake sur AWS</h3>
-                <p>Création d'un Data Lake sur AWS avec Glue, S3 et Athena...</p>
-                <button class="btn-project">Voir plus</button>
+                <h3>Aristid Retail Technology</h3>
+                <p>Analyse de prix concurrentiels et refonte du système de facturation.</p>
+                <button class="btn-project" onclick="openModal('aristidModal')">Voir plus</button>
             </div>
             <div class="project-card">
-                <h3>Projet 3: Visualisation en temps réel</h3>
-                <p>Dashboard en temps réel pour suivre l'activité des serveurs...</p>
-                <button class="btn-project">Voir plus</button>
+                <h3>IQVIA</h3>
+                <p>Automatisation des fichiers prix et feedbacks pour médecins.</p>
+                <button class="btn-project" onclick="openModal('iqviaModal')">Voir plus</button>
             </div>
         </div>
+        <!-- ✅ Modales pour afficher les détails des projets -->
+        <div id="oncopoleModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('oncopoleModal')">&times;</span>
+                <h2>Oncopole Claudis Rigaud</h2>
+                <p>Conception et mise en œuvre de pipelines de données scalables sur GCP.</p>
+                <p>Technologies : Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse</p>
+            </div>
+        </div>
+
+        <div id="aristidModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('aristidModal')">&times;</span>
+                <h2>Aristid Retail Technology</h2>
+                <p>Mise en place de pipelines de données optimisés pour le traitement des flux concurrentiels.</p>
+                <p>Technologies : Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), Airflow</p>
+            </div>
+        </div>
+
+        <div id="iqviaModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('iqviaModal')">&times;</span>
+                <h2>IQVIA</h2>
+                <p>Automatisation des fichiers prix hebdomadaires/mensuels sous NiFi.</p>
+                <p>Technologies : NiFi, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence</p>
+            </div>
+        </div>
+        
+        
     </section>
     <!-- Pied de page / Footer -->
     <footer id="contact" class="footer">
@@ -149,13 +178,32 @@
             </a>
         </div>
     </footer>
-
+    <!--
     <script>
         function toggleMenu() {
             var menu = document.getElementById("mobile-menu");
             menu.classList.toggle("show");
         }
     </script>   
-
+    -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+    
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    
+        // Fermer la modale quand on clique en dehors
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>    
 </body>
 </html>
