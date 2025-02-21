@@ -319,18 +319,24 @@ body {
 
 .projects-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-wrap: nowrap; /* ❌ Empêche les éléments de passer à la ligne */
+    justify-content: center; /* ✅ Centre les éléments horizontalement */
+    gap: 15px; /* ✅ Espacement entre les cartes */
+    max-width: 1200px; /* ✅ Largeur max pour éviter l'étalement */
+    margin: auto; /* ✅ Centre la section */
+    overflow: hidden; /* ✅ Évite tout débordement */
 }
 
+/* ✅ Réduction des cartes projets */
 .project-card {
+    flex: 1 1 300px; /* ✅ Taille uniforme */
+    max-width: 320px; /* ✅ Largeur max */
+    min-width: 280px; /* ✅ Taille minimum */
     background: white;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 30%;
     transition: transform 0.3s ease-in-out;
 }
 
