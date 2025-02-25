@@ -336,22 +336,60 @@ body {
 }
 
 .progress-bar {
-    width: 100px; /* Ajuste selon l'espace disponible */
-    height: 8px;
-    background-color: #e4e4e7;
-    border-radius: 5px;
     position: relative;
+    width: 100%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 6px;
     overflow: hidden;
-    display: inline-block;
-    vertical-align: middle;
+    margin-top: 10px;
 }
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg, #7D5FB2, #563d7c);
-    border-radius: 5px;
+    width: 0; /* Départ à 0 */
+    border-radius: 6px;
     transition: width 1.5s ease-in-out;
-    width: 0; /* Doit commencer à 0 */
+    position: relative;
+}
+
+/* 🔵 Bleu */
+.progress.blue {
+    background: linear-gradient(90deg, #007bff, #00c2ff);
+}
+
+/* 🟣 Violet */
+.progress.purple {
+    background: linear-gradient(90deg, #6f42c1, #d15eff);
+}
+
+/* 🟠 Orange */
+.progress.orange {
+    background: linear-gradient(90deg, #ff8c00, #ffcc00);
+}
+
+/* 🟢 Vert */
+.progress.green {
+    background: linear-gradient(90deg, #28a745, #a3e635);
+}
+
+/* 🟡 Jaune */
+.progress.yellow {
+    background: linear-gradient(90deg, #ffc107, #ffeb3b);
+}
+
+/* 📍 Style du pourcentage */
+.progress-value {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 

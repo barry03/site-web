@@ -89,31 +89,41 @@
                     <li>
                         <span>📊 Modélisation et traitement de données</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="90"></div>
+                            <div class="progress blue" data-width="90">
+                                <span class="progress-value">90%</span>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <span>🔄 Développement de pipelines ETL</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="80"></div>
+                            <div class="progress purple" data-width="90">
+                                <span class="progress-value">80%</span>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <span>📡 Big Data & Cloud (AWS, GCP)</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="85"></div>
+                            <div class="progress orange" data-width="90">
+                                <span class="progress-value">85%</span>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <span>⚙️ Automatisation & CI/CD</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="90"></div>
+                            <div class="progress green" data-width="90">
+                                <span class="progress-value">90%</span>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <span>📈 Data Visualisation (Power BI, Metabase)</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="70"></div>
+                            <div class="progress yellow" data-width="90">
+                                <span class="progress-value">70%</span>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -351,25 +361,35 @@
 
             window.addEventListener("scroll", revealOnScroll);
 
-            let progressBars = document.querySelectorAll(".progress");
-
             function animateProgressBars() {
                 let screenPosition = window.innerHeight / 1.3;
-
-                progressBars.forEach((bar) => {
+            
+                document.querySelectorAll(".progress").forEach((bar) => {
                     let barPosition = bar.getBoundingClientRect().top;
-                    let targetWidth = parseInt(bar.getAttribute("data-width"), 10); // Convertit en nombre
-
+                    let targetWidth = bar.getAttribute("data-width");
+            
                     if (barPosition < screenPosition && !bar.classList.contains("animated")) {
-                        bar.style.width = targetWidth + "%"; // Ajoute % ici, mais pas dans le HTML
+                        bar.style.width = targetWidth;
                         bar.classList.add("animated");
+            
+                        let progressValue = bar.querySelector(".progress-value");
+                        let value = 0;
+                        let targetValue = parseInt(targetWidth);
+            
+                        let interval = setInterval(() => {
+                            if (value >= targetValue) {
+                                clearInterval(interval);
+                            } else {
+                                value++;
+                                progressValue.textContent = value + "%";
+                            }
+                        }, 20);
                     }
                 });
             }
-
-            // ✅ Exécute au chargement et au scroll
-            window.addEventListener("load", animateProgressBars);
+            
             window.addEventListener("scroll", animateProgressBars);
+            
 
             let projectsSection = document.querySelector(".projects-container");
 
