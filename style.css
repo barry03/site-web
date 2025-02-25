@@ -246,11 +246,17 @@ body {
 
 .competences-list ul li {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Corrige l'alignement vertical */
+    justify-content: space-between; /* Espace entre texte et barre */
     gap: 15px; /* Ajoute un petit espace entre le texte et la barre */
     width: 100%;
     white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+.competences-list span {
+    flex-grow: 1; /* Permet au texte de s'étendre naturellement */
+    font-size: 16px; /* Augmente la taille du texte */
+    font-weight: 500;
 }
 
 .competences-list li::before {
@@ -382,6 +388,14 @@ body {
     max-width: 1200px; /* ✅ Largeur max pour éviter l'étalement */
     margin: auto; /* ✅ Centre la section */
     overflow: hidden; /* ✅ Évite tout débordement */
+    opacity: 0;
+    transform: translateY(40px); /* Décale vers le bas */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.projects-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ✅ Réduction des cartes projets */
