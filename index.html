@@ -84,11 +84,36 @@
             <div class="competences-list">
                 <h3>Mes Compétences</h3>
                 <ul>
-                    <li>📊 Modélisation et traitement de données</li>
-                    <li>🔄 Développement de pipelines ETL</li>
-                    <li>📡 Big Data & Cloud (AWS, GCP)</li>
-                    <li>⚙️ Automatisation & CI/CD</li>
-                    <li>📈 Data Visualisation (Power BI, Metabase)</li>
+                    <li>
+                        📊 Modélisation et traitement de données
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        🔄 Développement de pipelines ETL
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        📡 Big Data & Cloud (AWS, GCP)
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        ⚙️ Automatisation & CI/CD
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        📈 Data Visualisation (Power BI, Metabase)
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="stack-technique">
@@ -110,6 +135,7 @@
             </div>
         </div>
     </section>
+    
 
     <!-- Section Projets -->
     <!-- ✅ Section Projets -->
@@ -229,76 +255,108 @@
             });
         };
     
-        // ✅ Gestion du formulaire de contact avec validation
+        // ✅ Gestion du formulaire de contact avec validation et envoi via Formspree
         document.addEventListener("DOMContentLoaded", function() {
             var form = document.getElementById("contact-form");
-
-        if (form) {
-            form.addEventListener("submit", async function (event) {
-                event.preventDefault(); // Empêche le rechargement de la page
-
-                // Récupération des champs et des messages d'erreur
-                var name = document.getElementById("name");
-                var email = document.getElementById("email");
-                var message = document.getElementById("message");
-
-                var nameError = document.getElementById("name-error");
-                var emailError = document.getElementById("email-error");
-                var messageError = document.getElementById("message-error");
-                var successMessage = document.getElementById("success-message");
-
-                // Réinitialisation des erreurs
-                name.classList.remove("error");
-                email.classList.remove("error");
-                message.classList.remove("error");
-
-                nameError.style.display = "none";
-                emailError.style.display = "none";
-                messageError.style.display = "none";
-                successMessage.style.display = "none";
-
-                var isValid = true;
-
-                // Vérifications des champs
-                if (name.value.trim() === "") {
-                    name.classList.add("error");
-                    nameError.style.display = "block";
-                    isValid = false;
-                }
-
-                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(email.value.trim())) {
-                    email.classList.add("error");
-                    emailError.style.display = "block";
-                    isValid = false;
-                }
-
-                if (message.value.trim() === "") {
-                    message.classList.add("error");
-                    messageError.style.display = "block";
-                    isValid = false;
-                }
-
-                // ✅ Envoi du formulaire seulement si toutes les validations sont OK
-                if (isValid) {
-                    let formData = new FormData(this);
-                    let response = await fetch(this.action, {
-                        method: "POST",
-                        body: formData,
-                        headers: { "Accept": "application/json" }
-                    });
-
-                    if (response.ok) {
-                        successMessage.style.display = "block";
-                        this.reset();
-                    } else {
-                        alert("Oops ! Une erreur est survenue. Réessayez plus tard.");
+    
+            if (form) {
+                form.addEventListener("submit", async function(event) {
+                    event.preventDefault(); // Empêche le rechargement de la page
+    
+                    // Récupération des champs et des messages d'erreur
+                    var name = document.getElementById("name");
+                    var email = document.getElementById("email");
+                    var message = document.getElementById("message");
+    
+                    var nameError = document.getElementById("name-error");
+                    var emailError = document.getElementById("email-error");
+                    var messageError = document.getElementById("message-error");
+                    var successMessage = document.getElementById("success-message");
+    
+                    // Réinitialisation des erreurs
+                    name.classList.remove("error");
+                    email.classList.remove("error");
+                    message.classList.remove("error");
+    
+                    nameError.style.display = "none";
+                    emailError.style.display = "none";
+                    messageError.style.display = "none";
+                    successMessage.style.display = "none";
+    
+                    var isValid = true;
+    
+                    // Vérifications des champs
+                    if (name.value.trim() === "") {
+                        name.classList.add("error");
+                        nameError.style.display = "block";
+                        isValid = false;
+                    }
+    
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(email.value.trim())) {
+                        email.classList.add("error");
+                        emailError.style.display = "block";
+                        isValid = false;
+                    }
+    
+                    if (message.value.trim() === "") {
+                        message.classList.add("error");
+                        messageError.style.display = "block";
+                        isValid = false;
+                    }
+    
+                    // ✅ Envoi du formulaire seulement si toutes les validations sont OK
+                    if (isValid) {
+                        let formData = new FormData(this);
+                        let response = await fetch(this.action, {
+                            method: "POST",
+                            body: formData,
+                            headers: { "Accept": "application/json" }
+                        });
+    
+                        if (response.ok) {
+                            successMessage.style.display = "block";
+                            this.reset();
+                        } else {
+                            alert("Oops ! Une erreur est survenue. Réessayez plus tard.");
+                        }
+                    }
+                });
+            }
+    
+            // ✅ Animation de la section Compétences & Stack Technique
+            let competencesSection = document.querySelector(".competences-container");
+    
+            function revealOnScroll() {
+                if (competencesSection) {
+                    let sectionPosition = competencesSection.getBoundingClientRect().top;
+                    let screenPosition = window.innerHeight / 1.3;
+    
+                    if (sectionPosition < screenPosition) {
+                        competencesSection.classList.add("show");
+                        window.removeEventListener("scroll", revealOnScroll); // Désactive l'écouteur après l'animation
                     }
                 }
-            });
-        }
-    });
+            }
+    
+            window.addEventListener("scroll", revealOnScroll);
 
-    </script>        
+            let progressBars = document.querySelectorAll(".progress");
+    
+            function animateProgressBars() {
+                let screenPosition = window.innerHeight / 1.3;
+
+                progressBars.forEach((bar) => {
+                    let barPosition = bar.getBoundingClientRect().top;
+                    if (barPosition < screenPosition) {
+                        bar.style.width = bar.getAttribute("style").match(/\d+/)[0] + "%";
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", animateProgressBars);
+        });
+    </script>
+    
 </body>
 </html>

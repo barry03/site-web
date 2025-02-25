@@ -228,6 +228,11 @@ p {
     padding: 40px 10%;
 }
 
+.competences-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .competences-list, .stack-technique {
     flex: 1;
     width: 45%;
@@ -295,7 +300,30 @@ p {
 .stack-technique img {
     width: 40px; /* Réduction des logos */
     height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.stack-technique img:hover {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.8;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 8px;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(to right, #7D5FB2, #563d7c);
+    border-radius: 5px;
+    transition: width 0.6s ease-in-out;
+}
+
 
 /* ✅ Ajuste la taille et l’animation des icônes */
 .tech-grid img {
@@ -707,6 +735,9 @@ p {
         text-align: center;
         gap: 20px;
         padding: 20px 5%;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
     .competences-list, .stack-technique {
