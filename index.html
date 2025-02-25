@@ -369,8 +369,7 @@
                     let targetWidth = bar.getAttribute("data-width");
             
                     if (barPosition < screenPosition && !bar.classList.contains("animated")) {
-                        bar.style.width = targetWidth + "%"; // ✅ Ajoute "%" pour fonctionner correctement
-                        bar.classList.add("animated");
+                        bar.style.width = targetWidth + "%"; // ✅ Ajoute "%"
             
                         let progressValue = bar.querySelector(".progress-value");
                         let value = 0;
@@ -383,12 +382,14 @@
                                 value++;
                                 progressValue.textContent = value + "%";
                             }
-                        }, 20);
+                        }, 15);
+            
+                        bar.classList.add("animated");
                     }
                 });
             }
             
-            window.addEventListener("scroll", animateProgressBars);            
+            window.addEventListener("scroll", animateProgressBars);                        
             
 
             let projectsSection = document.querySelector(".projects-container");
