@@ -78,10 +78,10 @@ body.dark-mode {
     justify-content: center;
     gap: 30px;
     padding: 40px;
-    opacity: 0;
-    transform: translateY(40px); /* Décale vers le bas */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 1; /* ✅ Mettre directement à 1 */
+    transform: translateY(0); /* ✅ Suppression de l'effet de décalage */
 }
+
 
 /* ✅ Style des boîtes CV */
 .cv-box {
