@@ -310,23 +310,22 @@ body {
 }
 
 .progress-bar {
-    flex-grow: 1;
-    height: 10px;
+    width: 100px; /* Ajuste selon l'espace disponible */
+    height: 8px;
     background-color: #e4e4e7;
-    border-radius: 50px;
+    border-radius: 5px;
     position: relative;
     overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .progress {
     height: 100%;
     background: linear-gradient(90deg, #7D5FB2, #563d7c);
-    border-radius: 50px;
+    border-radius: 5px;
     transition: width 1.5s ease-in-out;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
+    width: 0; /* Doit commencer à 0 */
 }
 
 

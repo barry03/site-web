@@ -87,31 +87,31 @@
                     <li>
                         <span>📊 Modélisation et traitement de données</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="90%"></div>
+                            <div class="progress" data-width="90"></div>
                         </div>
                     </li>
                     <li>
                         <span>🔄 Développement de pipelines ETL</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="90%"></div>
+                            <div class="progress" data-width="80"></div>
                         </div>
                     </li>
                     <li>
                         <span>📡 Big Data & Cloud (AWS, GCP)</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="90%"></div>
+                            <div class="progress" data-width="85"></div>
                         </div>
                     </li>
                     <li>
                         <span>⚙️ Automatisation & CI/CD</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="90%"></div>
+                            <div class="progress" data-width="90"></div>
                         </div>
                     </li>
                     <li>
                         <span>📈 Data Visualisation (Power BI, Metabase)</span>
                         <div class="progress-bar">
-                            <div class="progress" data-width="90%"></div>
+                            <div class="progress" data-width="70"></div>
                         </div>
                     </li>
                 </ul>
@@ -351,14 +351,19 @@
 
                 progressBars.forEach((bar) => {
                     let barPosition = bar.getBoundingClientRect().top;
-                    let targetWidth = bar.getAttribute("data-width");
+                    let targetWidth = parseInt(bar.getAttribute("data-width"), 10); // Convertit en nombre
 
                     if (barPosition < screenPosition && !bar.classList.contains("animated")) {
-                        bar.style.width = targetWidth + "%";
+                        bar.style.width = targetWidth + "%"; // Ajoute % ici, mais pas dans le HTML
                         bar.classList.add("animated");
                     }
                 });
             }
+
+            // ✅ Exécute au chargement et au scroll
+            window.addEventListener("load", animateProgressBars);
+            window.addEventListener("scroll", animateProgressBars);
+
         });
     </script>
     
