@@ -211,7 +211,8 @@ body {
     padding: 40px 10%;
 }
 
-.competences-container.show {
+.competences-container.show,
+.stack-technique.show {
     opacity: 1;
     transform: translateY(0);
 }

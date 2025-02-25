@@ -351,14 +351,14 @@
 
                 progressBars.forEach((bar) => {
                     let barPosition = bar.getBoundingClientRect().top;
+                    let targetWidth = bar.getAttribute("data-width");
+
                     if (barPosition < screenPosition && !bar.classList.contains("animated")) {
-                        bar.style.width = bar.getAttribute("data-width") + "%";
+                        bar.style.width = targetWidth + "%";
                         bar.classList.add("animated");
                     }
                 });
             }
-
-            window.addEventListener("scroll", animateProgressBars);
         });
     </script>
     
