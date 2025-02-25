@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 /* ✅ Police plus moderne */
 /* ✅ 1. Style Global */
 body {
