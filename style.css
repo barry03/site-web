@@ -336,41 +336,39 @@ body {
 }
 
 .progress-bar {
-    width: 100%;
-    background: #e0e0e0;
-    border-radius: 10px;
-    height: 12px;
     position: relative;
+    width: 100%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 8px;
     overflow: hidden;
 }
-
-.progress-bar {
-    width: 100%;
-    background: #e0e0e0;
-    border-radius: 10px;
-    height: 12px;
-    position: relative;
-    overflow: hidden;
-}
-/* 🔵 Bleu */
-.blue {
-    background: linear-gradient(90deg, #4facfe, #00f2fe);
+.progress {
+    height: 100%;
+    border-radius: 8px;
+    width: 0;
+    transition: width 1.5s ease-in-out;
 }
 
-.purple {
-    background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+/* ✅ Ajout des couleurs */
+.progress.blue {
+    background: linear-gradient(90deg, #4a90e2, #0056b3);
 }
 
-.green {
-    background: linear-gradient(90deg, #56ab2f, #a8e063);
+.progress.purple {
+    background: linear-gradient(90deg, #a66dd4, #6a1b9a);
 }
 
-.orange {
-    background: linear-gradient(90deg, #f2994a, #f2c94c);
+.progress.orange {
+    background: linear-gradient(90deg, #ffa726, #f57c00);
 }
 
-.yellow {
-    background: linear-gradient(90deg, #f7b733, #fc4a1a);
+.progress.green {
+    background: linear-gradient(90deg, #66bb6a, #2e7d32);
+}
+
+.progress.yellow {
+    background: linear-gradient(90deg, #ffeb3b, #fbc02d);
 }
 
 /* ✅ Ajoute une position correcte pour le pourcentage */
@@ -386,6 +384,7 @@ body {
     padding: 2px 6px;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 
