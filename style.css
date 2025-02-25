@@ -333,7 +333,7 @@ body {
 }
 
 .stack-technique img {
-    width: 40px; /* Réduction des logos */
+    width: 50px; /* Réduction des logos */
     height: auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
