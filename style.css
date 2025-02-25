@@ -377,10 +377,10 @@ body {
 /* ✅ Correction du positionnement des pourcentages */
 .progress-value {
     position: absolute;
-    top: -20px; /* ✅ Monte le texte */
-    left: 100%; /* ✅ À la fin de la barre */
+    top: -18px; /* ✅ Monte le texte */
+    left: 95%; /* ✅ À la fin de la barre */
     transform: translateX(-50%);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: #333;
     background: none; /* ❌ Enlève le fond blanc */
