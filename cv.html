@@ -21,18 +21,16 @@
         <div class="cv-box">
             <h2>📄 French Version</h2>
             <p class="cv-description"><i class="fas fa-file-alt"></i> Un résumé détaillant mon parcours et mes compétences en Data Engineering.</p>
-            <div class="cv-loader">⏳ Chargement du CV...</div>
             <iframe src="files/CV_Barry_FR.pdf" class="cv-frame"></iframe>
             <p id="cv-fr" class="cv-update-date"></p>
             <p id="recent-update-fr" class="recent-update"></p> <!-- ✅ Message "Mise à jour récente" -->
             <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Copier le lien</button>
             <a href="files/CV_Barry_FR.pdf" download class="btn-download">Télécharger 📥</a>
         </div>
-
+    
         <div class="cv-box">
             <h2>📄 English Version</h2>
             <p class="cv-description"><i class="fas fa-file-alt"></i> English resume showcasing my experience in Big Data & Cloud Solutions.</p>
-            <div class="cv-loader">⏳ Loading resume...</div>
             <iframe src="files/CV_Barry_EN.pdf" class="cv-frame"></iframe>
             <p id="cv-en" class="cv-update-date"></p>
             <p id="recent-update-en" class="recent-update"></p> <!-- ✅ Message "Mise à jour récente" -->
@@ -40,7 +38,7 @@
             <a href="files/CV_Barry_EN.pdf" download class="btn-download">Download 📥</a>
         </div>
     </section>
-
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Liste des fichiers CV
@@ -77,28 +75,9 @@
             });
 
             document.querySelectorAll(".cv-frame").forEach((iframe) => {
-                let loader = iframe.previousElementSibling; // Cible l'élément de chargement
-                iframe.style.display = "none"; // Cache le CV au départ
-
-                iframe.onload = function () {
-                    loader.style.display = "none"; // Cache le loader
-                    iframe.style.display = "block"; // Affiche le CV une fois chargé
-                };
+                iframe.style.display = "block"; // Afficher directement les CV
             });
         });
-
-        // ✅ Animation de l’apparition progressive des CV
-        function revealOnScroll() {
-            let cvContainer = document.querySelector(".cv-container");
-            let sectionPosition = cvContainer.getBoundingClientRect().top;
-            let screenPosition = window.innerHeight / 1.3;
-
-            if (sectionPosition < screenPosition) {
-                cvContainer.classList.add("show");
-            }
-        }
-
-        window.addEventListener("scroll", revealOnScroll);
 
         function copyCvLink(fileUrl) {
             let fullUrl = window.location.origin + "/" + fileUrl;
