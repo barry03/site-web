@@ -452,6 +452,32 @@ body {
     background-color: #f4f4f9;
     border-top: 2px solid #d3d3ea;
     margin-top: auto;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.8s ease-out;
+}
+
+.footer.show {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* ✅ Ajout d’un effet pulsant léger à l'ombre */
+@keyframes pulseShadow {
+    0% {
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.footer.show {
+    animation: pulseShadow 2s infinite alternate;
 }
 
 .footer-left {
