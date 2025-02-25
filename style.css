@@ -12,6 +12,21 @@ body {
     padding-top: 80px;
 }
 
+.logo-db {
+    font-size: 1.8rem; /* Taille légèrement plus grande */
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Change si nécessaire */
+    text-transform: uppercase;
+}
+
+.logo-db span:first-child {
+    color: #7D5FB2; /* Violet */
+}
+
+.logo-db span:last-child {
+    color: #0056b3; /* Bleu */
+}
+
 /* ✅ Style du texte descriptif */
 .hero-description {
     font-size: 1rem;
@@ -42,7 +57,7 @@ body {
     display: flex;
     align-items: center;
 }
-
+/*
 .navbar .logo {
     display: flex;
     align-items: center;
@@ -52,7 +67,7 @@ body {
     height: 40px;
     margin-right: 10px;
 }
-
+*/
 .nav-links {
     list-style: none;
     display: flex;
