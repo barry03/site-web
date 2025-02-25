@@ -163,18 +163,17 @@ body.dark-mode {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 8px 12px;
-    font-size: 13px;
+    gap: 6px;
+    padding: 6px 10px; /* ✅ Réduction de la taille */
+    font-size: 11px;
     font-weight: bold;
     background: #e4e4e7;
     color: #333;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }
-
 /* ✅ Effet au survol */
 .btn-copy:hover {
     background: #d4d4d7;
@@ -186,24 +185,31 @@ body.dark-mode {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 10px 15px; /* ✅ Réduction du padding */
-    font-size: 14px; /* ✅ Taille de texte ajustée */
+    gap: 6px; /* ✅ Moins d’espace entre l’icône et le texte */
+    padding: 8px 12px; /* ✅ Réduction du padding */
+    font-size: 12px; /* ✅ Taille de texte réduite */
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(135deg, #007bff, #0056b3); /* ✅ Dégradé bleu moderne */
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     border: none;
-    border-radius: 8px; /* ✅ Arrondi */
+    border-radius: 6px; /* ✅ Arrondi plus léger */
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* ✅ Ombre légère */
+    box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+    width: fit-content; /* ✅ Ajustement automatique à la taille du texte */
+}
+
+.cv-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* ✅ Ajout d'un bon espace entre les boutons */
+    margin-top: 10px;
 }
 
 .btn-download:hover {
-    background: #0056b3;
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.4);
 }
 
 /* ✅ Ajustement de la taille des icônes */
