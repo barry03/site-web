@@ -363,33 +363,35 @@
 
             function animateProgressBars() {
                 let screenPosition = window.innerHeight / 1.3;
-
-                document.querySelectorAll(".progress").forEach((bar) => {
+            
+                document.querySelectorAll(".progress-bar .progress").forEach((bar) => {
                     let barPosition = bar.getBoundingClientRect().top;
                     let targetWidth = bar.getAttribute("data-width");
-
+            
                     if (barPosition < screenPosition && !bar.classList.contains("animated")) {
-                        bar.style.width = targetWidth + "%"; // ✅ Ajoute "%" pour bien afficher
-                        bar.classList.add("animated");
-
+                        bar.style.width = targetWidth + "%"; // ✅ Ajoute "%"
+                        console.log(`Barre animée: ${targetWidth}%`); // ✅ Vérifie dans la console
+            
                         let progressValue = bar.querySelector(".progress-value");
                         let value = 0;
                         let targetValue = parseInt(targetWidth);
-
+            
                         let interval = setInterval(() => {
                             if (value >= targetValue) {
                                 clearInterval(interval);
                             } else {
                                 value++;
-                                progressValue.textContent = value + "%"; // ✅ Assure l'affichage
+                                progressValue.textContent = value + "%";
                             }
-                        }, 20);
+                        }, 15);
+            
+                        bar.classList.add("animated");
                     }
                 });
             }
-
-            // ✅ Ajoute l'événement pour déclencher l'animation au scroll
-            window.addEventListener("scroll", animateProgressBars);                      
+            
+            window.addEventListener("scroll", animateProgressBars);
+                              
             
 
             let projectsSection = document.querySelector(".projects-container");

@@ -322,6 +322,8 @@ body {
     width: 45%;
     text-align: center;
     position: relative; /* Pour que les logos restent dans ce bloc */
+    margin-left: 40px;
+    flex-shrink: 0;
 }
 
 .stack-technique img {
@@ -350,9 +352,8 @@ body {
 .progress {
     height: 100%;
     border-radius: 8px;
-    width: 0;
     transition: width 1.5s ease-in-out;
-    position: relative;
+    min-width: 5%; /* ✅ Évite que certaines barres soient invisibles */
 }
 
 /* ✅ Correction des couleurs */
@@ -375,14 +376,14 @@ body {
 /* ✅ Correction du positionnement des pourcentages */
 .progress-value {
     position: absolute;
-    top: -25px; /* ✅ Bien au-dessus de la barre */
-    right: 0; /* ✅ Aligné à la fin de la barre */
-    transform: translateX(50%);
+    top: -30px; /* ✅ Plus haut pour ne pas toucher la barre */
+    left: 100%; /* ✅ Aligne au bout de la barre */
+    transform: translateX(-50%);
     font-size: 14px;
     font-weight: bold;
     color: #333;
     background: white;
-    padding: 3px 7px;
+    padding: 2px 6px;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -832,10 +833,13 @@ body {
 
     /* ✅ Section Compétences */
     .competences-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /* ✅ Alignement en haut */
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 20px;
+        gap: 80px;
         padding: 20px 5%;
         opacity: 0;
         transform: translateY(20px);
