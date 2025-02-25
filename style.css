@@ -12,23 +12,6 @@ body {
     padding-top: 80px;
 }
 
-h1 {
-    font-size: 32px; /* Réduction des titres principaux */
-}
-
-h2 {
-    font-size: 24px;
-}
-
-h3 {
-    font-size: 18px;
-}
-
-p {
-    font-size: 14px;
-    line-height: 1.6; /* Meilleur espacement pour lisibilité */
-}
-
 /* ✅ Style du texte descriptif */
 .hero-description {
     font-size: 1rem;
@@ -241,7 +224,7 @@ p {
 }
 
 .competences-list h3, .stack-technique h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #3a3a70;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -250,6 +233,7 @@ p {
 .competences-list ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .competences-list li {
@@ -257,6 +241,15 @@ p {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+}
+
+.competences-list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px; /* Ajoute un petit espace entre le texte et la barre */
+    width: 100%;
+    white-space: nowrap; /* Empêche le retour à la ligne */
 }
 
 .competences-list li::before {
@@ -272,6 +265,13 @@ p {
 
 .competences-section h2, .projects-section h2 {
     font-size: 22px; /* Au lieu de 2.2rem */
+}
+
+.competences-container,
+.stack-technique {
+    opacity: 0;
+    transform: translateY(40px); /* Décale vers le bas */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* ✅ Ajuste la zone où les icônes peuvent bouger */
@@ -309,19 +309,23 @@ p {
 }
 
 .progress-bar {
-    width: 100%;
-    background-color: #eee;
-    border-radius: 5px;
+    flex-grow: 1;
+    height: 10px;
+    background-color: #e4e4e7;
+    border-radius: 50px;
+    position: relative;
     overflow: hidden;
-    height: 8px;
-    margin-top: 5px;
 }
 
 .progress {
     height: 100%;
-    background: linear-gradient(to right, #7D5FB2, #563d7c);
-    border-radius: 5px;
-    transition: width 0.6s ease-in-out;
+    background: linear-gradient(90deg, #7D5FB2, #563d7c);
+    border-radius: 50px;
+    transition: width 1.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
 }
 
 
