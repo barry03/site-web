@@ -307,13 +307,14 @@ body {
 /* ✅ Style de la grille */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-items: center;
     align-items: center;
-    max-width: 500px;
+    /*max-width: 500px;*/
     position: relative;
     margin-top: 15px;
+    width: fit-content;
 }
 
 .tech-grid img[alt="databricks"] {
@@ -398,7 +399,7 @@ body {
 
 /* ✅ Ajuste la taille et l’animation des icônes */
 .tech-grid img {
-    width: 60px;
+    width: 40px;
     height: auto;
     transition: transform 0.3s ease-in-out;
     position: relative;
