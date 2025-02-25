@@ -191,10 +191,12 @@ body.dark-mode {
 
 .cv-buttons {
     display: flex;
-    justify-content: center; /* Centre les boutons */
-    gap: 10px; /* Espacement entre les boutons */
+    justify-content: center; /* ✅ Centre les boutons */
+    align-items: center;
+    gap: 10px; /* ✅ Ajoute un espacement entre les boutons */
     margin-top: 10px;
 }
+
 /* ✅ Ajustement de la taille des icônes */
 .btn-download img {
     width: 18px;

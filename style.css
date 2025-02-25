@@ -13,9 +13,10 @@ body {
 }
 
 .logo-db {
-    font-size: 1.8rem; /* Taille légèrement plus grande */
+    text-decoration: none !important; /* Supprime le soulignement */
+    font-size: 2rem; /* Taille légèrement plus grande */
     font-weight: bold;
-    font-family: 'Poppins', sans-serif; /* Change si nécessaire */
+    font-family: 'Dancing Script', cursive;
     text-transform: uppercase;
 }
 
