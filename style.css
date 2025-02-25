@@ -336,60 +336,50 @@ body {
 }
 
 .progress-bar {
-    position: relative;
     width: 100%;
+    background: #e0e0e0;
+    border-radius: 10px;
     height: 12px;
-    background: #ddd;
-    border-radius: 6px;
+    position: relative;
     overflow: hidden;
-    margin-top: 10px;
 }
 
 .progress {
+    width: 0; /* ✅ Début à 0 pour animation */
     height: 100%;
-    width: 0; /* Départ à 0 */
-    border-radius: 6px;
-    transition: width 1.5s ease-in-out;
-    position: relative;
+    border-radius: 10px;
+    transition: width 1.5s ease-in-out; /* ✅ Animation fluide */
 }
 
 /* 🔵 Bleu */
-.progress.blue {
-    background: linear-gradient(90deg, #007bff, #00c2ff);
+.blue {
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
 }
 
-/* 🟣 Violet */
-.progress.purple {
-    background: linear-gradient(90deg, #6f42c1, #d15eff);
+.purple {
+    background: linear-gradient(90deg, #a18cd1, #fbc2eb);
 }
 
-/* 🟠 Orange */
-.progress.orange {
-    background: linear-gradient(90deg, #ff8c00, #ffcc00);
+.yellow {
+    background: linear-gradient(90deg, #f7b733, #fc4a1a);
 }
 
-/* 🟢 Vert */
-.progress.green {
-    background: linear-gradient(90deg, #28a745, #a3e635);
+.green {
+    background: linear-gradient(90deg, #56ab2f, #a8e063);
 }
 
-/* 🟡 Jaune */
-.progress.yellow {
-    background: linear-gradient(90deg, #ffc107, #ffeb3b);
+.orange {
+    background: linear-gradient(90deg, #f2994a, #f2c94c);
 }
 
-/* 📍 Style du pourcentage */
+/* ✅ Style du pourcentage */
 .progress-value {
     position: absolute;
-    top: -30px;
-    right: 0;
-    font-size: 14px;
+    right: 10px;
+    top: -22px;
+    font-size: 12px;
     font-weight: bold;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 4px 8px;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #333;
 }
 
 
