@@ -335,56 +335,56 @@ body {
     opacity: 0.8;
 }
 
+/* ✅ Corrige l'affichage des barres de progression */
 .progress-bar {
     position: relative;
     width: 100%;
-    height: 12px;
+    height: 14px; /* ✅ Légèrement plus grande */
     background: #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 10px; /* ✅ Ajoute de l'espace sous chaque barre */
 }
+
+/* ✅ Assure que la barre s'affiche correctement */
 .progress {
     height: 100%;
     border-radius: 8px;
     width: 0;
     transition: width 1.5s ease-in-out;
+    position: relative;
 }
 
-/* ✅ Ajout des couleurs */
+/* ✅ Correction des couleurs */
 .progress.blue {
     background: linear-gradient(90deg, #4a90e2, #0056b3);
 }
-
 .progress.purple {
     background: linear-gradient(90deg, #a66dd4, #6a1b9a);
 }
-
 .progress.orange {
     background: linear-gradient(90deg, #ffa726, #f57c00);
 }
-
 .progress.green {
     background: linear-gradient(90deg, #66bb6a, #2e7d32);
 }
-
 .progress.yellow {
     background: linear-gradient(90deg, #ffeb3b, #fbc02d);
 }
 
-/* ✅ Ajoute une position correcte pour le pourcentage */
+/* ✅ Correction du positionnement des pourcentages */
 .progress-value {
     position: absolute;
-    top: -25px; /* ✅ Place le pourcentage au-dessus */
-    left: 90%; /* ✅ Ajuste dynamiquement */
-    transform: translateX(-50%);
+    top: -25px; /* ✅ Bien au-dessus de la barre */
+    right: 0; /* ✅ Aligné à la fin de la barre */
+    transform: translateX(50%);
     font-size: 14px;
     font-weight: bold;
     color: #333;
     background: white;
-    padding: 2px 6px;
+    padding: 3px 7px;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 
