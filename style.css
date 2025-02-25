@@ -447,7 +447,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 30px 5%;
     font-size: 14px;
     background-color: #f4f4f9;
     border-top: 2px solid #d3d3ea;
@@ -455,6 +455,7 @@ body {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.8s ease-out;
+    min-height: auto;
 }
 
 .footer.show {
@@ -497,6 +498,10 @@ body {
     margin-bottom: 10px;
 }
 
+.footer-left, .footer-right {
+    padding: 10px 0; /* Moins d’espace en haut et en bas */
+}
+
 .footer-icons {
     display: flex;
     align-items: center;
@@ -505,7 +510,7 @@ body {
 }
 
 .footer-icons a i {
-    font-size: 20px; /* Réduit la taille des icônes */
+    font-size: 1.5rem; /* Réduit la taille des icônes */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -547,7 +552,7 @@ body {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 14px;
@@ -572,7 +577,7 @@ body {
     background-color: #7D5FB2;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 10px 0;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
