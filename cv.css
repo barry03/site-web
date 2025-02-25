@@ -160,38 +160,56 @@ body.dark-mode {
 
 
 .btn-copy {
-    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    background: #e4e4e7;
     color: #333;
     border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s ease-in-out;
-    margin-top: 5px;
-}
-
-.btn-copy:hover {
-    background: #ddd;
-}
-
-
-/* ✅ Style du bouton de téléchargement */
-.btn-download {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background: #007bff;
     border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* ✅ Effet au survol */
+.btn-copy:hover {
+    background: #d4d4d7;
+    transform: translateY(-2px);
+}
+
+/* ✅ Style global des boutons */
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 15px; /* ✅ Réduction du padding */
+    font-size: 14px; /* ✅ Taille de texte ajustée */
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* ✅ Dégradé bleu moderne */
+    color: white;
+    border: none;
+    border-radius: 8px; /* ✅ Arrondi */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* ✅ Ombre légère */
 }
 
 .btn-download:hover {
     background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* ✅ Ajustement de la taille des icônes */
+.btn-download img {
+    width: 18px;
+    height: auto;
 }
 
 /* ✅ Responsive */
