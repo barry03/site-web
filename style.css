@@ -307,12 +307,13 @@ body {
 /* ✅ Style de la grille */
 .tech-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     justify-items: center;
     align-items: center;
     max-width: 500px;
     position: relative;
+    margin-top: 15px;
 }
 
 .tech-grid img[alt="databricks"] {
@@ -321,10 +322,13 @@ body {
 
 .stack-technique {
     width: 45%;
+    display: flex;
     text-align: center;
+    flex-direction: column;
     position: relative; /* Pour que les logos restent dans ce bloc */
     margin-left: 40px;
     flex-shrink: 0;
+    align-items: center;
 }
 
 .stack-technique img {
