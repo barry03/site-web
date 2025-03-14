@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cas d'étude : Analyse téléchargements PyPI (GCP & Streamlit)</title>
+    <link rel="stylesheet" href="style.css"> <!-- ton CSS déjà existant -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+  
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo-db">
+                <span>D</span><span>B</span>
+            </a>            
+        </div>
+
+        <!-- ✅ Menu standard pour ordinateur -->
+        <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#competences">Compétences & Stack</a></li>
+            <li><a href="#projects">Projets</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#contact" class="cta-button">Contactez-moi</a>
+        </div>
+
+        <!-- ✅ Icône menu burger (visible sur mobile uniquement) -->
+        <!--<div class="menu-toggle" onclick="toggleMenu()">☰</div>-->
+
+        <!-- ✅ Menu mobile -->
+        <div id="mobile-menu">
+            <span class="menu-close" onclick="toggleMenu()">✖</span>
+            <ul>
+                <li><a href="#home" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
+            </ul>
+            <!--<a href="#contact" class="menu-contact" onclick="toggleMenu()">Contactez-moi</a>-->
+        </div>
+    </nav>
+
+    <!-- Section titre attractif -->
+    <section class="section-title">
+        <h1>Cas d'étude complet : Analyse des téléchargements PyPI (GCP & Streamlit)</h1>
+        <p>Découvrez ma méthodologie complète pour la réalisation d'un pipeline de données scalable et interactif.</p>
+    </section>
+
+    <!-- Section Contexte et Objectifs -->
+    <section class="section-context">
+        <h2>🎯 Contexte & Objectifs</h2>
+        <p>
+        Ce projet présente une analyse des données publiques issues de PyPI sur le nombre de téléchargements de packages Python, avec un pipeline automatisé réalisé sur GCP et Streamlit.
+        </p>
+        <ul>
+        <li>✔️ Collecter et ingérer des données via Composer (Airflow)</li>
+        <li>✔️ Transformation et agrégation via BigQuery SQL</li>
+        <li>✔️ Dashboard interactif avec Streamlit</li>
+        <li>✔️ CI/CD automatisé avec GitLab et Docker</li>
+        </ul>
+    </section>
+
+    <!-- Section Dashboards interactifs -->
+    <section class="section-dashboards">
+        <h2>📊 Dashboards & Visualisations</h2>
+        <p>Ci-dessous, vous trouverez un aperçu des dashboards interactifs réalisés :</p>
+
+        <!-- Placeholder pour tes dashboards -->
+        <div class="dashboard-gallery">
+        <img src="dashboard1.png" alt="dashboard Streamlit 1" class="dashboard-img">
+        <img src="dashboard2.png" alt="dashboard Streamlit 2" class="dashboard-img">
+        </div>
+
+        <!-- Bouton vers le Dashboard en ligne (quand tu l'auras) -->
+        <a href="#" class="btin">Voir le Dashboard interactif</a>
+    </section>
+
+    <!-- Section Méthodologie DevOps & CI/CD -->
+    <section class="section-devops">
+        <h2>⚙️ Workflow & DevOps (CI/CD)</h2>
+        <p>
+        J'ai utilisé GitLab CI/CD pour automatiser le déploiement via Docker et GCP Cloud Run.
+        </p>
+        <pre>
+        <code>./deploy.sh prod</code>
+        </pre>
+        <p>
+        Gestion des branches distinctes (prod & dev) permettant une séparation claire entre l'environnement de test et de production.
+        </p>
+    </section>
+
+    <!-- Section \"À venir\" pour anticiper les enrichissements -->
+    <section class="section-coming-soon">
+        <h2>✨ À venir bientôt...</h2>
+        <ul>
+        <li>📖 Articles techniques (Blog)</li>
+        <li>🎥 Vidéo de présentation personnelle</li>
+        </ul>
+    </section>
+
+    <!-- 📌 Nouveau Footer -->
+    <!-- 📌 Footer pour page projet (adapté) -->
+    <footer id="more-info" class="footer">
+
+        <!-- ✅ Partie gauche (conserver même design) -->
+        <div class="footer-left">
+            <h3>En savoir plus ? 📚</h3>
+            <p>Découvrez mes réalisations techniques et mes dernières publications.</p>
+
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/tonprofil" target="_blank">
+                    <i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i>
+                </a>
+                <a href="https://gitlab.com/tonprofil" target="_blank">
+                    <i class="fab fa-gitlab fa-2x" style="color: #FCA121;"></i>
+                </a>
+                <a href="https://twitter.com/tonprofil" target="_blank">
+                    <i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i>
+                </a>
+            </div>            
+        </div>
+
+        <!-- ✅ Partie droite (remplacer formulaire par autre contenu pertinent) -->
+        <div class="footer-right">
+            <p class="contact-title">Ressources complémentaires 🔗</p>
+            <ul class="footer-links">
+                <li><a href="https://gitlab.com/tonprofil/tonprojet" target="_blank">👉 Code source du projet (GitLab)</a></li>
+                <li><a href="#" target="_blank">👉 Dashboard interactif en ligne</a></li>
+                <li><a href="#" target="_blank">👉 Mes certifications professionnelles</a></li>
+                <li><a href="#" target="_blank">👉 Articles & Blog technique (à venir)</a></li>
+            </ul>  
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

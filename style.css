@@ -711,6 +711,58 @@ body {
     color: #333;
 }
 
+
+.section-title, .section-context, .section-dashboards, .section-devops, .section-coming-soon {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9faff;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  }
+  
+  .dashboard-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .dashboard-img {
+    max-width: 100%;
+    width: 450px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .dashboard-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .btin {
+    display: inline-block;
+    padding: 10px 25px;
+    color: white;
+    background-color: #5468ff;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btin:hover {
+    background-color: #4053d9;
+  }
+  
+  pre {
+    background-color: #eaeef6;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+
+
 /* ✅ Animation d’ouverture */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
