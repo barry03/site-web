@@ -57,9 +57,9 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 25px;
-    padding: 0;
-    margin: 0;
+    gap: 30px;
+    /*padding: 0;*/
+    margin-left: 40px;
 }
 
 .nav-links li a {
@@ -176,6 +176,18 @@ padding-left: 80px;
 .footer-icons a {
     text-decoration: none; /* enlève les tirets */
     border-bottom: none;   /* garantit qu'il n'y ait pas de bordure */
+}
+
+.footer-icons a i {
+    font-size: 1.3rem; /* Ajuste la taille ici selon tes préférences */
+    transition: transform 0.3s ease;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacement entre les icônes */
+    margin-top: 8px;
 }
   
 .contact-title {
