@@ -6,6 +6,7 @@
     <title>Mon CV - Djouldé Barry</title>
     <link rel="stylesheet" href="cv.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 </head>
 <body>
 
@@ -25,8 +26,8 @@
             <p id="cv-fr" class="cv-update-date"></p>
     
             <div class="cv-buttons"> <!-- ✅ Conteneur correctement ouvert -->
-                <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Copier le lien</button>
-                <a href="files/CV_Barry_FR.pdf" download class="btn-download">📥 Télécharger</a>
+                <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Partagez le profil </button>
+                <!--<a href="files/CV_Barry_FR.pdf" download class="btn-download">📥 Télécharger</a>-->
             </div> <!-- ✅ Conteneur correctement fermé -->
         </div>
     
@@ -37,8 +38,8 @@
             <p id="cv-en" class="cv-update-date"></p>
     
             <div class="cv-buttons"> <!-- ✅ Conteneur correctement ouvert -->
-                <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_EN.pdf')">📋 Copy Link</button>
-                <a href="files/CV_Barry_EN.pdf" download class="btn-download">📥 Download</a>
+                <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_EN.pdf')">📋 Share profil</button>
+                <!--<a href="files/CV_Barry_EN.pdf" download class="btn-download">📥 Download</a>-->
             </div> <!-- ✅ Conteneur correctement fermé -->
         </div>
     </section>
@@ -87,7 +88,7 @@
         function copyCvLink(fileUrl) {
             let fullUrl = window.location.origin + "/" + fileUrl;
             navigator.clipboard.writeText(fullUrl).then(() => {
-                alert("📋 Lien copié : " + fullUrl);
+                alert("📋 Link copied : " + fullUrl);
             }).catch(err => {
                 console.error("Erreur lors de la copie du lien", err);
             });
