@@ -40,12 +40,13 @@ body {
     width: 100%;
     display: flex;
     z-index: 1000;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background: white;
     padding: 10px 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     height: 60px; /* Réduction de la hauteur */
+    gap: 30px;
 }
 
 .nav-left {
@@ -56,8 +57,9 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
-    margin-left: 40px;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links li a {
@@ -72,12 +74,6 @@ body {
     color: #7D5FB2;
 }
 
-.nav-right {
-    margin-left: auto;
-    margin-right: 40px;
-    display: flex;
-    align-items: center;
-}
 
 .section-title, .section-context, .section-dashboards, .section-devops, .section-coming-soon {
     max-width: 1000px;
@@ -131,6 +127,7 @@ body {
   /* Footer adapté à explore.html */
 .footer {
     display: flex;
+    gap: 80px;
     justify-content: space-between;
     align-items: flex-start;
     padding: 30px 100px;
@@ -141,6 +138,7 @@ body {
 .footer-left {
     width: 40%;
     padding: 10px 0;
+    flex: 1;
 }
 
 .footer-left h3 {
@@ -172,7 +170,12 @@ body {
   
 .footer-right {
 flex: 1;
-padding-left: 60px;
+padding-left: 80px;
+}
+
+.footer-icons a {
+    text-decoration: none; /* enlève les tirets */
+    border-bottom: none;   /* garantit qu'il n'y ait pas de bordure */
 }
   
 .contact-title {
