@@ -48,55 +48,51 @@
     </nav>
 
     <!-- Section titre attractif -->
-    <section class="section-title">
-        <h1>Cas d'étude complet : Analyse des téléchargements PyPI (GCP & Streamlit)</h1>
-        <p>Découvrez ma méthodologie complète pour la réalisation d'un pipeline de données scalable et interactif.</p>
-    </section>
-
-    <!-- Section Contexte et Objectifs -->
-    <section class="section-context">
-        <h2>🎯 Contexte & Objectifs</h2>
-        <p>
-        Ce projet présente une analyse des données publiques issues de PyPI sur le nombre de téléchargements de packages Python, avec un pipeline automatisé réalisé sur GCP et Streamlit.
-        </p>
-        <ul>
-        <li>✔️ Collecter et ingérer des données via Composer (Airflow)</li>
-        <li>✔️ Transformation et agrégation via BigQuery SQL</li>
-        <li>✔️ Dashboard interactif avec Streamlit</li>
-        <li>✔️ CI/CD automatisé avec GitLab et Docker</li>
-        </ul>
-    </section>
-
-    <!-- Section Dashboards interactifs -->
-    <section class="section-dashboards">
-        <h2>📊 Dashboards & Visualisations</h2>
-        <p>Ci-dessous, vous trouverez un aperçu des dashboards interactifs réalisés :</p>
-
-        <!-- Placeholder pour tes dashboards -->
-        <div class="dashboard-gallery">
-        <img src="dashboard1.png" alt="dashboard Streamlit 1" class="dashboard-img">
-        <img src="dashboard2.png" alt="dashboard Streamlit 2" class="dashboard-img">
+    <section class="main-container">
+        <div class="section-header">
+            <h1>Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)</h1>
+            <p>Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.</p>
         </div>
-
-        <!-- Bouton vers le Dashboard en ligne (quand tu l'auras) -->
-        <a href="#" class="btin">Voir le Dashboard interactif</a>
-    </section>
-
-    <!-- Section Méthodologie DevOps & CI/CD -->
-    <section class="section-devops">
-        <h2>⚙️ Workflow & DevOps (CI/CD)</h2>
-        <p>
-        J'ai utilisé GitLab CI/CD pour automatiser le déploiement via Docker et GCP Cloud Run.
-        </p>
-        <pre>
-        <code>./deploy.sh prod</code>
-        </pre>
-        <p>
-        Gestion des branches distinctes (prod & dev) permettant une séparation claire entre l'environnement de test et de production.
-        </p>
-    </section>
-
+    
+        <div class="card-container">
+            <!-- Contexte & Objectifs -->
+            <div class="card">
+                <h2><span class="emoji">🎯</span> Contexte & Objectifs</h2>
+                <p>
+                    Analyse des données publiques issues de PyPI sur les téléchargements de packages Python, avec un pipeline automatisé sur GCP et Streamlit.
+                </p>
+                <ul class="styled-list">
+                    <li>Collecte automatique via Composer (Airflow)</li>
+                    <li>Traitement SQL avec BigQuery</li>
+                    <li>Dashboard interactif Streamlit</li>
+                    <li>Automatisation CI/CD via GitLab et Docker</li>
+                </ul>
+            </div>
+    
+            <!-- Dashboards -->
+            <div class="card">
+                <h2><span class="emoji">📊</span> Dashboards & Visualisations</h2>
+                <p>Quelques exemples des dashboards réalisés :</p>
+                <div class="dashboard-gallery">
+                    <img src="dashboard1.png" alt="Dashboard Streamlit 1">
+                    <img src="dashboard2.png" alt="Dashboard Streamlit 2">
+                </div>
+                <a href="#" class="btn">Voir le dashboard interactif</a>
+            </div>
+    
+            <!-- Méthodologie CI/CD -->
+            <div class="card">
+                <h2><span class="emoji">⚙️</span> Méthodologie & CI/CD</h2>
+                <p>
+                    Workflow entièrement automatisé et géré via GitLab CI/CD et Docker, avec séparation nette des environnements dev et prod.
+                </p>
+                <pre><code>./deploy.sh prod</code></pre>
+            </div>
+        </div>
+    </section>    
+    
     <!-- Section \"À venir\" pour anticiper les enrichissements -->
+    <!--
     <section class="section-coming-soon">
         <h2>✨ À venir bientôt...</h2>
         <ul>
@@ -104,7 +100,7 @@
         <li>🎥 Vidéo de présentation personnelle</li>
         </ul>
     </section>
-
+    -->
     <!-- 📌 Nouveau Footer -->
     <footer id="more-info" class="footer">
 

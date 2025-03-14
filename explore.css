@@ -74,55 +74,150 @@ body {
     color: #7D5FB2;
 }
 
+/* Container principal */
+.main-container {
+    max-width: 1100px;
+    margin: 100px auto 50px;
+    padding: 10px;
+}
 
-.section-title, .section-context, .section-dashboards, .section-devops, .section-coming-soon {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9faff;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-  }
-  
-  .dashboard-gallery {
+/* En-tête stylisé */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Conteneur des cartes */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Cartes stylisées */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #222;
+}
+
+.emoji {
+    margin-right: 8px;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Liste stylisée */
+.styled-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.styled-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    color: #444;
+}
+
+.styled-list li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+}
+
+/* Galerie Dashboards */
+.dashboard-gallery {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .dashboard-img {
-    max-width: 100%;
-    width: 450px;
-    border-radius: 10px;
-    transition: transform 0.2s ease;
-  }
-  
-  .dashboard-img:hover {
-    transform: scale(1.05);
-  }
-  
-  .btin {
-    display: inline-block;
-    padding: 10px 25px;
-    color: white;
-    background-color: #5468ff;
-    border-radius: 8px;
-    text-decoration: none;
     margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btin:hover {
-    background-color: #4053d9;
-  }
-  
-  pre {
-    background-color: #eaeef6;
-    padding: 15px;
+}
+
+.dashboard-gallery img {
+    width: 100%;
+    max-width: 400px;
     border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Bouton interactif */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #5468ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #4053d9;
+}
+/*
+.dashboard-img:hover {
+    transform: scale(1.05);
+}
+*/
+/* Bouton interactif */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #5468ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+  
+.btn:hover {
+    background-color: #4053d9;
+}
+  
+/* Bloc de code déploiement */
+pre {
+    background-color: #f4f7ff;
+    padding: 10px;
+    border-radius: 6px;
     overflow-x: auto;
-  }
+    margin-top: 20px;
+}
+
+pre code {
+    font-size: 0.95rem;
+    color: #333;
+}
 
   /* Footer adapté à explore.html */
 .footer {
