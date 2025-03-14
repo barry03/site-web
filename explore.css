@@ -153,13 +153,28 @@ body {
     left: 0;
 }
 
-/* Galerie Dashboards */
 .dashboard-gallery {
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
+}
+
+.dashboard-card {
+    background-color: #f4f7ff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    min-width: 350px;
+    max-width: 480px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
 }
 
 .dashboard-gallery img {
@@ -169,6 +184,18 @@ body {
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
+.dashboard-card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+.dashboard-card h4 {
+    margin-top: 12px;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+}
 /* Bouton interactif */
 .btn {
     display: inline-block;
