@@ -112,9 +112,7 @@ body {
     width: 100%;
     max-width: 1000px; /* Ajuste selon la largeur souhaitée */
     margin: auto;
-    transform: scale(1.2); /* Zoom de base */
-    min-height: 500px !important;
-    transition: transform 0.3s ease-in-out;
+    transform: scale(0.9);
 }
 
 /* 🟢 Evite le zoom au survol */
