@@ -110,14 +110,14 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1000px; /* Ajuste selon la largeur souhaitée */
+    max-width: 1050px; /* Ajuste selon la largeur souhaitée */
     margin: auto;
     transform: scale(0.9);
 }
 
 /* 🟢 Evite le zoom au survol */
 .mermaid:hover {
-    transform: scale(1.2) !important;
+    /*transform: scale(1.2) !important;*/
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     overflow: hidden; /* Empêche qu’il dépasse le cadre */
