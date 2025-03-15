@@ -296,7 +296,7 @@ pre code {
     background: #f8f9fa;
     border-radius: 10px;
     width: 100%;
-    max-width: 1000px; /* 🔹 Largeur maximale */
+    max-width: 1100px; /* 🔹 Largeur encore augmentée */
     height: auto;
     margin: 20px auto;
 }
@@ -307,10 +307,11 @@ pre code {
 }
 
 .ci-cd-diagram pre.mermaid {
-    font-size: 1.5em; /* 🔹 Augmente la taille du texte */
-    min-height: 300px; /* 🔹 Permet d'éviter qu'il soit trop compact */
+    font-size: 1.8em; /* 🔹 Encore plus grand */
+    min-height: 400px; /* 🔹 Plus d'espace pour éviter l'écrasement */
+    max-width: 100%;
+    overflow: auto;
 }
-
 /* 🟢 Ajustement du bouton */
 .btn-primary {
     display: inline-block;
