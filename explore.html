@@ -110,13 +110,18 @@
                           C -->|Merge Request Validé| D[Merge vers main]
                           D -->|Trigger Déploiement| E[Déploiement sur GCP Cloud Run]
                           E -->|🚀 App en ligne| F[Validation & Monitoring]
-                      
+                        
+                          %% Définition des styles Mermaid
                           classDef success fill:#28a745,stroke:#fff,stroke-width:2px,color:#fff;
                           classDef process fill:#007bff,stroke:#fff,stroke-width:2px,color:#fff;
                           classDef warning fill:#ffc107,stroke:#fff,stroke-width:2px,color:#fff;
-                      
-                          A,B,D,E,F,C success
-                      </pre>
+                        
+                          %% Application des styles Mermaid
+                          class A,B,C success;
+                          class D process;
+                          class E,F warning;
+                    </pre>
+                        
                       
                 </div>
 
@@ -191,6 +196,11 @@
         </div>
 
     </footer>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            mermaid.initialize({ startOnLoad: true });
+        });
+    </script>
+      
 </body>
 </html>
