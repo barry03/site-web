@@ -261,10 +261,16 @@ pre code {
 }
 
 /* 🟢 Ajustement du cadre CI/CD */
-.ci-cd-card {
-    text-align: center;
-    padding: 20px;
-    max-width: 600px; /* Limite la largeur */
+.card-ci-cd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* 🔹 Ajuste pour être aligné avec les autres blocs */
     margin: auto;
 }
 
@@ -277,10 +283,10 @@ pre code {
 
 /* 🟢 Evite que le zoom Mermaid déborde */
 .ci-cd-diagram-container {
-    overflow-x: auto; /* Permet un scroll horizontal si besoin */
+    overflow-x: auto;
     max-width: 100%;
-    padding: 10px;
-    max-height: 500px; /* 🟢 Empêche un schéma trop grand de dépasser */
+    padding: 20px;
+    text-align: center;
 }
 
 .ci-cd-diagram {
@@ -291,15 +297,19 @@ pre code {
     background: #f8f9fa;
     border-radius: 10px;
     width: 100%;
-    max-width: 800px; /* 🔹 Réduction légère pour l'harmonisation */
+    max-width: 1000px; /* 🔹 Augmente la largeur pour être plus visible */
+    height: auto;
     margin: 20px auto;
-    transform: scale(0.95); /* 🔹 Évite un zoom trop agressif */
 }
 
 /* 🟢 Centrage du bouton */
 .ci-cd-button-container {
     margin-top: 20px;
     text-align: center;
+}
+
+.ci-cd-diagram pre.mermaid {
+    font-size: 1.2em; /* 🔹 Augmente la taille du texte */
 }
 
 /* 🟢 Ajustement du bouton */
