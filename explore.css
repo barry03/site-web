@@ -280,7 +280,6 @@ pre code {
     margin-top: 15px;
 }
 
-
 /* 🟢 Evite que le zoom Mermaid déborde */
 .ci-cd-diagram-container {
     overflow-x: auto;
@@ -293,15 +292,14 @@ pre code {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     background: #f8f9fa;
     border-radius: 10px;
     width: 100%;
-    max-width: 1000px; /* 🔹 Augmente la largeur pour être plus visible */
+    max-width: 1000px; /* 🔹 Largeur maximale */
     height: auto;
     margin: 20px auto;
 }
-
 /* 🟢 Centrage du bouton */
 .ci-cd-button-container {
     margin-top: 20px;
@@ -309,7 +307,8 @@ pre code {
 }
 
 .ci-cd-diagram pre.mermaid {
-    font-size: 1.2em; /* 🔹 Augmente la taille du texte */
+    font-size: 1.5em; /* 🔹 Augmente la taille du texte */
+    min-height: 300px; /* 🔹 Permet d'éviter qu'il soit trop compact */
 }
 
 /* 🟢 Ajustement du bouton */
