@@ -109,11 +109,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100% !important;
-    max-width: 1100px !important; /* 🔹 Largeur plus grande */
+    width: 100%;
+    max-width: 1000px; /* Ajuste selon la largeur souhaitée */
     margin: auto;
-    transform: scale(1.2) !important; /* 🔹 Zoom forcé */
-    min-height: 500px !important; /* 🔹 Augmente la hauteur */
+    transform: scale(0.9);
 }
 
 /* 🟢 Evite le zoom au survol */
