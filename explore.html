@@ -103,14 +103,21 @@
 
                 <!-- Schéma interactif Mermaid -->
                 <div class="ci-cd-diagram">
-                <pre class="mermaid">
-                    graph TD
-                    A[Commit sur dev] -->|Trigger| B[Build Docker Image]
-                    B -->|Push to Registry| C[Docker Hub / GCP Artifact Registry]
-                    C -->|Merge Request Validé| D[Merge vers main]
-                    D -->|Trigger Déploiement| E[Déploiement sur GCP Cloud Run]
-                    E -->|App en ligne 🚀| F[Validation et Monitoring]
-                </pre>
+                    <pre class="mermaid">
+                        graph TD
+                          A[Commit sur dev] -->|Trigger| B[Build Docker Image]
+                          B -->|Push to Registry| C[Docker Hub / GCP Artifact Registry]
+                          C -->|Merge Request Validé| D[Merge vers main]
+                          D -->|Trigger Déploiement| E[Déploiement sur GCP Cloud Run]
+                          E -->|🚀 App en ligne| F[Validation & Monitoring]
+                      
+                          classDef success fill:#28a745,stroke:#fff,stroke-width:2px,color:#fff;
+                          classDef process fill:#007bff,stroke:#fff,stroke-width:2px,color:#fff;
+                          classDef warning fill:#ffc107,stroke:#fff,stroke-width:2px,color:#fff;
+                      
+                          A,B,D,E,F,C success
+                      </pre>
+                      
                 </div>
 
                 <!-- Animation Lottie -->
@@ -135,11 +142,9 @@
                     renderer: "svg",
                     loop: true,
                     autoplay: true,
-                    path: "https://assets10.lottiefiles.com/private_files/lf30_tcknufm3.json"
-                });
+                    path: "https://assets3.lottiefiles.com/packages/lf20_kqshxuij.json" 
+                });                  
             </script>
-
-
         </div>
     </section>    
     
