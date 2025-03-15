@@ -92,13 +92,54 @@
 
     
             <!-- Méthodologie CI/CD -->
+            <!-- Méthodologie CI/CD avec schéma interactif -->
+            <!-- Méthodologie CI/CD avec animation & lien GitLab -->
             <div class="card">
                 <h2><span class="emoji">⚙️</span> Méthodologie & CI/CD</h2>
                 <p>
                     Workflow entièrement automatisé et géré via GitLab CI/CD et Docker, avec séparation nette des environnements dev et prod.
                 </p>
                 <pre><code>./deploy.sh prod</code></pre>
+
+                <!-- Schéma interactif Mermaid -->
+                <div class="ci-cd-diagram">
+                <pre class="mermaid">
+                    graph TD
+                    A[Commit sur dev] -->|Trigger| B[Build Docker Image]
+                    B -->|Push to Registry| C[Docker Hub / GCP Artifact Registry]
+                    C -->|Merge Request Validé| D[Merge vers main]
+                    D -->|Trigger Déploiement| E[Déploiement sur GCP Cloud Run]
+                    E -->|App en ligne 🚀| F[Validation et Monitoring]
+                </pre>
+                </div>
+
+                <!-- Animation Lottie -->
+                <div id="ci-cd-animation" style="width: 300px; margin: auto;"></div>
+
+                <!-- Bouton vers les logs CI/CD -->
+                <a href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline/-/pipelines" target="_blank" class="btn-primary">
+                Voir les logs CI/CD
+                </a>
             </div>
+
+            <!-- Scripts Mermaid & Lottie -->
+            <script type="module">
+                import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+                mermaid.initialize({ startOnLoad: true });
+            </script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+            <script>
+                var animation = lottie.loadAnimation({
+                    container: document.getElementById("ci-cd-animation"),
+                    renderer: "svg",
+                    loop: true,
+                    autoplay: true,
+                    path: "https://assets10.lottiefiles.com/private_files/lf30_tcknufm3.json"
+                });
+            </script>
+
+
         </div>
     </section>    
     
