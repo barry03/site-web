@@ -108,7 +108,7 @@
                 <!-- Conteneur du schéma Mermaid -->
                 <div class="ci-cd-diagram-container">
                     <pre class="mermaid">
-                        graph TD
+                        graph LR
                           A[Commit sur dev] -->|Trigger| B[Build Docker Image]
                           B -->|Push to Registry| C[Docker Hub / GCP Artifact Registry]
                           C -->|Merge Request Validé| D[Merge vers main]
@@ -126,7 +126,7 @@
                 </div>
             
                 <!-- Bouton aligné proprement -->
-                <div class="ci-cd-button-container">
+                <div class="ci-cd-button">
                     <a href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline/-/pipelines" target="_blank" class="btn-primary">
                         Voir les logs CI/CD
                     </a>

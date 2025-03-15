@@ -110,8 +110,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 600px; /* Ajuste selon la largeur souhaitée */
+    max-width: 800px; /* Ajuste selon la largeur souhaitée */
     margin: auto;
+    transform: scale(0.9);
 }
 
 .mermaid:hover {
@@ -267,11 +268,32 @@ pre code {
     margin: auto;
 }
 
+.ci-cd-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+
 /* 🟢 Evite que le zoom Mermaid déborde */
 .ci-cd-diagram-container {
     overflow-x: auto; /* Permet un scroll horizontal si besoin */
     max-width: 100%;
     padding: 10px;
+    max-height: 500px; /* 🟢 Empêche un schéma trop grand de dépasser */
+}
+
+.ci-cd-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px; /* 🔹 Réduction légère pour l'harmonisation */
+    margin: 20px auto;
+    transform: scale(0.95); /* 🔹 Évite un zoom trop agressif */
 }
 
 /* 🟢 Centrage du bouton */
