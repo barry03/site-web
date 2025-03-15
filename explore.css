@@ -112,7 +112,9 @@ body {
     width: 100%;
     max-width: 1000px; /* Ajuste selon la largeur souhaitée */
     margin: auto;
-    transform: scale(0.9);
+    transform: scale(1.2); /* Zoom de base */
+    min-height: 500px !important;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* 🟢 Evite le zoom au survol */
@@ -120,6 +122,8 @@ body {
     transform: scale(1.2) !important;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    overflow: hidden; /* Empêche qu’il dépasse le cadre */
+    max-width: 100%;
 }
   
 
