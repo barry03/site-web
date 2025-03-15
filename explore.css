@@ -200,13 +200,17 @@ body {
 .btn {
     display: inline-block;
     margin-top: 25px;
-    padding: 10px 20px;
+    width: auto;
+    padding: 10px 15px;
     background-color: #5468ff;
     color: #fff;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: background-color 0.3s;
+    min-width: 150px;
 }
+
+
 
 .btn:hover {
     background-color: #4053d9;
