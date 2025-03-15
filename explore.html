@@ -94,15 +94,19 @@
             <!-- Méthodologie CI/CD -->
             <!-- Méthodologie CI/CD avec schéma interactif -->
             <!-- Méthodologie CI/CD avec animation & lien GitLab -->
-            <div class="card">
+            <div class="card ci-cd-card">
                 <h2><span class="emoji">⚙️</span> Méthodologie & CI/CD</h2>
                 <p>
                     Workflow entièrement automatisé et géré via GitLab CI/CD et Docker, avec séparation nette des environnements dev et prod.
                 </p>
-                <pre><code>./deploy.sh prod</code></pre>
-
-                <!-- Schéma interactif Mermaid -->
-                <div class="ci-cd-diagram">
+                
+                <!-- Commande affichée bien visible -->
+                <div class="deploy-command">
+                    <pre><code>./deploy.sh prod</code></pre>
+                </div>
+            
+                <!-- Conteneur du schéma Mermaid -->
+                <div class="ci-cd-diagram-container">
                     <pre class="mermaid">
                         graph TD
                           A[Commit sur dev] -->|Trigger| B[Build Docker Image]
@@ -110,29 +114,24 @@
                           C -->|Merge Request Validé| D[Merge vers main]
                           D -->|Trigger Déploiement| E[Déploiement sur GCP Cloud Run]
                           E -->|🚀 App en ligne| F[Validation & Monitoring]
-                        
-                          %% Définition des styles Mermaid
+            
                           classDef success fill:#28a745,stroke:#fff,stroke-width:2px,color:#fff;
                           classDef process fill:#007bff,stroke:#fff,stroke-width:2px,color:#fff;
                           classDef warning fill:#ffc107,stroke:#fff,stroke-width:2px,color:#fff;
-                        
-                          %% Application des styles Mermaid
+            
                           class A,B,C success;
                           class D process;
                           class E,F warning;
                     </pre>
-                        
-                      
                 </div>
-
-                <!-- Animation Lottie -->
-                <div id="ci-cd-animation" style="width: 300px; margin: auto;"></div>
-
-                <!-- Bouton vers les logs CI/CD -->
-                <a href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline/-/pipelines" target="_blank" class="btn-primary">
-                Voir les logs CI/CD
-                </a>
-            </div>
+            
+                <!-- Bouton aligné proprement -->
+                <div class="ci-cd-button-container">
+                    <a href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline/-/pipelines" target="_blank" class="btn-primary">
+                        Voir les logs CI/CD
+                    </a>
+                </div>
+            </div>            
 
             <!-- Scripts Mermaid & Lottie -->
             <script type="module">
