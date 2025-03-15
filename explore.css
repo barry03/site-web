@@ -109,14 +109,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 800px; /* Ajuste selon la largeur souhaitée */
+    width: 100% !important;
+    max-width: 1100px !important; /* 🔹 Largeur plus grande */
     margin: auto;
-    transform: scale(0.9);
+    transform: scale(1.2) !important; /* 🔹 Zoom forcé */
+    min-height: 500px !important; /* 🔹 Augmente la hauteur */
 }
 
+/* 🟢 Evite le zoom au survol */
 .mermaid:hover {
-    transform: scale(1.1);
+    transform: scale(1.2) !important;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -282,10 +284,14 @@ pre code {
 
 /* 🟢 Evite que le zoom Mermaid déborde */
 .ci-cd-diagram-container {
+    width: 100%;
+    max-width: 1200px; /* Augmenté pour correspondre aux autres sections */
     overflow-x: auto;
-    max-width: 100%;
     padding: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ci-cd-diagram {
@@ -307,10 +313,12 @@ pre code {
 }
 
 .ci-cd-diagram pre.mermaid {
-    font-size: 1.8em; /* 🔹 Encore plus grand */
-    min-height: 400px; /* 🔹 Plus d'espace pour éviter l'écrasement */
-    max-width: 100%;
+    font-size: 2em !important; /* 🔹 Forçage de la taille */
+    min-height: 500px !important; /* 🔹 Plus de hauteur */
+    width: 100% !important;
+    max-width: 1100px !important; /* 🔹 Largeur augmentée */
     overflow: auto;
+    transform: scale(1.2) !important; /* 🔹 Zoom forcé */
 }
 /* 🟢 Ajustement du bouton */
 .btn-primary {
