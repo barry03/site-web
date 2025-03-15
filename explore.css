@@ -110,7 +110,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1050px; /* Ajuste selon la largeur souhaitée */
+    max-width: 1100px; /* Ajuste selon la largeur souhaitée */
     margin: auto;
     transform: scale(0.9);
 }
