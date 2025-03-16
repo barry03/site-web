@@ -344,7 +344,7 @@ body {
 }
 
 .stack-technique img.big-tech {
-    width: 100px !important; /* Augmente la taille des icônes spécifiques */
+    width: 85px !important; /* Augmente la taille des icônes spécifiques */
     height: auto;
 }
 
