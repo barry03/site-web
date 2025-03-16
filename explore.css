@@ -193,6 +193,40 @@ body {
     left: 0;
 }
 
+/* Supprime le ✔️ uniquement pour les éléments ayant la classe "no-check" */
+.styled-list.no-check li::before {
+    content: none; /* Supprime le ✔️ */
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les blocs */
+}
+
+.blog-card {
+    flex: 1;
+    min-width: 300px; /* Largeur minimale pour éviter que ça soit trop petit */
+    max-width: 350px; /* Largeur maximale */
+}
+
+/* ✅ Ajustement du conteneur principal */
+#veille-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les blocs */
+    gap: 20px; /* Ajoute un espacement entre les blocs */
+}
+
+/* ✅ Ajustement des cartes pour qu'elles s'alignent bien */
+#veille-container .card {
+    flex: 1;
+    min-width: 300px; /* Empêche que les blocs deviennent trop petits */
+    max-width: 350px; /* Taille max pour éviter qu'un bloc prenne toute la ligne */
+    text-align: center;
+}
+
 /* ✅ Icônes ajustées */
 .icon {
     width: 20px;
