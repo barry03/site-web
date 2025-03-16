@@ -129,17 +129,15 @@ body {
 }
 
 .hero-description {
+    display: block;
     font-size: 1rem;
     line-height: 1.4;
     text-align: left;
     max-width: 70%;
-    max-height: 5.5em; /* Ajuste pour afficher correctement */
     margin: 0;
     overflow: hidden;
-    
-    display: block; /* Désactive le comportement de flex */
-    text-overflow: ellipsis; /* Ajoute les "..." si nécessaire */
-    white-space: normal; /* Permet le retour à la ligne normal */
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .hero-content {
