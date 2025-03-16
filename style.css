@@ -343,6 +343,15 @@ body {
     opacity: 0.8;
 }
 
+.big-tech {
+    width: 70px; /* Augmente la taille de ces icônes */
+    height: auto; /* Garde le ratio original */
+    transition: transform 0.3s ease-in-out;
+}
+.big-tech:hover {
+    transform: scale(1.2); /* Effet d'agrandissement au survol */
+}
+
 /* ✅ Corrige l'affichage des barres de progression */
 .progress-bar {
     position: relative;
