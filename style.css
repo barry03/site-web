@@ -891,12 +891,32 @@ body {
         flex-direction: column;
         align-items: center;
     }
-
+    /*
     .hero-image img {
         width: 180px;
         margin-top: 15px;
     }
-
+    */
+    .hero-image {
+        display: flex;
+        justify-content: flex-end; /* Place l'image à droite */
+        align-items: center; /* Centre verticalement */
+        width: 250px; /* Ajuste la taille du cadre selon besoin */
+        height: 250px;
+        overflow: hidden; /* Coupe l'excédent */
+        border-radius: 50%; /* Garder l'effet cercle */
+        background-color: #f0f0f0; /* Facultatif : couleur de fond */
+        position: absolute; /* Permet de le placer précisément */
+        right: 50px; /* Ajuste la position sur la droite */
+        top: 50%; /* L'aligne au centre vertical de son parent */
+        transform: translateY(-50%); /* Corrige l'alignement */
+    }
+    .hero-image .avatar {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Évite l'étirement de l'image */
+        display: block;
+    }
     /* ✅ Section Compétences */
     .competences-container {
         display: flex;
