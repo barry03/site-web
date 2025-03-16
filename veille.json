@@ -13,13 +13,13 @@
     ],
     "newsletters": [
       {
-        "name": "Data & AI Weekly",
-        "url": "https://www.data-newsletter.com/",
+        "name": "The Batch",
+        "url": "https://www.deeplearning.ai/the-batch/",
         "icon": "images/icons/mail.png"
       },
       {
         "name": "Codeur Weekly",
-        "url": "https://newsletter.codeur.com/",
+        "url": "https://www.codeur.com/users",
         "icon": "images/icons/mail.png"
       }
     ],
