@@ -207,6 +207,15 @@ body {
     padding-right: 40px; /* Espace à droite */
 }
 
+@keyframes moveAvatar {
+    0%, 100% {
+        transform: translateY(0); /* Position normale */
+    }
+    50% {
+        transform: translateY(-10px); /* Monte légèrement */
+    }
+}
+
 /* Ajustement de l’image Avatar */
 .hero-image .avatar {
     width: 180px; /* Taille réduite */
@@ -215,6 +224,7 @@ body {
     display: block;
     border-radius: 0; /* Supprime le cercle */
     max-height: 350px; /* Limite la hauteur */
+    animation: moveAvatar 2s infinite ease-in-out;
 }
 
 /*
