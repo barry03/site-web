@@ -899,23 +899,22 @@ body {
     */
     .hero-image {
         display: flex;
-        justify-content: flex-end; /* Place l'image à droite */
-        align-items: center; /* Centre verticalement */
-        width: 250px; /* Ajuste la taille du cadre selon besoin */
-        height: 250px;
-        overflow: hidden; /* Coupe l'excédent */
-        border-radius: 50%; /* Garder l'effet cercle */
-        background-color: #f0f0f0; /* Facultatif : couleur de fond */
-        position: absolute; /* Permet de le placer précisément */
+        justify-content: flex-end; /* Garde l'image à droite */
+        align-items: center;
+        width: auto; /* Laisse la taille originale */
+        height: auto;
+        position: absolute; /* Permet de le fixer à droite */
         right: 50px; /* Ajuste la position sur la droite */
         top: 50%; /* L'aligne au centre vertical de son parent */
         transform: translateY(-50%); /* Corrige l'alignement */
     }
+    
     .hero-image .avatar {
-        width: 100%;
+        width: 220px; /* Ajuste la taille */
         height: auto;
-        object-fit: cover; /* Évite l'étirement de l'image */
+        object-fit: contain; /* S'assure que l'image reste entière */
         display: block;
+        border-radius: 0; /* Supprime l'effet cercle */
     }
     /* ✅ Section Compétences */
     .competences-container {
