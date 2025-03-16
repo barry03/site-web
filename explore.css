@@ -83,13 +83,13 @@ body {
 
 /* En-tête stylisé */
 .section-header {
-    height: 20vh; /* Ajuste la hauteur */
-    max-height: 300px; /* Bloque la hauteur max */
     text-align: center;
     margin-bottom: 50px;
 }
 
 .section-header h1 {
+    height: 30vh; /* Ajuste la hauteur */
+    max-height: 300px; /* Bloque la hauteur max */
     font-size: 2rem;
     font-weight: bold;
     color: #222;
