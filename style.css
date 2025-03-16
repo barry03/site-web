@@ -121,8 +121,20 @@ body {
     align-items: center;
     padding: 40px 10%;
     margin-top: -10px;
+    height: 400px; /* Ajuste la hauteur du bloc */
+    max-width: 1200px; /* Pour éviter une largeur excessive */
+    margin-left: auto;
+    margin-right: auto;
 }
-
+/*
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10%;
+    margin-top: -10px;
+}
+*/
 .hero-content {
     max-width: 50%;
 }
@@ -197,24 +209,23 @@ body {
     margin-top: 20px;
 }
 */
+/* Ajustement de la section de l'avatar */
 .hero-image {
     display: flex;
-    justify-content: flex-end; /* Garde l'image à droite */
+    justify-content: flex-end;
     align-items: center;
-    width: 100%; /* Prend toute la largeur du hero */
-    height: auto;
-    position: relative; /* Empêche le dépassement */
-    padding-right: 60px; /* Ajoute un espace entre l'image et le bord droit */
-    max-width: 1200px; /* Pour ne pas qu'il s'étale trop */
+    width: 100%;
+    padding-right: 40px; /* Espace à droite */
 }
 
+/* Ajustement de l’image Avatar */
 .hero-image .avatar {
-    width: 200px; /* Taille ajustée */
+    width: 180px; /* Taille réduite */
     height: auto;
-    object-fit: contain; /* Conserve les proportions */
+    object-fit: contain; /* Assure une bonne mise à l’échelle */
     display: block;
     border-radius: 0; /* Supprime le cercle */
-    max-height: 100%; /* Empêche le débordement en bas */
+    max-height: 350px; /* Limite la hauteur */
 }
 
 /*
