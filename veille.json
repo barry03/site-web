@@ -1,0 +1,39 @@
+{
+    "podcasts": [
+      {
+        "name": "Code[Story] - Podcast Dev & Tech",
+        "url": "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+        "icon": "images/icons/spotify.png"
+      },
+      {
+        "name": "Big Data Hebdo",
+        "url": "https://open.spotify.com/show/25X7YWqBxXUryjlwSGy1cl",
+        "icon": "images/icons/spotify.png"
+      }
+    ],
+    "newsletters": [
+      {
+        "name": "Data & AI Weekly",
+        "url": "https://www.data-newsletter.com/",
+        "icon": "images/icons/mail.png"
+      },
+      {
+        "name": "Codeur Weekly",
+        "url": "https://newsletter.codeur.com/",
+        "icon": "images/icons/mail.png"
+      }
+    ],
+    "youtube": [
+      {
+        "name": "DataScientest",
+        "url": "https://www.youtube.com/c/DataScientest",
+        "icon": "images/icons/youtube.png"
+      },
+      {
+        "name": "Fireship - Dev & Cloud",
+        "url": "https://www.youtube.com/c/Fireship",
+        "icon": "images/icons/youtube.png"
+      }
+    ]
+  }
+  

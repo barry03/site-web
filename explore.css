@@ -102,7 +102,9 @@ body {
 .card-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .mermaid {
@@ -169,13 +171,33 @@ body {
     margin-bottom: 10px;
     position: relative;
     padding-left: 20px;
-    color: #444;
+    color: #555;
+    gap: 10px;
+    font-size: 1rem;
+    padding: 8px 0;
+}
+
+.styled-list li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.styled-list li a:hover {
+    color: #0056b3;
 }
 
 .styled-list li::before {
     content: "✔️";
     position: absolute;
     left: 0;
+}
+
+/* ✅ Icônes ajustées */
+.icon {
+    width: 20px;
+    height: 20px;
 }
 
 .dashboard-gallery {
