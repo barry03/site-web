@@ -33,25 +33,6 @@ body {
 
 /* ✅ Style du texte descriptif */
 
-.hero-description {
-    font-size: 1rem; /* Taille du texte */
-    line-height: 1.4; /* Réduit l’espacement entre les lignes */
-    text-align: left; /* Alignement propre */
-    max-width: 70%; /* Compacte le texte */
-    max-height: 5.6em; /* Ajuste pour afficher Cloud Computing */
-    margin: 0; /* Évite trop d’espace en haut et en bas */
-    overflow: hidden;
-    
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* Limite à 4 lignes */
-    -webkit-box-orient: vertical;
-    overflow: hidden; /* Cache l'excédent */
-    
-    line-clamp: 4; /* Ajout de la version standard pour compatibilité */
-    box-orient: vertical; /* Compatibilité */
-}
-
-
 /*
 .hero-description {
     font-size: 1rem;
@@ -139,12 +120,26 @@ body {
 
 .hero {
     display: flex;
-    height: 30vh; /* Ajuste la hauteur */
+    height: 35vh; /* Ajuste la hauteur */
     max-height: 495px; /* Bloque la hauteur max */
     justify-content: space-between;
     align-items: center;
     padding: 40px 10%;
     margin-top: -10px;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+    max-width: 70%;
+    max-height: 5.6em; /* Ajuste pour afficher correctement */
+    margin: 0;
+    overflow: hidden;
+    
+    display: block; /* Désactive le comportement de flex */
+    text-overflow: ellipsis; /* Ajoute les "..." si nécessaire */
+    white-space: normal; /* Permet le retour à la ligne normal */
 }
 
 .hero-content {
