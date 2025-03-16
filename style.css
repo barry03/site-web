@@ -187,6 +187,7 @@ body {
 }
 
 /* ✅ 5. Photo de Profil */
+/*
 .hero-image {
     position: relative;
     justify-content: center;
@@ -195,7 +196,27 @@ body {
     align-items: center;
     margin-top: 20px;
 }
+*/
+.hero-image {
+    display: flex;
+    justify-content: flex-end; /* Garde l'image à droite */
+    align-items: center;
+    width: auto; /* Laisse la taille originale */
+    height: auto;
+    position: absolute; /* Permet de le fixer à droite */
+    right: 50px; /* Ajuste la position sur la droite */
+    top: 50%; /* L'aligne au centre vertical de son parent */
+    transform: translateY(-50%); /* Corrige l'alignement */
+}
+.hero-image .avatar {
+    width: 220px; /* Ajuste la taille */
+    height: auto;
+    object-fit: contain; /* S'assure que l'image reste entière */
+    display: block;
+    border-radius: 0; /* Supprime l'effet cercle */
+}
 
+/*
 .hero-image img {
     width: 200px;
     border-radius: 50%;
@@ -204,7 +225,7 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
-
+*/
 .hero-image img:hover {
     transform: scale(1.05);
 }
@@ -897,25 +918,7 @@ body {
         margin-top: 15px;
     }
     */
-    .hero-image {
-        display: flex;
-        justify-content: flex-end; /* Garde l'image à droite */
-        align-items: center;
-        width: auto; /* Laisse la taille originale */
-        height: auto;
-        position: absolute; /* Permet de le fixer à droite */
-        right: 50px; /* Ajuste la position sur la droite */
-        top: 50%; /* L'aligne au centre vertical de son parent */
-        transform: translateY(-50%); /* Corrige l'alignement */
-    }
     
-    .hero-image .avatar {
-        width: 220px; /* Ajuste la taille */
-        height: auto;
-        object-fit: contain; /* S'assure que l'image reste entière */
-        display: block;
-        border-radius: 0; /* Supprime l'effet cercle */
-    }
     /* ✅ Section Compétences */
     .competences-container {
         display: flex;
