@@ -195,11 +195,12 @@ body {
 
 /* Supprime le ✔️ uniquement pour les éléments ayant la classe "no-check" */
 .styled-list.no-check li::before {
-    content: none; /* Supprime le ✔️ */
+    content: none !important;
 }
 .no-check {
     list-style: none !important;
     padding-left: 0 !important;
+    margin-left: 0 !important;
 }
 
 #background-video {
@@ -443,7 +444,18 @@ pre code {
     padding: 30px 100px;
     background-color: #f0f3ff;
     border-top: 2px solid #e1e8ff;
-  }
+}
+
+/* Style du bloc citation */
+.footer-extra {
+    width: 40%;
+    text-align: right;
+    font-style: italic;
+    color: #444;
+    font-size: 14px;
+    border-left: 4px solid #5468ff;
+    padding-left: 15px;
+}
   
 .footer-left {
     width: 40%;

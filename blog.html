@@ -65,7 +65,7 @@
             <div class="blog-card">
                 <h2>🌍 Mes articles externes</h2>
                 <p>Retrouvez mes articles publiés ailleurs :</p>
-                <ul class="styled-list no-check"></ul>
+                <ul class="styled-list no-check">
                     <li>📌 <a href="https://dev.to/" target="_blank">Mon blog sur Dev.to</a></li>
                     <li>📌 <a href="https://medium.com/?tag=data-engineering" target="_blank">Mes articles sur Medium</a></li>
                 </ul>
@@ -154,6 +154,28 @@
                 </a>                  
             </div>            
         </div>
+    
+        <!-- ✅ Bloc Citations Inspirantes -->
+        <div class="footer-extra">
+            <blockquote id="quote"></blockquote>
+        </div>
     </footer>
+    
+    <script>
+        // Liste de citations inspirantes pour les devs
+        const quotes = [
+            "“Code is like humor. When you have to explain it, it’s bad.” – Cory House",
+            "“First, solve the problem. Then, write the code.” – John Johnson",
+            "“The best way to predict the future is to invent it.” – Alan Kay",
+            "“Simplicity is the soul of efficiency.” – Austin Freeman",
+            "“Talk is cheap. Show me the code.” – Linus Torvalds",
+            "“Your most unhappy customers are your greatest source of learning.” – Bill Gates",
+            "“The function of good software is to make the complex appear simple.” – Grady Booch"
+        ];
+    
+        // Afficher une citation aléatoire
+        document.getElementById("quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+    </script>
+    
 </body>
 </html>
