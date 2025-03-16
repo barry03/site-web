@@ -440,21 +440,27 @@ pre code {
     display: flex;
     gap: 80px;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 30px 100px;
     background-color: #f0f3ff;
     border-top: 2px solid #e1e8ff;
 }
 
 /* Style du bloc citation */
-.footer-extra {
-    width: 40%;
-    text-align: right;
+/* Nouvelle section pour les citations */
+.footer-quotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacement entre les citations */
+    text-align: center;
+    max-width: 50%;
+}
+
+.footer-quotes blockquote {
     font-style: italic;
+    font-size: 0.9rem;
     color: #444;
-    font-size: 14px;
-    border-left: 4px solid #5468ff;
-    padding-left: 15px;
 }
   
 .footer-left {
