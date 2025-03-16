@@ -84,17 +84,21 @@
         async function loadVeilleData() {
             const response = await fetch("veille.json"); // Chargement du JSON
             const data = await response.json();
-      
+        
             const categories = {
                 "podcasts": "🎙 Podcasts",
                 "newsletters": "📩 Newsletters",
                 "youtube": "📺 Chaînes YouTube"
             };
-      
+        
             let veilleHTML = "";
-      
+        
+            let totalSources = 0; // Compteur des sources
+        
             for (let key in categories) {
                 if (data[key]) {
+                    totalSources += data[key].length; // On compte le nombre total de sources
+        
                     veilleHTML += `
                         <div class="card">
                             <h2>${categories[key]}</h2>
@@ -110,13 +114,24 @@
                     `;
                 }
             }
-      
+        
             document.getElementById("veille-container").innerHTML = veilleHTML;
+        
+            // Vérification des nouvelles sources
+            checkNewVeille(totalSources);
         }
-      
+        
+        function checkNewVeille(currentCount) {
+            let oldCount = localStorage.getItem("veilleCount") || 0;
+        
+            if (currentCount > oldCount) {
+                alert("📢 Une nouvelle source de veille technologique a été ajoutée !");
+                localStorage.setItem("veilleCount", currentCount);
+            }
+        }
+        
         loadVeilleData(); // Exécution du script
     </script>
-
 
     <footer class="footer">
         <div class="footer-left">

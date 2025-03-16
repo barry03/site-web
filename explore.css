@@ -196,13 +196,21 @@ body {
 /* Supprime le ✔️ uniquement pour les éléments ayant la classe "no-check" */
 .styled-list.no-check li::before {
     content: none; /* Supprime le ✔️ */
-}
-.styled-list.no-check {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none !important;
+    padding-left: 0 !important;
 }
 
+.back-button {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #0056b3;
+}
 
 .blog-container {
     display: flex;
@@ -212,11 +220,15 @@ body {
 }
 
 .blog-card {
+    background-color: white; /* Remet le fond blanc */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
     flex: 1;
-    min-width: 300px; /* Largeur minimale pour éviter que ça soit trop petit */
-    max-width: 350px; /* Largeur maximale */
+    min-width: 300px;
+    max-width: 450px;
 }
-
 /* ✅ Ajustement du conteneur principal */
 #veille-container {
     display: flex;
