@@ -32,46 +32,21 @@ body {
     color: #0056b3; /* Bleu */
 }
 
-/* 🌍 Articles Externes - Adaptation Horizontale */
-.external-articles {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    overflow-x: auto;
-    padding: 15px;
-}
-
-.external-card {
-    min-width: 280px;
-    max-width: 320px;
-    background: #fff;
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* 🎨 Style des liens 'Voir plus' */
 .external-links {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
     margin-top: 10px;
 }
 
-.external-links a {
+.btn-link {
     text-decoration: none;
-    color: #007bff;
+    color: #4a90e2;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
 }
 
-.external-links a:hover {
+.btn-link:hover {
     color: #0056b3;
-    text-decoration: underline;
 }
 
 
@@ -276,28 +251,35 @@ body {
     color: #0056b3;
 }
 
-.blog-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 20px; /* Espacement entre les blocs */
-    overflow-x: auto;
+.blog-container, 
+.external-articles {
+    display: flex; /* Active Flexbox */
+    flex-direction: row; /* Aligne horizontalement */
+    justify-content: center; /* Centre les blocs */
+    gap: 20px; /* Espacement entre les cartes */
+    flex-wrap: wrap; /* Passe à la ligne sur petits écrans */
+    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+    scroll-behavior: smooth;
+    scrollbar-width: thin; /* Pour Firefox */
+    scrollbar-color: #ccc transparent; /* Couleur de la barre de défilement */
 }
 
 .blog-card {
-    background-color: white; /* Remet le fond blanc */
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background-color: white; /* Fond blanc */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 15px; /* Espacement interne */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    text-align: center; /* Centrage du texte */
     flex: 1;
-    min-width: 250px;
-    max-width: 350px;
-    transition: transform 0.3s ease-in-out;
+    min-width: 250px; /* Largeur minimale */
+    max-width: 350px; /* Largeur maximale */
+    transition: transform 0.3s ease-in-out; /* Effet fluide au survol */
 }
+
 .blog-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px); /* Effet d’élévation au survol */
 }
+
 /* ✅ Ajustement du conteneur principal */
 #veille-container {
     display: flex;
