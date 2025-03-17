@@ -251,47 +251,53 @@ body {
     color: #0056b3;
 }
 
-/* 🌍 Alignement général */
-.blog-container, 
-.external-articles {
+/* 🏗 Conteneur principal */
+.blog-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Passe à la ligne si nécessaire */
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: #ccc transparent;
+    max-width: 90%;
+    margin: auto;
 }
 
-.blog-container .blog-card,
-.external-articles .external-card {
-    min-width: 320px; /* Largeur minimale */
-    max-width: 380px; /* Largeur maximale augmentée */
-    padding: 10px; /* Espacement réduit */
+/* 🎯 Ajustement des 2 premières cartes */
+.blog-card {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 12px;
+    height: auto;
+    max-height: 260px; /* 🔹 Réduction de la hauteur */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 🔹 Évite l'espace inutile */
+}
+
+/* 🎯 Ajustement spécifique pour "Mes articles externes" */
+.external-articles {
+    width: 100%;
+    max-width: 600px; /* 🔹 Plus large pour afficher correctement les liens */
     text-align: center;
-    flex: 1;
-    height: auto; /* Ajustement dynamique */
+    padding: 15px;
+    margin-top: 10px;
+    max-height: 280px; /* 🔹 Plus grand pour contenir les articles */
+    overflow-y: auto; /* 🔹 Scroll vertical si nécessaire */
 }
 
-/* 📌 Ajustement du texte */
-.blog-card p, 
-.external-card p {
-    font-size: 0.85rem;
-    line-height: 1.3;
-    max-height: 3.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal; /* Permet le retour à la ligne */
-    word-wrap: break-word; /* Coupe les mots longs */
+/* 📌 Style des liens externes */
+.external-articles a {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #007bff;
+    white-space: normal; /* 🔹 Permet le retour à la ligne */
+    transition: color 0.3s ease-in-out;
 }
 
-/* 📌 Titre plus compact */
-.blog-card h2, 
-.external-card h2 {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+.external-articles a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 /* 📌 Bouton plus compact */
@@ -301,38 +307,28 @@ body {
     margin-top: 6px;
 }
 
-/* 📌 Amélioration du design des liens externes */
-.external-articles a {
-    display: block;
+/* 📌 Amélioration des liens "Voir plus" */
+.btn-link {
     font-size: 0.9rem;
-    margin-top: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
     text-decoration: none;
     color: #007bff;
     transition: color 0.3s ease-in-out;
 }
 
-.external-articles a:hover {
+.btn-link:hover {
     color: #0056b3;
     text-decoration: underline;
 }
 
-/* 📌 Cartes globales */
-.blog-card, 
-.external-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
 /* 📌 Effet au survol */
-.blog-card:hover, 
-.external-card:hover {
+.blog-card:hover {
     transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-/* 📌 Réduction des tailles pour uniformiser avec la veille */
 
 
 /* ✅ Ajustement du conteneur principal */
