@@ -120,8 +120,8 @@ body {
 
 .hero {
     display: flex;
-    height: 32vh; /* Ajuste la hauteur */
-    max-height: 495px; /* Bloque la hauteur max */
+    height: auto;
+    max-height: 500px; /* Bloque la hauteur max */
     justify-content: space-between;
     align-items: center;
     padding: 40px 10%;
