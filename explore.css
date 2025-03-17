@@ -32,6 +32,41 @@ body {
     color: #0056b3; /* Bleu */
 }
 
+.external-articles {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.external-article {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.external-article a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.external-article a:hover {
+    color: #0056b3;
+}
+
+.external-links {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.external-links a {
+    display: inline-block;
+    margin-left: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
 /* ✅ 2. Navigation */
 .navbar {
     position: fixed; /* Fixe la navbar */
@@ -235,16 +270,16 @@ body {
 
 .blog-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     gap: 20px; /* Espacement entre les blocs */
 }
 
 .blog-card {
     background-color: white; /* Remet le fond blanc */
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     flex: 1;
     min-width: 300px;
@@ -260,7 +295,7 @@ body {
 
 .veille-cards {
     display: flex;
-    flex-direction: row; /* Aligner les cartes sur une ligne */
+    flex-direction: column; /* Aligner les cartes sur une ligne */
     justify-content: center;
     flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si l'écran est petit */
     gap: 25px; /* Espace entre les cartes */

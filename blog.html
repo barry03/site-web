@@ -45,33 +45,96 @@
             <h1>📖 Blog Technique</h1>
             <p>Retrouvez ici mes articles techniques et retours d'expérience.</p>
         </div>
-
+    
         <div class="blog-container">
-            <!-- Article 1 -->
+            <!-- Articles internes -->
             <div class="blog-card">
                 <h2><a href="article1.html">🚀 Automatiser un pipeline CI/CD sur GitLab</a></h2>
                 <p>Comment j’ai mis en place un pipeline CI/CD avec Docker et GitLab CI.</p>
                 <a href="article1.html" class="btn">Lire l'article</a>
             </div>
-
-            <!-- Article 2 -->
+    
             <div class="blog-card">
                 <h2><a href="article2.html">📊 Analyse des téléchargements PyPI avec BigQuery</a></h2>
                 <p>Une étude sur l’utilisation de BigQuery pour visualiser les tendances PyPI.</p>
                 <a href="article2.html" class="btn">Lire l'article</a>
             </div>
-
-            <!-- Articles Externes -->
-            <div class="blog-card">
-                <h2>🌍 Mes articles externes</h2>
-                <p>Retrouvez mes articles publiés ailleurs :</p>
-                <ul class="styled-list no-check">
-                    <li>📌 <a href="https://dev.to/" target="_blank">Mon blog sur Dev.to</a></li>
-                    <li>📌 <a href="https://medium.com/?tag=data-engineering" target="_blank">Mes articles sur Medium</a></li>
-                </ul>
+        </div>
+    
+        <!-- 📌 Carte dynamique "Mes articles externes" -->
+        <div class="blog-card external-articles">
+            <h2>🌍 Mes articles externes</h2>
+            <div id="external-articles-container">
+                <!-- Contenu ajouté dynamiquement -->
+            </div>
+            <div class="external-links">
+                <a href="https://dev.to/" target="_blank">🔗 Voir plus sur Dev.to</a>
+                <a href="https://medium.com/@barrydjoulde15" target="_blank">🔗 Voir plus sur Medium</a>
             </div>
         </div>
     </section>
+    
+    <script>
+        async function fetchArticles() {
+            const devToTags = ["dataengineering", "bigdata", "kubernetes", "python"]; // Tags ciblés
+            let articles = [];
+
+            // 🔹 1. Récupérer les articles de Dev.to
+            for (let tag of devToTags) {
+                const url = `https://dev.to/api/articles?tag=${tag}&per_page=1`; // Récupère 1 article/tag
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    
+                    articles.push(...data.map(article => ({
+                        title: article.title,
+                        link: article.url,
+                        source: `Dev.to - #${tag}`,
+                        date: new Date(article.published_at)
+                    })));
+                } catch (error) {
+                    console.error(`Erreur récupération Dev.to (${tag})`, error);
+                }
+            }
+
+            // 🔹 2. Récupérer les articles de Medium via RSS (converti en JSON)
+            try {
+                const response = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/@barrydjoulde15/feed");
+                const data = await response.json();
+
+                if (data.items) {
+                    articles.push(...data.items.slice(0, 1).map(item => ({
+                        title: item.title,
+                        link: item.link,
+                        source: "Medium",
+                        date: new Date(item.pubDate)
+                    })));
+                }
+            } catch (error) {
+                console.error("Erreur récupération Medium", error);
+            }
+
+            // 🔹 3. Trier les articles par date (les plus récents en premier)
+            articles.sort((a, b) => b.date - a.date);
+
+            // 🔹 4. Afficher dynamiquement les articles dans la carte "Mes articles externes"
+            displayArticles(articles);
+        }
+
+        function displayArticles(articles) {
+            const container = document.getElementById("external-articles-container");
+            container.innerHTML = articles.slice(0, 3).map(article => `
+                <div class="external-article">
+                    <p><strong>${article.source} :</strong> <a href="${article.link}" target="_blank">${article.title}</a></p>
+                </div>
+            `).join('');
+        }
+
+        // Charger les articles au chargement de la page
+        fetchArticles();
+
+    </script>
+    
 
         <!-- 📡 Section Veille Technologique -->
     <!-- 📡 Section Veille Technologique -->
