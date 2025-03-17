@@ -310,8 +310,8 @@ body {
     text-align: center;
     text-decoration: none;
     color: white;
-    background-color: #6366F1; /* Même couleur que Lire l'article */
-    border-radius: 8px;
+    /*background-color: #6366F1; Même couleur que Lire l'article */
+    /*border-radius: 8px;*/
     transition: background 0.3s ease-in-out;
 }
 
