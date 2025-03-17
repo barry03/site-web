@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cas d'étude : Analyse téléchargements PyPI (GCP & Streamlit)</title>
+    <link rel="stylesheet" href="explore.css"> <!-- ton CSS déjà existant -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- À intégrer dans ton fichier HTML (si ce n'est pas déjà fait) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+  
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo-db">
+                <span>D</span><span>B</span>
+            </a>            
+        </div>
+
+        <!-- ✅ Menu standard pour ordinateur -->
+        <ul class="nav-links">
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="index.html#competences">Compétences & Stack</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="blog.html">Blog & Veille</a></li>
+        </ul>
+        <!--
+        <div class="nav-right">
+            <a href="#contact" class="cta-button">Contactez-moi</a>
+        </div>
+        -->
+        <!-- ✅ Icône menu burger (visible sur mobile uniquement) -->
+        <!--<div class="menu-toggle" onclick="toggleMenu()">☰</div>-->
+
+        <!-- ✅ Menu mobile -->
+        <div id="mobile-menu">
+            <span class="menu-close" onclick="toggleMenu()">✖</span>
+            <ul>
+                <li><a href="index.html#home" onclick="toggleMenu()">À propos</a></li>
+                <li><a href="index.html#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
+                <li><a href="index.html#projects" onclick="toggleMenu()">Projets</a></li>
+            </ul>
+            <!--<a href="#contact" class="menu-contact" onclick="toggleMenu()">Contactez-moi</a>-->
+        </div>
+    </nav>
+
+    <video autoplay muted loop id="background-video">
+        <source src="videos/background.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos.
+    </video>
+    <!-- Section titre attractif -->
+    <section class="main-container">
+        <div class="section-header">
+            <h1>Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)</h1>
+            <p>Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.</p>
+        </div>
+    
+        <div class="card-container">
+            <!-- Contexte & Objectifs -->
+            <div class="card">
+                <h2><span class="emoji">🎯</span> Contexte & Objectifs</h2>
+                <p>
+                    Analyse des données publiques issues de PyPI sur les téléchargements de packages Python, avec un pipeline automatisé sur GCP et Streamlit.
+                </p>
+                <ul class="styled-list">
+                    <li>Collecte automatique via Composer (Airflow)</li>
+                    <li>Traitement SQL avec BigQuery</li>
+                    <li>Dashboard interactif Streamlit</li>
+                    <li>Automatisation CI/CD via GitLab et Docker</li>
+                </ul>
+            </div>
+    
+            <!-- Dashboards -->
+            <!-- Dashboards & Visualisations -->
+            <div class="card">
+                <h2><span class="emoji">📊</span> Dashboards & Visualisations</h2>
+                <p>Quelques exemples concrets des dashboards interactifs réalisés :</p>
+
+                <div class="dashboard-gallery">
+                    <div class="dashboard-card">
+                        <img src="images/tech/dashboard2.png" alt="Dashboard Streamlit : Téléchargements par pays">
+                        <h4>Téléchargements par Pays</h4>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <img src="images/tech/dashboard1.png" alt="Dashboard Streamlit : Top projets PyPI">
+                        <h4>Top Projets PyPI téléchargés</h4>
+                    </div>
+                </div>
+
+                <a href="https://pypi-monitoring-pipelines-tkwvu4x8htfzernenaefap.streamlit.app/" class="btn" target="_blank">Voir le Dashboard interactif</a>
+            </div>
+
+    
+            <!-- Méthodologie CI/CD -->
+            <!-- Méthodologie CI/CD avec schéma interactif -->
+            <!-- Méthodologie CI/CD avec animation & lien GitLab -->
+            <div class="card ci-cd-card">
+                <h2><span class="emoji">⚙️</span> Méthodologie & CI/CD</h2>
+                <p>
+                    Workflow entièrement automatisé et géré via GitLab CI/CD et Docker, avec séparation nette des environnements dev et prod.
+                </p>
+                
+                <!-- Commande affichée bien visible -->
+                <div class="deploy-command">
+                    <pre><code>./deploy.sh prod</code></pre>
+                </div>
+            
+                <!-- Conteneur du schéma Mermaid -->
+                <div class="ci-cd-diagram-container">
+                    <pre class="mermaid">
+                        graph LR
+                          A[Commit sur dev] -->|Trigger| B[Build Docker Image]
+                          B -->|Push to Registry| C[Docker Hub / GCP Artifact Registry]
+                          C -->|Merge Request Validé| D[Merge vers main]
+                          D -->|Trigger Déploiement| E[Déploiement sur GCP Cloud Run]
+                          E -->|🚀 App en ligne| F[Validation & Monitoring]
+            
+                          classDef success fill:#28a745,stroke:#fff,stroke-width:2px,color:#fff;
+                          classDef process fill:#007bff,stroke:#fff,stroke-width:2px,color:#fff;
+                          classDef warning fill:#ffc107,stroke:#fff,stroke-width:2px,color:#fff;
+            
+                          class A,B,C success;
+                          class D process;
+                          class E,F warning;
+                    </pre>
+                </div>
+            
+                <!-- Bouton aligné proprement -->
+                <div class="ci-cd-button">
+                    <a href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline/-/pipelines" target="_blank" class="btn-primary">
+                        Voir les logs CI/CD
+                    </a>
+                </div>
+            </div>            
+
+            <!-- Scripts Mermaid & Lottie -->
+            <script type="module">
+                import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+                mermaid.initialize({ startOnLoad: true });
+            </script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+            <script>
+                var animation = lottie.loadAnimation({
+                    container: document.getElementById("ci-cd-animation"),
+                    renderer: "svg",
+                    loop: true,
+                    autoplay: true,
+                    path: "https://assets3.lottiefiles.com/packages/lf20_kqshxuij.json" 
+                });                  
+            </script>
+        </div>
+    </section>    
+    
+    <!-- Section \"À venir\" pour anticiper les enrichissements -->
+    <!--
+    <section class="section-coming-soon">
+        <h2>✨ À venir bientôt...</h2>
+        <ul>
+        <li>📖 Articles techniques (Blog)</li>
+        <li>🎥 Vidéo de présentation personnelle</li>
+        </ul>
+    </section>
+    -->
+    <!-- 📌 Nouveau Footer -->
+    <footer id="more-info" class="footer">
+
+        <!-- ✅ Partie gauche (conserver même design) -->
+        <div class="footer-left">
+            <h3>En savoir plus ? 📚</h3>
+            <p>Découvrez mes réalisations techniques et mes dernières publications.</p>
+
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank">
+                    <i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i>
+                </a>
+                <a href="https://gitlab.com/barrydjoulde" target="_blank">
+                    <i class="fab fa-gitlab fa-2x" style="color: #FCA121;"></i>
+                </a>
+                <a href="https://x.com/Barrydjoul" target="_blank">
+                    <i class="fa-brands fa-x-twitter fa-2x" style="color: #000;"></i>
+                </a>                
+            </div>            
+        </div>
+
+        <!-- ✅ Partie droite (remplacer formulaire par autre contenu pertinent) -->
+        <div class="footer-right">
+            <p class="contact-title">Ressources complémentaires 🔗</p>
+            <ul class="footer-links">
+                <li><a href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline" target="_blank">👉 Code source du projet (GitLab)</a></li>
+                <!--<li><a href="#" target="_blank">👉 Dashboard interactif en ligne</a></li>-->
+                <li><a href="https://gitlab.com/barrydjoulde/my-certifications" target="_blank">👉 Mes certifications professionnelles</a></li>
+                <!--<li><a href="blog.html">👉 Articles & Blog technique</a></li>-->
+            </ul>  
+        </div>
+
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            mermaid.initialize({ startOnLoad: true });
+        });
+    </script>
+      
+</body>
+</html>

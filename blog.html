@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Technique - Djoulde Barry</title>
+    <link rel="stylesheet" href="explore.css"> <!-- On garde le même design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- À intégrer dans ton fichier HTML (si ce n'est pas déjà fait) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <!--
+            <a href="index.html" class="logo-db">
+                <span>D</span><span>B</span>
+            </a>         
+            -->   
+            <a href="explore.html" class="back-button">← Retour</a>
+        </div>
+        <!--
+        <ul class="nav-links">
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="blog.html#veille">Veille Technologique</a></li>
+        </ul>
+        -->
+    </nav>
+
+    <video autoplay muted loop id="background-video">
+        <source src="videos/background.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos.
+    </video>
+    
+    <!-- Section des articles -->
+    <section class="main-container">
+        <div class="section-header">
+            <h1>📖 Blog Technique</h1>
+            <p>Retrouvez ici mes articles techniques et retours d'expérience.</p>
+        </div>
+
+        <div class="blog-container">
+            <!-- Article 1 -->
+            <div class="blog-card">
+                <h2><a href="article1.html">🚀 Automatiser un pipeline CI/CD sur GitLab</a></h2>
+                <p>Comment j’ai mis en place un pipeline CI/CD avec Docker et GitLab CI.</p>
+                <a href="article1.html" class="btn">Lire l'article</a>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="blog-card">
+                <h2><a href="article2.html">📊 Analyse des téléchargements PyPI avec BigQuery</a></h2>
+                <p>Une étude sur l’utilisation de BigQuery pour visualiser les tendances PyPI.</p>
+                <a href="article2.html" class="btn">Lire l'article</a>
+            </div>
+
+            <!-- Articles Externes -->
+            <div class="blog-card">
+                <h2>🌍 Mes articles externes</h2>
+                <p>Retrouvez mes articles publiés ailleurs :</p>
+                <ul class="styled-list no-check">
+                    <li>📌 <a href="https://dev.to/" target="_blank">Mon blog sur Dev.to</a></li>
+                    <li>📌 <a href="https://medium.com/?tag=data-engineering" target="_blank">Mes articles sur Medium</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+        <!-- 📡 Section Veille Technologique -->
+    <!-- 📡 Section Veille Technologique -->
+    <section class="main-container">
+        <div class="section-header">
+            <h1>📡 Veille Technologique</h1>
+            <p>Mes sources préférées pour rester à jour sur l'écosystème tech et data.</p>
+        </div>
+        <div id="veille-container" class="card-container veille-cards">
+            <!-- Le contenu sera généré dynamiquement ici -->
+        </div>
+    </section>
+
+    <script>
+        async function loadVeilleData() {
+            const response = await fetch("veille.json"); // Chargement du JSON
+            const data = await response.json();
+        
+            const categories = {
+                "podcasts": "🎙 Podcasts",
+                "newsletters": "📩 Newsletters",
+                "youtube": "📺 Chaînes YouTube"
+            };
+        
+            let veilleHTML = "";
+        
+            let totalSources = 0; // Compteur des sources
+        
+            for (let key in categories) {
+                if (data[key]) {
+                    totalSources += data[key].length; // On compte le nombre total de sources
+        
+                    veilleHTML += `
+                        <div class="card">
+                            <h2>${categories[key]}</h2>
+                            <ul class="styled-list no-check">
+                                ${data[key].map(item => `
+                                    <li>
+                                        <img src="${item.icon}" class="icon"> 
+                                        <a href="${item.url}" target="_blank">${item.name}</a>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+            }
+        
+            document.getElementById("veille-container").innerHTML = veilleHTML;
+        
+            // Vérification des nouvelles sources
+            checkNewVeille(totalSources);
+        }
+        
+        function checkNewVeille(currentCount) {
+            let oldCount = localStorage.getItem("veilleCount") || 0;
+        
+            if (currentCount > oldCount) {
+                alert("📢 Une nouvelle source de veille technologique a été ajoutée !");
+                localStorage.setItem("veilleCount", currentCount);
+            }
+        }
+        
+        loadVeilleData(); // Exécution du script
+    </script>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <h3>En savoir plus ? 📚</h3>
+            <p>Découvrez mes réalisations techniques et mes dernières publications.</p>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank">
+                    <i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i>
+                </a>
+                <a href="https://gitlab.com/barrydjoulde" target="_blank">
+                    <i class="fab fa-gitlab fa-2x" style="color: #FCA121;"></i>
+                </a>
+                <a href="https://x.com/Barrydjoul" target="_blank">
+                    <i class="fa-brands fa-x-twitter fa-2x" style="color: #000;"></i>
+                </a>                  
+            </div>            
+        </div>
+    
+        <!-- Ajout d'une section citations -->
+        <div class="footer-quotes">
+            <blockquote>“Talk is cheap. Show me the code.” – Linus Torvalds</blockquote>
+            <blockquote>“Programs must be written for people to read, and only incidentally for machines to execute.” – Harold Abelson</blockquote>
+            <blockquote>“Simplicity is the soul of efficiency.” – Austin Freeman</blockquote>
+        </div>
+    </footer>
+    
+    <!--
+    <script>
+        // Liste de citations inspirantes pour les devs
+        const quotes = [
+            "“Code is like humor. When you have to explain it, it’s bad.” – Cory House",
+            "“First, solve the problem. Then, write the code.” – John Johnson",
+            "“The best way to predict the future is to invent it.” – Alan Kay",
+            "“Simplicity is the soul of efficiency.” – Austin Freeman",
+            "“Talk is cheap. Show me the code.” – Linus Torvalds",
+            "“Your most unhappy customers are your greatest source of learning.” – Bill Gates",
+            "“The function of good software is to make the complex appear simple.” – Grady Booch"
+        ];
+    
+        // Afficher une citation aléatoire
+        document.getElementById("quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+    </script>
+    -->
+</body>
+</html>

@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- À intégrer dans ton fichier HTML (si ce n'est pas déjà fait) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
     
@@ -44,13 +46,13 @@
         </div>
 
         <!-- ✅ Icône menu burger (visible sur mobile uniquement) -->
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <!--<div class="menu-toggle" onclick="toggleMenu()">☰</div>-->
 
         <!-- ✅ Menu mobile -->
         <div id="mobile-menu">
             <span class="menu-close" onclick="toggleMenu()">✖</span>
             <ul>
-                <li><a href="#home" onclick="toggleMenu()">Accueil</a></li>
+                <li><a href="#home" onclick="toggleMenu()">À propo</a></li>
                 <li><a href="#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
             </ul>
@@ -69,12 +71,13 @@
                 Mon expertise couvre l'ETL, le Big Data et le Cloud Computing.
             </p>
             <div class="button-group">
-                <a href="#projects" class="btn-primary">Explorez plus</a>
+                <a href="explore.html" class="btn-primary">Explorez plus</a>
                 <a href="cv.html" class="btn-secondary">📄 Voir mon CV</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="images/profil.jpg" alt="Djouldé Barry">
+            <!--<img src="images/profils.jpg" alt="Djouldé Barry">-->
+            <img src="images/profils.png" alt="Mon Avatar" title="Mon Avatar" class="avatar">
         </div>
     </header>
     
@@ -135,15 +138,15 @@
                     <img src="images/tech/python.png" alt="Python" title="Python">
                     <img src="images/tech/sql.png" alt="SQL" title="SQL">
                     <img src="images/tech/postgre.png" alt="PostgreSQL" title="PostgreSQL">
-                    <img src="images/tech/sparkbis.png" alt="spark" title="Spark">
+                    <img src="images/tech/sparkbis.png" alt="spark" title="Spark" class="big-tech">
                     <img src="images/tech/google-cloud.png" alt="GCP" title="google-cloud GCP">
                     <img src="images/tech/airflobis.png" alt="airflow" title="Airflow">
-                    <img src="images/tech/gitbis.png" alt="gitlab" title="GitLab">
+                    <img src="images/tech/kafka.png" alt="kafka" title="Kafka" class="big-tech">
                     <img src="images/tech/dockerbis.png" alt="docker" title="Docker">
-                    <img src="images/tech/awsbis.png" alt="aws" title="Cloud AWS">
-                    <img src="images/tech/nifibis.png" alt="nifi" title="Nifi">
+                    <img src="images/tech/awsbis.png" alt="aws" title="Cloud AWS" class="big-tech">
+                    <img src="images/tech/nifibis.png" alt="nifi" title="Nifi" class="big-tech">
                     <img src="images/tech/databis.png" alt="databricks" title="Databricks">
-                    <img src="images/tech/powerbis.png" alt="powerbi" title="PowerBi">
+                    <img src="images/tech/powerbis.png" alt="powerbi" title="PowerBi" class="big-tech">
                 </div>
             </div>
         </div>
@@ -209,15 +212,15 @@
             <p>Contactez-moi pour discuter de vos projets en Data Engineering.</p>
     
             <div class="footer-icons">
-                <a href="https://www.linkedin.com/in/tonprofil" target="_blank">
+                <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank">
                     <i class="fab fa-linkedin fa-2x" style="color: #0077B5;"></i>
                 </a>
-                <a href="https://gitlab.com/tonprofil" target="_blank">
+                <a href="https://gitlab.com/barrydjoulde" target="_blank">
                     <i class="fab fa-gitlab fa-2x" style="color: #FCA121;"></i>
                 </a>
-                <a href="https://twitter.com/tonprofil" target="_blank">
-                    <i class="fab fa-twitter fa-2x" style="color: #1DA1F2;"></i>
-                </a>
+                <a href="https://x.com/Barrydjoul" target="_blank">
+                    <i class="fa-brands fa-x-twitter fa-2x" style="color: #000;"></i>
+                </a>                
             </div>            
         </div>
     

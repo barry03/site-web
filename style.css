@@ -32,15 +32,17 @@ body {
 }
 
 /* ✅ Style du texte descriptif */
+
+/*
 .hero-description {
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
-    max-width: 500px; /* Limite la largeur */
+    max-width: 500px;
     margin-top: 10px;
     text-align: justify;
 }
-
+*/
 /* ✅ 2. Navigation */
 .navbar {
     position: fixed; /* Fixe la navbar */
@@ -115,12 +117,27 @@ body {
 }
 
 /* ✅ 3. Hero Section */
+
 .hero {
     display: flex;
+    height: auto;
+    max-height: 500px; /* Bloque la hauteur max */
     justify-content: space-between;
     align-items: center;
     padding: 40px 10%;
     margin-top: -10px;
+}
+
+.hero-description {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+    max-width: 70%;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .hero-content {
@@ -187,6 +204,7 @@ body {
 }
 
 /* ✅ 5. Photo de Profil */
+/*
 .hero-image {
     position: relative;
     justify-content: center;
@@ -195,7 +213,37 @@ body {
     align-items: center;
     margin-top: 20px;
 }
+*/
+/* Ajustement de la section de l'avatar */
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 40px; /* Espace à droite */
+}
 
+@keyframes moveAvatar {
+    0%, 100% {
+        transform: translateY(0); /* Position normale */
+    }
+    50% {
+        transform: translateY(-10px); /* Monte légèrement */
+    }
+}
+
+/* Ajustement de l’image Avatar */
+.hero-image .avatar {
+    width: 180px; /* Taille réduite */
+    height: auto;
+    object-fit: contain; /* Assure une bonne mise à l’échelle */
+    display: block;
+    border-radius: 0; /* Supprime le cercle */
+    max-height: 350px; /* Limite la hauteur */
+    animation: moveAvatar 2s infinite ease-in-out;
+}
+
+/*
 .hero-image img {
     width: 200px;
     border-radius: 50%;
@@ -204,7 +252,7 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
-
+*/
 .hero-image img:hover {
     transform: scale(1.05);
 }
@@ -342,6 +390,12 @@ body {
     transform: scale(1.1) rotate(5deg);
     opacity: 0.8;
 }
+
+.stack-technique img.big-tech {
+    width: 85px !important; /* Augmente la taille des icônes spécifiques */
+    height: auto;
+}
+
 
 /* ✅ Corrige l'affichage des barres de progression */
 .progress-bar {
@@ -572,7 +626,7 @@ body {
 }
 
 .footer-icons a i {
-    font-size: 1.5rem; /* Réduit la taille des icônes */
+    font-size: 1.3rem; /* Réduit la taille des icônes */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -711,6 +765,58 @@ body {
     color: #333;
 }
 
+
+.section-title, .section-context, .section-dashboards, .section-devops, .section-coming-soon {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9faff;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  }
+  
+  .dashboard-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .dashboard-img {
+    max-width: 100%;
+    width: 450px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .dashboard-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .btin {
+    display: inline-block;
+    padding: 10px 25px;
+    color: white;
+    background-color: #5468ff;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btin:hover {
+    background-color: #4053d9;
+  }
+  
+  pre {
+    background-color: #eaeef6;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+
+
 /* ✅ Animation d’ouverture */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
@@ -833,12 +939,13 @@ body {
         flex-direction: column;
         align-items: center;
     }
-
+    /*
     .hero-image img {
         width: 180px;
         margin-top: 15px;
     }
-
+    */
+    
     /* ✅ Section Compétences */
     .competences-container {
         display: flex;
