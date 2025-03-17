@@ -128,25 +128,6 @@ body {
     margin-top: 0px;
 }
 
-.mermaid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1100px; /* Ajuste selon la largeur souhaitée */
-    margin: auto;
-    transform: scale(0.9);
-}
-
-/* 🟢 Evite le zoom au survol */
-.mermaid:hover {
-    transform: scale(1.0) !important;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    overflow: hidden; /* Empêche qu’il dépasse le cadre */
-    max-width: 100%;
-}
-
 /* Cartes stylisées */
 .card {
     background-color: #ffffff;
@@ -482,10 +463,29 @@ pre code {
     margin-top: 15px;
 }
 
+/* 🟢 Ajustement principal de Mermaid */
+.mermaid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px; /* 🔹 Augmenté pour éviter la coupure */
+    margin: auto;
+    transform: scale(1); /* 🔹 Suppression du zoom réduit */
+    overflow: visible; /* 🔹 Permet d'afficher tout le contenu */
+}
+
+/* 🟢 Evite le zoom au survol */
+.mermaid:hover {
+    transform: none !important; /* 🔹 Évite le zoom */
+    transition: none !important;
+    cursor: default;
+}
+
 /* 🟢 Evite que le zoom Mermaid déborde */
 .ci-cd-diagram-container {
     width: 100%;
-    max-width: 1200px; /* Augmenté pour correspondre aux autres sections */
+    max-width: 1250px; /* Augmenté pour correspondre aux autres sections */
     overflow-x: auto;
     padding: 20px;
     text-align: center;
@@ -513,12 +513,13 @@ pre code {
 }
 
 .ci-cd-diagram pre.mermaid {
-    font-size: 2em !important; /* 🔹 Forçage de la taille */
+    font-size: 1.6em !important; /* 🔹 Forçage de la taille */
     min-height: 500px !important; /* 🔹 Plus de hauteur */
     width: 100% !important;
-    max-width: 1100px !important; /* 🔹 Largeur augmentée */
-    overflow: auto;
+    max-width: 1200px !important; /* 🔹 Largeur augmentée */
+    overflow: visible;
     transform: scale(1.2) !important; /* 🔹 Zoom forcé */
+    white-space: normal !important;
 }
 /* 🟢 Ajustement du bouton */
 .btn-primary {
