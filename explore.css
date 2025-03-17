@@ -274,25 +274,33 @@ body {
 }
 
 /* 🎯 Ajustement spécifique pour "Mes articles externes" */
+/* 📌 Bloc "Mes articles externes" */
 .external-articles {
-    width: 100%;
-    max-width: 600px; /* 🔹 Plus large pour afficher correctement les liens */
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 600px; /* Large pour afficher les liens */
     text-align: center;
     padding: 15px;
     margin-top: 10px;
-    max-height: 280px; /* 🔹 Plus grand pour contenir les articles */
-    overflow-y: auto; /* 🔹 Scroll vertical si nécessaire */
+    height: auto; /* 🔹 Hauteur ajustable pour éviter le scroll */
+    min-height: 200px; /* 🔹 Assure que tout tienne bien */
+    overflow: hidden; /* 🔹 Empêche la barre de défilement */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* 📌 Style des liens externes */
+/* 📌 Liens externes bien répartis */
 .external-articles a {
-    display: block;
-    font-size: 0.9rem;
-    margin-top: 5px;
-    text-decoration: none;
-    color: #007bff;
-    white-space: normal; /* 🔹 Permet le retour à la ligne */
-    transition: color 0.3s ease-in-out;
+    display: block; /* Affichage en colonne */
+    font-size: 0.95rem;
+    white-space: normal; /* Autorise le retour à la ligne */
+    margin-bottom: 5px;
+}
+
+/* 📌 Conteneur des liens - Empêche le débordement */
+.external-articles #external-articles-container {
+    max-height: none; /* 🔹 Désactive la hauteur fixe */
+    overflow: visible; /* 🔹 Rend tout visible */
 }
 
 .external-articles a:hover {
@@ -300,36 +308,33 @@ body {
     text-decoration: underline;
 }
 
-/* 📌 Bouton plus compact */
+/* 📌 Boutons "Voir plus" bien positionnés */
+.external-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px; /* Ajoute de l’espace au-dessus */
+}
+
+/*
 .blog-card .btn {
     font-size: 0.85rem;
     padding: 5px 10px;
     margin-top: 6px;
 }
+*/
 
-/* 📌 Amélioration des liens "Voir plus" */
+/* 📌 Ajustement des boutons */
 .btn-link {
     font-size: 0.9rem;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
     text-decoration: none;
     color: #007bff;
     transition: color 0.3s ease-in-out;
 }
-
 .btn-link:hover {
     color: #0056b3;
     text-decoration: underline;
 }
-
-/* 📌 Effet au survol */
-.blog-card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
 
 /* ✅ Ajustement du conteneur principal */
 #veille-container {
@@ -540,27 +545,33 @@ pre code {
     padding: 30px 100px;
     background-color: #f0f3ff;
     border-top: 2px solid #e1e8ff;
+    flex-wrap: nowrap;
 }
 
 /* Style du bloc citation */
 /* Nouvelle section pour les citations */
+/* 📌 Citations */
 .footer-quotes {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espacement entre les citations */
+    gap: 30px; /* 🔹 Augmente l’espace entre les citations */
     text-align: center;
-    max-width: 50%;
+    flex: 2;
+    max-width: 60%; /* 🔹 Assure que les citations restent bien réparties */
+    flex-wrap: nowrap; /* 🔹 Empêche le mode vertical */
 }
 
+/* 📌 Style des citations */
 .footer-quotes blockquote {
     font-style: italic;
     font-size: 0.9rem;
     color: #444;
+    min-width: 220px; /* 🔹 Évite le rétrécissement sur petits écrans */
 }
   
 .footer-left {
-    width: 40%;
+    max-width: 40%;
     padding: 10px 0;
     flex: 1;
 }
