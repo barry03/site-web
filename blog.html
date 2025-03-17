@@ -255,7 +255,7 @@
                 document.getElementById("article-description").innerText = latestArticle.description;
                 document.getElementById("article-content").innerHTML = `
                     <p><strong>Publié le :</strong> ${new Date(latestArticle.published_at).toLocaleDateString()}</p>
-                    <p>${latestArticle.body_html}</p>
+                    <p>${latestArticle.body_html ? latestArticle.body_html : "Contenu indisponible."}</p>
                     <a href="${latestArticle.url}" target="_blank" class="btn">Lire l'article complet</a>
                 `;
             } catch (error) {

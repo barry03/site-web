@@ -246,20 +246,22 @@ body {
 /* 📌 Bloc Article */
 .article-container {
     flex: 2; /* Prend plus de place */
-    background-color: white;
-    padding: 20px;
+    background: transparent !important;
+    padding: 0;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none !important;
     min-height: 300px;
+    border: none !important;
 }
 
 /* 📌 Bloc "Mes articles externes" */
 .external-articles {
     flex: 1; /* Moins large */
-    background-color: white;
-    padding: 20px;
+    background: transparent !important;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0;
     min-height: 300px;
 }
 
