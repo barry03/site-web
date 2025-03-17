@@ -547,7 +547,7 @@ pre code {
     gap: 80px;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 100px 30px 100px; /* Réduction du padding-top (avant 30px, maintenant 10px) */
+    padding: -2px 90px 20px 90px; /* Réduction du padding-top (avant 30px, maintenant 10px) */
     margin-top: 0; /* Garde un alignement correct */
     background-color: #f0f3ff;
     border-top: 2px solid #e1e8ff;
