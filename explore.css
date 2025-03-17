@@ -251,6 +251,7 @@ body {
     color: #0056b3;
 }
 
+/* 🌍 Alignement général */
 .blog-container, 
 .external-articles {
     display: flex; /* Active Flexbox */
@@ -264,21 +265,57 @@ body {
     scrollbar-color: #ccc transparent; /* Couleur de la barre de défilement */
 }
 
-.blog-card {
-    background-color: white; /* Fond blanc */
-    border-radius: 10px; /* Coins arrondis */
-    padding: 15px; /* Espacement interne */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    text-align: center; /* Centrage du texte */
+/* 📌 Réduction des tailles pour uniformiser avec la veille */
+.blog-container .blog-card {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 12px;
+    text-align: center;
     flex: 1;
-    min-width: 250px; /* Largeur minimale */
-    max-width: 350px; /* Largeur maximale */
-    transition: transform 0.3s ease-in-out; /* Effet fluide au survol */
+    height: auto;
+    flex-grow: 0; /* Empêche les cartes de trop s'étirer */
 }
 
-.blog-card:hover {
-    transform: translateY(-5px); /* Effet d’élévation au survol */
+/* 📌 Réduction du titre */
+.blog-card h2 {
+    font-size: 1.1rem; /* Plus petit pour compacter */
+    margin-bottom: 6px;
 }
+
+/* 📌 Réduction du bouton */
+.blog-card .btn {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+    margin-top: 6px;
+}
+
+/* 📌 Ajustement du texte */
+.blog-card p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+    max-height: 3.2em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; /* Empêche la coupure brutale */
+}
+
+/* 📌 Style global des cartes */
+.blog-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 250px;
+    max-width: 320px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 📌 Effet d’élévation au survol */
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
 
 /* ✅ Ajustement du conteneur principal */
 #veille-container {
