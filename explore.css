@@ -254,67 +254,85 @@ body {
 /* 🌍 Alignement général */
 .blog-container, 
 .external-articles {
-    display: flex; /* Active Flexbox */
-    flex-direction: row; /* Aligne horizontalement */
-    justify-content: center; /* Centre les blocs */
-    gap: 20px; /* Espacement entre les cartes */
-    flex-wrap: wrap; /* Passe à la ligne sur petits écrans */
-    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: thin; /* Pour Firefox */
-    scrollbar-color: #ccc transparent; /* Couleur de la barre de défilement */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
 }
 
-/* 📌 Réduction des tailles pour uniformiser avec la veille */
-.blog-container .blog-card {
-    min-width: 280px;
-    max-width: 320px;
-    padding: 12px;
+.blog-container .blog-card,
+.external-articles .external-card {
+    min-width: 320px; /* Largeur minimale */
+    max-width: 380px; /* Largeur maximale augmentée */
+    padding: 10px; /* Espacement réduit */
     text-align: center;
     flex: 1;
-    height: auto;
-    flex-grow: 0; /* Empêche les cartes de trop s'étirer */
-}
-
-/* 📌 Réduction du titre */
-.blog-card h2 {
-    font-size: 1.1rem; /* Plus petit pour compacter */
-    margin-bottom: 6px;
-}
-
-/* 📌 Réduction du bouton */
-.blog-card .btn {
-    font-size: 0.85rem;
-    padding: 5px 8px;
-    margin-top: 6px;
+    height: auto; /* Ajustement dynamique */
 }
 
 /* 📌 Ajustement du texte */
-.blog-card p {
+.blog-card p, 
+.external-card p {
     font-size: 0.85rem;
     line-height: 1.3;
-    max-height: 3.2em;
+    max-height: 3.5em;
+    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden; /* Empêche la coupure brutale */
+    white-space: normal; /* Permet le retour à la ligne */
+    word-wrap: break-word; /* Coupe les mots longs */
 }
 
-/* 📌 Style global des cartes */
-.blog-card {
+/* 📌 Titre plus compact */
+.blog-card h2, 
+.external-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+/* 📌 Bouton plus compact */
+.blog-card .btn {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    margin-top: 6px;
+}
+
+/* 📌 Amélioration du design des liens externes */
+.external-articles a {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.external-articles a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* 📌 Cartes globales */
+.blog-card, 
+.external-card {
     background-color: white;
     border-radius: 10px;
-    padding: 12px;
+    padding: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    min-width: 250px;
-    max-width: 320px;
     transition: transform 0.3s ease-in-out;
 }
 
-/* 📌 Effet d’élévation au survol */
-.blog-card:hover {
+/* 📌 Effet au survol */
+.blog-card:hover, 
+.external-card:hover {
     transform: translateY(-5px);
 }
+/* 📌 Réduction des tailles pour uniformiser avec la veille */
 
 
 /* ✅ Ajustement du conteneur principal */
