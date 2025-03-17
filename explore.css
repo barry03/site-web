@@ -261,7 +261,7 @@ body {
     border-radius: 10px;
     box-shadow: none !important;
     border: none !important;
-    padding: 0;
+    padding: 20px;
     min-height: 300px;
 }
 
@@ -288,7 +288,7 @@ body {
 /* Harmonisation des liens "Voir plus" */
 .external-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 15px;
     margin-top: 10px;
 }
@@ -303,20 +303,14 @@ body {
 /* 📌 Style des boutons */
 /* Style des boutons Voir plus */
 .btn-link {
-    display: flex;
-    padding: 10px 20px;
     font-size: 0.9rem;
-    font-weight: bold;
-    /*text-align: center;*/
     text-decoration: none;
-    color: white;
-    /*background-color: #6366F1; Même couleur que Lire l'article */
-    /*border-radius: 8px;*/
-    transition: background 0.3s ease-in-out;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
 }
 
 .btn-link:hover {
-    background-color: #4F46E5; /* Couleur plus foncée au survol */
+    color: #0056b3; /* Couleur plus foncée au survol */
 }
 
 /* ✅ Ajustement du conteneur principal */
