@@ -86,11 +86,12 @@ body {
     color: #7D5FB2;
 }
 
-/* Container principal */
+/* 🔹 Conteneur principal doit prendre tout l’espace disponible */
 .main-container {
-    max-width: 1100px;
-    margin: 100px auto 50px;
-    padding: 10px;
+    flex: 1; /* Prend tout l’espace restant pour pousser le footer en bas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Organise les blocs */
 }
 
 /* En-tête stylisé */
@@ -579,6 +580,7 @@ pre code {
     margin-top: -30px;
     margin: 0; /* Supprime toute marge */
     width: 100vw; /* Utilise toute la largeur de l'écran */
+    position: relative; /* S’assure qu’il reste bien en place */
 }
 
 /* 🔹 Supprimer tout éventuel padding ou margin des sections à l’intérieur */
