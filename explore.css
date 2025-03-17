@@ -239,14 +239,21 @@ body {
 }
 /* 📌 Bloc Article */
 .article-container {
-    flex: 2; /* Prend plus de place */
+    flex: 2; /* Plus de place pour le contenu */
+    background: transparent !important;
     padding: 0;
+    border-radius: 10px;
+    box-shadow: none !important;
     min-height: 300px;
+    border: none !important;
 }
-
 /* 📌 Bloc "Mes articles externes" */
 .external-articles {
     flex: 1; /* Moins large */
+    background: transparent !important;
+    border-radius: 10px;
+    box-shadow: none !important;
+    border: none !important;
     padding: 20px;
     min-height: 300px;
 }
@@ -257,7 +264,7 @@ body {
     grid-template-columns: 1fr 1fr; /* 2 colonnes */
     gap: 15px; /* Espacement entre les articles */
 }
-
+/* 📌 Liens des articles externes */
 /* 📌 Liens des articles externes */
 .external-articles a {
     display: block;
@@ -274,7 +281,10 @@ body {
 
 /* 📌 Conteneur des articles externes */
 #external-articles-container {
-    flex-grow: 1; /* Utilise tout l’espace disponible */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 /* 📌 Boutons "Voir plus" bien positionnés */
@@ -307,11 +317,13 @@ body {
 
 /* ✅ Ajustement du conteneur principal */
 /* 📌 Alignement des cartes de veille */
+/* ✅ Ajustement des cartes pour qu'elles s'alignent bien */
 #veille-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    margin-top: -30px; /* Remonte légèrement */
 }
 .veille-cards {
     display: flex;
@@ -526,24 +538,19 @@ pre code {
     background-color: #0056b3;
 }
 
-  /* Footer adapté à explore.html */
-/* Assure un alignement horizontal */
-/* 📌 Footer - Ajustement des marges */
+/* 📌 Ajustement du footer */
 .footer {
     display: flex;
-    gap: 80px;
+    gap: 50px;
     justify-content: space-between;
     align-items: center;
     background-color: #f0f3ff;
     border-top: 2px solid #e1e8ff;
     flex-wrap: nowrap;
-    padding-top: 10px;
-    margin-top: -40px; /* Ajustement pour éviter l'espace trop grand */
+    padding-top: 5px; /* Réduit le padding */
+    margin-top: -30px; /* Remonte légèrement */
 }
 
-/* Style du bloc citation */
-/* Nouvelle section pour les citations */
-/* 📌 Citations */
 /* 📌 Citations */
 .footer-quotes {
     display: flex;
