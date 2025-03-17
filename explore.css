@@ -261,19 +261,21 @@ body {
     margin: auto;
 }
 
+
 /* 🎯 Ajustement des 2 premières cartes */
 .blog-card {
     min-width: 280px;
     max-width: 320px;
     padding: 12px;
     height: auto;
-    max-height: 260px; /* 🔹 Réduction de la hauteur */
+    max-height: 240px; /* 🔹 Réduction pour éviter l’espace vide */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 🔹 Évite l'espace inutile */
+    justify-content: space-between;
 }
 
 /* 🎯 Ajustement spécifique pour "Mes articles externes" */
+/* 📌 Bloc "Mes articles externes" */
 /* 📌 Bloc "Mes articles externes" */
 .external-articles {
     width: 100%; /* Prend toute la largeur disponible */
@@ -281,26 +283,24 @@ body {
     text-align: center;
     padding: 15px;
     margin-top: 10px;
-    height: auto; /* 🔹 Hauteur ajustable pour éviter le scroll */
-    min-height: 200px; /* 🔹 Assure que tout tienne bien */
-    overflow: hidden; /* 🔹 Empêche la barre de défilement */
+    height: auto; /* Assure que tout s'affiche sans scroll */
+    min-height: 220px; /* 🔹 Assure que les boutons "Voir plus" ne disparaissent pas */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Équilibre le contenu */
 }
 
-/* 📌 Liens externes bien répartis */
+/* 📌 Ajustement des liens externes */
 .external-articles a {
-    display: block; /* Affichage en colonne */
+    display: block;
     font-size: 0.95rem;
-    white-space: normal; /* Autorise le retour à la ligne */
+    white-space: normal; /* 🔹 Autorise le retour à la ligne */
     margin-bottom: 5px;
 }
 
-/* 📌 Conteneur des liens - Empêche le débordement */
-.external-articles #external-articles-container {
-    max-height: none; /* 🔹 Désactive la hauteur fixe */
-    overflow: visible; /* 🔹 Rend tout visible */
+/* 📌 Conteneur des liens pour éviter les coupures */
+#external-articles-container {
+    flex-grow: 1; /* 🔹 Permet d'utiliser tout l’espace disponible */
 }
 
 .external-articles a:hover {
@@ -308,14 +308,14 @@ body {
     text-decoration: underline;
 }
 
-/* 📌 Boutons "Voir plus" bien positionnés */
+/*📌 Conteneur des boutons "Voir plus" */
 .external-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px; /* Ajoute de l’espace au-dessus */
+    gap: 15px; /* 🔹 Ajoute de l’espace entre les boutons */
+    padding-top: 10px; /* 🔹 Ajoute un espace avant les boutons */
+    min-height: 40px; /* 🔹 Assure qu’ils restent visibles */
 }
-
 /*
 .blog-card .btn {
     font-size: 0.85rem;
@@ -324,7 +324,7 @@ body {
 }
 */
 
-/* 📌 Ajustement des boutons */
+/* 📌 Style des boutons "Voir plus" */
 .btn-link {
     font-size: 0.9rem;
     text-decoration: none;
@@ -537,6 +537,7 @@ pre code {
 }
 
   /* Footer adapté à explore.html */
+/* Assure un alignement horizontal */
 .footer {
     display: flex;
     gap: 80px;
@@ -551,15 +552,16 @@ pre code {
 /* Style du bloc citation */
 /* Nouvelle section pour les citations */
 /* 📌 Citations */
+/* 📌 Citations */
 .footer-quotes {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* 🔹 Augmente l’espace entre les citations */
+    gap: 30px;
     text-align: center;
     flex: 2;
-    max-width: 60%; /* 🔹 Assure que les citations restent bien réparties */
-    flex-wrap: nowrap; /* 🔹 Empêche le mode vertical */
+    max-width: 60%;
+    flex-wrap: nowrap;
 }
 
 /* 📌 Style des citations */
@@ -567,9 +569,10 @@ pre code {
     font-style: italic;
     font-size: 0.9rem;
     color: #444;
-    min-width: 220px; /* 🔹 Évite le rétrécissement sur petits écrans */
+    min-width: 220px;
 }
   
+/* 📌 Section gauche du footer */
 .footer-left {
     max-width: 40%;
     padding: 10px 0;
