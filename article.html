@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chargement...</title>
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1 id="article-header">Chargement...</h1>
+        <p id="article-description">Chargement du contenu...</p>
+        <div id="article-content"></div>
+        <a href="blog.html" class="btn">Retour au Blog</a>
+    </div>
+
+    <script>
+        // 🔹 Fonction pour récupérer l'ID de l'article depuis l'URL
+        function getArticleId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get("id"); // Récupère ?id=xxxx dans l'URL
+        }
+
+        // 🔹 Récupère et affiche un article en fonction de son ID
+        async function fetchArticle() {
+            const articleId = getArticleId(); 
+            if (!articleId) {
+                document.getElementById("article-header").innerText = "Aucun article trouvé.";
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://dev.to/api/articles/${articleId}`);
+                if (!response.ok) throw new Error("Erreur de chargement");
+                const article = await response.json();
+
+                // 🔹 Affichage de l’article
+                document.title = article.title;
+                document.getElementById("article-header").innerText = article.title;
+                document.getElementById("article-description").innerText = article.description;
+                document.getElementById("article-content").innerHTML = article.body_html;
+            } catch (error) {
+                document.getElementById("article-header").innerText = "Erreur de chargement";
+            }
+        }
+
+        fetchArticle();
+    </script>
+</body>
+</html>

@@ -45,22 +45,18 @@
             <h1>📖 Blog Technique</h1>
             <p>Retrouvez ici mes articles techniques et retours d'expérience.</p>
         </div>
-        
-        <div class="blog-container">
-            <div class="blog-card">
-                <h2><a href="article1.html">🚀 Automatiser un pipeline CI/CD sur GitLab</a></h2>
-                <p>Comment j’ai mis en place un pipeline CI/CD avec Docker et GitLab CI.</p>
-                <a href="article1.html" class="btn">Lire l'article</a>
+    
+        <!-- Conteneur Flex pour aligner les deux blocs horizontalement -->
+        <div class="blog-content">
+            <!-- 📌 Bloc "Article" -->
+            <div class="article-container">
+                <h2 id="article-header">Chargement...</h2>
+                <p id="article-description">Chargement du contenu...</p>
+                <div id="article-content"></div>
             </div>
-            
-            <div class="blog-card">
-                <h2><a href="article2.html">📊 Analyse des téléchargements PyPI avec BigQuery</a></h2>
-                <p>Une étude sur l’utilisation de BigQuery pour visualiser les tendances PyPI.</p>
-                <a href="article2.html" class="btn">Lire l'article</a>
-            </div>
-            
-            <!-- 📌 Carte dynamique "Mes articles externes" -->
-            <div class="blog-card external-articles">
+    
+            <!-- 📌 Bloc "Mes articles externes" -->
+            <div class="external-articles">
                 <h2>🌍 Mes articles externes</h2>
                 <div id="external-articles-container">
                     <!-- Dynamically filled with JS -->
@@ -72,6 +68,7 @@
             </div>
         </div>
     </section>
+    
     
     <script>
         async function fetchArticles() {
@@ -242,5 +239,33 @@
         document.getElementById("quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
     </script>
     -->
+    <script>
+        // 🔹 Récupérer le dernier article publié sur Dev.to
+        async function fetchLatestArticle() {
+            try {
+                const response = await fetch("https://dev.to/api/articles?username=djouldbarry_ee2&per_page=1");
+                if (!response.ok) throw new Error("Erreur de chargement");
+                const articles = await response.json();
+                if (articles.length === 0) throw new Error("Aucun article trouvé");
+    
+                const latestArticle = articles[0]; // Prendre le premier article (dernier publié)
+    
+                // Insérer les données de l'article dans la page
+                document.getElementById("article-header").innerText = latestArticle.title;
+                document.getElementById("article-description").innerText = latestArticle.description;
+                document.getElementById("article-content").innerHTML = `
+                    <p><strong>Publié le :</strong> ${new Date(latestArticle.published_at).toLocaleDateString()}</p>
+                    <p>${latestArticle.body_html}</p>
+                    <a href="${latestArticle.url}" target="_blank" class="btn">Lire l'article complet</a>
+                `;
+            } catch (error) {
+                document.getElementById("article-header").innerText = "Erreur de chargement";
+                document.getElementById("article-description").innerText = "Impossible d'afficher l'article.";
+            }
+        }
+    
+        fetchLatestArticle();
+    </script>
+    
 </body>
 </html>

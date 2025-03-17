@@ -235,50 +235,41 @@ body {
 }
 
 /* 🏗 Conteneur principal */
-.blog-container {
+.blog-content {
     display: flex;
-    flex-wrap: wrap; /* Passe à la ligne si nécessaire */
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* Espacement entre les deux blocs */
     max-width: 90%;
     margin: auto;
 }
-
-
-/* 🎯 Ajustement des 2 premières cartes */
-.blog-card {
-    min-width: 280px;
-    max-width: 320px;
-    padding: 12px;
-    height: auto;
-    max-height: 240px; /* 🔹 Réduction pour éviter l’espace vide */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* 📌 Bloc Article */
+.article-container {
+    flex: 2; /* Prend plus de place */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
 }
 
-/* 🎯 Ajustement spécifique pour "Mes articles externes" */
-/* 📌 Bloc "Mes articles externes" */
 /* 📌 Bloc "Mes articles externes" */
 .external-articles {
-    width: 100%; /* Prend toute la largeur disponible */
-    max-width: 600px; /* Large pour afficher les liens */
-    text-align: center;
-    padding: 15px;
-    margin-top: 10px;
-    height: auto; /* Assure que tout s'affiche sans scroll */
-    min-height: 220px; /* 🔹 Assure que les boutons "Voir plus" ne disparaissent pas */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Équilibre le contenu */
+    flex: 1; /* Moins large */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
 }
 
-/* 📌 Ajustement des liens externes */
+/* 📌 Liens des articles externes */
 .external-articles a {
     display: block;
     font-size: 0.95rem;
-    white-space: normal; /* 🔹 Autorise le retour à la ligne */
-    margin-bottom: 5px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 8px;
 }
 
 /* 📌 Conteneur des liens pour éviter les coupures */
@@ -291,13 +282,12 @@ body {
     text-decoration: underline;
 }
 
-/*📌 Conteneur des boutons "Voir plus" */
+/* 📌 Boutons "Voir plus" bien positionnés */
 .external-links {
     display: flex;
     justify-content: center;
-    gap: 15px; /* 🔹 Ajoute de l’espace entre les boutons */
-    padding-top: 10px; /* 🔹 Ajoute un espace avant les boutons */
-    min-height: 40px; /* 🔹 Assure qu’ils restent visibles */
+    gap: 15px;
+    margin-top: 15px;
 }
 /*
 .blog-card .btn {
@@ -307,7 +297,7 @@ body {
 }
 */
 
-/* 📌 Style des boutons "Voir plus" */
+/* 📌 Style des boutons */
 .btn-link {
     font-size: 0.9rem;
     text-decoration: none;
@@ -547,7 +537,7 @@ pre code {
     gap: 80px;
     justify-content: space-between;
     align-items: center;
-    padding: -2px 90px 20px 90px; /* Réduction du padding-top (avant 30px, maintenant 10px) */
+    padding: 5px 100px 30px 100px; /* Réduction du padding-top (avant 30px, maintenant 10px) */
     margin-top: 0; /* Garde un alignement correct */
     background-color: #f0f3ff;
     border-top: 2px solid #e1e8ff;
