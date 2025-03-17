@@ -342,6 +342,9 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
 }
 
 
@@ -541,14 +544,14 @@ pre code {
 /* 📌 Ajustement du footer */
 .footer {
     display: flex;
-    gap: 50px;
+    gap: 80px;
     justify-content: space-between;
     align-items: center;
     background-color: #f0f3ff;
     border-top: 2px solid #e1e8ff;
     flex-wrap: nowrap;
-    padding-top: 5px; /* Réduit le padding */
-    margin-top: -30px; /* Remonte légèrement */
+    padding-top: 10px; /* Réduit le padding en haut */
+    margin-top: -30px; /* Remonte tout le footer */
 }
 
 /* 📌 Citations */
