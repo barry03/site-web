@@ -84,7 +84,7 @@ body {
 /* En-tête stylisé */
 .section-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .section-header h1 {
@@ -107,6 +107,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 25px;
+    margin-top: 0px;
 }
 
 .mermaid {
@@ -127,12 +128,27 @@ body {
     overflow: hidden; /* Empêche qu’il dépasse le cadre */
     max-width: 100%;
 }
-  
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Cache ce qui dépasse */
+    position: relative;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: calc(320px * 6); /* Ajuste selon le nombre d'éléments */
+    animation: scroll-horizontal 15s linear infinite;
+}
 
 /* Cartes stylisées */
 .card {
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
     padding: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
@@ -141,6 +157,13 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+/* Stop animation au survol */
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
 }
 
 .card:hover {
@@ -151,6 +174,11 @@ body {
     margin-bottom: 15px;
     font-size: 1.4rem;
     color: #222;
+}
+/* Animation pour défiler horizontalement */
+@keyframes scroll-horizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .emoji {
@@ -218,7 +246,6 @@ body {
     opacity: 0.2; /* Ajuster la transparence pour que le contenu reste lisible */
 }
 
-
 .back-button {
     text-decoration: none;
     color: #007bff;
@@ -238,15 +265,19 @@ body {
     gap: 20px; /* Espacement entre les blocs */
 }
 
+/* Cartes des articles */
 .blog-card {
-    background-color: white; /* Remet le fond blanc */
-    border-radius: 12px;
+    width: 300px; /* Taille fixe des cartes */
+    height: 220px;
+    background: white;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    flex: 1;
-    min-width: 300px;
-    max-width: 450px;
 }
 /* ✅ Ajustement du conteneur principal */
 #veille-container {
