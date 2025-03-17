@@ -573,13 +573,22 @@ pre code {
     justify-content: space-between;
     align-items: center;
     background-color: #f0f3ff;
-    border-top: 2px solid #e1e8ff;
+    border-top: 2px solid #e1e8ff; /* Garde la bordure supérieure */
     flex-wrap: nowrap;
     padding-top: 10px; 
     margin-top: -30px;
+    margin: 0; /* Supprime toute marge */
     width: 100vw; /* Utilise toute la largeur de l'écran */
 }
 
+/* 🔹 Supprimer tout éventuel padding ou margin des sections à l’intérieur */
+/*
+.footer > * {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px; 
+}
+*/
 /* 📌 Citations */
 .footer-quotes {
     display: flex;
