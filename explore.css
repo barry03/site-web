@@ -577,13 +577,17 @@ pre code {
     justify-content: space-between;
     align-items: center;
     background-color: #f0f3ff;
-    border-top: 2px solid #e1e8ff; /* Garde la bordure supérieure */
+    border-top: 2px solid #e1e8ff;
     flex-wrap: nowrap;
-    padding-top: 10px; 
+    padding-top: 10px;
     margin-top: -30px;
     margin: 0; /* Supprime toute marge */
-    width: 100vw; /* Utilise toute la largeur de l'écran */
+    width: 100%; /* Prend toute la largeur sans débordement */
+    left: 0; /* Colle à gauche */
+    position: relative; /* Assure qu’il suive le flux normal */
+    box-sizing: border-box; /* Empêche les débordements liés au padding */
 }
+
 
 /* 🔹 Supprimer tout éventuel padding ou margin des sections à l’intérieur */
 /*
@@ -619,7 +623,7 @@ pre code {
     padding: 10px 0;
     flex: 1;
     align-items: flex-start; /* Aligne le contenu sur la gauche */
-    padding-left: 15px; /* Décale légèrement de la bordure */
+    /*padding-left: 15px;*/
 }
 
 .footer-left h3 {
@@ -669,7 +673,10 @@ padding-left: 80px;
     align-items: center;
     gap: 12px; /* Espacement entre les icônes */
     margin-top: 10px; /* Ajustement pour éviter qu'ils touchent le bord */
-    padding-left: 10px; /* Ajoute une marge à gauche pour décaler légèrement */
+}
+.footer-left,
+.footer-icons {
+    padding-left: 0; 
 }
   
 .contact-title {
