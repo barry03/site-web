@@ -10,7 +10,7 @@ html, body {
 
 .article-page .main-container {
     position: relative;
-    top: -30px; /* 🔹 Remonte le contenu de 30px */
+    top: -60px; /* 🔹 Remonte le contenu de 30px */
 }
 
 .logo-db {

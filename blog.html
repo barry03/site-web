@@ -258,16 +258,23 @@
                 document.getElementById("article-header").innerText = latestArticle.title;
                 document.getElementById("article-description").innerText = latestArticle.description;
 
-                // Ajoute un extrait de l'article (évite la répétition du titre)
+                // 🔹 Extraction et nettoyage du contenu
                 const articleContent = document.getElementById("article-content");
 
-                // Vérifier s'il y a un contenu utilisable
                 if (latestArticle.body_html) {
-                    let articleText = latestArticle.body_html
-                        .replace(/<h1[^>]*>.*?<\/h1>/i, '') // Supprime les titres H1
-                        .replace(/<[^>]+>/g, ''); // Supprime les balises HTML
+                    let contentHtml = latestArticle.body_html;
 
-                    articleContent.innerText = articleText.substring(0, 200) + "...";
+                    // 🔹 Supprimer tout ce qui précède "Why a Pandas Mindmap?"
+                    let startIndex = contentHtml.indexOf("Why a Pandas Mindmap?");
+                    if (startIndex !== -1) {
+                        contentHtml = contentHtml.substring(startIndex); // 🔹 Coupe le texte à partir de ce point
+                    }
+
+                    // 🔹 Nettoyage : suppression des balises HTML
+                    let textContent = contentHtml.replace(/<[^>]+>/g, ''); // 🔹 Supprime les balises HTML
+
+                    // 🔹 Affichage uniquement les 200 premiers caractères après "Why a Pandas Mindmap?"
+                    articleContent.innerText = textContent.substring(0, 200) + "...";
                 } else {
                     articleContent.innerText = "Aperçu non disponible.";
                 }
@@ -284,7 +291,6 @@
 
         // Exécuter la fonction au chargement
         fetchLatestArticle();
-
     </script>    
     
 </body>
