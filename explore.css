@@ -466,36 +466,59 @@ pre code {
     margin-top: 15px;
 }
 
-/* 🟢 Ajustement principal de Mermaid */
 .mermaid {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px; /* Ajuste selon la largeur souhaitée */
     margin: auto;
-    transform: scale(1); /* 🔹 Suppression du zoom réduit */
-    overflow: hidden !important; /* 🔹 Empêche l’apparition de la barre */
-    white-space: normal !important; /* 🔹 Autorise la gestion automatique du texte */
+    overflow: hidden !important; /* 🔹 Cache tout débordement */
+    transform: none; /* 🔹 Supprime le zoom qui crée un débordement */
 }
-
-/* 🟢 Evite le zoom au survol */
+/*
+.mermaid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    transform: scale(0.9);
+}
+*/
+/* ✅ Effet de zoom au survol */
 .mermaid:hover {
-    transform: scale(1.05); /* 🔹 Ajoute un léger zoom */
+    transform: scale(1.05) !important; /* 🔹 Léger zoom au survol */
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
 
-/* 🔹 Suppression du défilement horizontal */
+/* ✅ Supprime le défilement Mermaid */
 .ci-cd-diagram-container {
     width: 100%;
-    max-width: 1100px;
-    overflow-x: hidden !important; /* 🔹 Supprime le défilement horizontal */
+    max-width: 1200px;
+    overflow-x: hidden !important; /* 🔹 Empêche le scroll horizontal */
+    overflow-y: hidden !important; /* 🔹 Empêche le scroll vertical */
+    padding: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* 🟢 Evite que le zoom Mermaid déborde */
+/*
+.ci-cd-diagram-container {
+    width: 100%;
+    max-width: 1200px; 
+    overflow-x: auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
 
 /* 🟢 Evite que le zoom Mermaid déborde */
 /*
@@ -512,6 +535,8 @@ pre code {
     overflow-x: hidden !important;
 }
 */
+
+/* ✅ Ajustement du diagramme */
 .ci-cd-diagram {
     display: flex;
     justify-content: center;
@@ -520,26 +545,27 @@ pre code {
     background: #f8f9fa;
     border-radius: 10px;
     width: 100%;
-    /*max-width: 1100px;*/ /* 🔹 Largeur encore augmentée */
+    max-width: 1100px;
     height: auto;
     margin: 20px auto;
 }
+
 /* 🟢 Centrage du bouton */
 .ci-cd-button-container {
     margin-top: 20px;
     text-align: center;
 }
 
-/* 🔹 Ajustement spécifique pour éviter le scroll */
 .ci-cd-diagram pre.mermaid {
-    font-size: 1.6em !important;
-    min-height: 500px !important;
+    font-size: 1.6em !important; /* 🔹 Forçage de la taille */
+    min-height: 500px !important; /* 🔹 Plus de hauteur */
     width: 100% !important;
-    max-width: 95vw !important;
-    overflow: hidden !important;
-    transform: scale(1.1) !important; /* 🔹 Léger agrandissement */
-    white-space: normal !important;
+    max-width: 1100px !important; /* 🔹 Largeur augmentée */
+    overflow: hidden !important; /* 🔹 Supprime le scroll vertical */
+    /*transform: scale(1.2) !important;*/ /* 🔹 Zoom forcé */
+    transform: none !important; /* 🔹 Enlève le zoom qui dépasse */
 }
+
 /* 🟢 Ajustement du bouton */
 .btn-primary {
     display: inline-block;
