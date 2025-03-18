@@ -5,6 +5,7 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    padding-top: 80px;
 }
 /* ✅ 1. Style Global */
 /*
@@ -471,7 +472,7 @@ pre code {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /*max-width: 1000px;*/
+    max-width: 1000px;
     margin: auto;
     transform: scale(1); /* 🔹 Suppression du zoom réduit */
     overflow: hidden !important; /* 🔹 Empêche l’apparition de la barre */
@@ -488,7 +489,7 @@ pre code {
 /* 🔹 Suppression du défilement horizontal */
 .ci-cd-diagram-container {
     width: 100%;
-    /*max-width: 1100px;*/
+    max-width: 1100px;
     overflow-x: hidden !important; /* 🔹 Supprime le défilement horizontal */
     text-align: center;
     display: flex;
@@ -519,7 +520,7 @@ pre code {
     background: #f8f9fa;
     border-radius: 10px;
     width: 100%;
-    max-width: 1100px; /* 🔹 Largeur encore augmentée */
+    /*max-width: 1100px;*/ /* 🔹 Largeur encore augmentée */
     height: auto;
     margin: 20px auto;
 }
@@ -534,7 +535,7 @@ pre code {
     font-size: 1.6em !important;
     min-height: 500px !important;
     width: 100% !important;
-    /*max-width: 95vw !important;*/
+    max-width: 95vw !important;
     overflow: hidden !important;
     transform: scale(1.1) !important; /* 🔹 Léger agrandissement */
     white-space: normal !important;
@@ -585,7 +586,7 @@ pre code {
 /* ✅ Correction du footer */
 .footer {
     width: 100%; /* 🔹 Assure que le footer couvre toute la largeur */
-    position: absolute; /* 🔹 Fixe le footer en bas */
+    position: relative; /* 🔹 Fixe le footer en bas */
     bottom: 0; /* 🔹 Le colle bien en bas */
     left: 0; /* 🔹 Le colle bien à gauche */
     right: 0; /* 🔹 Le colle bien à droite */
