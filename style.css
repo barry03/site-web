@@ -164,25 +164,20 @@ body {
 /* ✅ 4. Boutons */
 .button-group {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: flex-start;
     margin-top: 20px;
     padding-left: 5px;
 }
 
-.btn-secondary, .btn-primary{
-    display: inline-block;
-    padding: 12px 22px; /* 🔹 Augmente légèrement le padding pour un meilleur rendu */
-    font-size: 16px; /* 🔹 Augmente la taille pour plus de lisibilité */
+.btn-primary, .btn-secondary {
+    padding: 6px 14px;  /* Réduit l’espace intérieur */
+    font-size: 13px;    /* Légèrement plus petit */
     font-weight: 600;
-    text-align: center;
-    border-radius: 8px;
+    border-radius: 6px; /* Arrondi plus subtil */
     transition: all 0.3s ease-in-out;
     text-decoration: none;
-    max-width: 280px; /* 🔹 Fixe une largeur max pour éviter que le bouton soit trop large */
-    white-space: nowrap; /* 🔹 Empêche le texte de passer à la ligne */
-    overflow: hidden;
-    text-overflow: ellipsis; /* 🔹 Ajoute des "..." si le texte dépasse */
+    white-space: nowrap; /* Empêche le retour à la ligne */
 }
 
 /*
