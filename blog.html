@@ -261,7 +261,9 @@
                 // Ajoute un extrait de l'article (300 premiers caractères)
                 const articleContent = document.getElementById("article-content");
                 if (latestArticle.body_html) {
-                    articleContent.innerHTML = latestArticle.body_html.substring(0, 300) + "...";
+                    articleContent.innerHTML = latestArticle.body_html.substring(0, 200) + "...";
+                } else if (latestArticle.body_markdown) {
+                    articleContent.innerText = latestArticle.body_markdown.substring(0, 200) + "...";
                 } else {
                     articleContent.innerText = "Aperçu non disponible.";
                 }
