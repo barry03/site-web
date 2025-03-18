@@ -1,8 +1,13 @@
-html {
-    scroll-behavior: smooth;
+/* ✅ Assure que le footer reste toujours en bas */
+html, body {
+    height: 100%; /* 🔹 Assure que tout prend 100% de la hauteur */
+    margin: 0; /* 🔹 Supprime toute marge parasite */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
-/* ✅ Police plus moderne */
 /* ✅ 1. Style Global */
+/*
 body {
     font-size: 14px;
     min-height: 100vh;
@@ -14,7 +19,7 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
-
+*/
 .logo-db {
     text-decoration: none !important; /* Supprime le soulignement */
     font-size: 2rem; /* Taille légèrement plus grande */
@@ -85,12 +90,12 @@ body {
     color: #7D5FB2;
 }
 
-/* Container principal */
+/* ✅ Assure que le contenu prend bien toute la place et pousse le footer en bas */
 .main-container {
+    flex: 1; /* 🔹 Prend toute la hauteur dispo */
     max-width: 1100px;
-    margin: 100px auto 50px;
-    padding: 5px;
-    flex: 1;
+    margin: auto;
+    padding: 20px;
 }
 
 /* En-tête stylisé */
@@ -466,7 +471,7 @@ pre code {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
+    /*max-width: 1000px;*/
     margin: auto;
     transform: scale(1); /* 🔹 Suppression du zoom réduit */
     overflow: hidden !important; /* 🔹 Empêche l’apparition de la barre */
@@ -483,7 +488,7 @@ pre code {
 /* 🔹 Suppression du défilement horizontal */
 .ci-cd-diagram-container {
     width: 100%;
-    max-width: 1100px; /* 🔹 Empêche les débordements */
+    /*max-width: 1100px;*/
     overflow-x: hidden !important; /* 🔹 Supprime le défilement horizontal */
     text-align: center;
     display: flex;
@@ -577,10 +582,11 @@ pre code {
 }
 */
 /* 📌 Correction de l'alignement du footer */
+/* ✅ Correction du footer */
 .footer {
-    width: 100vw; /* 🔹 Assure que le footer couvre toute la largeur */
+    width: 100%; /* 🔹 Assure que le footer couvre toute la largeur */
     position: absolute; /* 🔹 Fixe le footer en bas */
-    bottom: 0; /* 🔹 Le colle bien au bas */
+    bottom: 0; /* 🔹 Le colle bien en bas */
     left: 0; /* 🔹 Le colle bien à gauche */
     right: 0; /* 🔹 Le colle bien à droite */
     padding: 20px 50px; /* 🔹 Ajuste les paddings pour ne pas écraser le contenu */
