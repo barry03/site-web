@@ -258,19 +258,27 @@
                 document.getElementById("article-header").innerText = latestArticle.title;
                 document.getElementById("article-description").innerText = latestArticle.description;
                 
-                // Ajoute un extrait de l'article au lieu de tout afficher
-                document.getElementById("article-content").innerHTML = latestArticle.body_html.substring(0, 300) + "...";
+                // Ajoute un extrait de l'article (300 premiers caractères)
+                const articleContent = document.getElementById("article-content");
+                if (latestArticle.body_html) {
+                    articleContent.innerHTML = latestArticle.body_html.substring(0, 300) + "...";
+                } else {
+                    articleContent.innerText = "Aperçu non disponible.";
+                }
 
-                // Modifier dynamiquement le lien du bouton pour pointer vers article.html avec l'ID
+                // Modifier dynamiquement le lien du bouton pour pointer vers `article.html` avec l'ID
                 document.getElementById("read-article-btn").href = `article.html?id=${articleId}`;
             } catch (error) {
                 console.error("Erreur lors de la récupération de l'article :", error);
                 document.getElementById("article-header").innerText = "Erreur de chargement";
                 document.getElementById("article-description").innerText = "Impossible de récupérer l'article.";
+                document.getElementById("article-content").innerText = "";
             }
         }
 
+        // Exécuter la fonction au chargement
         fetchLatestArticle();
+
 
     </script>    
     
