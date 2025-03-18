@@ -1,17 +1,23 @@
+/* 🔹 Permet de forcer le footer à toujours être visible en bas si la page est courte */
+html, body {
+    min-height: 100vh; /* 🔹 Assure que le contenu prenne toute la hauteur */
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+/*
 html {
     scroll-behavior: smooth;
 }
+    */
 /* ✅ Police plus moderne */
 /* ✅ 1. Style Global */
 body {
     font-size: 14px;
-    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e3eaf8, #ffffff);
     background-size: cover;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
     padding-top: 80px;
 }
 
@@ -90,6 +96,7 @@ body {
     max-width: 1100px;
     margin: 100px auto 50px;
     padding: 10px;
+    flex: 1;
 }
 
 /* En-tête stylisé */
@@ -578,7 +585,7 @@ pre code {
 /* 📌 Correction de l'alignement du footer */
 .footer {
     width: 100vw; /* 🔹 Assure que le footer couvre toute la largeur */
-    position: fixed; /* 🔹 Fixe le footer en bas */
+    position: relative; /* 🔹 Fixe le footer en bas */
     bottom: 0; /* 🔹 Le colle bien au bas */
     left: 0; /* 🔹 Le colle bien à gauche */
     right: 0; /* 🔹 Le colle bien à droite */
