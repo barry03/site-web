@@ -10,7 +10,8 @@ html, body {
 
 /* Ajustement uniquement pour article.html */
 .article-page .main-container {
-    margin-top: -10px; /* 🔹 Remonte légèrement le contenu */
+    padding-top: 10px !important; /* 🔹 Réduit l'espace en haut */
+    margin-top: 0 !important; /* 🔹 Supprime toute marge descendante */
 }
 
 

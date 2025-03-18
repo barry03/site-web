@@ -263,13 +263,14 @@
                 if (!articleResponse.ok) throw new Error("Erreur de chargement du contenu");
 
                 const articleData = await articleResponse.json();
-                
+
+                // 🔹 Extraire le contenu sans le titre pour éviter le doublon
+                let extractedContent = articleData.body_html.replace(/<h1>.*?<\/h1>/i, ""); // Supprime le premier <h1>
+
                 // Ajoute un extrait de l'article (200 premiers caractères)
                 const articleContent = document.getElementById("article-content");
-                if (articleData.body_html) {
-                    articleContent.innerHTML = articleData.body_html.substring(0, 200) + "...";
-                } else if (articleData.body_markdown) {
-                    articleContent.innerText = articleData.body_markdown.substring(0, 200) + "...";
+                if (extractedContent) {
+                    articleContent.innerHTML = extractedContent.substring(0, 200) + "...";
                 } else {
                     articleContent.innerText = "Aperçu non disponible.";
                 }
