@@ -258,16 +258,18 @@
                 document.getElementById("article-header").innerText = latestArticle.title;
                 document.getElementById("article-description").innerText = latestArticle.description;
 
-                // 🔹 Extraction et nettoyage du contenu
+                // 🔹 Récupération et affichage du contenu Markdown
+                console.log("🔹 Contenu brut Markdown :", latestArticle.body_markdown);
+                console.log("🔹 Contenu HTML :", latestArticle.body_html);
+
                 const articleContent = document.getElementById("article-content");
+                let contentText = latestArticle.body_markdown || latestArticle.body_html;
 
-                if (latestArticle.body_markdown) {
-                    let contentText = latestArticle.body_markdown; // 🔹 Texte brut sans HTML
-
-                    // 🔹 Trouver "Why a Pandas Mindmap?"
+                if (contentText) {
+                    // 🔹 Trouver "Why a Pandas Mindmap?" dans Markdown
                     let startIndex = contentText.indexOf("## Why a Pandas Mindmap?");
                     if (startIndex !== -1) {
-                        contentText = contentText.substring(startIndex + 2); // 🔹 Coupe avant le titre (##)
+                        contentText = contentText.substring(startIndex + 2);
                     }
 
                     // 🔹 Affichage des 200 premiers caractères
@@ -283,7 +285,7 @@
                 // Modifier dynamiquement le lien du bouton pour pointer vers `article.html` avec l'ID
                 document.getElementById("read-article-btn").href = `article.html?id=${articleId}`;
             } catch (error) {
-                console.error("Erreur lors de la récupération de l'article :", error);
+                console.error("❌ Erreur lors de la récupération de l'article :", error);
                 document.getElementById("article-header").innerText = "Erreur de chargement";
                 document.getElementById("article-description").innerText = "Impossible de récupérer l'article.";
                 document.getElementById("article-content").innerText = "";
@@ -292,7 +294,6 @@
 
         // Exécuter la fonction au chargement
         fetchLatestArticle();
-
     </script>    
     
 </body>
