@@ -8,12 +8,10 @@ html, body {
     padding-top: 80px;
 }
 
-/* Ajustement uniquement pour article.html */
 .article-page .main-container {
-    padding-top: 10px !important; /* 🔹 Réduit l'espace en haut */
-    margin-top: 0 !important; /* 🔹 Supprime toute marge descendante */
+    position: relative;
+    top: -30px; /* 🔹 Remonte le contenu de 30px */
 }
-
 
 .logo-db {
     text-decoration: none !important; /* Supprime le soulignement */

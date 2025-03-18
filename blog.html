@@ -258,24 +258,21 @@
                 document.getElementById("article-header").innerText = latestArticle.title;
                 document.getElementById("article-description").innerText = latestArticle.description;
 
-                // 🔹 Faire une seconde requête pour récupérer `body_html`
-                const articleResponse = await fetch(`https://dev.to/api/articles/${articleId}`);
-                if (!articleResponse.ok) throw new Error("Erreur de chargement du contenu");
-
-                const articleData = await articleResponse.json();
-
-                // 🔹 Extraire le contenu sans le titre pour éviter le doublon
-                let extractedContent = articleData.body_html.replace(/<h1>.*?<\/h1>/i, ""); // Supprime le premier <h1>
-
-                // Ajoute un extrait de l'article (200 premiers caractères)
+                // Ajoute un extrait de l'article (évite la répétition du titre)
                 const articleContent = document.getElementById("article-content");
-                if (extractedContent) {
-                    articleContent.innerHTML = extractedContent.substring(0, 200) + "...";
+
+                // Vérifier s'il y a un contenu utilisable
+                if (latestArticle.body_html) {
+                    let articleText = latestArticle.body_html
+                        .replace(/<h1[^>]*>.*?<\/h1>/i, '') // Supprime les titres H1
+                        .replace(/<[^>]+>/g, ''); // Supprime les balises HTML
+
+                    articleContent.innerText = articleText.substring(0, 200) + "...";
                 } else {
                     articleContent.innerText = "Aperçu non disponible.";
                 }
 
-                // Modifier dynamiquement le lien du bouton pour pointer vers `article.html`
+                // Modifier dynamiquement le lien du bouton pour pointer vers `article.html` avec l'ID
                 document.getElementById("read-article-btn").href = `article.html?id=${articleId}`;
             } catch (error) {
                 console.error("Erreur lors de la récupération de l'article :", error);
@@ -287,6 +284,7 @@
 
         // Exécuter la fonction au chargement
         fetchLatestArticle();
+
     </script>    
     
 </body>
