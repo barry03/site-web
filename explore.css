@@ -465,7 +465,7 @@ pre code {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1300px; /* 🔹 Augmenté pour éviter la coupure */
+    max-width: 1100px; /* 🔹 Augmenté pour éviter la coupure */
     margin: auto;
     transform: scale(1); /* 🔹 Suppression du zoom réduit */
     overflow: hidden !important; /* 🔹 Empêche l’apparition de la barre */
@@ -474,15 +474,27 @@ pre code {
 
 /* 🟢 Evite le zoom au survol */
 .mermaid:hover {
-    transform: none !important; /* 🔹 Évite le zoom */
-    transition: none !important;
-    cursor: default;
+    transform: scale(1.05); /* 🔹 Ajoute un léger zoom */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 🔹 Suppression du défilement horizontal */
+.ci-cd-diagram-container {
+    width: 100%;
+    max-width: 100%; /* 🔹 Empêche les débordements */
+    overflow-x: hidden !important; /* 🔹 Supprime le défilement horizontal */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 🟢 Evite que le zoom Mermaid déborde */
+/*
 .ci-cd-diagram-container {
     width: 100%;
-    max-width: 1250px; /* Augmenté pour correspondre aux autres sections */
+    max-width: 1250px;
     overflow-x: auto;
     padding: 20px;
     text-align: center;
@@ -490,9 +502,9 @@ pre code {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    overflow-x: hidden !important; /* 🔹 Cache tout débordement horizontal */
+    overflow-x: hidden !important;
 }
-
+*/
 .ci-cd-diagram {
     display: flex;
     justify-content: center;
@@ -511,13 +523,14 @@ pre code {
     text-align: center;
 }
 
+/* 🔹 Ajustement spécifique pour éviter le scroll */
 .ci-cd-diagram pre.mermaid {
-    font-size: 1.6em !important; /* 🔹 Forçage de la taille */
-    min-height: 500px !important; /* 🔹 Plus de hauteur */
+    font-size: 1.6em !important;
+    min-height: 500px !important;
     width: 100% !important;
-    max-width: 1200px !important; /* 🔹 Largeur augmentée */
+    max-width: 95vw !important; /* 🔹 Ajuste la largeur pour éviter le débordement */
     overflow: hidden !important;
-    transform: scale(1.2) !important; /* 🔹 Zoom forcé */
+    transform: scale(1.1) !important; /* 🔹 Léger agrandissement */
     white-space: normal !important;
 }
 /* 🟢 Ajustement du bouton */
@@ -564,17 +577,18 @@ pre code {
 */
 /* 📌 Correction de l'alignement du footer */
 .footer {
+    width: 100vw; /* 🔹 Assure que le footer couvre toute la largeur */
+    position: fixed; /* 🔹 Fixe le footer en bas */
+    bottom: 0; /* 🔹 Le colle bien au bas */
+    left: 0; /* 🔹 Le colle bien à gauche */
+    right: 0; /* 🔹 Le colle bien à droite */
+    padding: 20px 50px; /* 🔹 Ajuste les paddings pour ne pas écraser le contenu */
+    background-color: #f0f3ff; 
+    border-top: 2px solid #e1e8ff;
     display: flex;
-    gap: 80px;
     justify-content: space-between;
     align-items: center;
-    background-color: #f0f3ff;
-    border-top: 2px solid #e1e8ff;
-    flex-wrap: nowrap;
-    padding: 20px 50px; /* 🔹 Ajoute du padding sur les côtés */
-    margin: 0; /* Supprime toute marge */
-    width: 100%; /* Assure une largeur complète */
-    box-sizing: border-box; /* 🔹 Empêche tout débordement */
+    box-sizing: border-box; /* 🔹 Empêche les débordements */
 }
 
 
@@ -598,7 +612,7 @@ pre code {
     flex-wrap: nowrap;
 }
 
-/* 📌 Style des citations */
+/* Style des citations */
 .footer-quotes blockquote {
     font-style: italic;
     font-size: 0.9rem;
@@ -606,7 +620,7 @@ pre code {
     min-width: 220px;
 }
   
-/* 📌 Section gauche du footer */
+/* Section gauche du footer */
 .footer-left {
     max-width: 40%;
     padding: 10px 0;
@@ -669,12 +683,6 @@ padding-left: 80px;
 .footer-icons {
     padding-left: 0; 
 }
-  
-.contact-title {
-font-size: 1.1em;
-margin-bottom: 15px;
-font-weight: bold;
-}
 
 .footer-links {
 list-style: none;
@@ -696,7 +704,11 @@ transition: color 0.2s ease-in;
 color: #4053d9;
 }
 
-
+.contact-title {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
 
 
   /* ✅ MENU BURGER (PAR DÉFAUT CACHÉ SUR ORDINATEUR) */
