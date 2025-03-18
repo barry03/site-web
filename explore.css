@@ -431,7 +431,7 @@ pre {
     background-color: #f4f7ff;
     padding: 10px;
     border-radius: 6px;
-    overflow-x: auto;
+    overflow-x: hidden !important; /* 🔹 Supprime le défilement horizontal */
     margin-top: 20px;
 }
 
@@ -579,7 +579,7 @@ pre code {
 /* 📌 Correction de l'alignement du footer */
 .footer {
     width: 100vw; /* 🔹 Assure que le footer couvre toute la largeur */
-    position: relative; /* 🔹 Fixe le footer en bas */
+    position: absolute; /* 🔹 Fixe le footer en bas */
     bottom: 0; /* 🔹 Le colle bien au bas */
     left: 0; /* 🔹 Le colle bien à gauche */
     right: 0; /* 🔹 Le colle bien à droite */
