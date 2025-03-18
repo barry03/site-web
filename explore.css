@@ -1,9 +1,4 @@
 html {
-    height: 100%; /* Toute la hauteur disponible */
-    margin: 0; /* Supprime tout espace par défaut */
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Permet d’aligner les éléments en colonne */
     scroll-behavior: smooth;
 }
 /* ✅ Police plus moderne */
@@ -425,12 +420,6 @@ body {
 .btn:hover {
     background-color: #4053d9;
 }
-/*
-.dashboard-img:hover {
-    transform: scale(1.05);
-}
-*/
-/* Bouton interactif */
   
 .btn:hover {
     background-color: #4053d9;
@@ -527,7 +516,7 @@ pre code {
     min-height: 500px !important; /* 🔹 Plus de hauteur */
     width: 100% !important;
     max-width: 1200px !important; /* 🔹 Largeur augmentée */
-    overflow: visible;
+    overflow: hidden !important;
     transform: scale(1.2) !important; /* 🔹 Zoom forcé */
     white-space: normal !important;
 }
@@ -573,6 +562,7 @@ pre code {
     min-height: auto;
 }
 */
+/* 📌 Correction de l'alignement du footer */
 .footer {
     display: flex;
     gap: 80px;
@@ -581,13 +571,10 @@ pre code {
     background-color: #f0f3ff;
     border-top: 2px solid #e1e8ff;
     flex-wrap: nowrap;
-    padding-top: 10px;
-    margin-top: -30px;
+    padding: 20px 50px; /* 🔹 Ajoute du padding sur les côtés */
     margin: 0; /* Supprime toute marge */
-    width: 100%; /* Prend toute la largeur sans débordement */
-    left: 0; /* Colle à gauche */
-    position: relative; /* Assure qu’il suive le flux normal */
-    box-sizing: border-box; /* Empêche les débordements liés au padding */
+    width: 100%; /* Assure une largeur complète */
+    box-sizing: border-box; /* 🔹 Empêche tout débordement */
 }
 
 
@@ -673,9 +660,11 @@ padding-left: 80px;
 .footer-icons {
     display: flex;
     align-items: center;
-    gap: 12px; /* Espacement entre les icônes */
-    margin-top: 10px; /* Ajustement pour éviter qu'ils touchent le bord */
+    gap: 15px; /* 🔹 Augmente l’espace entre les icônes */
+    margin-top: 10px; /* Ajustement vertical */
+    padding-left: 20px; /* 🔹 Décale légèrement depuis la bordure */
 }
+
 .footer-left,
 .footer-icons {
     padding-left: 0; 
