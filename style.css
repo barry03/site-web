@@ -170,6 +170,22 @@ body {
     padding-left: 5px;
 }
 
+.btn-secondary, .btn-primary{
+    display: inline-block;
+    padding: 12px 22px; /* 🔹 Augmente légèrement le padding pour un meilleur rendu */
+    font-size: 16px; /* 🔹 Augmente la taille pour plus de lisibilité */
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    max-width: 280px; /* 🔹 Fixe une largeur max pour éviter que le bouton soit trop large */
+    white-space: nowrap; /* 🔹 Empêche le texte de passer à la ligne */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 🔹 Ajoute des "..." si le texte dépasse */
+}
+
+/*
 .btn-primary, .btn-secondary {
     display: inline-block;
     padding: 8px 18px;
@@ -180,7 +196,7 @@ body {
     transition: all 0.3s ease-in-out;
     text-decoration: none;
 }
-
+*/
 .btn-primary {
     background-color: #007bff;
     color: white;

@@ -273,9 +273,9 @@
         
                     // 🔹 Affichage des 200 premiers caractères
                     document.getElementById("article-content").innerText =
-                        contentText.length > 300 ? contentText.substring(0, 300) + "..." : contentText;
+                        contentText.length > 400 ? contentText.substring(0, 400) + "..." : contentText;
                 } else {
-                    document.getElementById("article-content").innerText = ""; // 🔹 Supprime "Aperçu non disponible"
+                    document.getElementById("article-content").innerText = ""; //
                 }
         
                 // Modifier dynamiquement le lien du bouton pour pointer vers `article.html` avec l'ID
