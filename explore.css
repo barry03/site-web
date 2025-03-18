@@ -479,7 +479,8 @@ pre code {
     max-width: 1300px; /* 🔹 Augmenté pour éviter la coupure */
     margin: auto;
     transform: scale(1); /* 🔹 Suppression du zoom réduit */
-    overflow: visible; /* 🔹 Permet d'afficher tout le contenu */
+    overflow: hidden !important; /* 🔹 Empêche l’apparition de la barre */
+    white-space: normal !important; /* 🔹 Autorise la gestion automatique du texte */
 }
 
 /* 🟢 Evite le zoom au survol */
@@ -500,6 +501,7 @@ pre code {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    overflow-x: hidden !important; /* 🔹 Cache tout débordement horizontal */
 }
 
 .ci-cd-diagram {
