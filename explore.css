@@ -8,6 +8,12 @@ html, body {
     padding-top: 80px;
 }
 
+/* Ajustement uniquement pour article.html */
+.article-page .main-container {
+    margin-top: 30px; /* 🔹 Remonte légèrement le contenu */
+}
+
+
 .logo-db {
     text-decoration: none !important; /* Supprime le soulignement */
     font-size: 2rem; /* Taille légèrement plus grande */
