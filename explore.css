@@ -1,23 +1,17 @@
-/* 🔹 Permet de forcer le footer à toujours être visible en bas si la page est courte */
-html, body {
-    min-height: 100vh; /* 🔹 Assure que le contenu prenne toute la hauteur */
-    display: flex;
-    flex-direction: column;
-    scroll-behavior: smooth;
-}
-/*
 html {
     scroll-behavior: smooth;
 }
-    */
 /* ✅ Police plus moderne */
 /* ✅ 1. Style Global */
 body {
     font-size: 14px;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e3eaf8, #ffffff);
     background-size: cover;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     padding-top: 80px;
 }
 
@@ -96,7 +90,6 @@ body {
     max-width: 1100px;
     margin: 100px auto 50px;
     padding: 10px;
-    flex: 1;
 }
 
 /* En-tête stylisé */
@@ -468,11 +461,11 @@ pre code {
 
 /* 🟢 Ajustement principal de Mermaid */
 .mermaid {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1100px; /* 🔹 Augmenté pour éviter la coupure */
+    max-width: 1200px; /* 🔹 Augmenté pour éviter la coupure */
     margin: auto;
     transform: scale(1); /* 🔹 Suppression du zoom réduit */
     overflow: hidden !important; /* 🔹 Empêche l’apparition de la barre */
@@ -489,7 +482,7 @@ pre code {
 /* 🔹 Suppression du défilement horizontal */
 .ci-cd-diagram-container {
     width: 100%;
-    max-width: 100%; /* 🔹 Empêche les débordements */
+    max-width: 1300px; /* 🔹 Empêche les débordements */
     overflow-x: hidden !important; /* 🔹 Supprime le défilement horizontal */
     text-align: center;
     display: flex;
