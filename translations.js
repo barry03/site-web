@@ -1,5 +1,9 @@
 const translations = {
     "fr": {
+        "nav-about": "À propos",
+        "nav-skills": "Compétences & Stack",
+        "nav-projects": "Projets",
+        "nav-blog": "Blog & Veille",
         "title": "Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)",
         "subtitle": "Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.",
         "context": "Contexte & Objectifs",
@@ -23,6 +27,10 @@ const translations = {
         "footer-link-2": "👉 Mes certifications professionnelles"
     },
     "en": {
+        "nav-about": "About",
+        "nav-skills": "Skills & Stack",
+        "nav-projects": "Projects",
+        "nav-blog": "Blog & Insights",
         "title": "Case Study: Analysis of PyPI Downloads (GCP & Streamlit)",
         "subtitle": "Discover in detail my methodology for creating a scalable data pipeline.",
         "context": "Context & Objectives",
@@ -69,6 +77,12 @@ function setLanguage(lang) {
     document.getElementById("footer-links-title").innerText = translations[lang]["footer-links-title"];
     document.getElementById("footer-link-1").innerText = translations[lang]["footer-link-1"];
     document.getElementById("footer-link-2").innerText = translations[lang]["footer-link-2"];
+
+    //Traduction de la NAVBAR
+    document.getElementById("nav-about").innerText = translations[lang]["nav-about"];
+    document.getElementById("nav-skills").innerText = translations[lang]["nav-skills"];
+    document.getElementById("nav-projects").innerText = translations[lang]["nav-projects"];
+    document.getElementById("nav-blog").innerText = translations[lang]["nav-blog"];
 }
 // Attacher les événements aux boutons de langue après le chargement de la page
 document.addEventListener("DOMContentLoaded", function () {
