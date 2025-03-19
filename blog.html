@@ -45,33 +45,95 @@
             <h1>📖 Blog Technique</h1>
             <p>Retrouvez ici mes articles techniques et retours d'expérience.</p>
         </div>
+    
+        <!-- Conteneur Flex pour aligner les deux blocs horizontalement -->
+        <div class="blog-content">
+            <!-- 📌 Bloc "Article" -->
+            <div class="article-container">
+                <h2 id="article-header">Chargement...</h2>
+                <p id="article-description">Chargement du contenu...</p>
+                <div id="article-content"></div>
 
-        <div class="blog-container">
-            <!-- Article 1 -->
-            <div class="blog-card">
-                <h2><a href="article1.html">🚀 Automatiser un pipeline CI/CD sur GitLab</a></h2>
-                <p>Comment j’ai mis en place un pipeline CI/CD avec Docker et GitLab CI.</p>
-                <a href="article1.html" class="btn">Lire l'article</a>
+                <!-- 🔹 Bouton modifié pour charger dynamiquement l'article -->
+                <a id="read-article-btn" href="#" class="btn">Lire l'article</a>
             </div>
-
-            <!-- Article 2 -->
-            <div class="blog-card">
-                <h2><a href="article2.html">📊 Analyse des téléchargements PyPI avec BigQuery</a></h2>
-                <p>Une étude sur l’utilisation de BigQuery pour visualiser les tendances PyPI.</p>
-                <a href="article2.html" class="btn">Lire l'article</a>
-            </div>
-
-            <!-- Articles Externes -->
-            <div class="blog-card">
+    
+            <!-- 📌 Bloc "Mes articles externes" -->
+            <div class="external-articles">
                 <h2>🌍 Mes articles externes</h2>
-                <p>Retrouvez mes articles publiés ailleurs :</p>
-                <ul class="styled-list no-check">
-                    <li>📌 <a href="https://dev.to/" target="_blank">Mon blog sur Dev.to</a></li>
-                    <li>📌 <a href="https://medium.com/?tag=data-engineering" target="_blank">Mes articles sur Medium</a></li>
-                </ul>
+                <div id="external-articles-container" class="external-grid">
+                    <!-- Les articles externes seront ajoutés ici via JS -->
+                </div>
+                <div class="external-links">
+                    <a href="https://dev.to/" target="_blank" class="btn-link">🔗 Voir plus sur Dev.to</a>
+                    <a href="https://medium.com/@barrydjoulde15" target="_blank" class="btn-link">🔗 Voir plus sur Medium</a>
+                </div>
             </div>
         </div>
     </section>
+    
+    
+    <script>
+        async function fetchArticles() {
+            const devToTags = ["dataengineering", "bigdata", "kubernetes", "python"]; // Tags ciblés
+            let articles = [];
+
+            // 🔹 1. Récupérer les articles de Dev.to
+            for (let tag of devToTags) {
+                const url = `https://dev.to/api/articles?tag=${tag}&per_page=1`; // Récupère 1 article/tag
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    
+                    articles.push(...data.map(article => ({
+                        title: article.title,
+                        link: article.url,
+                        source: `Dev.to - #${tag}`,
+                        date: new Date(article.published_at)
+                    })));
+                } catch (error) {
+                    console.error(`Erreur récupération Dev.to (${tag})`, error);
+                }
+            }
+
+            // 🔹 2. Récupérer les articles de Medium via RSS (converti en JSON)
+            try {
+                const response = await fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/@barrydjoulde15/feed");
+                const data = await response.json();
+
+                if (data.items) {
+                    articles.push(...data.items.slice(0, 1).map(item => ({
+                        title: item.title,
+                        link: item.link,
+                        source: "Medium",
+                        date: new Date(item.pubDate)
+                    })));
+                }
+            } catch (error) {
+                console.error("Erreur récupération Medium", error);
+            }
+
+            // 🔹 3. Trier les articles par date (les plus récents en premier)
+            articles.sort((a, b) => b.date - a.date);
+
+            // 🔹 4. Afficher dynamiquement les articles dans la carte "Mes articles externes"
+            displayArticles(articles);
+        }
+
+        function displayArticles(articles) {
+            const container = document.getElementById("external-articles-container");
+            container.innerHTML = articles.slice(0, 3).map(article => `
+                <div class="external-article">
+                    <p><strong>${article.source} :</strong> <a href="${article.link}" target="_blank">${article.title}</a></p>
+                </div>
+            `).join('');
+        }
+
+        // Charger les articles au chargement de la page
+        fetchArticles();
+
+    </script>
+    
 
         <!-- 📡 Section Veille Technologique -->
     <!-- 📡 Section Veille Technologique -->
@@ -158,7 +220,7 @@
         <!-- Ajout d'une section citations -->
         <div class="footer-quotes">
             <blockquote>“Talk is cheap. Show me the code.” – Linus Torvalds</blockquote>
-            <blockquote>“Programs must be written for people to read, and only incidentally for machines to execute.” – Harold Abelson</blockquote>
+            <!--<blockquote>“Programs must be written for people to read, and only incidentally for machines to execute.” – Harold Abelson</blockquote>-->
             <blockquote>“Simplicity is the soul of efficiency.” – Austin Freeman</blockquote>
         </div>
     </footer>
@@ -180,5 +242,56 @@
         document.getElementById("quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
     </script>
     -->
+    <script>
+        async function fetchLatestArticle() {
+            try {
+                const response = await fetch("https://dev.to/api/articles?username=djouldbarry_ee2&per_page=1");
+                if (!response.ok) throw new Error("Erreur de chargement des articles");
+        
+                const articles = await response.json();
+                if (articles.length === 0) throw new Error("Aucun article trouvé");
+        
+                const latestArticle = articles[0]; // Récupère le dernier article publié
+                const articleId = latestArticle.id;
+        
+                // Mise à jour du titre et description
+                document.getElementById("article-header").innerText = latestArticle.title;
+                document.getElementById("article-description").innerText = latestArticle.description;
+        
+                // 🔹 Récupération et affichage du contenu
+                let contentText = latestArticle.body_markdown || latestArticle.body_html;
+        
+                if (contentText) {
+                    // 🔹 Suppression des balises HTML si besoin
+                    contentText = contentText.replace(/<[^>]*>?/gm, ''); 
+        
+                    // 🔹 Recherche du bon point de départ
+                    let startIndex = contentText.indexOf("Why a Pandas Mindmap?");
+                    if (startIndex !== -1) {
+                        contentText = contentText.substring(startIndex);
+                    }
+        
+                    // 🔹 Affichage des 200 premiers caractères
+                    document.getElementById("article-content").innerText =
+                        contentText.length > 400 ? contentText.substring(0, 400) + "..." : contentText;
+                } else {
+                    document.getElementById("article-content").innerText = ""; //
+                }
+        
+                // Modifier dynamiquement le lien du bouton pour pointer vers `article.html` avec l'ID
+                document.getElementById("read-article-btn").href = `article.html?id=${articleId}`;
+            } catch (error) {
+                console.error("❌ Erreur lors de la récupération de l'article :", error);
+                document.getElementById("article-header").innerText = "Erreur de chargement";
+                document.getElementById("article-description").innerText = "Impossible de récupérer l'article.";
+                document.getElementById("article-content").innerText = "";
+            }
+        }
+        
+        // Exécuter la fonction au chargement
+        fetchLatestArticle();
+        
+    </script>    
+    
 </body>
 </html>
