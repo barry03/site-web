@@ -28,24 +28,12 @@
             <li><a href="index.html#projects">Projets</a></li>
             <li><a href="blog.html">Blog & Veille</a></li>
         </ul>
-        <!--
-        <div class="nav-right">
-            <a href="#contact" class="cta-button">Contactez-moi</a>
-        </div>
-        -->
-        <!-- ✅ Icône menu burger (visible sur mobile uniquement) -->
-        <!--<div class="menu-toggle" onclick="toggleMenu()">☰</div>-->
 
-        <!-- ✅ Menu mobile -->
-        <div id="mobile-menu">
-            <span class="menu-close" onclick="toggleMenu()">✖</span>
-            <ul>
-                <li><a href="index.html#home" onclick="toggleMenu()">À propos</a></li>
-                <li><a href="index.html#competences" onclick="toggleMenu()">Compétences & Stack</a></li>
-                <li><a href="index.html#projects" onclick="toggleMenu()">Projets</a></li>
-            </ul>
-            <!--<a href="#contact" class="menu-contact" onclick="toggleMenu()">Contactez-moi</a>-->
-        </div>
+        <div class="language-switcher">
+            <img src="images/icons/fr-flag.png" alt="Français" id="fr-btn" class="lang-btn">
+            <img src="images/icons/en-flags.png" alt="English" id="en-btn" class="lang-btn">
+        </div>        
+        
     </nav>
 
     <video autoplay muted loop id="background-video">
@@ -55,44 +43,43 @@
     <!-- Section titre attractif -->
     <section class="main-container">
         <div class="section-header">
-            <h1>Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)</h1>
-            <p>Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.</p>
+            <h1 id="page-title">Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)</h1>
+            <p id="page-subtitle">Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.</p>
+        </div>
         </div>
     
         <div class="card-container">
             <!-- Contexte & Objectifs -->
             <div class="card">
-                <h2><span class="emoji">🎯</span> Contexte & Objectifs</h2>
-                <p>
+                <h2 id="context-title"><span class="emoji">🎯</span> Contexte & Objectifs</h2>
+                <p id="context-text">
                     Analyse des données publiques issues de PyPI sur les téléchargements de packages Python, avec un pipeline automatisé sur GCP et Streamlit.
                 </p>
                 <ul class="styled-list">
-                    <li>Collecte automatique via Composer (Airflow)</li>
-                    <li>Traitement SQL avec BigQuery</li>
-                    <li>Dashboard interactif Streamlit</li>
-                    <li>Automatisation CI/CD via GitLab et Docker</li>
+                    <li id="context-point-1">Collecte automatique via Composer (Airflow)</li>
+                    <li id="context-point-2">Traitement SQL avec BigQuery</li>
+                    <li id="context-point-3">Dashboard interactif Streamlit</li>
+                    <li id="context-point-4">Automatisation CI/CD via GitLab et Docker</li>
                 </ul>
             </div>
-    
-            <!-- Dashboards -->
             <!-- Dashboards & Visualisations -->
             <div class="card">
-                <h2><span class="emoji">📊</span> Dashboards & Visualisations</h2>
-                <p>Quelques exemples concrets des dashboards interactifs réalisés :</p>
+                <h2 id="dashboards-title"><span class="emoji">📊</span> Dashboards & Visualisations</h2>
+                <p id="dashboards-text">Quelques exemples concrets des dashboards interactifs réalisés :</p>
 
                 <div class="dashboard-gallery">
                     <div class="dashboard-card">
                         <img src="images/tech/dashboard2.png" alt="Dashboard Streamlit : Téléchargements par pays">
-                        <h4>Téléchargements par Pays</h4>
+                        <h4 id="dashboard-country-title">Téléchargements par Pays</h4>
                     </div>
 
                     <div class="dashboard-card">
                         <img src="images/tech/dashboard1.png" alt="Dashboard Streamlit : Top projets PyPI">
-                        <h4>Top Projets PyPI téléchargés</h4>
+                        <h4 id="dashboard-project-title">Top Projets PyPI téléchargés</h4>
                     </div>
                 </div>
 
-                <a href="https://pypi-monitoring-pipelines-tkwvu4x8htfzernenaefap.streamlit.app/" class="btn" target="_blank">Voir le Dashboard interactif</a>
+                <a id="btn-dashboard" href="https://pypi-monitoring-pipelines-tkwvu4x8htfzernenaefap.streamlit.app/" class="btn" target="_blank">Voir le Dashboard interactif</a>
             </div>
 
     
@@ -100,8 +87,8 @@
             <!-- Méthodologie CI/CD avec schéma interactif -->
             <!-- Méthodologie CI/CD avec animation & lien GitLab -->
             <div class="card ci-cd-card">
-                <h2><span class="emoji">⚙️</span> Méthodologie & CI/CD</h2>
-                <p>
+                <h2 id="ci-cd-title"><span class="emoji">⚙️</span> Méthodologie & CI/CD</h2>
+                <p id="ci-cd-text">
                     Workflow entièrement automatisé et géré via GitLab CI/CD et Docker, avec séparation nette des environnements dev et prod.
                 </p>
                 
@@ -132,7 +119,7 @@
             
                 <!-- Bouton aligné proprement -->
                 <div class="ci-cd-button">
-                    <a href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline/-/pipelines" target="_blank" class="btn-primary">
+                    <a id="btn-ci-cd" href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline/-/pipelines" target="_blank" class="btn-primary">
                         Voir les logs CI/CD
                     </a>
                 </div>
@@ -172,8 +159,8 @@
 
         <!-- ✅ Partie gauche (conserver même design) -->
         <div class="footer-left">
-            <h3>En savoir plus ? 📚</h3>
-            <p>Découvrez mes réalisations techniques et mes dernières publications.</p>
+            <h3 id="footer-title">En savoir plus ? 📚</h3>
+            <p id="footer-text">Découvrez mes réalisations techniques et mes dernières publications.</p>
 
             <div class="footer-icons">
                 <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank">
@@ -190,12 +177,10 @@
 
         <!-- ✅ Partie droite (remplacer formulaire par autre contenu pertinent) -->
         <div class="footer-right">
-            <p class="contact-title">Ressources complémentaires 🔗</p>
+            <p id="footer-links-title" class="contact-title">Ressources complémentaires 🔗</p>
             <ul class="footer-links">
-                <li><a href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline" target="_blank">👉 Code source du projet (GitLab)</a></li>
-                <!--<li><a href="#" target="_blank">👉 Dashboard interactif en ligne</a></li>-->
-                <li><a href="https://gitlab.com/barrydjoulde/my-certifications" target="_blank">👉 Mes certifications professionnelles</a></li>
-                <!--<li><a href="blog.html">👉 Articles & Blog technique</a></li>-->
+                <li><a id="footer-link-1" href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline" target="_blank">👉 Code source du projet (GitLab)</a></li>
+                <li><a id="footer-link-2" href="https://gitlab.com/barrydjoulde/my-certifications" target="_blank">👉 Mes certifications professionnelles</a></li>
             </ul>  
         </div>
 
@@ -205,6 +190,8 @@
             mermaid.initialize({ startOnLoad: true });
         });
     </script>
-      
+
+    <script src="translations.js"></script>
+
 </body>
 </html>
