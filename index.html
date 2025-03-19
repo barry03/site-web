@@ -36,13 +36,13 @@
 
         <!-- Menu standard pour ordinateur -->
         <ul class="nav-links">
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#competences">Compétences & Stack</a></li>
-            <li><a href="#projects">Projets</a></li>
+            <li><a href="#about" id="nav-about">À propos</a></li>
+            <li><a href="#competences" id="nav-skills">Compétences & Stack</a></li>
+            <li><a href="#projects" id="nav-projects">Projets</a></li>
         </ul>
 
         <div class="nav-right">
-            <a href="#contact" class="cta-button">Contactez-moi</a>
+            <a href="#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
         </div>
     </nav>
     
@@ -50,16 +50,16 @@
     <header class="hero" id="about">
         <div class="hero-content">
             <h1>Djouldé <span class="highlight">Barry</span></h1>
-            <h2>Data Engineer | Spécialiste ETL & Big Data</h2>
-            <p class="hero-description">
+            <h2 id="hero-title">Data Engineer | Spécialiste ETL & Big Data</h2>
+            <p class="hero-description" id="hero-description">
                 Passionné par la gestion et la valorisation des données, je conçois des solutions
                 robustes pour l'ingestion, la transformation et l'analyse de grands volumes de données.
                 Mon expertise couvre l'ETL, le Big Data et le Cloud Computing.
             </p>
             <div class="button-group">
                 <!--<a href="explore.html" class="btn-primary">Explorez plus</a>-->
-                <a href="cv.html" class="btn-secondary">📄 Voir mon CV</a>
-                <a href="explore.html" class="btn-primary">Pourquoi moi ? Découvrez-le !</a>
+                <a href="cv.html" class="btn-secondary" id="btn-cv">📄 Voir mon CV</a>
+                <a href="explore.html" class="btn-primary" id="btn-explore">Pourquoi moi ? Découvrez-le !</a>
             </div>
         </div>
         <div class="hero-image">
@@ -71,13 +71,13 @@
 
     <!-- Section Compétences & Stack Technique -->
     <section id="competences" class="competences-section">
-        <h2>Compétences & Stack Technique</h2>
+        <h2 id="skills-title">Compétences & Stack Technique</h2>
         <div class="competences-container">
             <div class="competences-list">
-                <h3>Mes Compétences</h3>
+                <h3 id="skills-subtitle">Mes Compétences</h3>
                 <ul>
                     <li>
-                        <span>📊 Modélisation & Data Processing</span>
+                        <span id="skill-1">📊 Modélisation & Data Processing</span>
                         <div class="progress-bar">
                             <div class="progress blue" data-width="90">
                                 <span class="progress-value">90%</span>
@@ -85,7 +85,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>🔄 Développement de pipelines ETL</span>
+                        <span id="skill-2">🔄 Développement de pipelines ETL</span>
                         <div class="progress-bar">
                             <div class="progress purple" data-width="90">
                                 <span class="progress-value">90%</span>
@@ -93,7 +93,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>📡 Big Data & Cloud (AWS, GCP)</span>
+                        <span id="skill-3">📡 Big Data & Cloud (AWS, GCP)</span>
                         <div class="progress-bar">
                             <div class="progress orange" data-width="75">
                                 <span class="progress-value">75%</span>
@@ -101,7 +101,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>⚙️ Automatisation & CI/CD</span>
+                        <span id="skill-4">⚙️ Automatisation & CI/CD</span>
                         <div class="progress-bar">
                             <div class="progress green" data-width="70">
                                 <span class="progress-value">80%</span>
@@ -109,7 +109,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>📈 Data Visualisation (Power BI)</span>
+                        <span id="skill-5">📈 Data Visualisation (Power BI)</span>
                         <div class="progress-bar">
                             <div class="progress yellow" data-width="60">
                                 <span class="progress-value">60%</span>
@@ -120,7 +120,7 @@
             </div>
             
             <div class="stack-technique">
-                <h3>Stack Technique</h3>
+                <h3 id="stack-title">Stack Technique</h3>
                 <div class="tech-grid">
                     <img src="images/tech/python.png" alt="Python" title="Python">
                     <img src="images/tech/sql.png" alt="SQL" title="SQL">
@@ -143,22 +143,22 @@
     <!-- Section Projets -->
     <!-- ✅ Section Projets -->
     <section id="projects" class="projects-section">
-        <h2>Projets</h2>
+        <h2 id="projects-title">Projets</h2>
         <div class="projects-container">
             <div class="project-card">
-                <h3>Oncopole Claudis Rigaud</h3>
-                <p>Optimisation et structuration des données pour la recherche en oncologie.</p>
-                <button class="btn-project" onclick="openModal('oncopoleModal')">Voir plus</button>
+                <h3 id="project-1-title">Oncopole Claudis Rigaud</h3>
+                <p id="project-1-description">Optimisation et structuration des données pour la recherche en oncologie.</p>
+                <button class="btn-project" id="btn-project-1" onclick="openModal('oncopoleModal')">Voir plus</button>
             </div>
             <div class="project-card">
-                <h3>Aristid Retail Technology</h3>
-                <p>Analyse de prix concurrentiels et refonte du système de facturation.</p>
-                <button class="btn-project" onclick="openModal('aristidModal')">Voir plus</button>
+                <h3 id="project-2-title">Aristid Retail Technology</h3>
+                <p id="project-2-description">Analyse de prix concurrentiels et refonte du système de facturation.</p>
+                <button class="btn-project" id="btn-project-2" onclick="openModal('aristidModal')">Voir plus</button>
             </div>
             <div class="project-card">
-                <h3>IQVIA</h3>
-                <p>Automatisation des fichiers prix et feedbacks pour médecins.</p>
-                <button class="btn-project" onclick="openModal('iqviaModal')">Voir plus</button>
+                <h3 id="project-3-title">IQVIA</h3>
+                <p id="project-3-description">Automatisation des fichiers prix et feedbacks pour médecins.</p>
+                <button class="btn-project" id="btn-project-3" onclick="openModal('iqviaModal')">Voir plus</button>
             </div>
         </div>
 
@@ -166,27 +166,27 @@
         <div id="oncopoleModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('oncopoleModal')">&times;</span>
-                <h2>Oncopole Claudis Rigaud</h2>
-                <p>Conception et mise en œuvre de pipelines de données scalables sur GCP.</p>
-                <p><strong>Technologies :</strong> Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse</p>
+                <h2 id="modal-1-title">Oncopole Claudis Rigaud</h2>
+                <p id="modal-1-description">Conception et mise en œuvre de pipelines de données scalables sur GCP.</p>
+                <p><strong>Technologies :</strong> <span id="modal-1-tech">Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse</span></p>
             </div>
         </div>
 
         <div id="aristidModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('aristidModal')">&times;</span>
-                <h2>Aristid Retail Technology</h2>
-                <p>Mise en place de pipelines de données optimisés pour le traitement des flux concurrentiels.</p>
-                <p><strong>Technologies :</strong> Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), Airflow</p>
+                <h2 id="modal-2-title">Aristid Retail Technology</h2>
+                <p id="modal-2-description">Mise en place de pipelines de données optimisés pour le traitement des flux concurrentiels.</p>
+                <p><strong>Technologies :</strong> <span id="modal-2-tech">Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), Airflow</span></p>
             </div>
         </div>
 
         <div id="iqviaModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('iqviaModal')">&times;</span>
-                <h2>IQVIA</h2>
-                <p>Automatisation des fichiers prix hebdomadaires/mensuels sous NiFi.</p>
-                <p><strong>Technologies :</strong> NiFi, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence</p>
+                <h2 id="modal-3-title">IQVIA</h2>
+                <p id="modal-3-description">Automatisation des fichiers prix hebdomadaires/mensuels sous NiFi.</p>
+                <p><strong>Technologies :</strong> <span id="modal-3-tech">NiFi, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence</span></p>
             </div>
         </div>
     </section>
@@ -195,8 +195,8 @@
     <footer id="contact" class="footer">
         <!-- ✅ Partie gauche avec texte et icônes -->
         <div class="footer-left">
-            <h3>Envie de collaborer ? 🚀</h3>
-            <p>Contactez-moi pour discuter de vos projets en Data Engineering.</p>
+            <h3 id="footer-title">Envie de collaborer ? 🚀</h3>
+            <p id="footer-description">Contactez-moi pour discuter de vos projets en Data Engineering.</p>
     
             <div class="footer-icons">
                 <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank">
@@ -213,7 +213,7 @@
     
         <!-- ✅ Partie droite avec le formulaire -->
         <div class="footer-right">
-            <p class="contact-title">Envoyez-moi un message 📩</p>
+            <p class="contact-title" id="footer-contact-title">Envoyez-moi un message 📩</p>
             <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbldweqo" method="POST">
                 <input type="text" id="name" name="name" placeholder="Votre nom" required>
                 <span class="error-message" id="name-error">Veuillez entrer votre nom.</span>

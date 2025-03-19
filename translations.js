@@ -4,6 +4,22 @@ const translations = {
         "nav-skills": "Compétences & Stack",
         "nav-projects": "Projets",
         "nav-blog": "Blog & Veille",
+
+        // Titres des modals
+        "modal-1-title": "Oncopole Claudis Rigaud",
+        "modal-2-title": "Aristid Retail Technology",
+        "modal-3-title": "IQVIA",
+
+        // Descriptions des modals
+        "modal-1-description": "Conception et mise en œuvre de pipelines de données scalables sur GCP.",
+        "modal-2-description": "Mise en place de pipelines de données optimisés pour le traitement des flux concurrentiels.",
+        "modal-3-description": "Automatisation des fichiers prix hebdomadaires/mensuels sous Talend.",
+
+        // Technologies des modals
+        "modal-1-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse",
+        "modal-2-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), Airflow",
+        "modal-3-tech": "Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence",
+
         "title": "Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)",
         "subtitle": "Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.",
         "context": "Contexte & Objectifs",
@@ -31,6 +47,23 @@ const translations = {
         "nav-skills": "Skills & Stack",
         "nav-projects": "Projects",
         "nav-blog": "Blog & Insights",
+
+        // Titles of modals
+        "modal-1-title": "Oncopole Claudis Rigaud",
+        "modal-2-title": "Aristid Retail Technology",
+        "modal-3-title": "IQVIA",
+
+        // Descriptions of modals
+        "modal-1-description": "Design and implementation of scalable data pipelines on GCP.",
+        "modal-2-description": "Implementation of optimized data pipelines for competitive price processing.",
+        "modal-3-description": "Automation of weekly/monthly price files using Talend.",
+
+        // Technologies of modals
+        "modal-1-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse",
+        "modal-2-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), Airflow",
+        "modal-3-tech": "Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence",
+
+
         "title": "Case Study: Analysis of PyPI Downloads (GCP & Streamlit)",
         "subtitle": "Discover in detail my methodology for creating a scalable data pipeline.",
         "context": "Context & Objectives",
@@ -83,6 +116,20 @@ function setLanguage(lang) {
     document.getElementById("nav-skills").innerText = translations[lang]["nav-skills"];
     document.getElementById("nav-projects").innerText = translations[lang]["nav-projects"];
     document.getElementById("nav-blog").innerText = translations[lang]["nav-blog"];
+
+    //Traduction modale
+    document.getElementById("modal-1-title").innerText = translations[lang]["modal-1-title"];
+    document.getElementById("modal-2-title").innerText = translations[lang]["modal-2-title"];
+    document.getElementById("modal-3-title").innerText = translations[lang]["modal-3-title"];
+
+    document.getElementById("modal-1-description").innerText = translations[lang]["modal-1-description"];
+    document.getElementById("modal-2-description").innerText = translations[lang]["modal-2-description"];
+    document.getElementById("modal-3-description").innerText = translations[lang]["modal-3-description"];
+
+    document.getElementById("modal-1-tech").innerText = translations[lang]["modal-1-tech"];
+    document.getElementById("modal-2-tech").innerText = translations[lang]["modal-2-tech"];
+    document.getElementById("modal-3-tech").innerText = translations[lang]["modal-3-tech"];
+
 }
 // Attacher les événements aux boutons de langue après le chargement de la page
 document.addEventListener("DOMContentLoaded", function () {
