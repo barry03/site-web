@@ -70,6 +70,15 @@ function setLanguage(lang) {
     document.getElementById("footer-link-1").innerText = translations[lang]["footer-link-1"];
     document.getElementById("footer-link-2").innerText = translations[lang]["footer-link-2"];
 }
+// Attacher les événements aux boutons de langue après le chargement de la page
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("fr-btn").addEventListener("click", () => setLanguage("fr"));
+    document.getElementById("en-btn").addEventListener("click", () => setLanguage("en"));
+
+    // Définir la langue par défaut (Français au démarrage)
+    setLanguage("fr");
+});
+
 
 
       
