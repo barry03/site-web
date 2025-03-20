@@ -98,6 +98,24 @@ body {
     margin-right: 40px;
     display: flex;
     align-items: center; /* Centre verticalement */
+    gap: 15px;
+}
+/* ✅ Aligner les icônes de langue */
+.language-switcher {
+    display: flex;
+    align-items: center; /* ✅ Centrage vertical */
+    gap: 8px; /* ✅ Réduit l'espace entre les drapeaux */
+}
+
+.lang-btn {
+    width: 22px; /* ✅ Légèrement réduit */
+    height: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
 }
 
 .cta-button {

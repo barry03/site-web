@@ -90,27 +90,6 @@ html, body {
     padding: 20px;
 }
 
-.language-switcher {
-    position: relative; /* ✅ Aligné avec la navbar */
-    display: flex;
-    align-items: center; /* ✅ Centrage vertical */
-    gap: 10px;
-    margin-left: auto; /* ✅ Pousse les icônes complètement à droite */
-    padding-right: 20px; /* ✅ Ajuste l'espacement avec le bord droit */
-    height: 100%; /* ✅ Pour qu'ils suivent la hauteur de la navbar */
-}
-
-.lang-btn {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.lang-btn:hover {
-    transform: scale(1.1);
-}
-
 /* En-tête stylisé */
 .section-header {
     text-align: center;
