@@ -4,6 +4,8 @@ const translations = {
         "nav-skills": "Compétences & Stack",
         "nav-projects": "Projets",
         "nav-blog": "Blog & Veille",
+        "nav-contact": "Contactez-moi",
+
 
         // 📌 HERO Section
         "hero-title": "Djouldé Barry",
@@ -30,7 +32,10 @@ const translations = {
         "project-2-description": "Analyse de prix concurrentiels et refonte du système de facturation.",
         "project-3-title": "IQVIA",
         "project-3-description": "Automatisation des fichiers prix et feedbacks pour médecins.",
-        "btn-project": "Voir plus",
+        "btn-project-1": "Voir plus",
+        "btn-project-2": "Voir plus",
+        "btn-project-3": "Voir plus",
+
 
         // Titres des modals
         "modal-1-title": "Oncopole Claudis Rigaud",
@@ -78,12 +83,14 @@ const translations = {
         "footer-form-message": "Votre message",
         "footer-form-submit": "Envoyer",
         "footer-success-message": "Merci pour votre message ! 📩"
+
     },
     "en": {
         "nav-about": "About",
         "nav-skills": "Skills & Stack",
         "nav-projects": "Projects",
         "nav-blog": "Blog & Insights",
+        "nav-contact": "Contact Me",
 
         // 📌 HERO Section
         "hero-title": "Djouldé Barry",
@@ -110,7 +117,10 @@ const translations = {
         "project-2-description": "Competitive pricing analysis and billing system overhaul.",
         "project-3-title": "IQVIA",
         "project-3-description": "Automation of price files and feedbacks for doctors.",
-        "btn-project": "Learn more",
+        "btn-project-1": "Learn more",
+        "btn-project-2": "Learn more",
+        "btn-project-3": "Learn more",
+
 
         // Titles of modals
         "modal-1-title": "Oncopole Claudis Rigaud",
@@ -223,8 +233,9 @@ function applyTranslations(lang) {
     document.getElementById("project-2-description").innerText = translations[lang]["project-2-description"];
     document.getElementById("project-3-title").innerText = translations[lang]["project-3-title"];
     document.getElementById("project-3-description").innerText = translations[lang]["project-3-description"];
-    document.querySelectorAll(".btn-project").forEach(btn => btn.innerText = translations[lang]["btn-project"]);
-
+    document.querySelectorAll(".btn-project").forEach((btn, index) => {
+        btn.innerText = translations[lang][`btn-project-${index + 1}`];
+    });
 
     //Traduction modale
     document.getElementById("modal-1-title").innerText = translations[lang]["modal-1-title"];
@@ -250,15 +261,16 @@ function applyTranslations(lang) {
     document.getElementById("footer-success-message").innerText = translations[lang]["footer-success-message"];
 
 }
-// ✅ Écouteur d'événements sur les boutons de langue
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("Langue enregistrée :", localStorage.getItem("selectedLanguage")); // ✅ Debug
     document.getElementById("fr-btn").addEventListener("click", () => setLanguage("fr"));
     document.getElementById("en-btn").addEventListener("click", () => setLanguage("en"));
 
-    // ✅ Vérifier s'il y a une langue enregistrée et l'appliquer
-    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr"; // Français par défaut
+    // ✅ Appliquer la langue enregistrée
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr"; 
     applyTranslations(savedLanguage);
 });
+
 
 
       
