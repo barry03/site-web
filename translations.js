@@ -13,27 +13,28 @@ const translations = {
         "hero-description": "Passionné par la gestion et la valorisation des données, je conçois des solutions robustes pour l'ingestion, la transformation et l'analyse de grands volumes de données. Mon expertise couvre l'ETL, le Big Data et le Cloud Computing.",
         "hero-btn-cv": "📄 Voir mon CV",
         "hero-btn-explore": "Pourquoi moi ? Découvrez-le !",
+        
+        // compétences
+        "skills-title": "Compétences & Stack Technique",
+        "skills-subtitle": "Mes Compétences",
+        "skill-1": "📊 Modélisation & Data Processing",
+        "skill-2": "🔄 Développement de pipelines ETL",
+        "skill-3": "📡 Big Data & Cloud (AWS, GCP)",
+        "skill-4": "⚙️ Automatisation & CI/CD",
+        "skill-5": "📈 Data Visualisation (Power BI)",
+        "stack-title": "Stack Technique",
 
-        // 📌 COMPÉTENCES Section
-        "competences-title": "Compétences & Stack Technique",
-        "competences-list-title": "Mes Compétences",
-        "competences-skill-1": "📊 Modélisation & Data Processing",
-        "competences-skill-2": "🔄 Développement de pipelines ETL",
-        "competences-skill-3": "📡 Big Data & Cloud (AWS, GCP)",
-        "competences-skill-4": "⚙️ Automatisation & CI/CD",
-        "competences-skill-5": "📈 Data Visualisation (Power BI)",
-        "competences-stack-title": "Stack Technique",
         
         // cas d'etude
-        "title": "Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)",
-        "subtitle": "Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.",
-        "context": "Contexte & Objectifs",
+        "page-title": "Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)",
+        "page-subtitle": "Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.",
+        "context-title": "Contexte & Objectifs",
         "context-text": "Analyse des données publiques issues de PyPI sur les téléchargements de packages Python, avec un pipeline automatisé sur GCP et Streamlit.",
         "context-point-1": "Collecte automatique via Composer (Airflow)",
         "context-point-2": "Traitement SQL avec BigQuery",
         "context-point-3": "Dashboard interactif Streamlit",
         "context-point-4": "Automatisation CI/CD via GitLab et Docker",
-        "dashboards": "Dashboards & Visualisations",
+        "dashboards-title": "Dashboards & Visualisations",
         "dashboards-text": "Quelques exemples concrets des dashboards interactifs réalisés :",
         "dashboard-country-title": "Téléchargements par Pays",
         "dashboard-project-title": "Top Projets PyPI téléchargés",
@@ -67,25 +68,25 @@ const translations = {
         "hero-btn-explore": "Why me? Find out!",
 
         // 📌 COMPETENCES Section
-        "competences-title": "Skills & Technical Stack",
-        "competences-list-title": "My Skills",
-        "competences-skill-1": "📊 Modeling & Data Processing",
-        "competences-skill-2": "🔄 ETL Pipeline Development",
-        "competences-skill-3": "📡 Big Data & Cloud (AWS, GCP)",
-        "competences-skill-4": "⚙️ Automation & CI/CD",
-        "competences-skill-5": "📈 Data Visualization (Power BI)",
-        "competences-stack-title": "Technical Stack",
+        "skills-title": "Skills & Technical Stack",
+        "skills-subtitle": "My Skills",
+        "skill-1": "📊 Modeling & Data Processing",
+        "skill-2": "🔄 ETL Pipeline Development",
+        "skill-3": "📡 Big Data & Cloud (AWS, GCP)",
+        "skill-4": "⚙️ Automation & CI/CD",
+        "skill-5": "📈 Data Visualization (Power BI)",
+        "stack-title": "Technical Stack",
 
         // use case
-        "title": "Case Study: Analysis of PyPI Downloads (GCP & Streamlit)",
-        "subtitle": "Discover in detail my methodology for creating a scalable data pipeline.",
-        "context": "Context & Objectives",
+        "page-title": "Case Study: Analysis of PyPI Downloads (GCP & Streamlit)",
+        "page-subtitle": "Discover in detail my methodology for creating a scalable data pipeline.",
+        "context-title": "Context & Objectives",
         "context-text": "Analysis of public PyPI data on Python package downloads, with an automated pipeline on GCP and Streamlit.",
         "context-point-1": "Automatic data collection via Composer (Airflow)",
         "context-point-2": "SQL processing with BigQuery",
         "context-point-3": "Interactive dashboard with Streamlit",
         "context-point-4": "CI/CD automation via GitLab and Docker",
-        "dashboards": "Dashboards & Visualizations",
+        "dashboards-title": "Dashboards & Visualizations",
         "dashboards-text": "Some concrete examples of interactive dashboards created:",
         "dashboard-country-title": "Downloads by Country",
         "dashboard-project-title": "Most Downloaded PyPI Projects",
@@ -112,13 +113,15 @@ function applyTranslations(lang) {
 
     // Liste des ID à traduire
     const elementsToTranslate = [
-        "nav-about", "nav-skills", "nav-projects", "nav-contact", 
-        "nav-blog", "nav-back", "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore", "competences-title",
-        "competences-list-title", "competences-skill-1", "competences-skill-2", "competences-skill-3", "competences-skill-4", "competences-skill-5",
-        "competences-stack-title", "title", "subtitle", "context", "context-text", "context-point-2", "context-point-3", "context-point-4",
-        "dashboards", "dashboards-text", "dashboard-country-title", "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text",
-        "btn-ci-cd", "blog-title", "blog-description", "external-articles-title", "btn-devto", "veille-title", "veille-description"
-    ];
+        "nav-about", "nav-skills", "nav-projects", "nav-contact", "nav-blog", "nav-back",
+        "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore",
+        "skills-title", "skills-subtitle", "skill-1", "skill-2",
+        "skill-3", "skill-4", "skill-5", "stack-title",
+        "page-title", "page-subtitle", "context-title", "context-text", "context-point-1", "context-point-2",
+        "context-point-3", "context-point-4", "dashboards-title", "dashboards-text", "dashboard-country-title",
+        "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text", "btn-ci-cd",
+        "blog-title", "blog-description", "external-articles-title", "btn-devto", "btn-medium", "veille-title", "veille-description"
+    ];    
 
     elementsToTranslate.forEach(id => {
         const element = document.getElementById(id);
