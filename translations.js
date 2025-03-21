@@ -6,6 +6,16 @@ const translations = {
         "nav-blog": "Blog & Veille",
         "nav-contact": "Contactez-moi",
 
+        "nav-back": "← Retour",
+        "blog-title": "📖 Blog Technique",
+        "blog-description": "Retrouvez ici mes articles techniques et retours d'expérience.",
+        "external-articles-title": "🌍 Mes articles externes",
+        "btn-devto": "🔗 Voir plus sur Dev.to",
+        "btn-medium": "🔗 Voir plus sur Medium",
+        "veille-title": "📡 Veille Technologique",
+        "veille-description": "Mes sources préférées pour rester à jour sur l'écosystème tech et data.",
+        "footer-title": "En savoir plus ? 📚",
+        "footer-description": "Découvrez mes réalisations techniques et mes dernières publications.",
 
         // 📌 HERO Section
         "hero-title": "Djouldé Barry",
@@ -92,6 +102,17 @@ const translations = {
         "nav-blog": "Blog & Insights",
         "nav-contact": "Contact Me",
 
+        "nav-back": "← Back",
+        "blog-title": "📖 Technical Blog",
+        "blog-description": "Find my technical articles and experience sharing here.",
+        "external-articles-title": "🌍 My External Articles",
+        "btn-devto": "🔗 See more on Dev.to",
+        "btn-medium": "🔗 See more on Medium",
+        "veille-title": "📡 Tech Watch",
+        "veille-description": "My favorite sources to stay updated on the tech and data ecosystem.",
+        "footer-title": "Want to know more? 📚",
+        "footer-description": "Discover my technical achievements and latest publications.",
+
         // 📌 HERO Section
         "hero-title": "Djouldé Barry",
         "hero-subtitle": "Data Engineer | ETL & Big Data Specialist",
@@ -175,13 +196,21 @@ const translations = {
 
 // ✅ Fonction pour définir la langue et sauvegarder le choix
 function setLanguage(lang) {
-    localStorage.setItem("selectedLanguage", lang); // ✅ Sauvegarde la langue choisie
     applyTranslations(lang);
 }
 
 function applyTranslations(lang) {
-    document.getElementById("page-title").innerText = translations[lang]["title"];
-    document.getElementById("page-subtitle").innerText = translations[lang]["subtitle"];
+    console.log("Application de la langue :", lang);
+
+    if (document.getElementById("page-title")) {
+        document.getElementById("page-title").innerText = translations[lang]["title"];
+    }
+    if (document.getElementById("page-subtitle")) {
+        document.getElementById("page-subtitle").innerText = translations[lang]["subtitle"];
+    }
+    if (document.getElementById("hero-title")) {
+        document.getElementById("hero-title").innerText = translations[lang]["hero-title"];
+    }
     document.getElementById("context-title").innerText = "🎯 " + translations[lang]["context"];
     document.getElementById("context-text").innerText = translations[lang]["context-text"];
     document.getElementById("context-point-1").innerText = translations[lang]["context-point-1"];
@@ -203,15 +232,22 @@ function applyTranslations(lang) {
     document.getElementById("footer-link-2").innerText = translations[lang]["footer-link-2"];
 
     //Traduction de la NAVBAR
-    document.getElementById("nav-about").innerText = translations[lang]["nav-about"];
-    document.getElementById("nav-skills").innerText = translations[lang]["nav-skills"];
-    document.getElementById("nav-projects").innerText = translations[lang]["nav-projects"];
+    if (document.getElementById("nav-about")) {
+        document.getElementById("nav-about").innerText = translations[lang]["nav-about"];
+    }
+    if (document.getElementById("nav-skills")) {
+        document.getElementById("nav-skills").innerText = translations[lang]["nav-skills"];
+    }
+    if (document.getElementById("projects-title")) {
+        document.getElementById("projects-title").innerText = translations[lang]["projects-title"];
+    }
     document.getElementById("nav-blog").innerText = translations[lang]["nav-blog"];
-
-    // 📌 HERO Section
-    document.getElementById("hero-title").innerText = translations[lang]["hero-title"];
+  
     document.getElementById("hero-subtitle").innerText = translations[lang]["hero-subtitle"];
-    document.getElementById("hero-description").innerText = translations[lang]["hero-description"];
+
+    if (document.getElementById("hero-description")) {
+        document.getElementById("hero-description").innerText = translations[lang]["hero-description"];
+    }
     document.getElementById("hero-btn-cv").innerText = translations[lang]["hero-btn-cv"];
     document.getElementById("hero-btn-explore").innerText = translations[lang]["hero-btn-explore"];
 
@@ -260,16 +296,71 @@ function applyTranslations(lang) {
     document.getElementById("footer-form-submit").innerText = translations[lang]["footer-form-submit"];
     document.getElementById("footer-success-message").innerText = translations[lang]["footer-success-message"];
 
+    // 📌 NAVBAR
+    if (document.getElementById("nav-back")) {
+        document.getElementById("nav-back").innerText = translations[lang]["nav-back"];
+    }
+
+    // 📌 BLOG Section
+    if (document.getElementById("blog-title")) {
+        document.getElementById("blog-title").innerText = translations[lang]["blog-title"];
+    }
+    if (document.getElementById("blog-description")) {
+        document.getElementById("blog-description").innerText = translations[lang]["blog-description"];
+    }
+
+    // 📌 ARTICLES EXTERNES
+    if (document.getElementById("external-articles-title")) {
+        document.getElementById("external-articles-title").innerText = translations[lang]["external-articles-title"];
+    }
+    if (document.getElementById("btn-devto")) {
+        document.getElementById("btn-devto").innerText = translations[lang]["btn-devto"];
+    }
+    if (document.getElementById("btn-medium")) {
+        document.getElementById("btn-medium").innerText = translations[lang]["btn-medium"];
+    }
+
+    // 📌 VEILLE TECHNOLOGIQUE
+    if (document.getElementById("veille-title")) {
+        document.getElementById("veille-title").innerText = translations[lang]["veille-title"];
+    }
+    if (document.getElementById("veille-description")) {
+        document.getElementById("veille-description").innerText = translations[lang]["veille-description"];
+    }
+
+    // 📌 FOOTER
+    if (document.getElementById("footer-title")) {
+        document.getElementById("footer-title").innerText = translations[lang]["footer-title"];
+    }
+    if (document.getElementById("footer-description")) {
+        document.getElementById("footer-description").innerText = translations[lang]["footer-description"];
+    }
+
 }
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Langue enregistrée :", localStorage.getItem("selectedLanguage")); // ✅ Debug
-    document.getElementById("fr-btn").addEventListener("click", () => setLanguage("fr"));
-    document.getElementById("en-btn").addEventListener("click", () => setLanguage("en"));
+    console.log("Langue enregistrée :", localStorage.getItem("selectedLanguage")); 
+
+    const frButton = document.getElementById("fr-btn");
+    const enButton = document.getElementById("en-btn");
+
+    if (frButton) {
+        frButton.addEventListener("click", () => setLanguage("fr"));
+    } else {
+        console.error("❌ Bouton FR introuvable !");
+    }
+
+    if (enButton) {
+        enButton.addEventListener("click", () => setLanguage("en"));
+    } else {
+        console.error("❌ Bouton EN introuvable !");
+    }
 
     // ✅ Appliquer la langue enregistrée
-    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr"; 
-    applyTranslations(savedLanguage);
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr";
+    setLanguage(savedLanguage);  // 👉 Bien appeler `setLanguage()` ici
 });
+
+
 
 
 
