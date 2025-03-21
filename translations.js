@@ -113,7 +113,11 @@ function applyTranslations(lang) {
     // Liste des ID à traduire
     const elementsToTranslate = [
         "nav-about", "nav-skills", "nav-projects", "nav-contact", 
-        "nav-blog", "nav-back"
+        "nav-blog", "nav-back", "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore", "competences-title",
+        "competences-list-title", "competences-skill-1", "competences-skill-2", "competences-skill-3", "competences-skill-4", "competences-skill-5",
+        "competences-stack-title", "title", "subtitle", "context", "context-text", "context-point-2", "context-point-3", "context-point-4",
+        "dashboards", "dashboards-text", "dashboard-country-title", "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text",
+        "btn-ci-cd", "blog-title", "blog-description", "external-articles-title", "btn-devto", "veille-title", "veille-description"
     ];
 
     elementsToTranslate.forEach(id => {
