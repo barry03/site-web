@@ -251,20 +251,39 @@ function applyTranslations(lang) {
     document.getElementById("hero-btn-cv").innerText = translations[lang]["hero-btn-cv"];
     document.getElementById("hero-btn-explore").innerText = translations[lang]["hero-btn-explore"];
 
-    // 📌 COMPÉTENCES Section
-    document.getElementById("competences-title").innerText = translations[lang]["competences-title"];
-    document.getElementById("competences-list-title").innerText = translations[lang]["competences-list-title"];
-    document.getElementById("competences-skill-1").innerText = translations[lang]["competences-skill-1"];
-    document.getElementById("competences-skill-2").innerText = translations[lang]["competences-skill-2"];
-    document.getElementById("competences-skill-3").innerText = translations[lang]["competences-skill-3"];
-    document.getElementById("competences-skill-4").innerText = translations[lang]["competences-skill-4"];
-    document.getElementById("competences-skill-5").innerText = translations[lang]["competences-skill-5"];
+    // ✅ COMPÉTENCES
+    if (document.getElementById("competences-title")) {
+        document.getElementById("competences-title").innerText = translations[lang]["competences-title"];
+
+    if (document.getElementById("competences-list-title")) {
+        document.getElementById("competences-list-title").innerText = translations[lang]["competences-list-title"];
+    }
+    if (document.getElementById("skill-1")) {
+        document.getElementById("skill-1").innerText = translations[lang]["competences-skill-1"];
+    }
+    if (document.getElementById("skill-2")) {
+        document.getElementById("skill-2").innerText = translations[lang]["competences-skill-2"];
+    }
+    if (document.getElementById("skill-3")) {
+        document.getElementById("skill-3").innerText = translations[lang]["competences-skill-3"];
+    }
+    if (document.getElementById("skill-4")) {
+        document.getElementById("skill-4").innerText = translations[lang]["competences-skill-4"];
+    }
+    if (document.getElementById("skill-5")) {
+        document.getElementById("skill-5").innerText = translations[lang]["competences-skill-5"];
+    }
     document.getElementById("competences-stack-title").innerText = translations[lang]["competences-stack-title"];
 
-    // 📌 PROJETS Section
-    document.getElementById("projects-title").innerText = translations[lang]["projects-title"];
-    document.getElementById("project-1-title").innerText = translations[lang]["project-1-title"];
-    document.getElementById("project-1-description").innerText = translations[lang]["project-1-description"];
+    if (document.getElementById("projects-title")) {
+        document.getElementById("projects-title").innerText = translations[lang]["projects-title"];
+    }
+    if (document.getElementById("project-1-title")) {
+        document.getElementById("project-1-title").innerText = translations[lang]["project-1-title"];
+    }
+    if (document.getElementById("project-1-description")) {
+        document.getElementById("project-1-description").innerText = translations[lang]["project-1-description"];
+    }
     document.getElementById("project-2-title").innerText = translations[lang]["project-2-title"];
     document.getElementById("project-2-description").innerText = translations[lang]["project-2-description"];
     document.getElementById("project-3-title").innerText = translations[lang]["project-3-title"];
@@ -335,10 +354,11 @@ function applyTranslations(lang) {
     if (document.getElementById("footer-description")) {
         document.getElementById("footer-description").innerText = translations[lang]["footer-description"];
     }
+    console.log("Traduction appliquée :", lang);
 
 }
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Langue enregistrée :", localStorage.getItem("selectedLanguage")); 
+    console.log("Langue enregistrée :", localStorage.getItem("selectedLanguage"));
 
     const frButton = document.getElementById("fr-btn");
     const enButton = document.getElementById("en-btn");
@@ -355,10 +375,17 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("❌ Bouton EN introuvable !");
     }
 
-    // ✅ Appliquer la langue enregistrée
+    // ✅ Appliquer la langue enregistrée uniquement si on trouve des éléments à traduire
     const savedLanguage = localStorage.getItem("selectedLanguage") || "fr";
-    setLanguage(savedLanguage);  // 👉 Bien appeler `setLanguage()` ici
+
+    // Vérifie si la page a des éléments traduisibles avant d'exécuter
+    if (document.getElementById("hero-title") || document.getElementById("projects-title")) {
+        setLanguage(savedLanguage);
+    } else {
+        console.warn("⚠️ Aucun élément traduisible trouvé sur cette page.");
+    }
 });
+
 
 
 
