@@ -47,6 +47,7 @@ const translations = {
         "blog-title": "📖 Blog Technique",
         "blog-description": "Retrouvez ici mes articles techniques et retours d'expérience.",
         "external-articles-title": "🌍 Mes articles externes",
+        "read-article-btn":"Lire l'article",
         "btn-devto": "🔗 Voir plus sur Dev.to",
         "btn-medium": "🔗 Voir plus sur Medium",
         "veille-title": "📡 Veille Technologique",
@@ -99,6 +100,7 @@ const translations = {
         "blog-title": "📖 Technical Blog",
         "blog-description": "Find my technical articles and experience sharing here.",
         "external-articles-title": "🌍 My External Articles",
+        "read-article-btn": "Read the article",
         "btn-devto": "🔗 See more on Dev.to",
         "btn-medium": "🔗 See more on Medium",
         "veille-title": "📡 Tech Watch",
@@ -120,7 +122,7 @@ function applyTranslations(lang) {
         "page-title", "page-subtitle", "context-title", "context-text", "context-point-1", "context-point-2",
         "context-point-3", "context-point-4", "dashboards-title", "dashboards-text", "dashboard-country-title",
         "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text", "btn-ci-cd",
-        "blog-title", "blog-description", "external-articles-title", "btn-devto", "btn-medium", "veille-title", "veille-description"
+        "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description"
     ];    
 
     elementsToTranslate.forEach(id => {
