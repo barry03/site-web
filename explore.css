@@ -7,6 +7,11 @@ html, body {
     flex-direction: column;
     padding-top: 80px;
 }
+/* ✅ Cacher les boutons sur explore.html et blog.html */
+body:not(.home) .language-switcher {
+    display: none;
+}
+
 
 .article-page .main-container {
     position: relative;

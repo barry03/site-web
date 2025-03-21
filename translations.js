@@ -47,21 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const frButton = document.getElementById("fr-btn");
     const enButton = document.getElementById("en-btn");
 
-    if (frButton) {
+    // Vérifier si on est sur index.html avant d'ajouter les eventListeners
+    if (frButton && enButton) {
         frButton.addEventListener("click", () => setLanguage("fr"));
-    } else {
-        console.error("❌ Bouton FR introuvable !");
-    }
-
-    if (enButton) {
         enButton.addEventListener("click", () => setLanguage("en"));
-    } else {
-        console.error("❌ Bouton EN introuvable !");
     }
 
-    // ✅ Appliquer la langue enregistrée sur toutes les pages
-    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr"; 
+    // Appliquer la langue enregistrée sur toutes les pages
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr";
     applyTranslations(savedLanguage);
 });
+
 
 
