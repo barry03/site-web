@@ -35,17 +35,15 @@ function applyTranslations(lang) {
     });
 }
 
-// ✅ Fonction pour définir la langue et sauvegarder le choix
+// ✅ Met à jour la langue et l'enregistre dans localStorage
 function setLanguage(lang) {
-    localStorage.setItem("selectedLanguage", lang); // Sauvegarde la langue choisie
+    localStorage.setItem("selectedLanguage", lang);
     applyTranslations(lang);
 }
 
-// ✅ Écouteur d'événements sur les boutons de langue
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("🌍 Langue enregistrée :", localStorage.getItem("selectedLanguage"));
+    console.log("Langue enregistrée :", localStorage.getItem("selectedLanguage"));
 
-    // Vérifie et attache les événements aux boutons
     const frButton = document.getElementById("fr-btn");
     const enButton = document.getElementById("en-btn");
 
@@ -61,7 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("❌ Bouton EN introuvable !");
     }
 
-    // ✅ Appliquer la langue enregistrée dès le chargement de la page
-    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr";
+    // ✅ Appliquer la langue enregistrée sur toutes les pages
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "fr"; 
     applyTranslations(savedLanguage);
 });
+
+
