@@ -254,6 +254,7 @@ function applyTranslations(lang) {
     // ✅ COMPÉTENCES
     if (document.getElementById("competences-title")) {
         document.getElementById("competences-title").innerText = translations[lang]["competences-title"];
+    }
 
     if (document.getElementById("competences-list-title")) {
         document.getElementById("competences-list-title").innerText = translations[lang]["competences-list-title"];
@@ -385,10 +386,3 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn("⚠️ Aucun élément traduisible trouvé sur cette page.");
     }
 });
-
-
-
-
-
-
-      
