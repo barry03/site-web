@@ -73,6 +73,11 @@ body:not(.home) .language-switcher {
     font-size: 2rem;
 }
 
+/*utilisation future*/
+.hobby-card span {
+    display: none;
+}
+
 .hobby-card:hover {
     transform: translateY(-4px);
 }

@@ -104,7 +104,6 @@ const translations = {
         "hobby-football": "Football",
         "hobby-basketball": "Basket",
         "hobby-gaming": "Jeux vidéo",
-        "hobby-photo": "Photographie",
         "hobby-travel": "Voyages",
         "hobby-podcast": "Podcasts Tech",
         "hobby-cooking": "Cuisine"
@@ -214,7 +213,6 @@ const translations = {
         "hobby-football": "Football",
         "hobby-basketball": "Basketball",
         "hobby-gaming": "Gaming",
-        "hobby-photo": "Photography",
         "hobby-travel": "Travel",
         "hobby-podcast": "Tech Podcasts",
         "hobby-cooking": "Cooking"
