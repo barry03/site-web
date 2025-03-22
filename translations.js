@@ -97,7 +97,16 @@ const translations = {
         "email-error" : "Veuillez entrer un email valide svp.",
         "message": "Veuillez entrer un message svp.",
         "envoie": "Envoyer",
-        "success-message": "Merci pour votre message ! 📩"
+        "success-message": "Merci pour votre message ! 📩",
+
+        "hobbies-title": "🎯 Centres d’intérêt",
+        "hobbies-description": "Au-delà des données et du code, voici quelques passions qui m’inspirent au quotidien.",
+        "hobby-football": "Football",
+        "hobby-basketball": "Basket",
+        "hobby-gaming": "Jeux vidéo",
+        "hobby-photo": "Photographie",
+        "hobby-travel": "Voyages",
+        "hobby-podcast": "Podcasts Tech"
 
     },
     "en": {
@@ -194,12 +203,20 @@ const translations = {
         "name": "Your name",
         "name-error" : "Please enter your name",
         "email": "Your email",
-        "email-error" : "Please enter a email address",
+        "email-error" : "Please enter a valid email address",
         "message": "Your message",
         "message-error" : "Please enter a message",
         "envoie": "Send",
-        "success-message": "Thank you for your message! 📩"
+        "success-message": "Thank you for your message! 📩",
 
+        "hobbies-title": "🎯 Hobbies & Interests",
+        "hobbies-description": "Beyond data and code, here are a few passions that inspire me every day.",
+        "hobby-football": "Football",
+        "hobby-basketball": "Basketball",
+        "hobby-gaming": "Gaming",
+        "hobby-photo": "Photography",
+        "hobby-travel": "Travel",
+        "hobby-podcast": "Tech Podcasts"
     }
 };
 
@@ -219,7 +236,9 @@ function applyTranslations(lang) {
         "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text", "btn-ci-cd",
         "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description",
         "footer-title-blog", "footer-description", "footer-links-title", "footer-link-1", "footer-link-2", "footer-title", "footer-text",
-        "footer-contact-title", "name", "name-error", "email", "email-error", "message", "message-error", "envoie", "success-message"
+        "footer-contact-title", "name", "name-error", "email", "email-error", "message", "message-error", "envoie", "success-message",
+        "hobbies-title", "hobbies-description","hobby-football", "hobby-basketball", "hobby-gaming","hobby-photo", "hobby-travel", "hobby-podcast"
+
     ];
 
     elementsToTranslate.forEach(id => {
