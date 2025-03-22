@@ -51,7 +51,25 @@ const translations = {
         "btn-devto": "🔗 Voir plus sur Dev.to",
         "btn-medium": "🔗 Voir plus sur Medium",
         "veille-title": "📡 Veille Technologique",
-        "veille-description": "Mes sources préférées pour rester à jour sur l'écosystème tech et data."
+        "veille-description": "Mes sources préférées pour rester à jour sur l'écosystème tech et data.",
+        "footer-title-blog": "En savoir plus ? 📚",
+        "footer-description": "Découvrez mes réalisations techniques et mes dernières publications.",
+
+        // footer explore
+        "footer-links-title": "Ressources complémentaires 🔗",
+        "footer-link-1": "👉 Code source du projet (GitLab)",
+        "footer-link-2": "👉 Mes certifications professionnelles",
+
+        // 📌 FOOTER index.html
+        "footer-title": "Envie de collaborer ? 🚀",
+        "footer-text": "Contactez-moi pour discuter de vos projets en Data Engineering.",
+        "footer-contact-title": "Envoyez-moi un message 📩",
+        "footer-form-name": "Votre nom",
+        "footer-form-email": "Votre email",
+        "footer-form-message": "Votre message",
+        "footer-form-submit": "Envoyer",
+        "footer-success-message": "Merci pour votre message ! 📩"
+
     },
     "en": {
         "nav-about": "About",
@@ -104,7 +122,24 @@ const translations = {
         "btn-devto": "🔗 See more on Dev.to",
         "btn-medium": "🔗 See more on Medium",
         "veille-title": "📡 Tech Watch",
-        "veille-description": "My favorite sources to stay updated on the tech and data ecosystem."
+        "veille-description": "My favorite sources to stay updated on the tech and data ecosystem.",
+        "footer-title-blog": "Want to know more? 📚",
+        "footer-description": "Discover my technical achievements and latest publications.",
+
+        // footer explore
+        "footer-links-title": "Additional Resources 🔗",
+        "footer-link-1": "👉 Project source code (GitLab)",
+        "footer-link-2": "👉 My professional certifications",
+
+        // 📌 FOOTER index.html
+        "footer-title": "Looking to collaborate? 🚀",
+        "footer-text": "Contact me to discuss your Data Engineering projects.",
+        "footer-contact-title": "Send me a message 📩",
+        "footer-form-name": "Your name",
+        "footer-form-email": "Your email",
+        "footer-form-message": "Your message",
+        "footer-form-submit": "Send",
+        "footer-success-message": "Thank you for your message! 📩"
 
     }
 };
@@ -122,7 +157,9 @@ function applyTranslations(lang) {
         "page-title", "page-subtitle", "context-title", "context-text", "context-point-1", "context-point-2",
         "context-point-3", "context-point-4", "dashboards-title", "dashboards-text", "dashboard-country-title",
         "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text", "btn-ci-cd",
-        "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description"
+        "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description",
+        "footer-title-blog", "footer-description", "footer-links-title", "footer-link-1", "footer-link-2", "footer-title", "footer-text",
+        "footer-contact-title", "footer-form-name", "footer-form-email", "footer-form-message", "footer-form-submit", "footer-success-message"
     ];    
 
     elementsToTranslate.forEach(id => {
