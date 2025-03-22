@@ -218,15 +218,15 @@
         <!-- ✅ Partie droite avec le formulaire -->
         <div class="footer-right">
             <p class="contact-title" id="footer-contact-title">Envoyez-moi un message 📩</p>
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbldweqo" method="POST">
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbldweqo" method="POST" novalidate>
                 <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                <span class="error-message" id="name-error">Veuillez entrer votre nom.</span>
+                <span class="error-message" id="name-error">Veuillez entrer votre nom svp.</span>
             
                 <input type="email" id="email" name="email" placeholder="Votre email" required>
-                <span class="error-message" id="email-error">Veuillez entrer un email valide.</span>
+                <span class="error-message" id="email-error">Veuillez entrer un email valide svp.</span>
             
                 <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-                <span class="error-message" id="message-error">Veuillez entrer un message.</span>
+                <span class="error-message" id="message-error">Veuillez entrer un message svp.</span>
             
                 <button type="submit" id="envoie">Envoyer</button>
                 <p class="success-message" id="success-message">Merci pour votre message ! 📩</p>

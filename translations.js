@@ -94,8 +94,8 @@ const translations = {
         "name": "Votre nom",
         "name-error" : "Veuillez entrer votre nom svp.",
         "email": "Votre email",
-        "email-error" : "Veuillez entrer votre email svp.",
-        "message": "Votre message",
+        "email-error" : "Veuillez entrer un email valide svp.",
+        "message": "Veuillez entrer un message svp.",
         "envoie": "Envoyer",
         "success-message": "Merci pour votre message ! 📩"
 
@@ -194,7 +194,7 @@ const translations = {
         "name": "Your name",
         "name-error" : "Please enter your name",
         "email": "Your email",
-        "email-error" : "Please enter your email",
+        "email-error" : "Please enter a email address",
         "message": "Your message",
         "message-error" : "Please enter a message",
         "envoie": "Send",
