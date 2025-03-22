@@ -36,6 +36,21 @@ const translations = {
         "btn-project-2": "Voir plus",
         "btn-project-3": "Voir plus",
 
+        // Titres des modals
+        "modal-1-title": "Oncopole Claudis Rigaud",
+        "modal-2-title": "Aristid Retail Technology",
+        "modal-3-title": "IQVIA",
+
+        // Descriptions des modals
+        "modal-1-description": "Conception et mise en œuvre de pipelines de données scalables sur GCP.",
+        "modal-2-description": "Mise en place de pipelines de données optimisés pour le traitement des flux concurrentiels.",
+        "modal-3-description": "Automatisation des fichiers prix hebdomadaires/mensuels sous Talend.",
+
+        // Technologies des modals
+        "modal-1-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse",
+        "modal-2-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), Airflow",
+        "modal-3-tech": "Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence",
+
         
         // cas d'etude
         "page-title": "Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)",
@@ -81,7 +96,7 @@ const translations = {
         "email": "Votre email",
         "email-error" : "Veuillez entrer votre email svp.",
         "message": "Votre message",
-        "submit": "Envoyer",
+        "envoie": "Envoyer",
         "success-message": "Merci pour votre message ! 📩"
 
     },
@@ -121,6 +136,21 @@ const translations = {
         "btn-project-1": "Learn more",
         "btn-project-2": "Learn more",
         "btn-project-3": "Learn more",
+
+        // Titles of modals
+        "modal-1-title": "Oncopole Claudis Rigaud",
+        "modal-2-title": "Aristid Retail Technology",
+        "modal-3-title": "IQVIA",
+
+        // Descriptions of modals
+        "modal-1-description": "Design and implementation of scalable data pipelines on GCP.",
+        "modal-2-description": "Implementation of optimized data pipelines for competitive price processing.",
+        "modal-3-description": "Automation of weekly/monthly price files using Talend.",
+
+        // Technologies of modals
+        "modal-1-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse",
+        "modal-2-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), Airflow",
+        "modal-3-tech": "Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence",
 
         // use case
         "page-title": "Case Study: Analysis of PyPI Downloads (GCP & Streamlit)",
@@ -167,7 +197,7 @@ const translations = {
         "email-error" : "Please enter your email",
         "message": "Your message",
         "message-error" : "Please enter a message",
-        "submit": "Send",
+        "envoie": "Send",
         "success-message": "Thank you for your message! 📩"
 
     }
@@ -182,13 +212,14 @@ function applyTranslations(lang) {
         "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore",
         "skills-title", "skills-subtitle", "skill-1", "skill-2",
         "skill-3", "skill-4", "skill-5", "stack-title", "projects-title", "project-1-title", "project-1-description", "project-2-title",
-        "project-2-description", "project-3-title", "project-3-description", "btn-project-1", "btn-project-2", "btn-project-3",
+        "project-2-description", "project-3-title", "project-3-description", "btn-project-1", "btn-project-2", "btn-project-3", "modal-1-title",
+        "modal-2-title", "modal-3-title", "modal-1-description", "modal-2-description", "modal-3-description", "modal-1-tech", "modal-2-tech", "modal-3-tech",
         "page-title", "page-subtitle", "context-title", "context-text", "context-point-1", "context-point-2",
         "context-point-3", "context-point-4", "dashboards-title", "dashboards-text", "dashboard-country-title",
         "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text", "btn-ci-cd",
         "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description",
         "footer-title-blog", "footer-description", "footer-links-title", "footer-link-1", "footer-link-2", "footer-title", "footer-text",
-        "footer-contact-title", "name", "name-error", "email", "email-error", "message", "message-error", "submit", "success-message"
+        "footer-contact-title", "name", "name-error", "email", "email-error", "message", "message-error", "envoie", "success-message"
     ];
 
     elementsToTranslate.forEach(id => {
