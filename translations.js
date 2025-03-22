@@ -24,6 +24,18 @@ const translations = {
         "skill-5": "📈 Data Visualisation (Power BI)",
         "stack-title": "Stack Technique",
 
+        // 📌 PROJETS Section
+        "projects-title": "Projets",
+        "project-1-title": "Oncopole Claudis Rigaud",
+        "project-1-description": "Optimisation et structuration des données pour la recherche en oncologie.",
+        "project-2-title": "Aristid Retail Technology",
+        "project-2-description": "Analyse de prix concurrentiels et refonte du système de facturation.",
+        "project-3-title": "IQVIA",
+        "project-3-description": "Automatisation des fichiers prix et feedbacks pour médecins.",
+        "btn-project-1": "Voir plus",
+        "btn-project-2": "Voir plus",
+        "btn-project-3": "Voir plus",
+
         
         // cas d'etude
         "page-title": "Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)",
@@ -98,6 +110,18 @@ const translations = {
         "skill-5": "📈 Data Visualization (Power BI)",
         "stack-title": "Technical Stack",
 
+        // 📌 PROJETS Section
+        "projects-title": "Projects",
+        "project-1-title": "Oncopole Claudis Rigaud",
+        "project-1-description": "Optimization and structuring of data for oncology research.",
+        "project-2-title": "Aristid Retail Technology",
+        "project-2-description": "Competitive pricing analysis and billing system overhaul.",
+        "project-3-title": "IQVIA",
+        "project-3-description": "Automation of price files and feedbacks for doctors.",
+        "btn-project-1": "Learn more",
+        "btn-project-2": "Learn more",
+        "btn-project-3": "Learn more",
+
         // use case
         "page-title": "Case Study: Analysis of PyPI Downloads (GCP & Streamlit)",
         "page-subtitle": "Discover in detail my methodology for creating a scalable data pipeline.",
@@ -153,24 +177,31 @@ const translations = {
 function applyTranslations(lang) {
     console.log("🌍 Application de la langue :", lang);
 
-    // Liste des ID à traduire
     const elementsToTranslate = [
         "nav-about", "nav-skills", "nav-projects", "nav-contact", "nav-blog", "nav-back",
         "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore",
         "skills-title", "skills-subtitle", "skill-1", "skill-2",
-        "skill-3", "skill-4", "skill-5", "stack-title",
+        "skill-3", "skill-4", "skill-5", "stack-title", "projects-title", "project-1-title", "project-1-description", "project-2-title",
+        "project-2-description", "project-3-title", "project-3-description", "btn-project-1", "btn-project-2", "btn-project-3",
         "page-title", "page-subtitle", "context-title", "context-text", "context-point-1", "context-point-2",
         "context-point-3", "context-point-4", "dashboards-title", "dashboards-text", "dashboard-country-title",
         "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text", "btn-ci-cd",
         "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description",
         "footer-title-blog", "footer-description", "footer-links-title", "footer-link-1", "footer-link-2", "footer-title", "footer-text",
         "footer-contact-title", "name", "name-error", "email", "email-error", "message", "message-error", "submit", "success-message"
-    ];    
+    ];
 
     elementsToTranslate.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
-            element.innerText = translations[lang][id];
+            // 🎯 Si c’est un champ input ou textarea
+            if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+                element.placeholder = translations[lang][id];
+            }
+            // Sinon texte standard
+            else {
+                element.innerText = translations[lang][id];
+            }
         }
     });
 }
