@@ -6,7 +6,7 @@ html, body {
     display: flex;
     flex-direction: column;
     padding-top: 80px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 /* ✅ Cacher les boutons sur explore.html et blog.html */
 body:not(.home) .language-switcher {
