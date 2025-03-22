@@ -64,11 +64,13 @@ const translations = {
         "footer-title": "Envie de collaborer ? 🚀",
         "footer-text": "Contactez-moi pour discuter de vos projets en Data Engineering.",
         "footer-contact-title": "Envoyez-moi un message 📩",
-        "footer-form-name": "Votre nom",
-        "footer-form-email": "Votre email",
-        "footer-form-message": "Votre message",
-        "footer-form-submit": "Envoyer",
-        "footer-success-message": "Merci pour votre message ! 📩"
+        "name": "Votre nom",
+        "name-error" : "Veuillez entrer votre nom svp.",
+        "email": "Votre email",
+        "email-error" : "Veuillez entrer votre email svp.",
+        "message": "Votre message",
+        "submit": "Envoyer",
+        "success-message": "Merci pour votre message ! 📩"
 
     },
     "en": {
@@ -135,11 +137,14 @@ const translations = {
         "footer-title": "Looking to collaborate? 🚀",
         "footer-text": "Contact me to discuss your Data Engineering projects.",
         "footer-contact-title": "Send me a message 📩",
-        "footer-form-name": "Your name",
-        "footer-form-email": "Your email",
-        "footer-form-message": "Your message",
-        "footer-form-submit": "Send",
-        "footer-success-message": "Thank you for your message! 📩"
+        "name": "Your name",
+        "name-error" : "Please enter your name",
+        "email": "Your email",
+        "email-error" : "Please enter your email",
+        "message": "Your message",
+        "message-error" : "Please enter a message",
+        "submit": "Send",
+        "success-message": "Thank you for your message! 📩"
 
     }
 };
@@ -159,7 +164,7 @@ function applyTranslations(lang) {
         "dashboard-project-title", "btn-dashboard", "ci-cd-title", "ci-cd-text", "btn-ci-cd",
         "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description",
         "footer-title-blog", "footer-description", "footer-links-title", "footer-link-1", "footer-link-2", "footer-title", "footer-text",
-        "footer-contact-title", "footer-form-name", "footer-form-email", "footer-form-message", "footer-form-submit", "footer-success-message"
+        "footer-contact-title", "name", "name-error", "email", "email-error", "message", "message-error", "submit", "success-message"
     ];    
 
     elementsToTranslate.forEach(id => {
