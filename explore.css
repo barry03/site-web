@@ -45,12 +45,12 @@ body:not(.home) .language-switcher {
 }
 
 .hobbies-container {
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
+
 
 .hobbies-grid {
     display: grid;
@@ -62,7 +62,7 @@ body:not(.home) .language-switcher {
 .hobby-card {
     background-color: #fff;
     padding: 10px 12px;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     font-size: 1rem;
     transition: transform 0.2s ease-in-out;
@@ -256,14 +256,21 @@ body:not(.home) .language-switcher {
     color: #0056b3;
 }
 
+.article-container,
+.hobbies-container,
+.external-articles {
+    flex: 1 1 30%; /* ✅ Chaque bloc occupe ~1/3 avec flexibilité */
+    max-width: 32%;
+}
+
 /* Conteneur principal */
 .blog-content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 30px; /* Espacement entre les deux blocs */
-    max-width: 90%;
+    gap: 40px; /* Espacement entre les deux blocs */
+    max-width: 100%;
     margin-bottom: 15px;
     margin-top: 40px; /* Réduit l'espace sous les articles */
 }

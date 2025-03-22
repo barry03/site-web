@@ -106,8 +106,8 @@ const translations = {
         "hobby-gaming": "Jeux vidéo",
         "hobby-photo": "Photographie",
         "hobby-travel": "Voyages",
-        "hobby-podcast": "Podcasts Tech"
-
+        "hobby-podcast": "Podcasts Tech",
+        "hobby-cooking": "Cuisine"
     },
     "en": {
         "nav-about": "About",
@@ -216,7 +216,8 @@ const translations = {
         "hobby-gaming": "Gaming",
         "hobby-photo": "Photography",
         "hobby-travel": "Travel",
-        "hobby-podcast": "Tech Podcasts"
+        "hobby-podcast": "Tech Podcasts",
+        "hobby-cooking": "Cooking"
     }
 };
 
@@ -237,7 +238,7 @@ function applyTranslations(lang) {
         "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description",
         "footer-title-blog", "footer-description", "footer-links-title", "footer-link-1", "footer-link-2", "footer-title", "footer-text",
         "footer-contact-title", "name", "name-error", "email", "email-error", "message", "message-error", "envoie", "success-message",
-        "hobbies-title", "hobbies-description","hobby-football", "hobby-basketball", "hobby-gaming","hobby-photo", "hobby-travel", "hobby-podcast"
+        "hobbies-title", "hobbies-description","hobby-football", "hobby-basketball", "hobby-gaming","hobby-photo", "hobby-travel", "hobby-podcast", "hobby-cooking"
 
     ];
 
