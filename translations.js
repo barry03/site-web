@@ -301,12 +301,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const removeOverlay = () => {
             overlay.classList.remove("show");
-            document.removeEventListener("mousemove", removeOverlay);
-            document.removeEventListener("click", removeOverlay);
+
+            // ✅ Supprime les écouteurs après interaction
+            ["mousemove", "click", "scroll"].forEach(evt => {
+                document.removeEventListener(evt, removeOverlay);
+            });
         };
 
-        document.addEventListener("mousemove", removeOverlay);
-        document.addEventListener("click", removeOverlay);
+        // ✅ Ajoute les 3 écouteurs en une ligne
+        ["mousemove", "click", "scroll"].forEach(evt => {
+            document.addEventListener(evt, removeOverlay);
+        });
     }
 
 });
