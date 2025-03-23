@@ -7,7 +7,7 @@ const translations = {
         "nav-blog": "Blog & Veille",
         "nav-back": "← Retour",
 
-        // 📌 HERO Section
+        // HERO Section
         "hero-title": "Djouldé Barry",
         "hero-subtitle": "Data Engineer | Spécialiste ETL & Big Data",
         "hero-description": "Passionné par la gestion et la valorisation des données, je conçois des solutions robustes pour l'ingestion, la transformation et l'analyse de grands volumes de données. Mon expertise couvre l'ETL, le Big Data et le Cloud Computing.",
@@ -24,7 +24,7 @@ const translations = {
         "skill-5": "📈 Data Visualisation (Power BI)",
         "stack-title": "Stack Technique",
 
-        // 📌 PROJETS Section
+        // PROJETS Section
         "projects-title": "Projets",
         "project-1-title": "Oncopole Claudis Rigaud",
         "project-1-description": "Optimisation et structuration des données pour la recherche en oncologie.",
@@ -87,7 +87,7 @@ const translations = {
         "footer-link-1": "👉 Code source du projet (GitLab)",
         "footer-link-2": "👉 Mes certifications professionnelles",
 
-        // 📌 FOOTER index.html
+        // FOOTER index.html
         "footer-title": "Envie de collaborer ? 🚀",
         "footer-text": "Contactez-moi pour discuter de vos projets en Data Engineering.",
         "footer-contact-title": "Envoyez-moi un message 📩",
@@ -119,14 +119,14 @@ const translations = {
         "nav-blog": "Blog & Insights",
         "nav-back": "← Back",
 
-        // 📌 HERO Section
+        // HERO Section
         "hero-title": "Djouldé Barry",
         "hero-subtitle": "Data Engineer | ETL & Big Data Specialist",
         "hero-description": "Passionate about data management and enhancement, I design robust solutions for ingestion, transformation, and analysis of large volumes of data. My expertise covers ETL, Big Data, and Cloud Computing.",
         "hero-btn-cv": "📄 View my CV",
         "hero-btn-explore": "Why me? Find out!",
 
-        // 📌 COMPETENCES Section
+        // COMPETENCES Section
         "skills-title": "Skills & Technical Stack",
         "skills-subtitle": "My Skills",
         "skill-1": "📊 Modeling & Data Processing",
@@ -136,7 +136,7 @@ const translations = {
         "skill-5": "📈 Data Visualization (Power BI)",
         "stack-title": "Technical Stack",
 
-        // 📌 PROJETS Section
+        // PROJETS Section
         "projects-title": "Projects",
         "project-1-title": "Oncopole Claudis Rigaud",
         "project-1-description": "Optimization and structuring of data for oncology research.",
@@ -198,7 +198,7 @@ const translations = {
         "footer-link-1": "👉 Project source code (GitLab)",
         "footer-link-2": "👉 My professional certifications",
 
-        // 📌 FOOTER index.html
+        // FOOTER index.html
         "footer-title": "Looking to collaborate? 🚀",
         "footer-text": "Contact me to discuss your Data Engineering projects.",
         "footer-contact-title": "Send me a message 📩",
