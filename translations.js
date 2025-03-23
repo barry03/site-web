@@ -106,7 +106,10 @@ const translations = {
         "hobby-gaming": "Jeux vidéo",
         "hobby-travel": "Voyages",
         "hobby-podcast": "Podcasts Tech",
-        "hobby-cooking": "Cuisine"
+        "hobby-cooking": "Cuisine",
+
+        "welcome-toast": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀",
+
     },
     "en": {
         "nav-about": "About",
@@ -215,7 +218,9 @@ const translations = {
         "hobby-gaming": "Gaming",
         "hobby-travel": "Travel",
         "hobby-podcast": "Tech Podcasts",
-        "hobby-cooking": "Cooking"
+        "hobby-cooking": "Cooking",
+
+        "welcome-toast": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀",
     }
 };
 
@@ -253,6 +258,11 @@ function applyTranslations(lang) {
             }
         }
     });
+    const toast = document.getElementById("toast-welcome");
+    if (toast) {
+        toast.innerText = translations[lang]["welcome-toast"];
+    }
+
 }
 
 // ✅ Met à jour la langue et l'enregistre dans localStorage
@@ -282,6 +292,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     applyTranslations(savedLanguage);
+
+    const toast = document.getElementById("toast-welcome");
+    if (toast) {
+        toast.classList.add("show");
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 5000); // Le toast disparaît après 5 secondes
+    }
+
 });
 
 
