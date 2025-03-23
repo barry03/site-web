@@ -108,7 +108,7 @@ const translations = {
         "hobby-podcast": "Podcasts Tech",
         "hobby-cooking": "Cuisine",
 
-        "welcome-toast": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀",
+        "welcome-overlay": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀"
 
     },
     "en": {
@@ -220,7 +220,7 @@ const translations = {
         "hobby-podcast": "Tech Podcasts",
         "hobby-cooking": "Cooking",
 
-        "welcome-toast": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀",
+        "welcome-overlay": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀"
     }
 };
 
