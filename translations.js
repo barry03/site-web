@@ -296,22 +296,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Affichage de l’overlay de bienvenue
     const overlay = document.getElementById("welcome-overlay");
 
-    if (overlay) {
+    // Vérifie si le message a déjà été vu dans cette session
+    const hasSeenWelcome = sessionStorage.getItem("welcomeSeen");
+
+    if (overlay && !hasSeenWelcome) {
         overlay.classList.add("show");
 
         const removeOverlay = () => {
             overlay.classList.remove("show");
+            sessionStorage.setItem("welcomeSeen", "true");
 
-            // Supprime les écouteurs après interaction
-            ["mousemove", "click", "scroll"].forEach(evt => {
-                document.removeEventListener(evt, removeOverlay);
-            });
+            // Supprimer les listeners après déclenchement
+            ["mousemove", "click", "scroll"].forEach(evt =>
+                document.removeEventListener(evt, removeOverlay)
+            );
         };
 
-        // Ajoute les 3 écouteurs en une ligne
-        ["mousemove", "click", "scroll"].forEach(evt => {
-            document.addEventListener(evt, removeOverlay);
-        });
+        ["mousemove", "click", "scroll"].forEach(evt =>
+            document.addEventListener(evt, removeOverlay)
+        );
     }
 
 });
