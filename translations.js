@@ -258,9 +258,9 @@ function applyTranslations(lang) {
             }
         }
     });
-    const toast = document.getElementById("toast-welcome");
-    if (toast) {
-        toast.innerText = translations[lang]["welcome-toast"];
+    const welcomeOverlayMessage = document.getElementById("welcome-message");
+    if (welcomeOverlayMessage) {
+        welcomeOverlayMessage.innerText = translations[lang]["welcome-overlay"];
     }
 
 }
@@ -293,12 +293,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     applyTranslations(savedLanguage);
 
-    const toast = document.getElementById("toast-welcome");
-    if (toast) {
-        toast.classList.add("show");
-        setTimeout(() => {
-            toast.classList.remove("show");
-        }, 5000); // Le toast disparaît après 5 secondes
+    // ✅ Affichage de l’overlay de bienvenue
+    const overlay = document.getElementById("welcome-overlay");
+
+    if (overlay) {
+        overlay.classList.add("show");
+
+        const removeOverlay = () => {
+            overlay.classList.remove("show");
+            document.removeEventListener("mousemove", removeOverlay);
+            document.removeEventListener("click", removeOverlay);
+        };
+
+        document.addEventListener("mousemove", removeOverlay);
+        document.addEventListener("click", removeOverlay);
     }
 
 });

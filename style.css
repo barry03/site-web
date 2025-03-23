@@ -19,28 +19,38 @@ body:not(.home) .language-switcher {
     display: none;
 }
 
-/* Toast de bienvenue */
-#toast-welcome {
+/* 🔒 Overlay de bienvenue */
+#welcome-overlay {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 0.95rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 9999;
-    max-width: 90%;
-    text-align: center;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
 }
 
-#toast-welcome.show {
+#welcome-overlay.show {
     opacity: 1;
+    pointer-events: all;
 }
 
+.welcome-message {
+    color: white;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 90%;
+}
 
 
 .logo-db {
