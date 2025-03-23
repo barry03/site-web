@@ -25,10 +25,10 @@
             <iframe src="files/CV_Barry_FR.pdf" class="cv-frame"></iframe>
             <p id="cv-fr" class="cv-update-date"></p>
     
-            <div class="cv-buttons"> <!-- ✅ Conteneur correctement ouvert -->
+            <div class="cv-buttons">
                 <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Partagez le profil </button>
                 <!--<a href="files/CV_Barry_FR.pdf" download class="btn-download">📥 Télécharger</a>-->
-            </div> <!-- ✅ Conteneur correctement fermé -->
+            </div>
         </div>
     
         <div class="cv-box">
@@ -37,10 +37,10 @@
             <iframe src="files/CV_Barry_EN.pdf" class="cv-frame"></iframe>
             <p id="cv-en" class="cv-update-date"></p>
     
-            <div class="cv-buttons"> <!-- ✅ Conteneur correctement ouvert -->
+            <div class="cv-buttons">
                 <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_EN.pdf')">📋 Share profil</button>
                 <!--<a href="files/CV_Barry_EN.pdf" download class="btn-download">📥 Download</a>-->
-            </div> <!-- ✅ Conteneur correctement fermé -->
+            </div> 
         </div>
     </section>
     
@@ -67,7 +67,7 @@
     
                             document.getElementById(cv.id).textContent = `Dernière mise à jour : ${formattedDate}`;
                             
-                            // ✅ Vérifie si la mise à jour est récente (moins de 3 mois)
+                            // Vérifie si la mise à jour est récente (moins de 3 mois)
                             let today = new Date();
                             let diffTime = Math.abs(today - date);
                             let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -99,7 +99,7 @@
             localStorage.setItem("theme", mode);
         }
 
-        // ✅ Conserve le mode choisi par l'utilisateur
+        // Conserve le mode choisi par l'utilisateur
         document.addEventListener("DOMContentLoaded", function () {
             if (localStorage.getItem("theme") === "dark") {
                 document.body.classList.add("dark-mode");

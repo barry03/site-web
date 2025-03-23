@@ -224,7 +224,7 @@ const translations = {
     }
 };
 
-// ✅ Fonction pour appliquer les traductions
+// Fonction pour appliquer les traductions
 function applyTranslations(lang) {
     console.log("🌍 Application de la langue :", lang);
 
@@ -265,7 +265,7 @@ function applyTranslations(lang) {
 
 }
 
-// ✅ Met à jour la langue et l'enregistre dans localStorage
+// Met à jour la langue et l'enregistre dans localStorage
 function setLanguage(lang) {
     localStorage.setItem("selectedLanguage", lang);
     applyTranslations(lang);
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     applyTranslations(savedLanguage);
 
-    // ✅ Affichage de l’overlay de bienvenue
+    // Affichage de l’overlay de bienvenue
     const overlay = document.getElementById("welcome-overlay");
 
     if (overlay) {
@@ -302,13 +302,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const removeOverlay = () => {
             overlay.classList.remove("show");
 
-            // ✅ Supprime les écouteurs après interaction
+            // Supprime les écouteurs après interaction
             ["mousemove", "click", "scroll"].forEach(evt => {
                 document.removeEventListener(evt, removeOverlay);
             });
         };
 
-        // ✅ Ajoute les 3 écouteurs en une ligne
+        // Ajoute les 3 écouteurs en une ligne
         ["mousemove", "click", "scroll"].forEach(evt => {
             document.addEventListener(evt, removeOverlay);
         });
