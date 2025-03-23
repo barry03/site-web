@@ -8,8 +8,7 @@ const translations = {
         "nav-back": "← Retour",
 
         // HERO Section
-        /*"hero-title": "Djouldé Barry",*/
-        "hero-subtitle": "Data Engineer | Spécialiste ETL & Big Data",
+        "hero-title": "Data Engineer | Spécialiste ETL & Big Data",
         "hero-description": "Passionné par la gestion et la valorisation des données, je conçois des solutions robustes pour l'ingestion, la transformation et l'analyse de grands volumes de données. Mon expertise couvre l'ETL, le Big Data et le Cloud Computing.",
         "hero-btn-cv": "📄 Voir mon CV",
         "hero-btn-explore": "Pourquoi moi ? Découvrez-le !",
@@ -120,8 +119,7 @@ const translations = {
         "nav-back": "← Back",
 
         // HERO Section
-        /*"hero-title": "Djouldé Barry",*/
-        "hero-subtitle": "Data Engineer | ETL & Big Data Specialist",
+        "hero-title": "Data Engineer | ETL & Big Data Specialist",
         "hero-description": "Passionate about data management and enhancement, I design robust solutions for ingestion, transformation, and analysis of large volumes of data. My expertise covers ETL, Big Data, and Cloud Computing.",
         "hero-btn-cv": "📄 View my CV",
         "hero-btn-explore": "Why me? Find out!",
