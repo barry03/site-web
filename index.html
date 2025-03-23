@@ -10,16 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- À intégrer dans ton fichier HTML (si ce n'est pas déjà fait) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <!-- Exemple avec Pacifico -->
     <!--<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-
-    
     <!-- Lien vers le CSS -->
     <link rel="stylesheet" href="style.css">
     
@@ -29,7 +25,6 @@
 <body class="home">
     <div class="background-container"></div>
 
-    <!-- Navigation -->
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-left">
@@ -147,9 +142,7 @@
         </div>
     </section>
     
-
     <!-- Section Projets -->
-    <!-- ✅ Section Projets -->
     <section id="projects" class="projects-section">
         <h2 id="projects-title">Projets</h2>
         <div class="projects-container">
@@ -170,7 +163,7 @@
             </div>
         </div>
 
-        <!-- ✅ Modales -->
+        <!-- Modales -->
         <div id="oncopoleModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('oncopoleModal')">&times;</span>
@@ -199,9 +192,9 @@
         </div>
     </section>
 
-    <!-- 📌 Nouveau Footer -->
+    <!-- Nouveau Footer -->
     <footer id="contact" class="footer">
-        <!-- ✅ Partie gauche avec texte et icônes -->
+        <!-- Partie gauche avec texte et icônes -->
         <div class="footer-left">
             <h3 id="footer-title">Envie de collaborer ? 🚀</h3>
             <p id="footer-description">Contactez-moi pour discuter de vos projets en Data Engineering.</p>
@@ -219,7 +212,7 @@
             </div>            
         </div>
     
-        <!-- ✅ Partie droite avec le formulaire -->
+        <!-- Partie droite avec le formulaire -->
         <div class="footer-right">
             <p class="contact-title" id="footer-contact-title">Envoyez-moi un message 📩</p>
             <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbldweqo" method="POST" novalidate>
@@ -237,23 +230,16 @@
             </form>            
         </div>
     </footer>    
-    <!--
+
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("show");
-        }
-    </script>   
-    -->
-    <script>
-        // ✅ Fonction pour ouvrir une modale
+        // Fonction pour ouvrir une modale
         function openModal(id) {
             var modal = document.getElementById(id);
             modal.classList.add("show");
             modal.style.display = "flex";
         }
     
-        // ✅ Fonction pour fermer une modale
+        // Fonction pour fermer une modale
         function closeModal(id) {
             var modal = document.getElementById(id);
             modal.classList.remove("show");
@@ -262,7 +248,7 @@
             }, 300);
         }
     
-        // ✅ Fermer la modale en cliquant en dehors
+        // Fermer la modale en cliquant en dehors
         window.onclick = function(event) {
             document.querySelectorAll('.modal').forEach(modal => {
                 if (event.target == modal) {
@@ -271,7 +257,7 @@
             });
         };
     
-        // ✅ Gestion du formulaire de contact avec validation et envoi via Formspree
+        // Gestion du formulaire de contact avec validation et envoi via Formspree
         document.addEventListener("DOMContentLoaded", function() {
             var form = document.getElementById("contact-form");
     
@@ -321,7 +307,7 @@
                         isValid = false;
                     }
     
-                    // ✅ Envoi du formulaire seulement si toutes les validations sont OK
+                    // Envoi du formulaire seulement si toutes les validations sont OK
                     if (isValid) {
                         let formData = new FormData(this);
                         let response = await fetch(this.action, {
@@ -340,7 +326,7 @@
                 });
             }
     
-            // ✅ Animation de la section Compétences & Stack Technique
+            // Animation de la section Compétences & Stack Technique
             let competencesSection = document.querySelector(".competences-container");
             let stackSection = document.querySelector(".stack-technique");
 
@@ -367,8 +353,8 @@
                     let targetWidth = bar.getAttribute("data-width");
             
                     if (barPosition < screenPosition && !bar.classList.contains("animated")) {
-                        bar.style.width = targetWidth + "%"; // ✅ Ajoute "%"
-                        console.log(`Barre animée: ${targetWidth}%`); // ✅ Vérifie dans la console
+                        bar.style.width = targetWidth + "%"; // Ajoute "%"
+                        console.log(`Barre animée: ${targetWidth}%`); // Vérifie dans la console
             
                         let progressValue = bar.querySelector(".progress-value");
                         let value = 0;
@@ -417,7 +403,7 @@
 
             window.addEventListener("scroll", revealFooter);
 
-            // ✅ Gestion du bouton "Contactez-moi" pour descendre en douceur
+            // Gestion du bouton "Contactez-moi" pour descendre en douceur
             document.querySelector(".btn-contact").addEventListener("click", function(e) {
                 e.preventDefault();
                 document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
