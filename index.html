@@ -259,73 +259,65 @@
     
         // Gestion du formulaire de contact avec validation et envoi via Formspree
         document.addEventListener("DOMContentLoaded", function() {
-            var form = document.getElementById("contact-form");
-    
+            const form = document.getElementById("contact-form");
+
             if (form) {
                 form.addEventListener("submit", async function(event) {
-                    event.preventDefault(); // Empêche le rechargement de la page
-    
-                    // Récupération des champs et des messages d'erreur
-                    var name = document.getElementById("name");
-                    var email = document.getElementById("email");
-                    var message = document.getElementById("message");
-    
-                    var nameError = document.getElementById("name-error");
-                    var emailError = document.getElementById("email-error");
-                    var messageError = document.getElementById("message-error");
-                    var successMessage = document.getElementById("success-message");
-    
-                    // Réinitialisation des erreurs
-                    name.classList.remove("error");
-                    email.classList.remove("error");
-                    message.classList.remove("error");
-    
-                    nameError.style.display = "none";
-                    emailError.style.display = "none";
-                    messageError.style.display = "none";
-                    successMessage.style.display = "none";
-    
-                    var isValid = true;
-    
-                    // Vérifications des champs
+                    event.preventDefault();
+
+                    const name = document.getElementById("name");
+                    const email = document.getElementById("email");
+                    const message = document.getElementById("message");
+
+                    const nameError = document.getElementById("name-error");
+                    const emailError = document.getElementById("email-error");
+                    const messageError = document.getElementById("message-error");
+                    const successMessage = document.getElementById("success-message");
+
+                    // Réinitialiser tout
+                    [name, email, message].forEach(input => input.classList.remove("error"));
+                    [nameError, emailError, messageError, successMessage].forEach(el => el.style.display = "none");
+
+                    // Validation progressive champ par champ
                     if (name.value.trim() === "") {
                         name.classList.add("error");
                         nameError.style.display = "block";
-                        isValid = false;
+                        name.focus();
+                        return; // Stop ici
                     }
-    
-                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailPattern.test(email.value.trim())) {
                         email.classList.add("error");
                         emailError.style.display = "block";
-                        isValid = false;
+                        email.focus();
+                        return;
                     }
-                    
+
                     if (message.value.trim() === "") {
                         message.classList.add("error");
                         messageError.style.display = "block";
-                        isValid = false;
+                        message.focus();
+                        return;
                     }
-    
-                    // Envoi du formulaire seulement si toutes les validations sont OK
-                    if (isValid) {
-                        let formData = new FormData(this);
-                        let response = await fetch(this.action, {
-                            method: "POST",
-                            body: formData,
-                            headers: { "Accept": "application/json" }
-                        });
-    
-                        if (response.ok) {
-                            successMessage.style.display = "block";
-                            this.reset();
-                        } else {
-                            alert("Oops ! Une erreur est survenue. Réessayez plus tard.");
-                        }
+
+                    // Tout est bon, on envoie
+                    const formData = new FormData(this);
+                    const response = await fetch(this.action, {
+                        method: "POST",
+                        body: formData,
+                        headers: { "Accept": "application/json" }
+                    });
+
+                    if (response.ok) {
+                        successMessage.style.display = "block";
+                        this.reset();
+                    } else {
+                        alert("Oops ! Une erreur est survenue. Réessayez plus tard.");
                     }
                 });
             }
-    
+
             // Animation de la section Compétences & Stack Technique
             const isFirstVisit = !sessionStorage.getItem("indexScrollPlayed");
             const competencesSection = document.querySelector(".competences-container");
