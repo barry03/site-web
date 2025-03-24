@@ -742,7 +742,12 @@ body:not(.home) .language-switcher {
 
 /* Masquer la modale par défaut */
 .modal {
+    max-width: 600px; /* Réduit la largeur */
+    padding: 25px 30px;
     display: none; /* Caché au chargement */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -750,7 +755,7 @@ body:not(.home) .language-switcher {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Fond flou */
-    align-items: center;
+    text-align: left;
     justify-content: center;
     backdrop-filter: blur(5px);
 }
@@ -803,6 +808,28 @@ body:not(.home) .language-switcher {
     cursor: pointer;
     font-weight: bold;
     color: #333;
+}
+/* Ajout d'espacement propre entre les sections */
+.modal-section {
+    margin-bottom: 20px;
+}
+
+.modal-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.modal-section p,
+.modal-section ul {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Liste à puces personnalisée */
+.modal-section ul {
+    padding-left: 20px;
+    list-style-type: disc;
 }
 
 
