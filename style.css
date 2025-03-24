@@ -755,7 +755,7 @@ body:not(.home) .language-switcher {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Fond flou */
-    text-align: left;
+    align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
 }
@@ -808,28 +808,6 @@ body:not(.home) .language-switcher {
     cursor: pointer;
     font-weight: bold;
     color: #333;
-}
-/* Ajout d'espacement propre entre les sections */
-.modal-section {
-    margin-bottom: 20px;
-}
-
-.modal-section h4 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-}
-
-.modal-section p,
-.modal-section ul {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Liste à puces personnalisée */
-.modal-section ul {
-    padding-left: 20px;
-    list-style-type: disc;
 }
 
 
