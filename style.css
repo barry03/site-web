@@ -543,6 +543,7 @@ body:not(.home) .language-switcher {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.3s ease-in-out;
+    text-align: center;
 }
 
 .project-card:hover {
@@ -572,6 +573,11 @@ body:not(.home) .language-switcher {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+    font-size: 14px;
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;
+    margin: 0 auto;
 }
 
 .btn-project:hover {
