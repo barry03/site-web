@@ -742,12 +742,7 @@ body:not(.home) .language-switcher {
 
 /* Masquer la modale par défaut */
 .modal {
-    max-width: 600px; /* Réduit la largeur */
-    padding: 25px 30px;
     display: none; /* Caché au chargement */
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    font-family: 'Poppins', sans-serif;
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -771,8 +766,8 @@ body:not(.home) .language-switcher {
     margin: 10px 0;
 }
 .modal-tasks li {
-    margin-bottom: 8px;
-    line-height: 1.4;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 /* Contenu de la modale */
 .modal-content {
