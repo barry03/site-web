@@ -300,7 +300,7 @@
                         emailError.style.display = "block";
                         isValid = false;
                     }
-    
+                    
                     if (message.value.trim() === "") {
                         message.classList.add("error");
                         messageError.style.display = "block";
@@ -327,94 +327,104 @@
             }
     
             // Animation de la section Compétences & Stack Technique
-            let competencesSection = document.querySelector(".competences-container");
-            let stackSection = document.querySelector(".stack-technique");
+            const isFirstVisit = !sessionStorage.getItem("indexScrollPlayed");
+            const competencesSection = document.querySelector(".competences-container");
+            const stackSection = document.querySelector(".stack-technique");
+            const projectsSection = document.querySelector(".projects-container");
+            const footer = document.querySelector(".footer");
+            const progressBars = document.querySelectorAll(".progress-bar .progress");
 
-            function revealOnScroll() {
-                let sectionPosition = competencesSection.getBoundingClientRect().top;
-                let stackPosition = stackSection.getBoundingClientRect().top;
-                let screenPosition = window.innerHeight / 1.3;
+            // Si ce n’est pas la première visite → tout est visible directement
+            if (!isFirstVisit) {
+                competencesSection.classList.add("show");
+                stackSection.classList.add("show");
+                projectsSection.classList.add("show");
+                footer.classList.add("show");
 
-                if (sectionPosition < screenPosition) {
-                    competencesSection.classList.add("show");
-                }
-                if (stackPosition < screenPosition) {
-                    stackSection.classList.add("show");
-                }
-            }
+                progressBars.forEach(bar => {
+                    const targetWidth = bar.getAttribute("data-width");
+                    bar.style.width = targetWidth + "%";
+                    bar.classList.add("animated");
 
-            window.addEventListener("scroll", revealOnScroll);
-
-            function animateProgressBars() {
-                let screenPosition = window.innerHeight / 1.3;
-            
-                document.querySelectorAll(".progress-bar .progress").forEach((bar) => {
-                    let barPosition = bar.getBoundingClientRect().top;
-                    let targetWidth = bar.getAttribute("data-width");
-            
-                    if (barPosition < screenPosition && !bar.classList.contains("animated")) {
-                        bar.style.width = targetWidth + "%"; // Ajoute "%"
-                        console.log(`Barre animée: ${targetWidth}%`); // Vérifie dans la console
-            
-                        let progressValue = bar.querySelector(".progress-value");
-                        let value = 0;
-                        let targetValue = parseInt(targetWidth);
-            
-                        let interval = setInterval(() => {
-                            if (value >= targetValue) {
-                                clearInterval(interval);
-                            } else {
-                                value++;
-                                progressValue.textContent = value + "%";
-                            }
-                        }, 15);
-            
-                        bar.classList.add("animated");
+                    const progressValue = bar.querySelector(".progress-value");
+                    if (progressValue) {
+                        progressValue.textContent = targetWidth + "%";
                     }
                 });
+                return; // Ne lance pas les scroll listeners
             }
-            
-            window.addEventListener("scroll", animateProgressBars);
-                              
-            
 
-            let projectsSection = document.querySelector(".projects-container");
+            // Sinon (1ère visite) → animations au scroll
+            function revealOnScroll() {
+                const screenPosition = window.innerHeight / 1.3;
 
-            function revealProjectsOnScroll() {
-                let sectionPosition = projectsSection.getBoundingClientRect().top;
-                let screenPosition = window.innerHeight / 1.3;
+                if (competencesSection.getBoundingClientRect().top < screenPosition) {
+                    competencesSection.classList.add("show");
+                }
 
-                if (sectionPosition < screenPosition) {
+                if (stackSection.getBoundingClientRect().top < screenPosition) {
+                    stackSection.classList.add("show");
+                }
+
+                if (projectsSection.getBoundingClientRect().top < screenPosition) {
                     projectsSection.classList.add("show");
                 }
-            }
 
-            window.addEventListener("scroll", revealProjectsOnScroll);
-
-            function revealFooter() {
-                let footer = document.querySelector(".footer");
-                let footerPosition = footer.getBoundingClientRect().top;
-                let screenPosition = window.innerHeight / 1.3;
-
-                if (footerPosition < screenPosition) {
+                if (footer.getBoundingClientRect().top < screenPosition) {
                     footer.classList.add("show");
                 }
             }
 
-            window.addEventListener("scroll", revealFooter);
+            function animateProgressBars() {
+                const screenPosition = window.innerHeight / 1.3;
 
-            // Gestion du bouton "Contactez-moi" pour descendre en douceur
-            document.querySelector(".btn-contact").addEventListener("click", function(e) {
-                e.preventDefault();
-                document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
-            });
+                progressBars.forEach(bar => {
+                    const barPosition = bar.getBoundingClientRect().top;
+                    const targetWidth = bar.getAttribute("data-width");
+
+                    if (barPosition < screenPosition && !bar.classList.contains("animated")) {
+                        bar.style.width = targetWidth + "%";
+                        let value = 0;
+                        const targetValue = parseInt(targetWidth);
+                        const progressValue = bar.querySelector(".progress-value");
+
+                        const interval = setInterval(() => {
+                            if (value >= targetValue) {
+                                clearInterval(interval);
+                            } else {
+                                value++;
+                                if (progressValue) {
+                                    progressValue.textContent = value + "%";
+                                }
+                            }
+                        }, 15);
+
+                        bar.classList.add("animated");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            window.addEventListener("scroll", animateProgressBars);
+
+            // Une fois joué, ne le refait pas pour cette session
+            sessionStorage.setItem("indexScrollPlayed", "true");
+
+            // Animation douce vers le footer si bouton cliqué
+            const contactBtn = document.querySelector(".btn-contact");
+            if (contactBtn) {
+                contactBtn.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+                });
+            }
 
         });
     </script>
 
     <script src="translations.js"></script>
 
-    <!-- 👋 Message de Bienvenue (Welcome Overlay) -->
+    <!--Message de Bienvenue (Welcome Overlay) -->
     <div id="welcome-overlay" class="overlay-hidden">
         <div class="welcome-message" id="welcome-message"></div>
     </div>
