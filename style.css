@@ -351,12 +351,6 @@ body:not(.home) .language-switcher {
     margin: auto;
 }
 
-.project-date {
-    font-size: 0.85rem;
-    color: #888;
-    margin-bottom: 8px;
-}
-
 .competences-section h2, .projects-section h2 {
     font-size: 22px; /* Au lieu de 2.2rem */
 }
@@ -529,13 +523,22 @@ body:not(.home) .language-switcher {
     transform: translateY(0);
 }
 
+.project-date {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
 /* Réduction des cartes projets */
 .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 1 1 300px; /* Taille uniforme */
     max-width: 320px; /* Largeur max */
     min-width: 280px; /* Taille minimum */
     background: white;
-    padding: 15px;
+    padding: 20px 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -549,14 +552,16 @@ body:not(.home) .language-switcher {
 .project-card h3 {
     font-size: 16px;
     color: #3a3a70;
+    margin-bottom: 4px;
 }
 
 .project-card p {
-    width: 280px; /* Taille plus compacte */
-    padding: 15px;
+    /*width: 280px; Taille plus compacte */
+    padding: 0;
     font-size: 13px;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .btn-project {
