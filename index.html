@@ -10,22 +10,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- À intégrer dans ton fichier HTML (si ce n'est pas déjà fait) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-    
     <!-- Lien vers le CSS -->
     <link rel="stylesheet" href="style.css">
     
     <!-- Icône du site -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 </head>
-<body>
+<body class="home">
     <div class="background-container"></div>
 
-    <!-- Navigation -->
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-left">
@@ -36,13 +35,17 @@
 
         <!-- Menu standard pour ordinateur -->
         <ul class="nav-links">
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#competences">Compétences & Stack</a></li>
-            <li><a href="#projects">Projets</a></li>
+            <li><a href="#about" id="nav-about">À propos</a></li>
+            <li><a href="#competences" id="nav-skills">Compétences & Stack</a></li>
+            <li><a href="#projects" id="nav-projects">Projets</a></li>
         </ul>
 
         <div class="nav-right">
-            <a href="#contact" class="cta-button">Contactez-moi</a>
+            <a href="#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
+            <div class="language-switcher">
+                <img src="images/icons/fr-flag.png" id="fr-btn" class="lang-btn" alt="Français">
+                <img src="images/icons/en-flags.png" id="en-btn" class="lang-btn" alt="English">
+            </div>
         </div>
     </nav>
     
@@ -50,16 +53,16 @@
     <header class="hero" id="about">
         <div class="hero-content">
             <h1>Djouldé <span class="highlight">Barry</span></h1>
-            <h2>Data Engineer | Spécialiste ETL & Big Data</h2>
-            <p class="hero-description">
+            <h2 id="hero-title">Data Engineer | Spécialiste ETL & Big Data</h2>
+            <p class="hero-description" id="hero-description">
                 Passionné par la gestion et la valorisation des données, je conçois des solutions
                 robustes pour l'ingestion, la transformation et l'analyse de grands volumes de données.
                 Mon expertise couvre l'ETL, le Big Data et le Cloud Computing.
             </p>
             <div class="button-group">
                 <!--<a href="explore.html" class="btn-primary">Explorez plus</a>-->
-                <a href="cv.html" class="btn-secondary">📄 Voir mon CV</a>
-                <a href="explore.html" class="btn-primary">Pourquoi moi ? Découvrez-le !</a>
+                <a href="cv.html" class="btn-secondary" id="hero-btn-cv">📄 Voir mon CV</a>
+                <a href="explore.html" class="btn-primary" id="hero-btn-explore">Pourquoi moi ? Découvrez-le !</a>
             </div>
         </div>
         <div class="hero-image">
@@ -71,13 +74,13 @@
 
     <!-- Section Compétences & Stack Technique -->
     <section id="competences" class="competences-section">
-        <h2>Compétences & Stack Technique</h2>
+        <h2 id="skills-title">Compétences & Stack Technique</h2>
         <div class="competences-container">
             <div class="competences-list">
-                <h3>Mes Compétences</h3>
+                <h3 id="skills-subtitle">Mes Compétences</h3>
                 <ul>
                     <li>
-                        <span>📊 Modélisation & Data Processing</span>
+                        <span id="skill-1">📊 Modélisation & Data Processing</span>
                         <div class="progress-bar">
                             <div class="progress blue" data-width="90">
                                 <span class="progress-value">90%</span>
@@ -85,7 +88,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>🔄 Développement de pipelines ETL</span>
+                        <span id="skill-2">🔄 Développement de pipelines ETL</span>
                         <div class="progress-bar">
                             <div class="progress purple" data-width="90">
                                 <span class="progress-value">90%</span>
@@ -93,7 +96,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>📡 Big Data & Cloud (AWS, GCP)</span>
+                        <span id="skill-3">📡 Big Data & Cloud (AWS, GCP)</span>
                         <div class="progress-bar">
                             <div class="progress orange" data-width="75">
                                 <span class="progress-value">75%</span>
@@ -101,7 +104,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>⚙️ Automatisation & CI/CD</span>
+                        <span id="skill-4">⚙️ Automatisation & CI/CD</span>
                         <div class="progress-bar">
                             <div class="progress green" data-width="70">
                                 <span class="progress-value">80%</span>
@@ -109,7 +112,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>📈 Data Visualisation (Power BI)</span>
+                        <span id="skill-5">📈 Data Visualisation (Power BI)</span>
                         <div class="progress-bar">
                             <div class="progress yellow" data-width="60">
                                 <span class="progress-value">60%</span>
@@ -120,7 +123,7 @@
             </div>
             
             <div class="stack-technique">
-                <h3>Stack Technique</h3>
+                <h3 id="stack-title">Stack Technique</h3>
                 <div class="tech-grid">
                     <img src="images/tech/python.png" alt="Python" title="Python">
                     <img src="images/tech/sql.png" alt="SQL" title="SQL">
@@ -139,64 +142,88 @@
         </div>
     </section>
     
-
     <!-- Section Projets -->
-    <!-- ✅ Section Projets -->
     <section id="projects" class="projects-section">
-        <h2>Projets</h2>
+        <h2 id="projects-title">Projets</h2>
         <div class="projects-container">
             <div class="project-card">
-                <h3>Oncopole Claudis Rigaud</h3>
-                <p>Optimisation et structuration des données pour la recherche en oncologie.</p>
-                <button class="btn-project" onclick="openModal('oncopoleModal')">Voir plus</button>
+                <h3 id="project-1-title">Oncopole Claudis Rigaud</h3>
+                <p class="project-date">Oct. 2024 – En cours</p>
+                <p id="project-1-description">Optimisation et structuration des données pour la recherche en oncologie.</p>
+                <button class="btn-project" id="btn-project-1" onclick="openModal('oncopoleModal')">Voir plus</button>
             </div>
             <div class="project-card">
-                <h3>Aristid Retail Technology</h3>
-                <p>Analyse de prix concurrentiels et refonte du système de facturation.</p>
-                <button class="btn-project" onclick="openModal('aristidModal')">Voir plus</button>
+                <h3 id="project-2-title">Aristid Retail Technology</h3>
+                <p class="project-date">Oct. 2024 – 09/2024</p>
+                <p id="project-2-description">Analyse de prix concurrentiels et refonte du système de facturation.</p>
+                <button class="btn-project" id="btn-project-2" onclick="openModal('aristidModal')">Voir plus</button>
             </div>
             <div class="project-card">
-                <h3>IQVIA</h3>
-                <p>Automatisation des fichiers prix et feedbacks pour médecins.</p>
-                <button class="btn-project" onclick="openModal('iqviaModal')">Voir plus</button>
+                <h3 id="project-3-title">IQVIA</h3>
+                <p class="project-date">Nov. 2021 – 09/2023</p>
+                <p id="project-3-description">Automatisation des fichiers prix et feedbacks pour médecins.</p>
+                <button class="btn-project" id="btn-project-3" onclick="openModal('iqviaModal')">Voir plus</button>
             </div>
         </div>
 
-        <!-- ✅ Modales -->
+        <!-- Modales -->
         <div id="oncopoleModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('oncopoleModal')">&times;</span>
-                <h2>Oncopole Claudis Rigaud</h2>
-                <p>Conception et mise en œuvre de pipelines de données scalables sur GCP.</p>
-                <p><strong>Technologies :</strong> Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse</p>
+                <h4 id="oncopole-objective-title">🎯 Objectifs</h4>
+                <p id="oncopole-objective-text">Optimiser la gestion des données pour la recherche en oncologie à travers une architecture scalable et automatisée.</p>
+                <h4 id="oncopole-missions-title">🛠️ Missions principales</h4>
+                <ul class="modal-tasks">
+                <li id="oncopole-task-1">Conception et déploiement de pipelines de données sur GCP via Composer (Airflow).</li>
+                <li id="oncopole-task-2">Utilisation de PySpark Databricks pour le traitement de données biologiques.</li>
+                <li id="oncopole-task-3">Orchestration des workflows.</li>
+                <li id="oncopole-task-4">Monitoring automatisé et de tests unitaires.</li>
+                </ul>
+                <h4 id="oncopole-tech-title">📦 Technologies</h4>
+                <p id="modal-1-tech">Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse</p>
             </div>
         </div>
 
         <div id="aristidModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('aristidModal')">&times;</span>
-                <h2>Aristid Retail Technology</h2>
-                <p>Mise en place de pipelines de données optimisés pour le traitement des flux concurrentiels.</p>
-                <p><strong>Technologies :</strong> Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), Airflow</p>
+                <h4 id="aristid-objective-title">🎯 Objectifs</h4>
+                <p id="aristid-objective-text">Mettre en place un système automatisé d’analyse concurrentielle de prix pour optimiser la stratégie tarifaire de l’entreprise.</p>
+                <h4 id="aristid-missions-title">🛠️ Missions principales</h4>
+                <ul class="modal-tasks">
+                    <li id="aristid-task-1">Collecte quotidienne des prix concurrents via des scripts Python et scraping web hébergés sur Cloud Functions.</li>
+                    <li id="aristid-task-2">Nettoyage et structuration des données avec Pandas, puis stockage sur BigQuery.</li>
+                    <li id="aristid-task-3">Surveillance et sécurisation des flux de données.</li>
+                    <li id="aristid-task-4">Orchestration du workflow complet avec Cloud Composer (Airflow).</li>
+                </ul>
+                <h4 id="aristid-tech-title">📦 Technologies</h4>
+                <p><span id="modal-2-tech">Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), GithubActions, Docker</span></p>
             </div>
         </div>
 
         <div id="iqviaModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('iqviaModal')">&times;</span>
-                <h2>IQVIA</h2>
-                <p>Automatisation des fichiers prix hebdomadaires/mensuels sous NiFi.</p>
-                <p><strong>Technologies :</strong> NiFi, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence</p>
+                <h4 id="iqvia-objective-title">🎯 Objectifs</h4>
+                <p id="iqvia-objective-text">Automatisation des fichiers prix hebdomadaires/mensuels sous Talend.</p>
+                <h4 id="iqvia-missions-title">🛠️ Missions principales</h4>
+                <ul class="modal-tasks">
+                    <li id="iqvia-task-1">Conception et mise en oeuvre d’un pipeline de données automatisé sous Talend.</li>
+                    <li id="iqvia-task-2">Optimisation des requêtes et validation des structures de données.</li>
+                    <li id="iqvia-task-3">Documentation du projet sur confluence.</li>
+                </ul>
+                <h4 id="iqvia-tech-title"></h4>
+                <p><span id="modal-3-tech">Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence</span></p>
             </div>
         </div>
     </section>
 
-    <!-- 📌 Nouveau Footer -->
+    <!-- Nouveau Footer -->
     <footer id="contact" class="footer">
-        <!-- ✅ Partie gauche avec texte et icônes -->
+        <!-- Partie gauche avec texte et icônes -->
         <div class="footer-left">
-            <h3>Envie de collaborer ? 🚀</h3>
-            <p>Contactez-moi pour discuter de vos projets en Data Engineering.</p>
+            <h3 id="footer-title">Envie de collaborer ? 🚀</h3>
+            <p id="footer-description">Contactez-moi pour discuter de vos projets en Data Engineering.</p>
     
             <div class="footer-icons">
                 <a href="https://www.linkedin.com/in/djould%C3%A9-barry-24868a187" target="_blank">
@@ -211,41 +238,34 @@
             </div>            
         </div>
     
-        <!-- ✅ Partie droite avec le formulaire -->
+        <!-- Partie droite avec le formulaire -->
         <div class="footer-right">
-            <p class="contact-title">Envoyez-moi un message 📩</p>
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbldweqo" method="POST">
+            <p class="contact-title" id="footer-contact-title">Envoyez-moi un message 📩</p>
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbldweqo" method="POST" novalidate>
                 <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                <span class="error-message" id="name-error">Veuillez entrer votre nom.</span>
+                <span class="error-message" id="name-error">Veuillez entrer votre nom svp.</span>
             
                 <input type="email" id="email" name="email" placeholder="Votre email" required>
-                <span class="error-message" id="email-error">Veuillez entrer un email valide.</span>
+                <span class="error-message" id="email-error">Veuillez entrer un email valide svp.</span>
             
                 <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-                <span class="error-message" id="message-error">Veuillez entrer un message.</span>
+                <span class="error-message" id="message-error">Veuillez entrer un message svp.</span>
             
-                <button type="submit">Envoyer</button>
+                <button type="submit" id="envoie">Envoyer</button>
                 <p class="success-message" id="success-message">Merci pour votre message ! 📩</p>
             </form>            
         </div>
     </footer>    
-    <!--
+
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById("mobile-menu");
-            menu.classList.toggle("show");
-        }
-    </script>   
-    -->
-    <script>
-        // ✅ Fonction pour ouvrir une modale
+        // Fonction pour ouvrir une modale
         function openModal(id) {
             var modal = document.getElementById(id);
             modal.classList.add("show");
             modal.style.display = "flex";
         }
     
-        // ✅ Fonction pour fermer une modale
+        // Fonction pour fermer une modale
         function closeModal(id) {
             var modal = document.getElementById(id);
             modal.classList.remove("show");
@@ -254,7 +274,7 @@
             }, 300);
         }
     
-        // ✅ Fermer la modale en cliquant en dehors
+        // Fermer la modale en cliquant en dehors
         window.onclick = function(event) {
             document.querySelectorAll('.modal').forEach(modal => {
                 if (event.target == modal) {
@@ -263,160 +283,171 @@
             });
         };
     
-        // ✅ Gestion du formulaire de contact avec validation et envoi via Formspree
+        // Gestion du formulaire de contact avec validation et envoi via Formspree
         document.addEventListener("DOMContentLoaded", function() {
-            var form = document.getElementById("contact-form");
-    
+            const form = document.getElementById("contact-form");
+
             if (form) {
                 form.addEventListener("submit", async function(event) {
-                    event.preventDefault(); // Empêche le rechargement de la page
-    
-                    // Récupération des champs et des messages d'erreur
-                    var name = document.getElementById("name");
-                    var email = document.getElementById("email");
-                    var message = document.getElementById("message");
-    
-                    var nameError = document.getElementById("name-error");
-                    var emailError = document.getElementById("email-error");
-                    var messageError = document.getElementById("message-error");
-                    var successMessage = document.getElementById("success-message");
-    
-                    // Réinitialisation des erreurs
-                    name.classList.remove("error");
-                    email.classList.remove("error");
-                    message.classList.remove("error");
-    
-                    nameError.style.display = "none";
-                    emailError.style.display = "none";
-                    messageError.style.display = "none";
-                    successMessage.style.display = "none";
-    
-                    var isValid = true;
-    
-                    // Vérifications des champs
+                    event.preventDefault();
+
+                    const name = document.getElementById("name");
+                    const email = document.getElementById("email");
+                    const message = document.getElementById("message");
+
+                    const nameError = document.getElementById("name-error");
+                    const emailError = document.getElementById("email-error");
+                    const messageError = document.getElementById("message-error");
+                    const successMessage = document.getElementById("success-message");
+
+                    // Réinitialiser tout
+                    [name, email, message].forEach(input => input.classList.remove("error"));
+                    [nameError, emailError, messageError, successMessage].forEach(el => el.style.display = "none");
+
+                    // Validation progressive champ par champ
                     if (name.value.trim() === "") {
                         name.classList.add("error");
                         nameError.style.display = "block";
-                        isValid = false;
+                        name.focus();
+                        return; // Stop ici
                     }
-    
-                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailPattern.test(email.value.trim())) {
                         email.classList.add("error");
                         emailError.style.display = "block";
-                        isValid = false;
+                        email.focus();
+                        return;
                     }
-    
+
                     if (message.value.trim() === "") {
                         message.classList.add("error");
                         messageError.style.display = "block";
-                        isValid = false;
+                        message.focus();
+                        return;
                     }
-    
-                    // ✅ Envoi du formulaire seulement si toutes les validations sont OK
-                    if (isValid) {
-                        let formData = new FormData(this);
-                        let response = await fetch(this.action, {
-                            method: "POST",
-                            body: formData,
-                            headers: { "Accept": "application/json" }
-                        });
-    
-                        if (response.ok) {
-                            successMessage.style.display = "block";
-                            this.reset();
-                        } else {
-                            alert("Oops ! Une erreur est survenue. Réessayez plus tard.");
-                        }
+
+                    // Tout est bon, on envoie
+                    const formData = new FormData(this);
+                    const response = await fetch(this.action, {
+                        method: "POST",
+                        body: formData,
+                        headers: { "Accept": "application/json" }
+                    });
+
+                    if (response.ok) {
+                        successMessage.style.display = "block";
+                        this.reset();
+                    } else {
+                        alert("Oops ! Une erreur est survenue. Réessayez plus tard.");
                     }
                 });
             }
-    
-            // ✅ Animation de la section Compétences & Stack Technique
-            let competencesSection = document.querySelector(".competences-container");
-            let stackSection = document.querySelector(".stack-technique");
 
+            // Animation de la section Compétences & Stack Technique
+            const isFirstVisit = !sessionStorage.getItem("indexScrollPlayed");
+            const competencesSection = document.querySelector(".competences-container");
+            const stackSection = document.querySelector(".stack-technique");
+            const projectsSection = document.querySelector(".projects-container");
+            const footer = document.querySelector(".footer");
+            const progressBars = document.querySelectorAll(".progress-bar .progress");
+
+            // Si ce n’est pas la première visite → tout est visible directement
+            if (!isFirstVisit) {
+                competencesSection.classList.add("show");
+                stackSection.classList.add("show");
+                projectsSection.classList.add("show");
+                footer.classList.add("show");
+
+                progressBars.forEach(bar => {
+                    const targetWidth = bar.getAttribute("data-width");
+                    bar.style.width = targetWidth + "%";
+                    bar.classList.add("animated");
+
+                    const progressValue = bar.querySelector(".progress-value");
+                    if (progressValue) {
+                        progressValue.textContent = targetWidth + "%";
+                    }
+                });
+                return; // Ne lance pas les scroll listeners
+            }
+
+            // Sinon (1ère visite) → animations au scroll
             function revealOnScroll() {
-                let sectionPosition = competencesSection.getBoundingClientRect().top;
-                let stackPosition = stackSection.getBoundingClientRect().top;
-                let screenPosition = window.innerHeight / 1.3;
+                const screenPosition = window.innerHeight / 1.3;
 
-                if (sectionPosition < screenPosition) {
+                if (competencesSection.getBoundingClientRect().top < screenPosition) {
                     competencesSection.classList.add("show");
                 }
-                if (stackPosition < screenPosition) {
+
+                if (stackSection.getBoundingClientRect().top < screenPosition) {
                     stackSection.classList.add("show");
                 }
-            }
 
-            window.addEventListener("scroll", revealOnScroll);
-
-            function animateProgressBars() {
-                let screenPosition = window.innerHeight / 1.3;
-            
-                document.querySelectorAll(".progress-bar .progress").forEach((bar) => {
-                    let barPosition = bar.getBoundingClientRect().top;
-                    let targetWidth = bar.getAttribute("data-width");
-            
-                    if (barPosition < screenPosition && !bar.classList.contains("animated")) {
-                        bar.style.width = targetWidth + "%"; // ✅ Ajoute "%"
-                        console.log(`Barre animée: ${targetWidth}%`); // ✅ Vérifie dans la console
-            
-                        let progressValue = bar.querySelector(".progress-value");
-                        let value = 0;
-                        let targetValue = parseInt(targetWidth);
-            
-                        let interval = setInterval(() => {
-                            if (value >= targetValue) {
-                                clearInterval(interval);
-                            } else {
-                                value++;
-                                progressValue.textContent = value + "%";
-                            }
-                        }, 15);
-            
-                        bar.classList.add("animated");
-                    }
-                });
-            }
-            
-            window.addEventListener("scroll", animateProgressBars);
-                              
-            
-
-            let projectsSection = document.querySelector(".projects-container");
-
-            function revealProjectsOnScroll() {
-                let sectionPosition = projectsSection.getBoundingClientRect().top;
-                let screenPosition = window.innerHeight / 1.3;
-
-                if (sectionPosition < screenPosition) {
+                if (projectsSection.getBoundingClientRect().top < screenPosition) {
                     projectsSection.classList.add("show");
                 }
-            }
 
-            window.addEventListener("scroll", revealProjectsOnScroll);
-
-            function revealFooter() {
-                let footer = document.querySelector(".footer");
-                let footerPosition = footer.getBoundingClientRect().top;
-                let screenPosition = window.innerHeight / 1.3;
-
-                if (footerPosition < screenPosition) {
+                if (footer.getBoundingClientRect().top < screenPosition) {
                     footer.classList.add("show");
                 }
             }
 
-            window.addEventListener("scroll", revealFooter);
+            function animateProgressBars() {
+                const screenPosition = window.innerHeight / 1.3;
 
-            // ✅ Gestion du bouton "Contactez-moi" pour descendre en douceur
-            document.querySelector(".btn-contact").addEventListener("click", function(e) {
-                e.preventDefault();
-                document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
-            });
+                progressBars.forEach(bar => {
+                    const barPosition = bar.getBoundingClientRect().top;
+                    const targetWidth = bar.getAttribute("data-width");
+
+                    if (barPosition < screenPosition && !bar.classList.contains("animated")) {
+                        bar.style.width = targetWidth + "%";
+                        let value = 0;
+                        const targetValue = parseInt(targetWidth);
+                        const progressValue = bar.querySelector(".progress-value");
+
+                        const interval = setInterval(() => {
+                            if (value >= targetValue) {
+                                clearInterval(interval);
+                            } else {
+                                value++;
+                                if (progressValue) {
+                                    progressValue.textContent = value + "%";
+                                }
+                            }
+                        }, 15);
+
+                        bar.classList.add("animated");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            window.addEventListener("scroll", animateProgressBars);
+
+            // Une fois joué, ne le refait pas pour cette session
+            sessionStorage.setItem("indexScrollPlayed", "true");
+
+            // Animation douce vers le footer si bouton cliqué
+            const contactBtn = document.querySelector(".btn-contact");
+            if (contactBtn) {
+                contactBtn.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+                });
+            }
 
         });
     </script>
+
+    <script src="translations.js"></script>
+
+    <!--Message de Bienvenue (Welcome Overlay) -->
+    <div id="welcome-overlay" class="overlay-hidden">
+        <div class="welcome-message" id="welcome-message"></div>
+    </div>
+  
+
     
 </body>
 </html>

@@ -1,8 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
-/* ✅ Police plus moderne */
-/* ✅ 1. Style Global */
+/* Style Global */
 body {
     font-size: 14px;
     min-height: 100vh;
@@ -14,10 +13,49 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
+/* Cacher les boutons sur explore.html et blog.html */
+body:not(.home) .language-switcher {
+    display: none;
+}
+
+/* Overlay de bienvenue */
+#welcome-overlay {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+#welcome-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.welcome-message {
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 90%;
+    font-weight: 500;
+}
+
 
 .logo-db {
     text-decoration: none !important; /* Supprime le soulignement */
-    font-size: 2rem; /* Taille légèrement plus grande */
+    font-size: 2rem;
     font-weight: bold;
     font-family: 'Dancing Script', cursive;
     text-transform: uppercase;
@@ -31,19 +69,8 @@ body {
     color: #0056b3; /* Bleu */
 }
 
-/* ✅ Style du texte descriptif */
 
-/*
-.hero-description {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-    max-width: 500px;
-    margin-top: 10px;
-    text-align: justify;
-}
-*/
-/* ✅ 2. Navigation */
+/* Navigation */
 .navbar {
     position: fixed; /* Fixe la navbar */
     top: 0; /* Colle en haut */
@@ -63,17 +90,7 @@ body {
     display: flex;
     align-items: center;
 }
-/*
-.navbar .logo {
-    display: flex;
-    align-items: center;
-}
 
-.navbar .logo img {
-    height: 40px;
-    margin-right: 10px;
-}
-*/
 .nav-links {
     list-style: none;
     display: flex;
@@ -98,6 +115,24 @@ body {
     margin-right: 40px;
     display: flex;
     align-items: center; /* Centre verticalement */
+    gap: 15px;
+}
+/* Aligner les icônes de langue */
+.language-switcher {
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    gap: 8px; /* Réduit l'espace entre les drapeaux */
+}
+
+.lang-btn {
+    width: 22px; /* Légèrement réduit */
+    height: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
 }
 
 .cta-button {
@@ -116,8 +151,7 @@ body {
     background: #563d7c;
 }
 
-/* ✅ 3. Hero Section */
-
+/* 3. Hero Section */
 .hero {
     display: flex;
     height: auto;
@@ -161,7 +195,7 @@ body {
     color: #666;
 }
 
-/* ✅ 4. Boutons */
+/* 4. Boutons */
 .button-group {
     display: flex;
     gap: 10px;
@@ -180,18 +214,6 @@ body {
     white-space: nowrap; /* Empêche le retour à la ligne */
 }
 
-/*
-.btn-primary, .btn-secondary {
-    display: inline-block;
-    padding: 8px 18px;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
-}
-*/
 .btn-primary {
     background-color: #007bff;
     color: white;
@@ -214,17 +236,6 @@ body {
     color: white;
 }
 
-/* ✅ 5. Photo de Profil */
-/*
-.hero-image {
-    position: relative;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-*/
 /* Ajustement de la section de l'avatar */
 .hero-image {
     display: flex;
@@ -254,21 +265,11 @@ body {
     animation: moveAvatar 2s infinite ease-in-out;
 }
 
-/*
-.hero-image img {
-    width: 200px;
-    border-radius: 50%;
-    height: 200px;
-    object-fit: cover;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-*/
 .hero-image img:hover {
     transform: scale(1.05);
 }
 
-/* ✅ SECTION COMPÉTENCES & STACK TECHNIQUE */
+/* SECTION COMPÉTENCES & STACK TECHNIQUE */
 .competences-section {
     display: flex;
     flex-direction: column;
@@ -361,16 +362,13 @@ body {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* ✅ Ajuste la zone où les icônes peuvent bouger */
-/* ✅ Stack technique logos */
-/* ✅ Style de la grille */
+/* Style de la grille */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-items: center;
     align-items: center;
-    /*max-width: 500px;*/
     position: relative;
     margin-top: 15px;
     width: fit-content;
@@ -408,28 +406,28 @@ body {
 }
 
 
-/* ✅ Corrige l'affichage des barres de progression */
+/* Corrige l'affichage des barres de progression */
 .progress-bar {
     position: relative;
     width: 100%;
     height: 12px;
     background: #e0e0e0;
     border-radius: 8px;
-    overflow: visible; /* ✅ Permet d'afficher les pourcentages au-dessus */
+    overflow: visible; /* Permet d'afficher les pourcentages au-dessus */
     max-width: 270px;
 }
 
-/* ✅ Assure que la barre s'affiche correctement */
+/* Assure que la barre s'affiche correctement */
 .progress {
     height: 100%;
     border-radius: 8px;
     width: 0;
     transition: width 1.5s ease-in-out;
-    position: relative; /* ✅ Pour que le pourcentage soit bien positionné */
-    min-width: 10%; /* ✅ Évite qu'elle soit invisible */
+    position: relative; /* Pour que le pourcentage soit bien positionné */
+    min-width: 10%; /* Évite qu'elle soit invisible */
 }
 
-/* ✅ Correction des couleurs */
+/* Correction des couleurs */
 .progress.blue {
     background: linear-gradient(90deg, #4a90e2, #0056b3);
 }
@@ -446,11 +444,11 @@ body {
     background: linear-gradient(90deg, #ffeb3b, #fbc02d);
 }
 
-/* ✅ Correction du positionnement des pourcentages */
+/* Correction du positionnement des pourcentages */
 .progress-value {
     position: absolute;
-    top: -20px; /* ✅ Monte le texte */
-    left: 100%; /* ✅ À la fin de la barre */
+    top: -20px; /* Monte le texte */
+    left: 100%; /* À la fin de la barre */
     transform: translateX(-50%);
     font-size: 20px;
     font-weight: bold;
@@ -462,7 +460,7 @@ body {
     text-shadow: none; /* ❌ Supprime l’effet d’ombre */
 }
 
-/* ✅ Ajuste la taille et l’animation des icônes */
+/* Ajuste la taille et l’animation des icônes */
 .tech-grid img {
     width: 40px;
     height: auto;
@@ -470,7 +468,7 @@ body {
     position: relative;
 }
 
-/* ✅ Tooltip */
+/* Tooltip */
 .tech-grid img::after {
     content: attr(alt);
     position: absolute;
@@ -488,7 +486,7 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-/* ✅ Affichage du tooltip au survol */
+/* Affichage du tooltip au survol */
 .tech-grid img:hover::after {
     opacity: 1;
     visibility: visible;
@@ -498,7 +496,7 @@ body {
     transform: scale(1.1);
 }
 
-/* ✅ SECTION PROJETS */
+/* SECTION PROJETS */
 .projects-section {
     text-align: center;
     padding: 80px 0;
@@ -509,12 +507,12 @@ body {
 
 .projects-container {
     display: flex;
-    flex-wrap: nowrap; /* ❌ Empêche les éléments de passer à la ligne */
-    justify-content: center; /* ✅ Centre les éléments horizontalement */
-    gap: 15px; /* ✅ Espacement entre les cartes */
-    max-width: 1200px; /* ✅ Largeur max pour éviter l'étalement */
-    margin: auto; /* ✅ Centre la section */
-    overflow: hidden; /* ✅ Évite tout débordement */
+    flex-wrap: nowrap; 
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 15px; /* Espacement entre les cartes */
+    max-width: 1200px; /* Largeur max pour éviter l'étalement */
+    margin: auto; /* Centre la section */
+    overflow: hidden; /* Évite tout débordement */
     opacity: 0;
     transform: translateY(40px); /* Décale vers le bas */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -525,17 +523,27 @@ body {
     transform: translateY(0);
 }
 
-/* ✅ Réduction des cartes projets */
+.project-date {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+/* Réduction des cartes projets */
 .project-card {
-    flex: 1 1 300px; /* ✅ Taille uniforme */
-    max-width: 320px; /* ✅ Largeur max */
-    min-width: 280px; /* ✅ Taille minimum */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 300px; /* Taille uniforme */
+    max-width: 320px; /* Largeur max */
+    min-width: 280px; /* Taille minimum */
     background: white;
-    padding: 15px;
+    padding: 20px 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.3s ease-in-out;
+    text-align: center;
 }
 
 .project-card:hover {
@@ -545,14 +553,16 @@ body {
 .project-card h3 {
     font-size: 16px;
     color: #3a3a70;
+    margin-bottom: 4px;
 }
 
 .project-card p {
-    width: 280px; /* Taille plus compacte */
-    padding: 15px;
+    /*width: 280px; Taille plus compacte */
+    padding: 0;
     font-size: 13px;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .btn-project {
@@ -563,13 +573,18 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
+    font-size: 14px;
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;
+    margin: 0 auto;
 }
 
 .btn-project:hover {
     background-color: #0056b3;
 }
 
-/* ✅ 7. Footer Fixé en Bas */
+/* 7. Footer Fixé en Bas */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -591,7 +606,7 @@ body {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
 
-/* ✅ Ajout d’un effet pulsant léger à l'ombre */
+/* Ajout d’un effet pulsant léger à l'ombre */
 @keyframes pulseShadow {
     0% {
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -655,13 +670,13 @@ body {
     transform: scale(1.2);
 }
 
-/* ✅ Formulaire à droite */
+/* Formulaire à droite */
 .footer-right {
     width: 50%;
     text-align: left;
 }
 
-/* ✅ Ajout d'un titre au formulaire */
+/* Ajout d'un titre au formulaire */
 .contact-title {
     font-size: 18px;
     font-weight: bold;
@@ -669,7 +684,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* ✅ Champs du formulaire */
+/* Champs du formulaire */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -685,7 +700,7 @@ body {
     font-size: 14px;
 }
 
-/* ✅ Messages d'erreur sous chaque champ */
+/* Messages d'erreur sous chaque champ */
 .error-message {
     color: red;
     font-size: 12px;
@@ -694,7 +709,7 @@ body {
     height: 14px; /* Fixe la hauteur pour éviter de décaler les champs */
 }
 
-/* ✅ Ajout d'une bordure rouge pour les erreurs */
+/* Ajout d'une bordure rouge pour les erreurs */
 .contact-form input.error,
 .contact-form textarea.error {
     border: 1px solid red;
@@ -714,7 +729,7 @@ body {
     background-color: #563d7c;
 }
 
-/* ✅ Message de succès */
+/* Message de succès */
 .success-message {
     color: green;
     font-size: 14px;
@@ -725,29 +740,43 @@ body {
 }
 
 
-/* ✅ Masquer la modale par défaut */
+/* Masquer la modale par défaut */
 .modal {
     display: none; /* Caché au chargement */
     position: fixed;
-    z-index: 2000;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Fond flou */
+    overflow: auto;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
 }
 
-/* ✅ Contenu de la modale */
+.modal-content h4 {
+    margin: 10px 0 6px;
+    font-size: 0.95rem;
+    color: #333;
+}
+.modal-content ul.modal-tasks li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+/* Contenu de la modale */
 .modal-content {
     background: white;
-    padding: 25px;
+    margin: 5% auto;
+    padding: 20px 24px;
     width: 90%;
-    max-width: 450px;
+    max-width: 360px;
     text-align: center;
-    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     opacity: 0;
@@ -755,7 +784,19 @@ body {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* ✅ Affichage avec animation */
+.modal-content p {
+    font-size: 0.90rem;
+    line-height: 1.4;
+    margin: 0 0 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.modal-content ul.modal-tasks {
+    padding-left: 15px;
+    margin-bottom: 12px;
+}
+
+/* Affichage avec animation */
 .modal.show {
     display: flex;
 }
@@ -765,15 +806,30 @@ body {
     transform: scale(1);
 }
 
-/* ✅ Bouton de fermeture */
-.close {
+.modal-content .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
     font-weight: bold;
     color: #333;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.modal-content .close:hover {
+    color: #e74c3c;
+}
+
+.modal-content p,
+.modal-content ul.modal-tasks li {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal-content p,
+.modal-content ul.modal-tasks li {
+  text-wrap: balance;
 }
 
 
@@ -825,192 +881,10 @@ body {
     border-radius: 8px;
     overflow-x: auto;
   }
-  
 
-
-/* ✅ Animation d’ouverture */
+/* Animation d’ouverture */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
 }
 
-
-/* ✅ MENU BURGER (PAR DÉFAUT CACHÉ SUR ORDINATEUR) */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* ✅ MENU MOBILE (CACHÉ PAR DÉFAUT) */
-/* ✅ Affichage du menu burger */
-#mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 75%;
-    height: 100%;
-    background: white;
-    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding-top: 50px;
-    z-index: 1001;
-}
-/* ✅ AFFICHAGE DU MENU LORSQU'IL EST OUVERT */
-#mobile-menu.show {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* ✅ STYLE DES LIENS DANS LE MENU MOBILE */
-#mobile-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#mobile-menu ul li {
-    padding: 15px;
-}
-
-#mobile-menu ul li a {
-    text-decoration: none;
-    color: #7D5FB2;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-#mobile-menu ul li a:hover {
-    color: #563d7c;
-}
-
-/* ✅ BOUTON DE FERMETURE DU MENU MOBILE */
-.menu-close {
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
-
-/* ✅ MEDIA QUERY POUR MOBILE */
-@media screen and (max-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-    }
-    .nav-links {
-        display: none; /* Cache le menu standard */
-    }
-
-    /* ✅ Déplace le menu burger à droite */
-    .menu-toggle {
-        display: block;
-        font-size: 32px;
-        cursor: pointer;
-        position: absolute;
-        top: 15px;
-        right: 20px; /* Positionne bien */
-    }
-
-    /* ✅ Ajustement du bouton CTA */
-    .cta-button {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-
-    /* ✅ Ajustement de la Hero Section */
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 5%;
-    }
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero h2 {
-        font-size: 1.1rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-        line-height: 1.5;
-        text-align: center; /* Corrige l’alignement du texte */
-        max-width: 85%;
-        margin: 0 auto;
-    }
-
-    .button-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    /*
-    .hero-image img {
-        width: 180px;
-        margin-top: 15px;
-    }
-    */
-    
-    /* ✅ Section Compétences */
-    .competences-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start; /* ✅ Alignement en haut */
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 40px;
-        padding: 20px 5%;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .competences-list, .stack-technique {
-        width: 100%;
-        text-align: center;
-        flex: 1.3;
-    }
-
-    /* ✅ Stack Technique : Affichage en 2 colonnes */
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        max-width: 85%;
-    }
-
-    /* ✅ Projets : Affichage en colonne */
-    .projects-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Centre les projets */
-        gap: 20px; /* Espacement entre les blocs */
-        max-width: 1200px; /* Pour éviter un étalement trop large */
-        margin: auto; /* Centre le tout */
-    }
-
-    /* ✅ Assure que les cartes prennent 30% de largeur pour afficher 3 en ligne */
-    .project-card {
-        flex: 1 1 calc(33.333% - 20px); /* 3 par ligne, ajustement pour le gap */
-        max-width: 380px; /* Empêche qu'elles deviennent trop larges */
-        min-width: 280px; /* Assure un bon rendu sur PC portable */
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        text-align: left;
-        transition: transform 0.3s ease-in-out;
-}
-
-    /* ✅ Footer */
-    .footer-icons {
-        flex-direction: row;
-        gap: 10px;
-    }
-}
