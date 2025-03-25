@@ -786,10 +786,10 @@ body:not(.home) .language-switcher {
 
 .modal-content p {
     font-size: 0.95rem;
-    line-height: 1.4;
+    line-height: 1.6;
     margin: 0 0 15px;
-    text-align: justify;
-    margin-bottom: 12px;
+    text-align: left;
+    margin-bottom: 10px;
 }
 .modal-content ul.modal-tasks {
     padding-left: 15px;
