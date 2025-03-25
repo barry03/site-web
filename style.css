@@ -785,10 +785,10 @@ body:not(.home) .language-switcher {
 }
 
 .modal-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.90rem;
+    line-height: 1.4;
     margin: 0 0 15px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 10px;
 }
 .modal-content ul.modal-tasks {
