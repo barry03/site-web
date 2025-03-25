@@ -650,9 +650,14 @@ pre code {
 }
   
 .footer-right {
-flex: 1;
-padding-left: 80px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* aligne à droite */
+    padding-right: 60px;   /* ajuste l'espace au bord */
+    text-align: right;
 }
+  
 
 .footer-icons a {
     text-decoration: none; /* enlève les tirets */
@@ -696,6 +701,8 @@ transition: color 0.2s ease-in;
 .footer-links li a:hover {
 color: #4053d9;
 }
+
+
 
 .contact-title {
     font-size: 1.1em;
