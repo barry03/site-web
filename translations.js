@@ -107,6 +107,38 @@ const translations = {
         "hobby-podcast": "Podcasts Tech",
         "hobby-cooking": "Cuisine",
 
+        // 🔹 Oncopole
+        "oncopole-objective-title": "🎯 Objectifs",
+        "oncopole-objective-text": "Optimiser la gestion des données pour la recherche en oncologie à travers une architecture scalable et automatisée.",
+        "oncopole-missions-title": "🛠️ Missions principales",
+        "oncopole-task-1": "Conception et déploiement de pipelines de données sur GCP via Composer (Airflow).",
+        "oncopole-task-2": "Utilisation de PySpark Databricks pour le traitement de données biologiques.",
+        "oncopole-task-3": "Orchestration des workflows.",
+        "oncopole-task-4": "Monitoring automatisé et de tests unitaires.",
+        "oncopole-tech-title": "📦 Technologies",
+        "modal-1-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse",
+
+        // 🔹 Aristid
+        "aristid-objective-title": "🎯 Objectifs",
+        "aristid-objective-text": "Mettre en place un système automatisé d’analyse concurrentielle de prix pour optimiser la stratégie tarifaire de l’entreprise.",
+        "aristid-missions-title": "🛠️ Missions principales",
+        "aristid-task-1": "Collecte quotidienne des prix concurrents via des scripts Python et scraping web hébergés sur Cloud Functions.",
+        "aristid-task-2": "Nettoyage et structuration des données avec Pandas, puis stockage sur BigQuery.",
+        "aristid-task-3": "Surveillance et sécurisation des flux de données.",
+        "aristid-task-4": "Orchestration du workflow complet avec Cloud Composer (Airflow).",
+        "aristid-tech-title": "📦 Technologies",
+        "modal-2-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), GithubActions, Docker",
+
+        // 🔹 IQVIA
+        "iqvia-objective-title": "🎯 Objectifs",
+        "iqvia-objective-text": "Automatisation des fichiers prix hebdomadaires/mensuels sous Talend.",
+        "iqvia-missions-title": "🛠️ Missions principales",
+        "iqvia-task-1": "Conception et mise en œuvre d’un pipeline de données automatisé sous Talend.",
+        "iqvia-task-2": "Optimisation des requêtes et validation des structures de données.",
+        "iqvia-task-3": "Documentation du projet sur confluence.",
+        "iqvia-tech-title": "📦 Technologies",
+        "modal-3-tech": "Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence",
+
         "welcome-overlay": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀"
 
     },
@@ -218,6 +250,38 @@ const translations = {
         "hobby-podcast": "Tech Podcasts",
         "hobby-cooking": "Cooking",
 
+        // 🔹 Oncopole
+        "oncopole-objective-title": "🎯 Objectives",
+        "oncopole-objective-text": "Optimize data management for oncology research through a scalable and automated architecture.",
+        "oncopole-missions-title": "🛠️ Key Missions",
+        "oncopole-task-1": "Design and deployment of data pipelines on GCP via Composer (Airflow).",
+        "oncopole-task-2": "Use of PySpark on Databricks for processing biological data.",
+        "oncopole-task-3": "Workflow orchestration.",
+        "oncopole-task-4": "Automated monitoring and unit testing.",
+        "oncopole-tech-title": "📦 Technologies",
+        "modal-1-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Composer, Dataflow), ClickHouse",
+
+        // 🔹 Aristid
+        "aristid-objective-title": "🎯 Objectives",
+        "aristid-objective-text": "Implement an automated system for price competitive analysis to optimize the company's pricing strategy.",
+        "aristid-missions-title": "🛠️ Key Missions",
+        "aristid-task-1": "Daily collection of competitor prices using Python scripts and web scraping hosted on Cloud Functions.",
+        "aristid-task-2": "Data cleaning and structuring with Pandas, then storage in BigQuery.",
+        "aristid-task-3": "Monitoring and securing data streams.",
+        "aristid-task-4": "Complete workflow orchestration with Cloud Composer (Airflow).",
+        "aristid-tech-title": "📦 Technologies",
+        "modal-2-tech": "Databricks, PySpark, GCP (BigQuery, Cloud Storage, CloudRun, Cloud Composer, Dataflow), GithubActions, Docker",
+
+        // 🔹 IQVIA
+        "iqvia-objective-title": "🎯 Objectives",
+        "iqvia-objective-text": "Automation of weekly/monthly pricing files with Talend.",
+        "iqvia-missions-title": "🛠️ Key Missions",
+        "iqvia-task-1": "Design and implementation of an automated data pipeline with Talend.",
+        "iqvia-task-2": "Query optimization and data structure validation.",
+        "iqvia-task-3": "Project documentation on Confluence.",
+        "iqvia-tech-title": "📦 Technologies",
+        "modal-3-tech": "Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence",
+
         "welcome-overlay": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀"
     }
 };
@@ -239,7 +303,11 @@ function applyTranslations(lang) {
         "blog-title", "blog-description", "external-articles-title", "read-article-btn", "btn-devto", "btn-medium", "veille-title", "veille-description",
         "footer-title-blog", "footer-description", "footer-links-title", "footer-link-1", "footer-link-2", "footer-title", "footer-text",
         "footer-contact-title", "name", "name-error", "email", "email-error", "message", "message-error", "envoie", "success-message",
-        "hobbies-title", "hobbies-description","hobby-football", "hobby-basketball", "hobby-gaming","hobby-photo", "hobby-travel", "hobby-podcast", "hobby-cooking"
+        "hobbies-title", "hobbies-description","hobby-football", "hobby-basketball", "hobby-gaming","hobby-photo", "hobby-travel", "hobby-podcast", "hobby-cooking",
+        "oncopole-objective-title", "oncopole-objective-text", "oncopole-missions-title", "oncopole-task-1", "oncopole-task-2", "oncopole-task-3",
+        "oncopole-task-4", "oncopole-tech-title", "modal-1-tech", "aristid-objective-title", "aristid-objective-text", "aristid-missions-title",
+        "aristid-task-1", "aristid-task-2", "aristid-task-3", "aristid-task-4", "aristid-tech-title", "modal-2-tech", "iqvia-objective-title",
+        "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech"
 
     ];
 
