@@ -925,7 +925,7 @@ body:not(.home) .language-switcher {
         cursor: pointer;
         color: #333;
         margin-left: auto; /* <-- pousse le bouton tout à droite */
-        margin-right: 24px;
+        margin-right: 28px;
     }    
 
     /* MENU DÉROULANT */
@@ -941,7 +941,7 @@ body:not(.home) .language-switcher {
         display: none;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         z-index: 999;
-        gap: 15px;
+        gap: 10px;
     }
 
     .nav-items.open {
@@ -950,7 +950,7 @@ body:not(.home) .language-switcher {
 
     .nav-links {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         align-items: flex-end;
         margin: 0;
         width: 100%;
@@ -958,7 +958,7 @@ body:not(.home) .language-switcher {
 
     .nav-links li a {
         text-align: right;
-        padding: 8px 0;
+        padding: 4px 0;
         display: block;
     }
 
