@@ -1006,10 +1006,9 @@ body:not(.home) .language-switcher {
         
     }
     
+    
     .hero-content {
-        max-width: 100%; /* ← Avant c'était sûrement 60% */
-        flex: 1;
-        min-width: 0; 
+        max-width: 80%;
     }
 
     .hero-description {
@@ -1019,35 +1018,37 @@ body:not(.home) .language-switcher {
     }
 
     .hero-image {
-        max-width: 40%;
+        display: flex;
         justify-content: flex-end;
-    }
+        align-items: flex-start;
+        max-width: 40%;
+        padding-right: 8px;     /* espace entre l’image et le bord */
+        margin-top: -20px;      /* remonte l’image légèrement */
+    }    
 
     .hero-image .avatar {
         width: 100px;
-        flex: 1;
         max-width: 100%;
         border-radius: 10px;
     }
 
     .button-group {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 8px;
-        padding-bottom: 2px;
-        flex-wrap: nowrap; /* Ne permet PAS le retour à la ligne */
-        overflow-x: auto; /* Pour gérer les cas extrêmes sur très petits écrans */
+        scrollbar-width: none;
     }
     
     .btn-primary,
     .btn-secondary {
         font-size: 11px;
         padding: 6px 10px;
-        border-radius: 4px;
-        white-space: nowrap; /* ← Empêche le retour à la ligne du texte */
-        flex-shrink: 0; /* ← Empêche le bouton de rapetisser */
-    }
+        white-space: nowrap;
+        flex-shrink: 0;
+        max-width: 160px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }    
     
 }
 
