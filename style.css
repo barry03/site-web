@@ -988,10 +988,13 @@ body:not(.home) .language-switcher {
     } 
 
     .hero {
-        flex-direction: row; /* reste en ligne */
-        padding: 20px;
+        flex-direction: row;
+        padding: 20px 16px;
+        margin-top: 60px;
         gap: 20px;
         align-items: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .hero-content {
@@ -1005,14 +1008,14 @@ body:not(.home) .language-switcher {
     }
 
     .hero-image {
-        max-width: 40%;
-        padding-right: 0;
+        max-width: none;
+        flex: 1;
         justify-content: flex-end;
     }
 
     .hero-image .avatar {
-        width: 100px;       /* ← Taille réduite pour mobile */
-        max-height: 160px;
+        width: 100px;
+        max-width: 100%;
         border-radius: 12px;
     }
 
@@ -1025,8 +1028,10 @@ body:not(.home) .language-switcher {
     .btn-primary,
     .btn-secondary {
         width: auto;
-        font-size: 12px;
-        padding: 6px 12px;
+        font-size: 10px;
+        padding: 6px 10px;
+        border-radius: 4px;
+        max-width: 220px;
     }
 }
 
