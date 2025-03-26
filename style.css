@@ -1,14 +1,14 @@
 html {
     scroll-behavior: smooth;
 }
-
+/*
 body, html {
     width: 100%;
     padding: 0;
     margin: 0;
-    overflow-x: hidden; /* évite les scrolls latéraux */
+    overflow-x: hidden; 
 }
-
+*/
 /* Style Global */
 body {
     font-size: 14px;
@@ -16,7 +16,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e3eaf8, #ffffff);
     background-size: cover;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     padding-top: 80px;
