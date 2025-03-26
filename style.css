@@ -999,14 +999,14 @@ body:not(.home) .language-switcher {
         flex-direction: row;
         padding: 20px 5%;
         height: auto;
-        margin-top: 40px;
+        margin-top: 30px;
         gap: 20px;
         align-items: center;
         width: 100%;
         box-sizing: border-box;
         background-color: white; /* ← s’assure que le fond blanc masque le dégradé */
     }
-    }
+    
     
     .hero-content {
         max-width: 60%;
@@ -1031,22 +1031,25 @@ body:not(.home) .language-switcher {
     }
 
     .button-group {
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
         justify-content: flex-start;
         gap: 8px;
         margin-top: 10px;
+        padding-left: 0;
+        flex-wrap: nowrap; /* Ne permet PAS le retour à la ligne */
+        overflow-x: auto; /* Pour gérer les cas extrêmes sur très petits écrans */
     }
     
-
     .btn-primary,
     .btn-secondary {
-        width: auto;
-        font-size: 10px;
-        padding: 6px 10px;
+        font-size: 12px;
+        padding: 6px 12px;
         border-radius: 4px;
-        max-width: unset;
+        white-space: nowrap; /* ← Empêche le retour à la ligne du texte */
+        flex-shrink: 0; /* ← Empêche le bouton de rapetisser */
     }
+    
 }
 
 
