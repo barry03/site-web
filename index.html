@@ -49,20 +49,28 @@
             </a>            
         </div>
 
-        <!-- Menu standard pour ordinateur -->
-        <ul class="nav-links">
-            <li><a href="#about" id="nav-about">À propos</a></li>
-            <li><a href="#competences" id="nav-skills">Compétences & Stack</a></li>
-            <li><a href="#projects" id="nav-projects">Projets</a></li>
-        </ul>
+        <!-- Bouton burger pour mobile -->
+        <div class="burger-menu" id="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
 
-        <div class="nav-right">
-            <a href="#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
-            <div class="language-switcher">
-                <img src="images/icons/fr-flag.png" id="fr-btn" class="lang-btn" alt="Français" onclick="gtag('event', 'language_fr');">
-                <img src="images/icons/en-flags.png" id="en-btn" class="lang-btn" alt="English" onclick="gtag('event', 'language_en');">
+        <!-- Éléments du menu (liens + droite) -->
+        <div class="nav-items">
+            <ul class="nav-links">
+                <li><a href="#about" id="nav-about">À propos</a></li>
+                <li><a href="#competences" id="nav-skills">Compétences & Stack</a></li>
+                <li><a href="#projects" id="nav-projects">Projets</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
+                <div class="language-switcher">
+                    <img src="images/icons/fr-flag.png" id="fr-btn" class="lang-btn" alt="Français" onclick="gtag('event', 'language_fr');">
+                    <img src="images/icons/en-flags.png" id="en-btn" class="lang-btn" alt="English" onclick="gtag('event', 'language_en');">
+                </div>
             </div>
         </div>
+
     </nav>
     
     <!-- Section Hero -->
@@ -462,6 +470,17 @@
     <div id="welcome-overlay" class="overlay-hidden">
         <div class="welcome-message" id="welcome-message"></div>
     </div>
+
+
+    <script>
+        const burger = document.getElementById('burger-menu');
+        const navItems = document.querySelector('.nav-items');
+    
+        burger.addEventListener('click', () => {
+            navItems.classList.toggle('open');
+        });
+    </script>
+    
   
 
     

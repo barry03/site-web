@@ -453,11 +453,11 @@ body:not(.home) .language-switcher {
     font-size: 20px;
     font-weight: bold;
     color: #333;
-    background: none; /* ❌ Enlève le fond blanc */
-    padding: 0; /* ❌ Supprime l’espacement */
-    border-radius: 0; /* ❌ Enlève l’arrondi */
-    box-shadow: none; /* ❌ Enlève l’ombre */
-    text-shadow: none; /* ❌ Supprime l’effet d’ombre */
+    background: none; /* Enlève le fond blanc */
+    padding: 0; /* Supprime l’espacement */
+    border-radius: 0; /* Enlève l’arrondi */
+    box-shadow: none; /*  Enlève l’ombre */
+    text-shadow: none; /* Supprime l’effet d’ombre */
 }
 
 /* Ajuste la taille et l’animation des icônes */
@@ -886,5 +886,63 @@ body:not(.home) .language-switcher {
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
+}
+
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #333;
+        margin-right: 20px;
+    }
+
+    .nav-items {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        display: none;
+    }
+
+    .nav-items.open {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-right {
+        margin: 10px 0 0 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+/* Par défaut (desktop), on cache le burger */
+.burger-menu {
+    display: none;
 }
 
