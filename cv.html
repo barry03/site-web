@@ -38,7 +38,7 @@
     
             <div class="cv-buttons">
                 <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Partagez le profil </button>
-                <!--<a href="files/CV_Barry_FR.pdf" download class="btn-download">📥 Télécharger</a>-->
+                <a href="files/CV_Barry_FR.pdf" download class="btn-download" onclick="gtag('event', 'cv_download', { cv_version: 'fr' });">📥 Télécharger</a>
             </div>
         </div>
     
@@ -50,7 +50,8 @@
     
             <div class="cv-buttons">
                 <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_EN.pdf')">📋 Share profil</button>
-                <!--<a href="files/CV_Barry_EN.pdf" download class="btn-download">📥 Download</a>-->
+                <a href="files/CV_Barry_EN.pdf" download class="btn-download"
+                onclick="gtag('event', 'cv_download', { cv_version: 'en' });">📥 Download</a>
             </div> 
         </div>
     </section>
