@@ -999,13 +999,12 @@ body:not(.home) .language-switcher {
         flex-direction: row;
         padding: 20px 5%;
         height: auto;
-        margin-top: 30px;
+        margin-top: 10px;
         gap: 20px;
         align-items: center;
         box-sizing: border-box;
         
     }
-    
     
     .hero-content {
         max-width: 80%;
@@ -1023,11 +1022,11 @@ body:not(.home) .language-switcher {
         align-items: flex-start;
         max-width: 40%;
         padding-right: 8px;     /* espace entre l’image et le bord */
-        margin-top: -60px;      /* remonte l’image légèrement */
+        margin-top: -30px;      /* remonte l’image légèrement */
     }    
 
     .hero-image .avatar {
-        width: 120px;
+        width: 150px;
         max-width: 100%;
         border-radius: 10px;
     }
@@ -1045,7 +1044,7 @@ body:not(.home) .language-switcher {
         padding: 6px 10px;
         white-space: nowrap;
         flex-shrink: 0;
-        max-width: 178px;
+        max-width: 190px;
         overflow: hidden;
         text-overflow: ellipsis;
     }    
