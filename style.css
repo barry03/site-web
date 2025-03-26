@@ -917,7 +917,7 @@ body:not(.home) .language-switcher {
         cursor: pointer;
         color: #333;
         margin-left: auto; /* <-- pousse le bouton tout à droite */
-        margin-right: 16px;
+        margin-right: 18px;
     }    
 
     /* MENU DÉROULANT */
@@ -968,11 +968,16 @@ body:not(.home) .language-switcher {
 
     .language-switcher {
         display: flex;
-        justify-content: flex-end;
         gap: 8px;
+        justify-content: flex-end;
         width: 100%;
-        margin-bottom: 5px;
-    }
+        margin-top: -5px;
+        margin-bottom: 10px;
+    }    
+    .lang-btn {
+        width: 18px;
+        height: auto;
+    }    
 }
 
 
