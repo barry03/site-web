@@ -901,13 +901,14 @@ body:not(.home) .language-switcher {
 @media screen and (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
-        padding: 10px 15px;
+        padding: 10px 20px;
+        justify-content: space-between;
     }
 
     .nav-left {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 10px;
     }
 
     .burger-menu {
@@ -915,22 +916,22 @@ body:not(.home) .language-switcher {
         font-size: 1.8rem;
         cursor: pointer;
         color: #333;
-        margin-left: 8px; /* petit décalage vers la droite */
+        margin-left: auto;
     }
 
     .nav-items {
         position: absolute;
         top: 60px;
-        left: 0;
+        right: 0;
         width: 100%;
         background: white;
         flex-direction: column;
-        align-items: center; /* CENTRER le menu */
-        padding: 20px;
+        align-items: flex-end; /* aligné à droite */
+        padding: 20px 20px 10px 20px;
         display: none;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         z-index: 999;
-        gap: 20px;
+        gap: 15px;
     }
 
     .nav-items.open {
@@ -939,10 +940,10 @@ body:not(.home) .language-switcher {
 
     .nav-links {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         width: 100%;
+        align-items: flex-end; /* aligné à droite */
         margin: 0;
-        align-items: center; /* centrer les liens */
     }
 
     .nav-links li {
@@ -952,14 +953,13 @@ body:not(.home) .language-switcher {
     .nav-links li a {
         display: block;
         padding: 8px 0;
-        text-align: center;
+        text-align: right;
     }
 
     .nav-right {
-        margin-top: 10px;
         flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        align-items: flex-end;
+        gap: 10px;
         width: 100%;
     }
 
@@ -971,7 +971,10 @@ body:not(.home) .language-switcher {
     .language-switcher {
         display: flex;
         gap: 8px;
-        justify-content: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: 5px;
     }
 }
+
 
