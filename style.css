@@ -1023,11 +1023,11 @@ body:not(.home) .language-switcher {
         align-items: flex-start;
         max-width: 40%;
         padding-right: 8px;     /* espace entre l’image et le bord */
-        margin-top: -20px;      /* remonte l’image légèrement */
+        margin-top: -60px;      /* remonte l’image légèrement */
     }    
 
     .hero-image .avatar {
-        width: 100px;
+        width: 120px;
         max-width: 100%;
         border-radius: 10px;
     }
@@ -1045,7 +1045,7 @@ body:not(.home) .language-switcher {
         padding: 6px 10px;
         white-space: nowrap;
         flex-shrink: 0;
-        max-width: 160px;
+        max-width: 178px;
         overflow: hidden;
         text-overflow: ellipsis;
     }    
