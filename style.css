@@ -912,7 +912,8 @@ body:not(.home) .language-switcher {
     }
 
     .nav-right {
-        flex-direction: column-reverse; /* ← Inverse l'ordre : lang d’abord, bouton ensuite */
+        display: flex; /* ← Manquait ici */
+        flex-direction: column-reverse;
         align-items: flex-end;
         gap: 10px;
         width: 100%;
@@ -924,7 +925,7 @@ body:not(.home) .language-switcher {
         cursor: pointer;
         color: #333;
         margin-left: auto; /* <-- pousse le bouton tout à droite */
-        margin-right: 20px;
+        margin-right: 24px;
     }    
 
     /* MENU DÉROULANT */
