@@ -900,8 +900,8 @@ body:not(.home) .language-switcher {
 
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-wrap: wrap;
         padding: 10px 20px;
+        flex-wrap: nowrap;
         justify-content: space-between;
     }
 
@@ -916,20 +916,21 @@ body:not(.home) .language-switcher {
         font-size: 1.8rem;
         cursor: pointer;
         color: #333;
-        margin-left: auto;
+        margin-right: 15px;
     }
 
+    /* MENU DÉROULANT */
     .nav-items {
-        position: absolute;
+        position: fixed;
         top: 60px;
         right: 0;
         width: 100%;
         background: white;
         flex-direction: column;
-        align-items: flex-end; /* aligné à droite */
-        padding: 20px 20px 10px 20px;
+        align-items: flex-end;
+        padding: 20px;
         display: none;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         z-index: 999;
         gap: 15px;
     }
@@ -941,19 +942,15 @@ body:not(.home) .language-switcher {
     .nav-links {
         flex-direction: column;
         gap: 15px;
-        width: 100%;
-        align-items: flex-end; /* aligné à droite */
+        align-items: flex-end;
         margin: 0;
-    }
-
-    .nav-links li {
-        width: auto;
+        width: 100%;
     }
 
     .nav-links li a {
-        display: block;
-        padding: 8px 0;
         text-align: right;
+        padding: 8px 0;
+        display: block;
     }
 
     .nav-right {
@@ -970,11 +967,12 @@ body:not(.home) .language-switcher {
 
     .language-switcher {
         display: flex;
-        gap: 8px;
         justify-content: flex-end;
+        gap: 8px;
         width: 100%;
         margin-bottom: 5px;
     }
 }
+
 
 
