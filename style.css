@@ -999,7 +999,7 @@ body:not(.home) .language-switcher {
         flex-direction: row;
         padding: 20px 5%;
         height: auto;
-        margin-top: 30px;
+        margin-top: 5px;
         gap: 20px;
         align-items: center;
         box-sizing: border-box;
