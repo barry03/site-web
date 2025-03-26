@@ -916,8 +916,8 @@ body:not(.home) .language-switcher {
         font-size: 1.8rem;
         cursor: pointer;
         color: #333;
-        margin-right: 15px;
-    }
+        margin-left: auto; /* <-- pousse le bouton tout à droite */
+    }    
 
     /* MENU DÉROULANT */
     .nav-items {
