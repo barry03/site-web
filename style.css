@@ -1,6 +1,14 @@
 html {
     scroll-behavior: smooth;
 }
+
+body, html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* évite les scrolls latéraux */
+}
+
 /* Style Global */
 body {
     font-size: 14px;
@@ -8,7 +16,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right, #e3eaf8, #ffffff);
     background-size: cover;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     display: flex;
     flex-direction: column;
     padding-top: 80px;
@@ -988,19 +996,19 @@ body:not(.home) .language-switcher {
     } 
 
     .hero {
-        display: flex;
+        width: 100vw;
         flex-direction: row;
-        align-items: center;
-        padding: 20px;
+        padding: 20px 5%;
+        height: auto;
         margin-top: 40px;
         gap: 20px;
-        width: 100vw;
-        max-width: 100%;
-        background-color: white;
+        align-items: center;
+        width: 100%;
         box-sizing: border-box;
+        background-color: white; /* ← s’assure que le fond blanc masque le dégradé */
+    }
     }
     
-
     .hero-content {
         max-width: 60%;
     }
@@ -1018,8 +1026,9 @@ body:not(.home) .language-switcher {
 
     .hero-image .avatar {
         width: 100px;
-        /*max-width: 100%;*/
-        border-radius: 12px;
+        flex: 1;
+        max-width: 100%;
+        border-radius: 10px;
     }
 
     .button-group {
