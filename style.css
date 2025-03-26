@@ -1002,9 +1002,8 @@ body:not(.home) .language-switcher {
         margin-top: 30px;
         gap: 20px;
         align-items: center;
-        width: 100%;
         box-sizing: border-box;
-        background-color: white; /* ← s’assure que le fond blanc masque le dégradé */
+        
     }
     
     
@@ -1035,8 +1034,7 @@ body:not(.home) .language-switcher {
         flex-direction: row;
         justify-content: flex-start;
         gap: 8px;
-        margin-top: 10px;
-        padding-left: 0;
+        padding-bottom: 2px;
         flex-wrap: nowrap; /* Ne permet PAS le retour à la ligne */
         overflow-x: auto; /* Pour gérer les cas extrêmes sur très petits écrans */
     }
