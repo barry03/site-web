@@ -1006,9 +1006,10 @@ body:not(.home) .language-switcher {
         
     }
     
-    
     .hero-content {
-        max-width: 60%;
+        max-width: 100%; /* ← Avant c'était sûrement 60% */
+        flex: 1;
+        min-width: 0; 
     }
 
     .hero-description {
@@ -1041,8 +1042,8 @@ body:not(.home) .language-switcher {
     
     .btn-primary,
     .btn-secondary {
-        font-size: 12px;
-        padding: 6px 12px;
+        font-size: 11px;
+        padding: 6px 10px;
         border-radius: 4px;
         white-space: nowrap; /* ← Empêche le retour à la ligne du texte */
         flex-shrink: 0; /* ← Empêche le bouton de rapetisser */
