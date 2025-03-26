@@ -911,13 +911,20 @@ body:not(.home) .language-switcher {
         gap: 10px;
     }
 
+    .nav-right {
+        flex-direction: column-reverse; /* ← Inverse l'ordre : lang d’abord, bouton ensuite */
+        align-items: flex-end;
+        gap: 10px;
+        width: 100%;
+    }
+
     .burger-menu {
         display: block;
         font-size: 1.8rem;
         cursor: pointer;
         color: #333;
         margin-left: auto; /* <-- pousse le bouton tout à droite */
-        margin-right: 18px;
+        margin-right: 20px;
     }    
 
     /* MENU DÉROULANT */
@@ -968,16 +975,16 @@ body:not(.home) .language-switcher {
 
     .language-switcher {
         display: flex;
-        gap: 8px;
         justify-content: flex-end;
+        gap: 8px;
         width: 100%;
-        margin-top: -5px;
-        margin-bottom: 10px;
-    }    
+        margin-bottom: 0;
+    }
+    
     .lang-btn {
         width: 18px;
         height: auto;
-    }    
+    }   
 }
 
 
