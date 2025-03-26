@@ -917,6 +917,7 @@ body:not(.home) .language-switcher {
         cursor: pointer;
         color: #333;
         margin-left: auto; /* <-- pousse le bouton tout à droite */
+        margin-right: 16px;
     }    
 
     /* MENU DÉROULANT */
