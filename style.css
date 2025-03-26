@@ -898,14 +898,13 @@ body:not(.home) .language-switcher {
     display: none;
 }
 
-/* Mobile Styles */
 @media screen and (max-width: 768px) {
     .burger-menu {
         display: block;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         cursor: pointer;
         color: #333;
-        margin-right: 20px;
+        margin-right: 10px; /* diminue ici pour décaler à gauche */
     }
 
     .nav-items {
@@ -916,18 +915,15 @@ body:not(.home) .language-switcher {
         background: white;
         flex-direction: column;
         align-items: flex-start;
-        padding: 10px 20px;
+        padding: 20px; /* plus d’espace autour */
         display: none;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-items.open {
-        display: flex;
+        gap: 20px; /* espace entre les blocs de liens */
     }
 
     .nav-links {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
         width: 100%;
         margin: 0;
     }
@@ -939,14 +935,24 @@ body:not(.home) .language-switcher {
     .nav-links li a {
         display: block;
         width: 100%;
-        padding: 10px 0;
+        padding: 8px 0;
     }
 
     .nav-right {
-        margin: 10px 0 0 0;
+        margin-top: 10px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 12px;
         width: 100%;
+    }
+
+    .cta-button {
+        font-size: 0.95rem;
+        padding: 10px 16px;
+    }
+
+    .language-switcher {
+        display: flex;
+        gap: 8px;
     }
 }
