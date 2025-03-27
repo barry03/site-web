@@ -993,7 +993,7 @@ body:not(.home) .language-switcher {
         width: 18px;
         height: auto;
     } 
-
+    /*-----------------------------*/
     .hero {
         width: 100vw;
         flex-direction: row;
@@ -1063,6 +1063,90 @@ body:not(.home) .language-switcher {
         overflow: hidden;
         text-overflow: ellipsis;
     }    
+
+    /*-----------compétences---------------*/
+
+    /* SECTION COMPÉTENCES MOBILE */
+
+    .competences-section {
+        padding: 40px 16px;
+    }
+
+    #skills-title {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .competences-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .competences-list h3,
+    .stack-technique h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .competences-list ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .competences-list li {
+        margin-bottom: 18px;
+    }
+
+    .competences-list span {
+        font-size: 0.95rem;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    /* Progress bars */
+    .progress-bar {
+        background-color: #e0e0e0;
+        height: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .progress {
+        height: 100%;
+        border-radius: 4px;
+        position: relative;
+    }
+
+    .progress-value {
+        position: absolute;
+        right: 6px;
+        top: -22px;
+        font-size: 0.75rem;
+        color: #333;
+    }
+
+    /* STACK TECHNIQUE GRID */
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 icônes par ligne */
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .tech-grid img {
+        max-width: 40px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .big-tech {
+        max-width: 48px;
+    }
+
     
 }
 
