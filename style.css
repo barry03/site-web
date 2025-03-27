@@ -1069,8 +1069,8 @@ body:not(.home) .language-switcher {
     /* SECTION COMPÉTENCES MOBILE */
 
     .competences-section {
-        padding: 40px 16px;
-    }
+        padding: 40px 16px 60px;
+    }    
 
     #skills-title {
         font-size: 1.3rem;
@@ -1080,9 +1080,10 @@ body:not(.home) .language-switcher {
 
     .competences-container {
         display: flex;
-        flex-direction: column; /* ← empile les deux blocs */
+        flex-direction: column; /* ← chaque bloc l’un au-dessus de l’autre */
         gap: 40px;
-    }    
+        width: 100%;
+    }
 
     .competences-list h3,
     .stack-technique h3 {
@@ -1091,8 +1092,10 @@ body:not(.home) .language-switcher {
         text-align: center;
     }    
 
-    .competences-list,.stack-technique {
-    width: 100%;
+    .competences-list,
+    .stack-technique {
+        width: 100%;
+        flex: none; /* ← ils ne doivent pas tenter de s'adapter ou grandir */
     }
 
     .competences-list ul {
@@ -1117,6 +1120,7 @@ body:not(.home) .language-switcher {
         height: 10px;
         border-radius: 4px;
         overflow: hidden;
+        width: 100%;
     }
 
     .progress {
@@ -1136,11 +1140,11 @@ body:not(.home) .language-switcher {
     /* STACK TECHNIQUE GRID */
     .tech-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* ou 3 si tu veux plus d'espace */
-        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
         justify-items: center;
         align-items: center;
-    }    
+    }
 
     .stack-technique {
         padding: 0 10px;
@@ -1150,7 +1154,7 @@ body:not(.home) .language-switcher {
         max-width: 40px;
         height: auto;
         object-fit: contain;
-    }    
+    }
 
     .big-tech {
         max-width: 48px;
