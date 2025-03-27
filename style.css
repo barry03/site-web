@@ -1080,15 +1080,19 @@ body:not(.home) .language-switcher {
 
     .competences-container {
         display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
+        flex-direction: column; /* ← empile les deux blocs */
+        gap: 40px;
+    }    
 
     .competences-list h3,
     .stack-technique h3 {
         font-size: 1.1rem;
         margin-bottom: 12px;
         text-align: center;
+    }    
+
+    .competences-list,.stack-technique {
+    width: 100%;
     }
 
     .competences-list ul {
@@ -1132,16 +1136,21 @@ body:not(.home) .language-switcher {
     /* STACK TECHNIQUE GRID */
     .tech-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 icônes par ligne */
+        grid-template-columns: repeat(4, 1fr); /* ou 3 si tu veux plus d'espace */
         gap: 10px;
         justify-items: center;
+        align-items: center;
+    }    
+
+    .stack-technique {
+        padding: 0 10px;
     }
 
     .tech-grid img {
         max-width: 40px;
         height: auto;
         object-fit: contain;
-    }
+    }    
 
     .big-tech {
         max-width: 48px;
