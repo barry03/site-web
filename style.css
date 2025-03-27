@@ -1068,17 +1068,9 @@ body:not(.home) .language-switcher {
 
     /* SECTION COMPÉTENCES MOBILE */
 
-    .competences-section {
-        padding: 40px 16px 60px;
-    }    
-
-    #skills-title {
-        font-size: 1.3rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
+    /* Écrasement TOTAL du style desktop */
     .competences-container {
+        all: unset; /* ← supprime toutes les règles héritées */
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -1088,6 +1080,16 @@ body:not(.home) .language-switcher {
         justify-content: center;
     }
 
+    .competences-section {
+        padding: 30px 16px 60px;
+    }    
+
+    #skills-title {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
     .competences-list h3,
     .stack-technique h3 {
         font-size: 1.1rem;
@@ -1095,15 +1097,16 @@ body:not(.home) .language-switcher {
     }
        
 
-    .competences-list, .stack-technique {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
+    .competences-list,
+    .stack-technique {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }    
 
     .competences-list ul {
         padding: 0;
@@ -1120,6 +1123,13 @@ body:not(.home) .language-switcher {
         display: block;
         margin-bottom: 6px;
         text-align: center;
+    }
+
+    .competences-list {
+        background: rgba(255,0,0,0.05);
+    }
+    .stack-technique {
+        background: rgba(0,0,255,0.05);
     }
 
     /* Progress bars */
