@@ -1114,14 +1114,20 @@ body:not(.home) .language-switcher {
         list-style: none;
     }
 
-    .competences-list li {
+    .competences-list ul li {
+        display: flex;
+        flex-direction: column; /* ← Empile le texte + la barre */
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
         margin-bottom: 18px;
-    }
+        width: 100%;
+    }    
 
     .competences-list span {
         font-size: 0.95rem;
         display: block;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
         text-align: center;
     }
 
@@ -1132,13 +1138,14 @@ body:not(.home) .language-switcher {
         background: rgba(0,0,255,0.05);
     }
 
-    /* Progress bars */
     .progress-bar {
-        background-color: #e0e0e0;
+        width: 100%;
+        max-width: 270px;
         height: 10px;
+        background-color: #e0e0e0;
         border-radius: 4px;
         overflow: hidden;
-        width: 100%;
+        position: relative;
     }
 
     .progress {
@@ -1149,8 +1156,8 @@ body:not(.home) .language-switcher {
 
     .progress-value {
         position: absolute;
-        right: 6px;
-        top: -22px;
+        top: -20px;
+        right: 0;
         font-size: 0.75rem;
         color: #333;
     }
@@ -1158,7 +1165,7 @@ body:not(.home) .language-switcher {
     /* STACK TECHNIQUE GRID */
     .tech-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
+        gap: 16px 12px; /* ← 16px entre les lignes (row-gap), 12px entre les colonnes (column-gap) */
         justify-items: center;
         align-items: center;
         max-width: 100%;
