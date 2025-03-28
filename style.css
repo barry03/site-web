@@ -1170,7 +1170,7 @@ body:not(.home) .language-switcher {
     .tech-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);  /* ← 4 colonnes fixes */
-        gap: 20px 14px;                         /* ← espace lignes + colonnes */
+        gap: 20px 24px; /* ← 20px vertical (entre lignes), 24px horizontal */
         justify-items: center;
         align-items: center;
         max-width: 100%;
@@ -1185,9 +1185,11 @@ body:not(.home) .language-switcher {
 
     .tech-grid img {
         max-width: 40px;
+        width: 100%;
         height: auto;
         object-fit: contain;
     }
+      
 
     .big-tech {
         max-width: 48px;
