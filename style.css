@@ -905,16 +905,6 @@ body:not(.home) .language-switcher {
     display: none;
 }
 
-/* Style par défaut (desktop) */
-.projects-carousel {
-    display: none; /* ← cache le carrousel */
-}
-  
-.projects-container {
-    display: flex; /* ← garde l'affichage classique */
-    justify-content: space-between;
-    gap: 20px;
-}
 
 @media screen and (max-width: 768px) {
     .navbar {
@@ -1212,8 +1202,13 @@ body:not(.home) .language-switcher {
 
     /* projets*/
 
+    .projects-carousel {
+        display: none;
+    }
+    
     .projects-container {
-        display: none; /* cache ton ancienne version mobile */
+        display: flex; /* ou grid, selon ton layout actuel */
+        gap: 20px;
     }
 
     .projects-carousel {
@@ -1222,33 +1217,32 @@ body:not(.home) .language-switcher {
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
-        flex-direction: column;
     }
-
+    
     .carousel-track {
         display: flex;
-        width: 300%;
+        width: 300%; /* 3 cards */
     }
 
     .project-card {
         flex: 0 0 100%;
         scroll-snap-align: center;
-        box-sizing: border-box;
         padding: 20px;
+        box-sizing: border-box;
     }
 
     .carousel-dots {
         display: flex;
         justify-content: center;
         gap: 6px;
-        margin-top: 12px;
+        margin-top: 10px;
     }
 
     .dot {
         width: 8px;
         height: 8px;
-        background: #ccc;
         border-radius: 50%;
+        background: #ccc;
     }
 
     .dot.active {
