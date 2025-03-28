@@ -905,6 +905,32 @@ body:not(.home) .language-switcher {
     display: none;
 }
 
+/* ====== DESKTOP STYLES (par défaut) ====== */
+.projects-carousel {
+    display: flex; /* visible en desktop */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+.carousel-track {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+  
+.project-card {
+    flex: 0 0 calc(33.33% - 20px);
+    box-sizing: border-box;
+    padding: 20px;
+}
+  
+  /* Dots cachés en desktop */
+.carousel-dots {
+    display: none;
+}
+  
+
 
 @media screen and (max-width: 768px) {
     .navbar {
@@ -1203,49 +1229,40 @@ body:not(.home) .language-switcher {
     /* projets*/
 
     .projects-carousel {
-        display: none;
-    }
-    
-    .projects-container {
-        display: flex; /* ou grid, selon ton layout actuel */
-        gap: 20px;
-    }
-
-    .projects-carousel {
         overflow-x: scroll;
-        display: flex;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
+        display: flex;
+        flex-direction: column;
     }
     
     .carousel-track {
         display: flex;
-        width: 300%; /* 3 cards */
+        width: 300%; /* ou auto, si les cartes sont 100% */
     }
-
+    
     .project-card {
         flex: 0 0 100%;
         scroll-snap-align: center;
         padding: 20px;
-        box-sizing: border-box;
     }
-
+    
     .carousel-dots {
         display: flex;
         justify-content: center;
         gap: 6px;
         margin-top: 10px;
     }
-
+    
     .dot {
         width: 8px;
         height: 8px;
         border-radius: 50%;
         background: #ccc;
     }
-
-    .dot.active {
+    
+      .dot.active {
         background: #7D5FB2;
     }
     
