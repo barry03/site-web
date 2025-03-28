@@ -8,10 +8,6 @@ html, body {
     padding-top: 80px;
     font-family: 'Inter', sans-serif;
 }
-/* Cacher les boutons sur explore.html et blog.html */
-body:not(.home) .language-switcher {
-    display: none;
-}
 
 .article-page .main-container {
     position: relative;
@@ -101,14 +97,14 @@ body:not(.home) .language-switcher {
 }
 
 .nav-left {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0; /* pour éviter que le logo rapetisse */
+    flex-shrink: 0;
 }
 
 .nav-right {
-    flex-grow: 1;
     display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-grow: 1;
     justify-content: flex-end;
 }
 
@@ -120,10 +116,18 @@ body:not(.home) .language-switcher {
 
 .nav-links li a {
     text-decoration: none;
-    color: #333;
     font-weight: 500;
     font-size: 1rem;
+    color: #333;
     transition: color 0.3s ease-in-out;
+}
+.language-switcher {
+    display: flex;
+    gap: 10px;
+}
+/* Cacher les boutons sur explore.html et blog.html */
+body:not(.home) .language-switcher {
+    display: none;
 }
 
 .nav-links li a:hover {
