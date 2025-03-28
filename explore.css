@@ -103,12 +103,19 @@ body:not(.home) .language-switcher {
 .nav-left {
     display: flex;
     align-items: center;
+    flex-shrink: 0; /* pour éviter que le logo rapetisse */
 }
 
 .nav-right {
+    flex-grow: 1;
     display: flex;
-    align-items: center;
-    gap: 20px;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
 .nav-links li a {
