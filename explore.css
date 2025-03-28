@@ -105,11 +105,10 @@ body:not(.home) .language-switcher {
     align-items: center;
 }
 
-.nav-links {
-    list-style: none;
+.nav-right {
     display: flex;
-    gap: 30px;
-    margin-left: auto;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-links li a {
