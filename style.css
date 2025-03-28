@@ -905,6 +905,17 @@ body:not(.home) .language-switcher {
     display: none;
 }
 
+/* Style par défaut (desktop) */
+.projects-carousel {
+    display: none; /* ← cache le carrousel */
+}
+  
+.projects-container {
+    display: flex; /* ← garde l'affichage classique */
+    justify-content: space-between;
+    gap: 20px;
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
         padding: 10px 20px;
@@ -1197,6 +1208,51 @@ body:not(.home) .language-switcher {
 
     .big-tech {
         max-width: 48px;
+    }
+
+    /* projets*/
+
+    .projects-container {
+        display: none; /* cache ton ancienne version mobile */
+    }
+
+    .projects-carousel {
+        overflow-x: scroll;
+        display: flex;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
+    }
+
+    .carousel-track {
+        display: flex;
+        width: 300%;
+    }
+
+    .project-card {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background: #ccc;
+        border-radius: 50%;
+    }
+
+    .dot.active {
+        background: #7D5FB2;
     }
     
 }
