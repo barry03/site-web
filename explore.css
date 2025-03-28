@@ -91,7 +91,7 @@ body:not(.home) .language-switcher {
     width: 100%;
     display: flex;
     z-index: 1000;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background: white;
     padding: 10px 20px;
@@ -109,7 +109,7 @@ body:not(.home) .language-switcher {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin-left: auto;
+    margin-left: 0;
 }
 
 .nav-links li a {
