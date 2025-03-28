@@ -80,6 +80,7 @@ html, body {
 }
 
 /* 2. Navigation */
+/* 2. Navigation */
 .navbar {
     position: fixed; /* Fixe la navbar */
     top: 0; /* Colle en haut */
@@ -87,7 +88,7 @@ html, body {
     width: 100%;
     display: flex;
     z-index: 1000;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background: white;
     padding: 10px 20px;
@@ -97,31 +98,29 @@ html, body {
 }
 
 .nav-left {
-    flex-shrink: 0;
-}
-
-.nav-right {
     display: flex;
     align-items: center;
-    gap: 30px;
-    flex-grow: 1;
-    justify-content: flex-end;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
-    margin-left: auto;
+    margin-left: 40px;
 }
 
 .nav-links li a {
     text-decoration: none;
+    color: #333;
     font-weight: 500;
     font-size: 1rem;
-    color: #333;
     transition: color 0.3s ease-in-out;
 }
+
+.nav-links li a:hover {
+    color: #7D5FB2;
+}
+
 .language-switcher {
     display: flex;
     gap: 10px;
@@ -129,10 +128,6 @@ html, body {
 /* Cacher les boutons sur explore.html et blog.html */
 body:not(.home) .language-switcher {
     display: none;
-}
-
-.nav-links li a:hover {
-    color: #7D5FB2;
 }
 
 /* Assure que le contenu prend bien toute la place et pousse le footer en bas */
