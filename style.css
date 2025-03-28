@@ -1136,14 +1136,14 @@ body:not(.home) .language-switcher {
         margin-bottom: 4px;
         display: block;
     }    
-
+    /*
     .competences-list {
         background: rgba(255,0,0,0.05);
     }
     .stack-technique {
         background: rgba(0,0,255,0.05);
     }
-
+    */
     .progress {
         position: relative;
         height: 10px;
@@ -1169,13 +1169,14 @@ body:not(.home) .language-switcher {
 
     .tech-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* ← plus flexible */
-        gap: 16px 12px;
+        grid-template-columns: repeat(4, 1fr);  /* ← 4 colonnes fixes */
+        gap: 20px 14px;                         /* ← espace lignes + colonnes */
         justify-items: center;
         align-items: center;
-        margin: 0 auto;
         max-width: 100%;
+        margin: 0 auto;
     }
+      
       
     .stack-technique {
         margin-left: 0 !important;  /* <-- retire le décalage vers la droite */
@@ -1191,9 +1192,13 @@ body:not(.home) .language-switcher {
     .big-tech {
         max-width: 48px;
     }
-
     
 }
-
-
+/*
+@media screen and (max-width: 350px) {
+    .tech-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+*/
 
