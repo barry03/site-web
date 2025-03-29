@@ -151,6 +151,7 @@ body:not(.home) .language-switcher {
     display: flex;
     gap: 16px;
     align-items: center;
+    margin-right: 16px; /* ← éloigne le select du bord droit */
 }
 
 /* Aligner les icônes de langue */
@@ -961,15 +962,7 @@ body:not(.home) .language-switcher {
         display: flex;
         align-items: center;
         gap: 10px;
-    }
-
-    .nav-right {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end; /* ← RESTE À DROITE */
-        gap: 10px;
-        width: 100%;
-    }    
+    }   
 
     .burger-menu {
         display: block;
