@@ -1218,6 +1218,16 @@ body:not(.home) .language-switcher {
         padding: 0 10px;
         gap: 12px;
     }
+
+    .btn-project {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 0;
+        margin-top: 8px;
+        margin-bottom: 0;
+        align-self: stretch; /* au lieu de center */
+    }
+      
     .project-card {
         max-width: 95%;
         min-width: auto;
@@ -1229,6 +1239,9 @@ body:not(.home) .language-switcher {
         gap: 6px;
         height: auto !important;
         border: 1px solid red; /* pour debug */
+        box-sizing: border-box;
+        flex-grow: 0 !important;
+        flex-shrink: 0 !important;
     }
     
     .project-card h3 {
@@ -1244,15 +1257,12 @@ body:not(.home) .language-switcher {
         margin-bottom: 10px;
         flex-grow: 0 !important; /* empêche l’extension inutile */
     }
-    
-    .btn-project {
-        width: 100%;
-        font-size: 14px;
-        padding: 8px 0;
-        margin-top: 8px;
-        margin-bottom: 0;
-        align-self: center; /* ou flex-start si tu veux le garder aligné à gauche */
-    }
+
+    .project-card h3 { background: rgba(0,0,255,0.05); }
+    .project-date { background: rgba(0,255,0,0.05); }
+    .project-card p { background: rgba(255,0,0,0.05); }
+    .btn-project { background: rgba(0,0,0,0.05); }
+
     
     /*
     #projects-title {
