@@ -499,8 +499,16 @@
             document.removeEventListener("click", closeMenuOnClickOutside);
           }
         }
+      
+        // Fermeture auto quand on clique sur un lien
+        const navLinks = document.querySelectorAll(".nav-links a");
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+          });
+        });
     </script>
-          
       
 </body>
 </html>

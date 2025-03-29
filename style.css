@@ -1022,14 +1022,14 @@ body:not(.home) .language-switcher {
         flex-direction: column;
         gap: 12px;
         align-items: flex-start;
-        padding-bottom: 20px; /* un peu d'air en bas */
+        padding-bottom: calc(32px + env(safe-area-inset-bottom));
     }
       
       
       /* Bouton */
     .cta-button {
         font-size: 0.9rem;
-        padding: 10px 16px;
+        padding: 5px 10px;
         background: #7D5FB2;
         color: white;
         border-radius: 30px;
@@ -1046,6 +1046,7 @@ body:not(.home) .language-switcher {
     .language-switcher {
         width: 100%;
         white-space: nowrap;
+        margin-left: 6px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
     }
     
     .custom-select-wrapper {
