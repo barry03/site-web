@@ -1046,7 +1046,7 @@ body:not(.home) .language-switcher {
     .language-switcher {
         width: 100%;
         white-space: nowrap;
-        margin-left: 15px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
+        margin-left: 20px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
     }
     
     .custom-select-wrapper {
