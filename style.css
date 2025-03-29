@@ -1028,10 +1028,10 @@ body:not(.home) .language-switcher {
         gap: 12px;
         align-items: flex-start;
         padding-bottom: calc(32px + env(safe-area-inset-bottom));
+        margin-left: 15px;
     }
       
-      
-      /* Bouton */
+    /* Bouton */
     .cta-button {
         font-size: 0.9rem;
         padding: 3px 8px;
@@ -1051,7 +1051,7 @@ body:not(.home) .language-switcher {
     .language-switcher {
         width: 100%;
         white-space: nowrap;
-        margin-left: 20px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
+        margin-left: 15px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
     }
     
     .custom-select-wrapper {
