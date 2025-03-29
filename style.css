@@ -978,37 +978,43 @@ body:not(.home) .language-switcher {
     }
       
     .nav-items {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        padding-bottom: 100px; /* espace pour nav-right en bas */
         position: fixed;
         top: 60px;
+        left: 0;
         right: 0;
-        width: 100%;
         background: white;
-        display: none;
-        padding: 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         z-index: 999;
-    
-        display: grid;
-        grid-template-columns: 1fr auto;
-        row-gap: 12px;
-        column-gap: 24px;
+        height: 100vh;
+        overflow-y: auto;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        display: none;
     }
     
+      
+    .nav-items.open {
+        display: flex;
+    }
       
     .nav-links {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        width: 100%;
+        gap: 12px;
     }
       
+    /* 👇 Affiche la nav-right tout en bas */
     .nav-right {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        gap: 10px;
-        width: 100%;
+        gap: 12px;
+        align-items: flex-start;
     }
       
     .nav-links li a {
