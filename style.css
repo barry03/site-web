@@ -1227,6 +1227,13 @@ body:not(.home) .language-switcher {
         margin-bottom: 0;
         align-self: stretch; /* au lieu de center */
     }
+
+    .btn-project:disabled {
+        display: block;
+        opacity: 1; /* temporaire pour qu’il garde sa taille pendant le test */
+        background: pink !important; /* test visuel */
+    }
+      
       
     .project-card {
         max-width: 95%;
@@ -1242,6 +1249,7 @@ body:not(.home) .language-switcher {
         box-sizing: border-box;
         flex-grow: 0 !important;
         flex-shrink: 0 !important;
+        min-height: unset !important;
     }
     
     .project-card h3 {
