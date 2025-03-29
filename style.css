@@ -132,22 +132,36 @@ body:not(.home) .language-switcher {
     gap: 15px;
 }
 /* Aligner les icônes de langue */
-.language-switcher {
-    display: flex;
-    align-items: center; /* Centrage vertical */
-    gap: 8px; /* Réduit l'espace entre les drapeaux */
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
 }
-
-.lang-btn {
-    width: 22px; /* Légèrement réduit */
-    height: 22px;
+  
+.globe-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 16px;
+}
+  
+.lang-select {
+    background-image: url("data:image/svg+xml,%3Csvg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding: 6px 12px 6px 32px; /* left padding pour laisser de la place au globe */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
 }
-
-.lang-btn:hover {
-    transform: scale(1.1);
-}
+  
 
 .cta-button {
     background: #7D5FB2;
@@ -928,12 +942,12 @@ body:not(.home) .language-switcher {
     }
 
     .nav-right {
-        display: flex; /* ← Manquait ici */
-        flex-direction: column-reverse;
-        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* ← RESTE À DROITE */
         gap: 10px;
         width: 100%;
-    }
+    }    
 
     .burger-menu {
         display: block;
@@ -952,12 +966,12 @@ body:not(.home) .language-switcher {
         width: 100%;
         background: white;
         flex-direction: column;
-        align-items: flex-end;
+        /*align-items: flex-end;*/
         padding: 20px;
         display: none;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         z-index: 999;
-        gap: 10px;
+        gap: 20px;
     }
 
     .nav-items.open {
@@ -965,16 +979,15 @@ body:not(.home) .language-switcher {
     }
 
     .nav-links {
+        display: flex;
         flex-direction: column;
+        align-items: flex-start; /* ← ALIGNE À GAUCHE */
         gap: 10px;
-        align-items: flex-end;
-        margin: 0;
         width: 100%;
     }
 
     .nav-links li a {
-        text-align: right;
-        padding: 4px 0;
+        text-align: left;
         display: block;
     }
 
@@ -989,7 +1002,7 @@ body:not(.home) .language-switcher {
         font-size: 0.85rem;
         padding: 8px 14px;
     }
-
+    /*
     .language-switcher {
         display: flex;
         justify-content: flex-end;
@@ -1002,6 +1015,7 @@ body:not(.home) .language-switcher {
         width: 18px;
         height: auto;
     } 
+    **/
     /*-----------------------------*/
     .hero {
         width: 100vw;

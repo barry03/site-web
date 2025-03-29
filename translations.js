@@ -340,24 +340,34 @@ function setLanguage(lang) {
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Langue enregistrée :", localStorage.getItem("selectedLanguage"));
 
-    const frButton = document.getElementById("fr-btn");
-    const enButton = document.getElementById("en-btn");
+    const langSelect = document.getElementById("language-select");
 
-    // Vérifier si on est sur index.html avant d'ajouter les eventListeners
-    if (frButton && enButton) {
-        frButton.addEventListener("click", () => setLanguage("fr"));
-        enButton.addEventListener("click", () => setLanguage("en"));
+    if (langSelect) {
+        langSelect.addEventListener("change", (e) => {
+            const selectedLang = e.target.value;
+            setLanguage(selectedLang);
+        });
     }
 
+
+    // 🚀 Correction : Forcer "fr" si c'est la première visite
     // 🚀 Correction : Forcer "fr" si c'est la première visite
     let savedLanguage = localStorage.getItem("selectedLanguage");
 
-    if (!savedLanguage) {  
-        savedLanguage = "fr";  // Par défaut FR la première fois
+    if (!savedLanguage) {
+        savedLanguage = "fr";
         localStorage.setItem("selectedLanguage", "fr");
     }
 
+    // ✅ Ajoute ceci juste ici 👇
+    if (langSelect) {
+        langSelect.value = savedLanguage;
+    }
+
+    // Applique les traductions
     applyTranslations(savedLanguage);
+
+    
 
     // Affichage de l’overlay de bienvenue
     const overlay = document.getElementById("welcome-overlay");
