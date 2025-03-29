@@ -1222,12 +1222,17 @@ body:not(.home) .language-switcher {
         max-width: 95%;
         min-width: auto;
         padding: 14px 12px;
+        display: flex;
         text-align: center;
         border-radius: 8px;
+        flex-direction: column;
+        justify-content: flex-start; /* important */
+        gap: 6px;
+        min-height: 200px;
     }
     .project-card h3 {
         font-size: 15px;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
     }
     .project-date {
         font-size: 0.8rem;
@@ -1235,13 +1240,16 @@ body:not(.home) .language-switcher {
     }
     .project-card p {
         font-size: 12px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+        flex-grow: 0 !important; /* empêche l’extension inutile */
     }
     
     .btn-project {
         width: 100%;
         font-size: 14px;
         padding: 8px 0;
+        margin-top: auto; /* colle le bouton en bas uniquement si besoin */
+        margin-bottom: 0;
     }
     
     #projects-title {
