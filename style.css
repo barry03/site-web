@@ -1218,6 +1218,23 @@ body:not(.home) .language-switcher {
         padding: 0 10px;
         gap: 12px;
     }
+      
+    .project-card {
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        width: 95%;
+        margin: auto;
+        padding: 12px;
+        border: 2px solid red;
+        border-radius: 10px;
+        background: white;
+        box-sizing: border-box;
+        text-align: center;
+    }
 
     .btn-project {
         width: 100%;
@@ -1226,31 +1243,7 @@ body:not(.home) .language-switcher {
         margin-top: 8px;
         margin-bottom: 0;
         align-self: stretch; /* au lieu de center */
-    }
-
-    .btn-project:disabled {
-        display: block;
-        opacity: 1; /* temporaire pour qu’il garde sa taille pendant le test */
-        background: pink !important; /* test visuel */
-    }
-      
-      
-    .project-card {
-        max-width: 95%;
-        min-width: auto;
-        padding: 12px 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* centrer le contenu sans text-align */
-        justify-content: flex-start;
-        gap: 6px;
-        height: auto !important;
-        border: 1px solid red; /* pour debug */
-        box-sizing: border-box;
-        flex-grow: 0 !important;
-        flex-shrink: 0 !important;
-        min-height: unset !important;
-    }
+    }  
     
     .project-card h3 {
         font-size: 15px;
