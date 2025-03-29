@@ -1204,6 +1204,7 @@ body:not(.home) .language-switcher {
     /* projets*/  
     .projects-section {
         padding: 50px 0 30px; /* Réduction des marges top/bottom */
+        background: linear-gradient(to right, #e3eaf8, #ffffff);
     }
 
     #projects-title {
@@ -1287,6 +1288,75 @@ body:not(.home) .language-switcher {
         top: 12px;
         right: 16px;
     }
+
+    /*footer*/
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 30px;
+        text-align: center;
+    }
+      
+    .footer-left,
+    .footer-right {
+        width: 100%;
+    }
+      
+    .footer-left h3,
+    .footer-left p,
+    .footer-icons {
+        margin-bottom: 12px;
+    }
+      
+    .footer-icons a {
+        margin: 0 10px;
+    }
+      
+    .contact-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+      
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+      
+    .contact-form textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+      
+    .contact-form button {
+        padding: 10px;
+        font-size: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+      
+    .contact-form button:hover {
+        background-color: #0056b3;
+    }
+      
+    .success-message,
+    .error-message {
+        font-size: 13px;
+        color: green;
+        text-align: center;
+    }
+      
 }
 /*
 @media screen and (max-width: 350px) {
