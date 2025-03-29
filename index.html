@@ -481,27 +481,26 @@
     <script>
         const burgerMenu = document.getElementById("burger-menu");
         const navItems = document.querySelector(".nav-items");
-
-        burgerMenu.addEventListener("click", (e) => {
-            e.stopPropagation(); // ← Empêche le clic de fermer le menu juste après l’avoir ouvert
-            navItems.classList.toggle("open");
-
-            // Si le menu s'ouvre, on ajoute le listener pour fermer au clic extérieur
-            if (navItems.classList.contains("open")) {
-                document.addEventListener("click", closeMenuOnClickOutside);
-            } else {
-                document.removeEventListener("click", closeMenuOnClickOutside);
-            }
+      
+        burgerMenu.addEventListener("click", function (e) {
+          e.stopPropagation(); // Évite fermeture immédiate
+          navItems.classList.toggle("open");
+      
+          if (navItems.classList.contains("open")) {
+            document.addEventListener("click", closeMenuOnClickOutside);
+          } else {
+            document.removeEventListener("click", closeMenuOnClickOutside);
+          }
         });
-
+      
         function closeMenuOnClickOutside(e) {
-            // Si on clique en dehors du menu
-            if (!navItems.contains(e.target) && !burgerMenu.contains(e.target)) {
-                navItems.classList.remove("open");
-                document.removeEventListener("click", closeMenuOnClickOutside);
-            }
+          if (!navItems.contains(e.target) && !burgerMenu.contains(e.target)) {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+          }
         }
-    </script>    
+    </script>
+          
       
 </body>
 </html>

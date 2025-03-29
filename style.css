@@ -973,8 +973,11 @@ body:not(.home) .language-switcher {
         margin-right: 28px;
     }    
 
-    /* MENU DÉROULANT */
     .nav-items {
+        display: none; /* CACHÉ PAR DÉFAUT */
+      }
+      
+    .nav-items.open {
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 12px 20px;
@@ -987,11 +990,8 @@ body:not(.home) .language-switcher {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         z-index: 999;
     }
-    
-    .nav-items.open {
-        display: grid;
-    }
       
+      /* Gérer les liens à gauche */
     .nav-links {
         display: contents;
     }
@@ -1006,26 +1006,30 @@ body:not(.home) .language-switcher {
         text-align: left;
         white-space: nowrap;
     }
-
-    /* 🛠️ Fix de la nav-right en mode colonne */
+      
+      /* Gérer les éléments de droite */
     .nav-right {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        justify-content: flex-start;
         align-items: flex-end;
     }
-
+      
+      /* Bouton contact */
     .cta-button {
         justify-self: end;
         font-size: 0.85rem;
         padding: 8px 14px;
         white-space: nowrap;
     }
+      
+      /* Select langue */
     .language-switcher {
         justify-self: end;
         white-space: nowrap;
     }
+      
+
     /*
     .language-switcher {
         display: flex;
