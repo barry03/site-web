@@ -1056,23 +1056,7 @@ body:not(.home) .language-switcher {
     .lang-select {
         width: 100%;
     }
-      
-
-    /*
-    .language-switcher {
-        display: flex;
-        justify-content: flex-end;
-        gap: 8px;
-        width: 100%;
-        margin-bottom: 0;
-    }
-    
-    .lang-btn {
-        width: 18px;
-        height: auto;
-    } 
-    **/
-    /*-----------------------------*/
+  
     .hero {
         width: 100vw;
         flex-direction: row;
@@ -1143,8 +1127,6 @@ body:not(.home) .language-switcher {
         text-overflow: ellipsis;
     }    
 
-    /*-----------compétences---------------*/
-
     /* SECTION COMPÉTENCES MOBILE */
 
     /* Écrasement TOTAL du style desktop */
@@ -1213,14 +1195,7 @@ body:not(.home) .language-switcher {
         margin-bottom: 4px;
         display: block;
     }    
-    /*
-    .competences-list {
-        background: rgba(255,0,0,0.05);
-    }
-    .stack-technique {
-        background: rgba(0,0,255,0.05);
-    }
-    */
+    
     .progress {
         position: relative;
         height: 10px;
@@ -1254,7 +1229,6 @@ body:not(.home) .language-switcher {
         margin: 0 auto;
     }
       
-      
     .stack-technique {
         margin-left: 0 !important;  /* <-- retire le décalage vers la droite */
         position: static !important;
@@ -1281,7 +1255,7 @@ body:not(.home) .language-switcher {
     /* projets*/  
     .projects-section {
         padding: 50px 0 30px; /* Réduction des marges top/bottom */
-        background: linear-gradient(to right, #e3eaf8, #ffffff);
+        /*background: linear-gradient(to right, #e3eaf8, #ffffff);*/
     }
 
     #projects-title {
