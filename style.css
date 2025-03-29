@@ -980,18 +980,20 @@ body:not(.home) .language-switcher {
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
-        width: 68vw; /* ← réduit depuis 75vw */
+        height: 100%;
+        width: 60vw; /* drawer plus fin */
         background: white;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        padding: 20px;
-        padding-bottom: 120px;
+        padding: 20px 16px 120px 16px; /* padding gauche réduit */
         box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
         z-index: 999;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
+    
+        /* Clé pour que .nav-right fonctionne en absolute */
+        overflow-y: auto;
+        will-change: transform;
     }
       
     .nav-items.open {
@@ -1003,23 +1005,22 @@ body:not(.home) .language-switcher {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
-        padding-left: 5px; /* ← ramène les liens un peu plus à gauche */
+        gap: 18px;
     }
       
     .nav-links li a {
         font-size: 1.05rem;
+        display: block;
         text-align: left;
         white-space: nowrap;
-        display: block;
     }
       
-      /* Contact + langue bien visibles en bas du drawer */
+    /* 👇 Affichage des boutons en bas du drawer */
     .nav-right {
         position: absolute;
         bottom: 20px;
-        left: 20px;
-        right: 20px;
+        left: 16px;
+        right: 16px;
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -1038,15 +1039,14 @@ body:not(.home) .language-switcher {
         text-decoration: none;
         transition: background 0.3s;
     }
-      
+    
     .cta-button:hover {
         background: #563d7c;
     }
-      
-    /* Langue */
+    
     .language-switcher {
-        white-space: nowrap;
         width: 100%;
+        white-space: nowrap;
     }
     
     .custom-select-wrapper {
