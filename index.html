@@ -488,8 +488,10 @@
       
           if (navItems.classList.contains("open")) {
             document.addEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.add("no-scroll"); // 🔒 Bloque le scroll
           } else {
             document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll"); // 🔓 Rétablit le scroll
           }
         });
       
@@ -497,18 +499,30 @@
           if (!navItems.contains(e.target) && !burgerMenu.contains(e.target)) {
             navItems.classList.remove("open");
             document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
           }
         }
       
-        // Fermeture auto quand on clique sur un lien
+        // ✅ Fermeture du menu quand on clique sur un lien du menu
         const navLinks = document.querySelectorAll(".nav-links a");
         navLinks.forEach(link => {
           link.addEventListener("click", () => {
             navItems.classList.remove("open");
             document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
           });
         });
-    </script>
       
+        // ✅ Fermeture du menu quand on clique sur le bouton "Contactez-moi"
+        const contactButton = document.getElementById("nav-contact");
+        if (contactButton) {
+          contactButton.addEventListener("click", () => {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
+          });
+        }
+    </script>
+       
 </body>
 </html>
