@@ -1029,7 +1029,7 @@ body:not(.home) .language-switcher {
       /* Bouton */
     .cta-button {
         font-size: 0.9rem;
-        padding: 5px 10px;
+        padding: 3px 8px;
         background: #7D5FB2;
         color: white;
         border-radius: 30px;
@@ -1046,7 +1046,7 @@ body:not(.home) .language-switcher {
     .language-switcher {
         width: 100%;
         white-space: nowrap;
-        margin-left: 6px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
+        margin-left: 10px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
     }
     
     .custom-select-wrapper {
