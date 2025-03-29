@@ -1313,7 +1313,7 @@ body:not(.home) .language-switcher {
     .footer-icons {
         display: flex;
         justify-content: center;
-        gap: 16px;
+        gap: 10px;
     }
       
     .footer-icons a {
