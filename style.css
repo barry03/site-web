@@ -1221,13 +1221,14 @@ body:not(.home) .language-switcher {
     .project-card {
         max-width: 95%;
         min-width: auto;
-        padding: 14px 12px;
+        padding: 12px 10px;
         display: flex;
         text-align: center;
         border-radius: 8px;
         flex-direction: column;
         justify-content: flex-start; /* important */
         gap: 6px;
+        height: auto !important;
     }
     .project-card h3 {
         font-size: 15px;
