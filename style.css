@@ -991,19 +991,15 @@ body:not(.home) .language-switcher {
     .nav-items.open {
         display: grid;
     }
-
+      
     .nav-links {
         display: contents;
-        flex-direction: column;
-        align-items: flex-start; /* ← ALIGNE À GAUCHE */
-        gap: 10px;
-        width: 100%;
     }
-
+      
     .nav-links li {
         display: contents;
     }
-
+      
     .nav-links li a {
         display: block;
         padding: 4px 0;
@@ -1011,12 +1007,13 @@ body:not(.home) .language-switcher {
         white-space: nowrap;
     }
 
+    /* 🛠️ Fix de la nav-right en mode colonne */
     .nav-right {
-        display: contents;
-        justify-items: end; /* aligne à droite */
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: flex-start;
         align-items: flex-end;
-        gap: 10px;
-        width: 100%;
     }
 
     .cta-button {
