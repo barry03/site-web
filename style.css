@@ -151,7 +151,7 @@ body:not(.home) .language-switcher {
     display: flex;
     gap: 16px;
     align-items: center;
-    margin-right: 25px; /* ← éloigne le select du bord droit */
+    margin-right: 30px; /* ← éloigne le select du bord droit */
 }
 
 /* Aligner les icônes de langue */
