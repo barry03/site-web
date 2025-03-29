@@ -981,38 +981,40 @@ body:not(.home) .language-switcher {
         top: 0;
         left: 0;
         height: 100vh;
-        width: 75vw; /* drawer style */
+        width: 68vw; /* ← réduit depuis 75vw */
         background: white;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         padding: 20px;
-        padding-bottom: 120px; /* espace pour le bas */
-        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        padding-bottom: 120px;
+        box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
         z-index: 999;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
     }
-    
+      
     .nav-items.open {
-        transform: translateX(0); /* drawer ouvert */
+        transform: translateX(0);
     }
-    
+      
+      /* Liens navigation */
     .nav-links {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 18px;
-        margin-top: 60px; /* espace sous le logo */
+        gap: 16px;
+        padding-left: 5px; /* ← ramène les liens un peu plus à gauche */
     }
-    
+      
     .nav-links li a {
-        display: block;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         text-align: left;
         white-space: nowrap;
+        display: block;
     }
-    
+      
+      /* Contact + langue bien visibles en bas du drawer */
     .nav-right {
         position: absolute;
         bottom: 20px;
@@ -1020,29 +1022,31 @@ body:not(.home) .language-switcher {
         right: 20px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: 12px;
+        align-items: flex-start;
     }
-    
+      
+      /* Bouton */
     .cta-button {
         font-size: 0.9rem;
         padding: 10px 16px;
-        white-space: nowrap;
         background: #7D5FB2;
         color: white;
         border-radius: 30px;
         font-weight: bold;
+        white-space: nowrap;
         text-decoration: none;
         transition: background 0.3s;
     }
-    
+      
     .cta-button:hover {
         background: #563d7c;
     }
-    
+      
+    /* Langue */
     .language-switcher {
-        width: 100%;
         white-space: nowrap;
+        width: 100%;
     }
     
     .custom-select-wrapper {
@@ -1052,6 +1056,7 @@ body:not(.home) .language-switcher {
     .lang-select {
         width: 100%;
     }
+      
 
     /*
     .language-switcher {
