@@ -9,6 +9,12 @@ html, body {
     font-family: 'Inter', sans-serif;
 }
 
+.logo-img {
+    height: 50px; /* ou 40px selon ton header */
+    width: auto;
+    display: block;
+}
+
 .article-page .main-container {
     position: relative;
     top: -95px; /* Remonte le contenu de 30px */
