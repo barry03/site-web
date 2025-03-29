@@ -1228,7 +1228,6 @@ body:not(.home) .language-switcher {
         flex-direction: column;
         justify-content: flex-start; /* important */
         gap: 6px;
-        min-height: 200px;
     }
     .project-card h3 {
         font-size: 15px;
@@ -1248,7 +1247,7 @@ body:not(.home) .language-switcher {
         width: 100%;
         font-size: 14px;
         padding: 8px 0;
-        margin-top: auto; /* colle le bouton en bas uniquement si besoin */
+        margin-top: 8px;
         margin-bottom: 0;
     }
     
