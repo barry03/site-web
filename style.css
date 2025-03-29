@@ -67,15 +67,22 @@ body:not(.home) .language-switcher {
     font-family: 'Dancing Script', cursive;
     text-transform: uppercase;
 }
-
+/*
 .logo-db span:first-child {
-    color: #7D5FB2; /* Violet */
+    color: #7D5FB2;
 }
 
 .logo-db span:last-child {
-    color: #0056b3; /* Bleu */
+    color: #0056b3;
 }
+*/
 
+.logo-img {
+    height: 36px; /* ou 40px selon ton header */
+    width: auto;
+    display: block;
+}
+  
 
 /* Navigation */
 .navbar {
