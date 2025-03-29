@@ -1229,7 +1229,6 @@ body:not(.home) .language-switcher {
         width: 95%;
         margin: auto;
         padding: 12px;
-        border: 2px solid red;
         border-radius: 10px;
         background: white;
         box-sizing: border-box;
@@ -1259,34 +1258,6 @@ body:not(.home) .language-switcher {
         flex-grow: 0 !important; /* empêche l’extension inutile */
     }
 
-    .project-card h3 { background: rgba(0,0,255,0.05); }
-    .project-date { background: rgba(0,255,0,0.05); }
-    .project-card p { background: rgba(255,0,0,0.05); }
-    .btn-project { background: rgba(0,0,0,0.05); }
-
-    
-    /*
-    #projects-title {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-    */
-    /*
-    .modal-content {
-        width: 95%;
-        padding: 20px 16px;
-        font-size: 0.95rem;
-    }
-    
-    .modal-content p,
-    .modal-content ul.modal-tasks li {
-        font-size: 0.95rem;
-    }
-    
-      .modal-content .close {
-        font-size: 26px;
-    }
-    */
     .modal-content {
         width: 90%;
         max-height: 90vh;
