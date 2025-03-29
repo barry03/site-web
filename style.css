@@ -985,7 +985,7 @@ body:not(.home) .language-switcher {
         background: white;
         display: flex;
         flex-direction: column;
-        padding: 20px 16px 120px 16px; /* padding gauche réduit */
+        padding: 20px 16px;
         box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
         z-index: 999;
         transform: translateX(-100%);
@@ -1017,15 +1017,14 @@ body:not(.home) .language-switcher {
       
     /* 👇 Affichage des boutons en bas du drawer */
     .nav-right {
-        position: absolute;
-        bottom: 20px;
-        left: 16px;
-        right: 16px;
+        margin-top: auto; /* 👈 pousse vers le bas du drawer */
         display: flex;
         flex-direction: column;
         gap: 12px;
         align-items: flex-start;
+        padding-bottom: 20px; /* un peu d'air en bas */
     }
+      
       
       /* Bouton */
     .cta-button {
