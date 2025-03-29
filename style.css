@@ -1309,6 +1309,12 @@ body:not(.home) .language-switcher {
     .footer-icons {
         margin-bottom: 12px;
     }
+
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
       
     .footer-icons a {
         margin: 0 10px;
@@ -1319,6 +1325,10 @@ body:not(.home) .language-switcher {
         display: flex;
         flex-direction: column;
         gap: 12px;
+    }
+
+    .contact-title {
+        text-align: center;
     }
       
     .contact-form input,
