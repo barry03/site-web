@@ -78,7 +78,7 @@ body:not(.home) .language-switcher {
 */
 
 .logo-img {
-    height: 36px; /* ou 40px selon ton header */
+    height: 42px; /* ou 40px selon ton header */
     width: auto;
     display: block;
 }
