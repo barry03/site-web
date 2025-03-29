@@ -151,7 +151,7 @@ body:not(.home) .language-switcher {
     display: flex;
     gap: 16px;
     align-items: center;
-    margin-right: 30px; /* ← éloigne le select du bord droit */
+    margin-right: 40px; /* ← éloigne le select du bord droit */
 }
 
 /* Aligner les icônes de langue */
@@ -174,7 +174,7 @@ body:not(.home) .language-switcher {
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 12px;
-    padding: 6px 12px 6px 32px; /* left padding pour laisser de la place au globe */
+    padding: 6px 36px 6px 32px; /* left padding pour laisser de la place au globe */
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -977,7 +977,7 @@ body:not(.home) .language-switcher {
     .nav-items {
         display: grid;
         grid-template-columns: 1fr auto;
-        gap: 10px 20px;
+        gap: 12px 20px;
         padding: 20px;
         background: white;
         position: fixed;
@@ -986,12 +986,11 @@ body:not(.home) .language-switcher {
         width: 100%;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         z-index: 999;
-        display: none; /* ← important pour cacher par défaut */
     }
     
     .nav-items.open {
-        display: grid; /* ← reste en grid */
-    }    
+        display: grid;
+    }
 
     .nav-links {
         display: contents;
@@ -1001,14 +1000,19 @@ body:not(.home) .language-switcher {
         width: 100%;
     }
 
+    .nav-links li {
+        display: contents;
+    }
+
     .nav-links li a {
-        text-align: left;
         display: block;
         padding: 4px 0;
+        text-align: left;
+        white-space: nowrap;
     }
 
     .nav-right {
-        display: grid;
+        display: contents;
         justify-items: end; /* aligne à droite */
         align-items: flex-end;
         gap: 10px;
@@ -1016,8 +1020,14 @@ body:not(.home) .language-switcher {
     }
 
     .cta-button {
+        justify-self: end;
         font-size: 0.85rem;
         padding: 8px 14px;
+        white-space: nowrap;
+    }
+    .language-switcher {
+        justify-self: end;
+        white-space: nowrap;
     }
     /*
     .language-switcher {
