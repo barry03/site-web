@@ -1223,13 +1223,14 @@ body:not(.home) .language-switcher {
         min-width: auto;
         padding: 12px 10px;
         display: flex;
-        text-align: center;
-        border-radius: 8px;
         flex-direction: column;
-        justify-content: flex-start; /* important */
+        align-items: center; /* centrer le contenu sans text-align */
+        justify-content: flex-start;
         gap: 6px;
         height: auto !important;
+        border: 1px solid red; /* pour debug */
     }
+    
     .project-card h3 {
         font-size: 15px;
         margin-bottom: 4px;
@@ -1250,12 +1251,15 @@ body:not(.home) .language-switcher {
         padding: 8px 0;
         margin-top: 8px;
         margin-bottom: 0;
+        align-self: center; /* ou flex-start si tu veux le garder aligné à gauche */
     }
     
+    /*
     #projects-title {
         font-size: 24px;
         margin-bottom: 30px;
     }
+    */
     /*
     .modal-content {
         width: 95%;
