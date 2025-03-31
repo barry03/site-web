@@ -30,6 +30,11 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
+/* Cacher les boutons sur explore.html et blog.html */
+body:not(.home) .nav-right,
+body:not(.home) .language-switcher {
+    display: none;
+}
 
 .logo-img {
     height: 50px; /* ou 40px selon ton header */
@@ -229,7 +234,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: #222;
-    margin-top: -10px; /* Remonte encore plus le titre */
+    margin-top: 10px; /* Remonte encore plus le titre */
 }
 
 .section-header p {
