@@ -810,13 +810,16 @@ color: #4053d9;
     }
   
     .burger-menu {
-      display: block;
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: #333;
-      margin: 0;
+        display: block !important; /* ← ajoute le !important ici */
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: #333;
+        margin: 0;
     }
-  
+    .burger-menu {
+        background: red;
+    }
+      
     .nav-items {
       position: fixed;
       top: 0;
