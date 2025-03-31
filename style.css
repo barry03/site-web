@@ -1028,7 +1028,7 @@ body:not(.home) .language-switcher {
         gap: 12px;
         align-items: flex-start;
         padding-bottom: calc(32px + env(safe-area-inset-bottom));
-        margin-left: 6px;
+        margin-left: 15px;
     }
       
     /* Bouton */
@@ -1051,7 +1051,7 @@ body:not(.home) .language-switcher {
     .language-switcher {
         width: 100%;
         white-space: nowrap;
-        margin-left: 6px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
+        margin-left: 2px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
     }
     
     .custom-select-wrapper {
