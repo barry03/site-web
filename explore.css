@@ -30,13 +30,6 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
-/* Cacher les boutons sur explore.html et blog.html */
-@media screen and (min-width: 769px) {
-    body:not(.home) .nav-right,
-    body:not(.home) .language-switcher {
-      display: none;
-    }
-}
   
 .logo-img {
     height: 50px; /* ou 40px selon ton header */

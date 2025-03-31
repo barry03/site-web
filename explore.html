@@ -214,15 +214,15 @@
         const navItems = document.querySelector(".nav-items");
       
         burgerMenu.addEventListener("click", function (e) {
-          e.stopPropagation(); // Évite fermeture immédiate
+          e.stopPropagation();
           navItems.classList.toggle("open");
       
           if (navItems.classList.contains("open")) {
             document.addEventListener("click", closeMenuOnClickOutside);
-            document.body.classList.add("no-scroll"); // 🔒 Bloque le scroll
+            document.body.classList.add("no-scroll");
           } else {
             document.removeEventListener("click", closeMenuOnClickOutside);
-            document.body.classList.remove("no-scroll"); // 🔓 Rétablit le scroll
+            document.body.classList.remove("no-scroll");
           }
         });
       
@@ -234,7 +234,6 @@
           }
         }
       
-        // Fermeture du menu quand on clique sur un lien du menu
         const navLinks = document.querySelectorAll(".nav-links a");
         navLinks.forEach(link => {
           link.addEventListener("click", () => {
@@ -244,7 +243,6 @@
           });
         });
       
-        // Fermeture du menu quand on clique sur le bouton "Contactez-moi"
         const contactButton = document.getElementById("nav-contact");
         if (contactButton) {
           contactButton.addEventListener("click", () => {
@@ -254,6 +252,7 @@
           });
         }
     </script>
+      
 
 </body>
 </html>
