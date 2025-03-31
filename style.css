@@ -1095,8 +1095,13 @@ body {
         padding-right: 8px;     /* espace entre l’image et le bord */
         margin-top: -30px;      /* remonte l’image légèrement */
     }    
-
+    /*
     .hero-image {
+        display: none;
+    }
+    */
+
+    .hero-image .avatar {
         display: none;
     }
 
