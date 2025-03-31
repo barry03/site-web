@@ -952,15 +952,16 @@ body:not(.home) .language-switcher {
 
 @media screen and (max-width: 768px) {
     .navbar {
+        display: flex;
         padding: 10px 20px;
-        flex-wrap: nowrap;
+        align-items: center;
         justify-content: space-between;
     }
 
     .nav-left {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
     }   
 
     .burger-menu {
@@ -968,8 +969,8 @@ body:not(.home) .language-switcher {
         font-size: 1.8rem;
         cursor: pointer;
         color: #333;
-        margin-left: auto; /* <-- pousse le bouton tout à droite */
-        margin-right: 28px;
+        margin: 0;
+        /*margin-right: 28px;*/
     }    
 
     .nav-items {
