@@ -112,14 +112,7 @@ body:not(.home) .language-switcher {
     gap: 20px;
     width: 100%;
 }
-/*
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-left: 40px;
-}
-*/
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -138,15 +131,7 @@ body:not(.home) .language-switcher {
 .nav-links li a:hover {
     color: #7D5FB2;
 }
-/*
-.nav-right {
-    margin-left: auto;
-    margin-right: 40px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-*/
+
 .nav-right {
     display: flex;
     gap: 16px;
@@ -960,7 +945,7 @@ body:not(.home) .language-switcher {
     .nav-left {
         display: flex;
         align-items: center;
-        gap: 9px;
+        gap: 5px;
     }   
 
     .burger-menu {
@@ -1089,7 +1074,7 @@ body:not(.home) .language-switcher {
     }
     
     .hero-content {
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .hero-description {
@@ -1107,6 +1092,10 @@ body:not(.home) .language-switcher {
         padding-right: 8px;     /* espace entre l’image et le bord */
         margin-top: -30px;      /* remonte l’image légèrement */
     }    
+
+    .hero-image {
+        display: none;
+    }
 
     .hero-image .avatar {
         width: 150px;

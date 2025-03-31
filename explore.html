@@ -29,43 +29,41 @@
     </script>
   
 </head>
-<body>
+<body class="home">
     <nav class="navbar">
         <div class="nav-left">
-            <!-- Bouton burger pour mobile -->
-            <div class="burger-menu" id="burger-menu">
-                <i class="fa-regular fa-bars"></i>
-            </div>
-
-            <a href="index.html" class="logo-db">
-              <img src="images/log.png" alt="Logo site" class="logo-img">
-            </a>
+          <!-- Burger avant le logo -->
+          <div class="burger-menu" id="burger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+          <a href="index.html" class="logo-db">
+            <img src="images/log.png" alt="Logo site" class="logo-img">
+          </a>
         </div>
-
+      
         <div class="nav-items">
-            <ul class="nav-links">
-                <li><a href="#about" id="nav-about">À propos</a></li>
-                <li><a href="#competences" id="nav-skills">Compétences & Stack</a></li>
-                <li><a href="#projects" id="nav-projects">Projets</a></li>
-                <li><a id="nav-blog" href="blog.html">Blog & Veille</a></li>
-            </ul>
-
-            <div class="nav-right">
-                <a href="#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
-                <div class="language-switcher">
-                    <div class="custom-select-wrapper">
-                      <span class="globe-icon">🌐</span>
-                      <select id="language-select" class="lang-select">
-                        <option value="fr">Français</option>
-                        <option value="en">English (US)</option>
-                      </select>
-                    </div>
-                </div>    
-                  
+          <ul class="nav-links">
+            <li><a id="nav-about" href="index.html#about">À propos</a></li>
+            <li><a id="nav-skills" href="index.html#competences">Compétences & Stack</a></li>
+            <li><a id="nav-projects" href="index.html#projects">Projets</a></li>
+            <li><a id="nav-blog" href="blog.html">Blog & Veille</a></li>
+          </ul>
+      
+          <div class="nav-right">
+            <a href="index.html#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
+            <div class="language-switcher">
+              <div class="custom-select-wrapper">
+                <span class="globe-icon">🌐</span>
+                <select id="language-select" class="lang-select">
+                  <option value="fr">Français</option>
+                  <option value="en">English (US)</option>
+                </select>
+              </div>
             </div>
+          </div>
         </div>
-        
     </nav>
+      
 
     <video autoplay muted loop id="background-video">
         <source src="videos/background.mp4" type="video/mp4">
@@ -210,6 +208,52 @@
     </script>
 
     <script src="translations.js"></script>
+
+    <script>
+        const burgerMenu = document.getElementById("burger-menu");
+        const navItems = document.querySelector(".nav-items");
+      
+        burgerMenu.addEventListener("click", function (e) {
+          e.stopPropagation(); // Évite fermeture immédiate
+          navItems.classList.toggle("open");
+      
+          if (navItems.classList.contains("open")) {
+            document.addEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.add("no-scroll"); // 🔒 Bloque le scroll
+          } else {
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll"); // 🔓 Rétablit le scroll
+          }
+        });
+      
+        function closeMenuOnClickOutside(e) {
+          if (!navItems.contains(e.target) && !burgerMenu.contains(e.target)) {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
+          }
+        }
+      
+        // Fermeture du menu quand on clique sur un lien du menu
+        const navLinks = document.querySelectorAll(".nav-links a");
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
+          });
+        });
+      
+        // Fermeture du menu quand on clique sur le bouton "Contactez-moi"
+        const contactButton = document.getElementById("nav-contact");
+        if (contactButton) {
+          contactButton.addEventListener("click", () => {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
+          });
+        }
+    </script>
 
 </body>
 </html>

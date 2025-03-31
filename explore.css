@@ -86,7 +86,6 @@ html, body {
 }
 
 /* 2. Navigation */
-/* 2. Navigation */
 .navbar {
     position: fixed; /* Fixe la navbar */
     top: 0; /* Colle en haut */
@@ -94,13 +93,12 @@ html, body {
     width: 100%;
     display: flex;
     z-index: 1000;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background: white;
     padding: 10px 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     height: 60px; /* Réduction de la hauteur */
-    gap: 30px;
 }
 
 .nav-left {
@@ -108,11 +106,19 @@ html, body {
     align-items: center;
 }
 
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
-    margin-left: 40px;
+    gap: 24px;
+    align-items: center;
 }
 
 .nav-links li a {
@@ -127,11 +133,61 @@ html, body {
     color: #7D5FB2;
 }
 
-.language-switcher {
+.nav-right {
     display: flex;
-    gap: 10px;
+    gap: 16px;
+    align-items: center;
+    margin-right: 40px; /* ← éloigne le select du bord droit */
 }
+
+/* Aligner les icônes de langue */
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.globe-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 16px;
+}
+  
+.lang-select {
+    background-image: url("data:image/svg+xml,%3Csvg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding: 6px 34px 6px 32px; /* left padding pour laisser de la place au globe */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.cta-button {
+    background: #7D5FB2;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-left: 20px; /* Espace avec le menu */
+    font-size: 12px;
+}
+
+.cta-button:hover {
+    background: #563d7c;
+}
+
 /* Cacher les boutons sur explore.html et blog.html */
+body:not(.home) .nav-right,
 body:not(.home) .language-switcher {
     display: none;
 }
@@ -743,7 +799,7 @@ color: #4053d9;
     .nav-left {
         display: flex;
         align-items: center;
-        gap: 9px;
+        gap: 5px;
     }   
 
     .burger-menu {
@@ -843,5 +899,10 @@ color: #4053d9;
     
     .lang-select {
         width: 100%;
+    }
+    .no-scroll {
+        overflow: hidden;
+        height: 100vh;
+        touch-action: none;
     }
 }
