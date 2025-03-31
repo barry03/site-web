@@ -32,24 +32,38 @@
 <body>
     <nav class="navbar">
         <div class="nav-left">
+            <!-- Bouton burger pour mobile -->
+            <div class="burger-menu" id="burger-menu">
+                <i class="fa-regular fa-bars"></i>
+            </div>
+
             <a href="index.html" class="logo-db">
               <img src="images/log.png" alt="Logo site" class="logo-img">
             </a>
         </div>
 
-        <!-- Menu standard pour ordinateur -->
-        <ul class="nav-links">
-            <li><a id="nav-about" href="index.html#about">À propos</a></li>
-            <li><a id="nav-skills" href="index.html#competences">Compétences & Stack</a></li>
-            <li><a id="nav-projects" href="index.html#projects">Projets</a></li>
-            <li><a id="nav-blog" href="blog.html">Blog & Veille</a></li>
-        </ul>
+        <div class="nav-items">
+            <ul class="nav-links">
+                <li><a href="#about" id="nav-about">À propos</a></li>
+                <li><a href="#competences" id="nav-skills">Compétences & Stack</a></li>
+                <li><a href="#projects" id="nav-projects">Projets</a></li>
+                <li><a id="nav-blog" href="blog.html">Blog & Veille</a></li>
+            </ul>
 
-        <div class="language-switcher">
-            <img src="images/icons/fr-flag.png" id="fr-btn" class="lang-btn" alt="Français">
-            <img src="images/icons/en-flags.png" id="en-btn" class="lang-btn" alt="English">
+            <div class="nav-right">
+                <a href="#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
+                <div class="language-switcher">
+                    <div class="custom-select-wrapper">
+                      <span class="globe-icon">🌐</span>
+                      <select id="language-select" class="lang-select">
+                        <option value="fr">Français</option>
+                        <option value="en">English (US)</option>
+                      </select>
+                    </div>
+                </div>    
+                  
+            </div>
         </div>
-        
         
     </nav>
 

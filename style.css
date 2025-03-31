@@ -949,7 +949,6 @@ body:not(.home) .language-switcher {
 }
 
 
-
 @media screen and (max-width: 768px) {
     .navbar {
         display: flex;
@@ -961,7 +960,7 @@ body:not(.home) .language-switcher {
     .nav-left {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 9px;
     }   
 
     .burger-menu {
