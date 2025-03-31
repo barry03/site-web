@@ -150,23 +150,6 @@
                     </a>
                 </div>
             </div>            
-
-            <!-- Scripts Mermaid & Lottie -->
-            <script type="module">
-                import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
-                mermaid.initialize({ startOnLoad: true });
-            </script>
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
-            <script>
-                var animation = lottie.loadAnimation({
-                    container: document.getElementById("ci-cd-animation"),
-                    renderer: "svg",
-                    loop: true,
-                    autoplay: true,
-                    path: "https://assets3.lottiefiles.com/packages/lf20_kqshxuij.json" 
-                });                  
-            </script>
         </div>
     </section>    
 
@@ -201,12 +184,22 @@
         </div>
 
     </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            mermaid.initialize({ startOnLoad: true });
-        });
+
+    <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ startOnLoad: true });
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById("ci-cd-animation"),
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            path: "https://assets3.lottiefiles.com/packages/lf20_kqshxuij.json" 
+        });                  
+    </script>
     <script src="translations.js"></script>
 
     <script>
@@ -251,8 +244,14 @@
             document.body.classList.remove("no-scroll");
           });
         }
-    </script>      
       
-
+        // Ne déclenche Mermaid que s’il est présent
+        document.addEventListener("DOMContentLoaded", function () {
+          if (typeof mermaid !== "undefined") {
+            mermaid.initialize({ startOnLoad: true });
+          }
+        });
+    </script>
+ 
 </body>
 </html>
