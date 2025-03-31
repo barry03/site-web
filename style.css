@@ -1027,8 +1027,8 @@ body:not(.home) .language-switcher {
         flex-direction: column;
         gap: 12px;
         align-items: flex-start;
+        padding-left: 4px; /* 👈 ajuste cette valeur jusqu’à ce que ça s’aligne */
         padding-bottom: calc(32px + env(safe-area-inset-bottom));
-        margin-left: 15px;
     }
       
     /* Bouton */
@@ -1051,7 +1051,7 @@ body:not(.home) .language-switcher {
     .language-switcher {
         width: 100%;
         white-space: nowrap;
-        margin-left: 2px; /* ajuste jusqu’à ce que ce soit bien aligné visuellement */
+        /*margin-left: 2px;*/
     }
     
     .custom-select-wrapper {
