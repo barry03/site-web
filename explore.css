@@ -136,14 +136,6 @@ body {
     align-items: center;
 }
 
-.nav-items {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-}
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -804,6 +796,9 @@ color: #4053d9;
     .nav-items {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
     }
     
     .burger-menu {
