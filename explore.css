@@ -800,16 +800,16 @@ color: #4053d9;
     font-weight: bold;
 }
 
-/* Par défaut (desktop) */
-.nav-items {
-    display: flex;
-    align-items: center;
+@media screen and (min-width: 769px) {
+    .nav-items {
+      display: flex;
+      align-items: center;
+    }
+    
+    .burger-menu {
+      display: none;
+    }
 }
-
-.burger-menu {
-    display: none;
-}
-
 
 /* Menu Mobile*/
 @media screen and (max-width: 768px) {
