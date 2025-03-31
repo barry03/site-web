@@ -876,12 +876,12 @@ color: #4053d9;
       
     /* 👇 Affichage des boutons en bas du drawer */
     .nav-right {
-        margin-top: auto; /* 👈 pousse vers le bas du drawer */
+        margin-top: auto; /* pousse vers le bas du drawer */
         display: flex;
         flex-direction: column;
         gap: 12px;
         align-items: flex-start;
-        padding-left: 4px; /* 👈 ajuste cette valeur jusqu’à ce que ça s’aligne */
+        padding-left: 4px; /* ajuste cette valeur jusqu’à ce que ça s’aligne */
         padding-bottom: calc(32px + env(safe-area-inset-bottom));
     }
       

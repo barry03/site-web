@@ -948,7 +948,7 @@ body {
     .nav-left {
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 8px;
     }   
 
     .burger-menu {
@@ -959,6 +959,13 @@ body {
         margin: 0;
         /*margin-right: 28px;*/
     }    
+
+    .burger-menu i {
+        font-weight: 300;     /* allège */
+        opacity: 0.7;         /* léger flou visuel */
+        transform: scaleY(0.85); /* rend les traits un peu plus fins */
+    }
+      
 
     .nav-items {
         display: none; /* CACHÉ PAR DÉFAUT */
