@@ -21,9 +21,11 @@ body {
     padding-top: 80px;
 }
 /* Cacher les boutons sur explore.html et blog.html */
-body:not(.home) .nav-right,
-body:not(.home) .language-switcher {
-    display: none;
+@media screen and (min-width: 769px) {
+    body:not(.home) .nav-right,
+    body:not(.home) .language-switcher {
+      display: none;
+    }
 }
 
 /* Overlay de bienvenue */
