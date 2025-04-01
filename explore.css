@@ -1,8 +1,3 @@
-* {
-    outline: 1px solid red !important;
-}
-
-  
 html {
     scroll-behavior: smooth;
 }
@@ -202,6 +197,452 @@ body {
     padding: 20px;
 }
 
+/* En-tête stylisé */
+.section-header {
+    text-align: center;
+    margin-top: -20px; /* Remonte la section */
+    padding-top: 5px; /* Ajuste le padding pour éviter l’écrasement */
+}
+
+.section-header h1 {
+    height: 3vh; /* Ajuste la hauteur */
+    max-height: 100px; /* Bloque la hauteur max */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 40px; /* Remonte encore plus le titre */
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Conteneur des cartes */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 0px;
+}
+
+/* Cartes stylisées */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Évite le débordement */
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #222;
+}
+
+.emoji {
+    margin-right: 8px;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Liste stylisée */
+.styled-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.styled-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    color: #555;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+.styled-list li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.styled-list li a:hover {
+    color: #0056b3;
+}
+
+.styled-list li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+}
+
+/* Supprime le ✔️ uniquement pour les éléments ayant la classe "no-check" */
+.styled-list.no-check li::before {
+    content: none !important;
+}
+.no-check {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover; /* Permet d’ajuster sans déformation */
+    opacity: 0.2; /* Ajuster la transparence pour que le contenu reste lisible */
+}
+
+
+.back-button {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #0056b3;
+}
+
+.article-container,
+.hobbies-container,
+.external-articles {
+    flex: 1 1 30%; /* Chaque bloc occupe ~1/3 avec flexibilité */
+    max-width: 32%;
+}
+
+/* Conteneur principal */
+.blog-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px; /* Espacement entre les deux blocs */
+    max-width: 100%;
+    margin-bottom: 15px;
+    margin-top: 40px; /* Réduit l'espace sous les articles */
+}
+/* Bloc Article */
+.article-container {
+    flex: 2; /* Plus de place pour le contenu */
+    background: transparent !important;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: none !important;
+    min-height: 300px;
+    border: none !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+/* Bloc "Mes articles externes" */
+.external-articles {
+    flex: 1; /* Moins large */
+    background: transparent !important;
+    border-radius: 10px;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 20px;
+    min-height: 300px;
+}
+
+/* Grille des articles externes */
+.external-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes */
+    gap: 15px; /* Espacement entre les articles */
+}
+
+/* Liens des articles externes */
+.external-articles a {
+    display: block;
+    font-size: 0.95rem;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.external-articles a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Conteneur des articles externes */
+#external-articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Boutons "Voir plus" bien positionnés */
+.external-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Style des boutons Voir plus */
+.btn-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-link:hover {
+    color: #0056b3; /* Couleur plus foncée au survol */
+}
+
+/* Ajustement des cartes pour qu'elles s'alignent bien */
+#veille-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -30px; /* Remonte légèrement */
+}
+.veille-cards {
+    display: flex;
+    flex-wrap: wrap; /* Permet le passage à la ligne si besoin */
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    overflow-x: auto;
+    margin-top: -30px;
+}
+/*  Cartes de veille */
+.veille-cards .card {
+    min-width: 250px;
+    max-width: 300px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Ajustement des cartes */
+#veille-container .card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+/* Icônes ajustées */
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dashboard-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dashboard-card {
+    background-color: #f4f7ff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    min-width: 350px;
+    max-width: 480px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-gallery img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.dashboard-card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+.dashboard-card h4 {
+    margin-top: 12px;
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+}
+/* Bouton interactif */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    width: auto;
+    padding: 10px 15px;
+    background-color: #5468ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    min-width: 150px;
+}
+
+.btn:hover {
+    background-color: #4053d9;
+}
+  
+.btn:hover {
+    background-color: #4053d9;
+}
+  
+/* Bloc de code déploiement */
+pre {
+    background-color: #f4f7ff;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: hidden !important; /* Supprime le défilement horizontal */
+    margin-top: 20px;
+}
+
+pre code {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Ajustement du cadre CI/CD */
+.card-ci-cd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Ajuste pour être aligné avec les autres blocs */
+    margin: auto;
+}
+
+.ci-cd-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.mermaid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px; /* Ajuste selon la largeur souhaitée */
+    margin: auto;
+    overflow: hidden !important; /* Cache tout débordement */
+    transform: none; /* Supprime le zoom qui crée un débordement */
+}
+
+/* Effet de zoom au survol */
+.mermaid:hover {
+    transform: scale(1.05) !important; /* Léger zoom au survol */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Supprime le défilement Mermaid */
+.ci-cd-diagram-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: hidden !important; /* Empêche le scroll horizontal */
+    overflow-y: hidden !important; /* Empêche le scroll vertical */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustement du diagramme */
+.ci-cd-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* Centrage du bouton */
+.ci-cd-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ci-cd-diagram pre.mermaid {
+    font-size: 1.6em !important; /* Forçage de la taille */
+    min-height: 500px !important; /* Plus de hauteur */
+    width: 100% !important;
+    max-width: 1100px !important; /* Largeur augmentée */
+    overflow: hidden !important; /* Supprime le scroll vertical */
+    /*transform: scale(1.2) !important;*/ /* Zoom forcé */
+    transform: none !important; /* Enlève le zoom qui dépasse */
+}
+
+/* Ajustement du bouton */
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
 /* Correction du footer */
 .footer {
     width: 100%; /* Assure que le footer couvre toute la largeur */
@@ -331,6 +772,12 @@ body {
     font-weight: bold;
 }
 
+/* En dehors des media queries = appliqué partout */
+.nav-right,
+.language-switcher {
+  display: none;
+}
+
 
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
@@ -430,6 +877,7 @@ body {
     .language-switcher {
         width: 100%;
         white-space: nowrap;
+        padding-left: 4px;
     }
   
     .custom-select-wrapper {
@@ -458,10 +906,6 @@ body {
     }
   
     .burger-menu {
-      display: none;
-    }
-    body:not(.home) .nav-right,
-    body:not(.home) .language-switcher {
       display: none;
     }
 }
