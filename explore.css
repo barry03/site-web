@@ -19,7 +19,6 @@ body {
     padding-top: 80px;
 }
   
-  
 .logo-img {
     height: 50px; /* ou 40px selon ton header */
     width: auto;
@@ -305,20 +304,6 @@ body {
     padding-left: 0 !important;
     margin-left: 0 !important;
 }
-
-#background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    object-fit: cover; /* Permet d’ajuster sans déformation */
-    opacity: 0.2; /* Ajuster la transparence pour que le contenu reste lisible */
-}
-
 
 .back-button {
     text-decoration: none;
@@ -778,7 +763,20 @@ pre code {
   display: none;
 }
 
-
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.2; /* ou ajuste selon le contraste */
+    pointer-events: none; /* pour éviter que ça bloque les clics */
+}
+  
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
@@ -801,9 +799,6 @@ pre code {
         cursor: pointer;
         color: #333;
         margin: 0;
-    }
-    .burger-menu {
-        background: red;
     }
       
     .nav-items {
