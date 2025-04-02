@@ -801,15 +801,19 @@ pre code {
 @media screen and (max-width: 768px) {
     .navbar {
         display: flex;
-        padding: 10px 20px;
+        padding: 10px 12px;
         align-items: center;
         justify-content: space-between;
     }
   
     .nav-left {
-        display: flex;
-        align-items: center;
-        gap: 5px;
+        flex-shrink: 1;
+        max-width: 50%;
+        overflow: hidden;
+    }
+    .logo-db img {
+        max-width: 100%;
+        height: auto;
     }
   
     .burger-menu {
