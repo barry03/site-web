@@ -18,6 +18,17 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
   
 .logo-img {
     height: 50px; /* ou 40px selon ton header */
@@ -939,26 +950,36 @@ pre code {
         font-size: 0.95rem;
     }
     
+    /* 👉 Responsive dashboard */
     .dashboard-gallery {
-        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
         gap: 16px;
-        margin-top: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
-    
+
     .dashboard-card {
-        width: 100%;
-        max-width: 100%;
-        padding: 12px;
+        min-width: 280px;
+        max-width: 90%;
+        flex: 0 0 auto;
     }
-    
-    .dashboard-card img {
-        width: 100%;
-        border-radius: 8px;
+
+    .ci-cd-diagram-container {
+        overflow-x: auto;
     }
-    
-    .dashboard-card h4 {
-        font-size: 1rem;
-        margin-top: 8px;
+
+    .ci-cd-diagram-container pre {
+        min-width: 600px;
+    }
+
+    .mermaid {
+        overflow: auto !important;
+    }
+
+    .card-ci-cd {
+        padding: 16px;
     }
     
     .btn,
@@ -966,16 +987,6 @@ pre code {
         width: 100%;
         text-align: center;
         margin-top: 16px;
-    }
-    
-    .ci-cd-diagram-container {
-        overflow-x: auto;
-        padding: 12px;
-    }
-    
-    .ci-cd-diagram-container pre {
-        font-size: 0.8rem !important;
-        min-width: 600px;
     }
     
     .ci-cd-button {
