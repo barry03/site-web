@@ -32,21 +32,24 @@ video {
   max-width: 100%;
   height: auto;
 }
-* {
-    outline: 1px solid red;
+body {
+    outline: 1px solid blue;
 }
-  
-  
-  
+.navbar,
+.nav-left,
+.logo-db img {
+    outline: 1px dashed red;
+}
+.article-page .main-container {
+    position: relative;
+    top: -95px; /* Remonte le contenu de 30px */
+}
+
+
 .logo-img {
     height: 50px; /* ou 40px selon ton header */
     width: auto;
     display: block;
-}
-
-.article-page .main-container {
-    position: relative;
-    top: -95px; /* Remonte le contenu de 30px */
 }
 
 .logo-db {
@@ -801,19 +804,23 @@ pre code {
 @media screen and (max-width: 768px) {
     .navbar {
         display: flex;
-        padding: 10px 12px;
+        padding: 10px 16px;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
     }
   
     .nav-left {
-        flex-shrink: 1;
-        max-width: 50%;
+        display: flex;
+        align-items: center;
+        max-width: 50%; /* ← force le logo à ne pas dépasser */
         overflow: hidden;
     }
     .logo-db img {
-        max-width: 100%;
+        max-width: 120px; /* ← taille raisonnable pour mobile */
         height: auto;
+        display: block;
     }
   
     .burger-menu {
