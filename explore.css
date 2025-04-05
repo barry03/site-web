@@ -917,7 +917,7 @@ pre code {
         top: 0;
         left: 0;
         height: 100%;
-        width: 60vw; /* drawer plus fin */
+        width: 50vw; /* drawer plus fin */
         background: white;
         display: flex;
         flex-direction: column;
@@ -974,7 +974,7 @@ pre code {
         gap: 12px;
         align-items: flex-start;
         padding-left: 4px; /* 👈 ajuste cette valeur jusqu’à ce que ça s’aligne */
-        padding-bottom: calc(26px + env(safe-area-inset-bottom));
+        padding-bottom: calc(30px + env(safe-area-inset-bottom));
     }
   
     /* Bouton */
@@ -1005,17 +1005,6 @@ pre code {
     
     .lang-select {
         width: 100%;
-    }
-    .language-switcher {
-        border: 2px dashed red;
-        background: #fff;
-    }
-      
-    .custom-select-wrapper,
-    .lang-select {
-        background: #f0f0f0;
-        border: 1px solid #ccc;
-        display: block;
     }
       
     /*
