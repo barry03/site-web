@@ -19,13 +19,13 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
-/*
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-*/
+
 /*
 html {
     scroll-behavior: smooth;
