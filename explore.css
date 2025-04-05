@@ -19,12 +19,13 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
+/*
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-  
+*/
 /*
 html {
     scroll-behavior: smooth;
@@ -851,16 +852,15 @@ pre code {
     body, html {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
     }    
-    
+    /*
     img,
     video {
         max-width: 100% !important;
         height: auto;
         display: block;
     }
-    
+    */
     .navbar {
         display: flex;
         padding: 10px 20px;
