@@ -8,7 +8,13 @@ body, html {
     margin: 0;
     padding: 0;
 }
-  
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    touch-action: none;
+}
+
 body {
     font-size: 14px;
     min-height: 100vh;
@@ -911,6 +917,7 @@ pre code {
       
     .nav-items {
         position: fixed;
+        box-sizing: border-box;
         top: 0;
         left: 0;
         height: 100%;
@@ -928,7 +935,7 @@ pre code {
         backdrop-filter: none !important;
         mix-blend-mode: normal !important;
         min-height: 100vh;
-    
+        max-width: 100%;
         overflow-y: auto;
         will-change: transform;
     }
@@ -954,6 +961,9 @@ pre code {
         width: 100%;
         padding-left: 0;
         white-space: nowrap;
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: #333 !important;
     }
     /*
     .nav-items {
@@ -1207,6 +1217,73 @@ pre code {
         line-height: 1.2;
         display: inline-block;
     }
+    /*footer*/
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 16px;
+        text-align: center;
+        gap: 24px;
+    }
+      
+    .footer-left,
+    .footer-right {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+    }
+      
+    .footer-left h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+      
+    .footer-left p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 12px;
+    }
+      
+    .footer-icons {
+        justify-content: center;
+        gap: 16px;
+        padding-left: 0;
+    }
+      
+    .footer-icons a i {
+        font-size: 1.6rem;
+    }
+      
+    .footer-right {
+        align-items: center;
+    }
+      
+    .footer-right p {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+      
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+      
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+      
+    .footer-links li a {
+        color: #5468ff;
+        font-size: 0.95rem;
+        text-decoration: none;
+    }
+      
+    .footer-links li a:hover {
+        color: #4053d9;
+    }
+      
       
 }
   
