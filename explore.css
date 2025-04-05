@@ -32,19 +32,11 @@ video {
   max-width: 100%;
   height: auto;
 }
-body {
-    outline: 1px solid blue;
-}
-.navbar,
-.nav-left,
-.logo-db img {
-    outline: 1px dashed red;
-}
+
 .article-page .main-container {
     position: relative;
     top: -95px; /* Remonte le contenu de 30px */
 }
-
 
 .logo-img {
     height: 50px; /* ou 40px selon ton header */
