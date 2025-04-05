@@ -207,7 +207,7 @@ const translations = {
         "dashboard-country-title": "Downloads by Country",
         "dashboard-project-title": "Most Downloaded PyPI Projects",
         "btn-dashboard": "View Interactive Dashboard",
-        "ci-cd-title": "Methodology & CI/CD",
+        "ci-cd-title": "⚙️ Methodology & CI/CD",
         "ci-cd-text": "Fully automated workflow managed via GitLab CI/CD and Docker, with a clear separation between dev and prod environments.",
         "btn-ci-cd": "View CI/CD Logs",
 
