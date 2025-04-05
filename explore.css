@@ -23,10 +23,14 @@ body {
   box-sizing: border-box;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
+html {
+    overflow-x: hidden;
 }
+  
+body {
+    overflow-x: visible; /* ← laisse le drawer s'afficher */
+}
+  
 img,
 video {
   max-width: 100%;
@@ -799,12 +803,13 @@ pre code {
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
+    /*
     body, html {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }    
-    
+    */
     .main-container,
     .section-header,
     .card-container,
@@ -834,22 +839,38 @@ pre code {
         align-items: center;
         gap: 8px;
     }
-
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 24px;
+        height: 18px;
+        cursor: pointer;
+    }
+      
+    .burger-menu span {
+        height: 2px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 2px;
+    }
+      
+    /*
     .burger-menu {
         display: block;
         font-size: 1.8rem;
         cursor: pointer;
         color: #333;
         margin: 0;
-        /*margin-right: 28px;*/
+        margin-right: 28px;
     }    
 
     .burger-menu i {
-        font-weight: 300;     /* allège */
-        opacity: 0.7;         /* léger flou visuel */
-        transform: scaleY(0.85); /* rend les traits un peu plus fins */
+        font-weight: 300;     
+        opacity: 0.7;         
+        transform: scaleY(0.85); 
     }
-
+    */
     .nav-items {
         display: none; /* CACHÉ PAR DÉFAUT */
     }
@@ -897,21 +918,13 @@ pre code {
         padding-left: 0;
         white-space: nowrap;
     }
-    .nav-links a {
-        color: red !important;
-        background: yellow !important;
-        opacity: 1 !important;
-        z-index: 9999;
-        position: relative;
-    }
+    /*
     .nav-items {
         filter: none !important;
         backdrop-filter: none !important;
         mix-blend-mode: normal !important;
     }
-      
-      
-      
+    */
     /* 👇 Affichage des boutons en bas du drawer */
     .nav-right {
         margin-top: auto; /* 👈 pousse vers le bas du drawer */
