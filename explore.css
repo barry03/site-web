@@ -974,7 +974,7 @@ pre code {
         gap: 12px;
         align-items: flex-start;
         padding-left: 4px; /* 👈 ajuste cette valeur jusqu’à ce que ça s’aligne */
-        padding-bottom: calc(36px + env(safe-area-inset-bottom));
+        padding-bottom: calc(26px + env(safe-area-inset-bottom));
     }
   
     /* Bouton */
