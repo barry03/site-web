@@ -783,6 +783,7 @@ pre code {
   display: none;
 }
 
+/*
 #background-video {
     position: fixed;
     right: 0;
@@ -793,10 +794,10 @@ pre code {
     height: auto;
     z-index: -1;
     object-fit: cover;
-    opacity: 0.2; /* ou ajuste selon le contraste */
-    pointer-events: none; /* pour éviter que ça bloque les clics */
+    opacity: 0.2; 
+    pointer-events: none; 
 }
-  
+*/ 
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
@@ -807,15 +808,6 @@ pre code {
         overflow-x: hidden;
     }    
     */
-    .main-container,
-    .section-header,
-    .card-container,
-    .card,
-    .navbar,
-    .nav-items {
-        max-width: 100vw !important;
-        /*overflow-x: hidden !important;*/
-    }
     /*
     img,
     video {
@@ -972,204 +964,6 @@ pre code {
         touch-action: none;
     }
     */
-    .nav-links a {
-        border: 1px dashed red;
-        color: black !important;
-        background: yellow !important;
-        z-index: 99999;
-        position: relative;
-    }
-    
-
-    .main-container {
-        padding: 16px;
-    }
-    
-    .section-header {
-        padding: 0 12px;
-        text-align: center;
-    }
-    
-    .section-header h1 {
-        font-size: 1.3rem;
-        line-height: 1.4;
-        margin-bottom: 10px;
-        height: auto;
-        max-height: none;
-    }
-    
-    .section-header p {
-        font-size: 0.95rem;
-    }
-
-    /* Supprimer tout overflow parasite */
-    .card-container,
-    .main-container,
-    .section-header {
-        overflow: visible !important;
-    }
-    
-    .card-container {
-        gap: 20px;
-        padding: 0;
-        margin: 0;
-        flex-direction: column;
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    .card {
-        margin-left: auto;
-        margin-right: auto;
-        width: calc(100% - 32px); /* ou padding horizontal total */
-        max-width: 600px;
-        box-sizing: border-box;
-    }
-    
-    .card h2 {
-        font-size: 1.2rem;
-        margin-bottom: 12px;
-    }
-    
-    .card p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-    
-    .styled-list {
-        padding-left: 0;
-        font-size: 0.95rem;
-    }
-    
-    .styled-list li {
-        padding-left: 20px;
-        font-size: 0.95rem;
-        word-break: break-word;
-        overflow-wrap: break-word;
-    }
-
-    /* Applique-le uniquement à cette section si besoin */
-    #dashboards-section {
-        overflow: hidden;
-        padding: 16px;
-        box-sizing: border-box;
-    }
-
-    /* Galerie scrollable horizontale */
-    .dashboard-gallery {
-        display: flex;
-        gap: 16px;
-        flex-direction: row;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding: 0 10px;
-        gap: 16px;
-        scroll-padding: 10px;
-        /*margin: 0 -8px;*/
-    }
-    
-    .dashboard-card {
-        flex: 0 0 90%; /* ← largeur de chaque capture */
-        scroll-snap-align: start;
-        background: #f9f9f9;
-        border-radius: 12px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-        padding: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }    
-    
-    .dashboard-card img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        object-fit: contain; /* ← au cas où l’image dépasse */
-        display: block;
-    }
-      
-    .dashboard-card h4 {
-        font-size: 0.95rem;
-        text-align: center;
-        margin-top: 12px;
-        white-space: nowrap;       /* ← évite le retour à la ligne trop tôt */
-        overflow: hidden;          /* ← cache les débordements */
-        text-overflow: ellipsis;   /* ← ajoute des "..." si ça déborde */
-    }
-
-    /* Bloc global CI/CD */
-    .ci-cd-card {
-        padding: 18px;
-        border-radius: 10px;
-        background: white;
-        margin: 0 auto;
-        width: calc(100% - 32px);
-        box-sizing: border-box;
-        max-width: 600px;
-    }
-    
-    /* Texte CI/CD */
-    .ci-cd-card p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        text-align: left;
-    }
-    
-    /* Commande */
-    .deploy-command {
-        margin-top: 16px;
-    }
-    
-    .deploy-command pre {
-        background: #f4f4f4;
-        padding: 10px;
-        border-radius: 6px;
-        font-size: 0.9rem;
-        overflow-x: auto;
-    }
-    
-    /* Diagramme */
-    .ci-cd-diagram-container {
-        overflow-x: auto;
-        margin-top: 16px;
-    }
-    
-    .ci-cd-diagram-container pre.mermaid {
-        min-width: 600px;
-        font-size: 1rem !important;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-    
-    /* Bouton */
-    .ci-cd-button {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .btn-primary {
-        width: 100%;
-        max-width: 400px;
-        font-size: 1rem;
-        padding: 10px 16px;
-        display: inline-block;
-        text-align: center;
-        border-radius: 8px;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-    }
-    
-    .btn-primary:hover {
-        background-color: #0056b3;
-    }
-    
-
-    .emoji {
-        font-family: system-ui, 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
-        font-size: 1.4rem;
-        line-height: 1.2;
-        display: inline-block;
-    }
       
 }
   
