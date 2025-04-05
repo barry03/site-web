@@ -14,7 +14,7 @@ const translations = {
         "hero-btn-explore": "Pourquoi moi ?",
         
         // compétences
-        "skills-title": "Compétences & Stack Technique",
+        "skills-title": "🧠 Compétences & Stack Technique",
         "skills-subtitle": "Mes Compétences",
         "skill-1": "📊 Modélisation & Data Processing",
         "skill-2": "🔄 Développement de pipelines ETL",
@@ -24,7 +24,7 @@ const translations = {
         "stack-title": "Stack Technique",
 
         // PROJETS Section
-        "projects-title": "Projets",
+        "projects-title": "🗂️ Projets",
         "project-1-title": "Oncopole Claudis Rigaud",
         "project-1-description": "Optimisation et structuration des données pour la recherche en oncologie.",
         "project-2-title": "Aristid Retail Technology",
@@ -157,7 +157,7 @@ const translations = {
         "hero-btn-explore": "Why me?",
 
         // COMPETENCES Section
-        "skills-title": "Skills & Technical Stack",
+        "skills-title": "🧠 Skills & Technical Stack",
         "skills-subtitle": "My Skills",
         "skill-1": "📊 Modeling & Data Processing",
         "skill-2": "🔄 ETL Pipeline Development",
@@ -167,7 +167,7 @@ const translations = {
         "stack-title": "Technical Stack",
 
         // PROJETS Section
-        "projects-title": "Projects",
+        "projects-title": "🗂️ Projects",
         "project-1-title": "Oncopole Claudis Rigaud",
         "project-1-description": "Optimization and structuring of data for oncology research.",
         "project-2-title": "Aristid Retail Technology",

@@ -37,11 +37,17 @@ body {
 }
 .project-title {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center; /* ← centre le contenu horizontalement */
     gap: 6px;
+    text-align: center;
     font-weight: bold;
     font-size: 1.05rem;
+    margin-top: 8px;
+    margin-bottom: 4px;
 }
+  
   
 /* Overlay de bienvenue */
 #welcome-overlay {
