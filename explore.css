@@ -26,11 +26,10 @@ body {
     padding-top: 80px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+* {
+    box-sizing: border-box;
+  }
+
 
 /*
 html {
@@ -975,16 +974,17 @@ pre code {
     }
     */
     /* 👇 Affichage des boutons en bas du drawer */
+    /*
     .nav-right {
-        margin-top: auto; /* 👈 pousse vers le bas du drawer */
+        margin-top: auto;
         display: flex;
         flex-direction: column;
         gap: 12px;
         align-items: flex-start;
-        padding-left: 4px; /* 👈 ajuste cette valeur jusqu’à ce que ça s’aligne */
+        padding-left: 4px; 
         padding-bottom: calc(34px + env(safe-area-inset-bottom));
     }
-  
+    */
     /* Bouton */
     .cta-button {
         font-size: 0.9rem;
@@ -997,7 +997,7 @@ pre code {
         text-decoration: none;
         transition: background 0.3s;
     }
-    
+    /*
     .cta-button:hover {
         background: #563d7c;
     }
@@ -1014,7 +1014,7 @@ pre code {
     .lang-select {
         width: 100%;
     }
-      
+    */ 
     /*
     .no-scroll {
         overflow: hidden;
