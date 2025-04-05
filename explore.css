@@ -854,11 +854,12 @@ pre code {
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
-    
+    /*
     body, html {
         width: 100%;
         max-width: 100%;
-    }    
+    }   
+    */ 
     /*
     img,
     video {
@@ -911,10 +912,11 @@ pre code {
         transform: scaleY(0.85); 
     }
     */
+    /*
     .nav-items {
-        display: none; /* CACHÉ PAR DÉFAUT */
+        display:
     }
-      
+    */ 
     .nav-items {
         position: fixed;
         box-sizing: border-box;
