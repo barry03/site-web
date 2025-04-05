@@ -775,9 +775,8 @@ pre code {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* aligne à droite */
-    padding-right: 60px;   /* ajuste l'espace au bord */
-    text-align: right;
+    align-items: flex-end; /* reste aligné à droite */
+    text-align: center;    /* mais texte centré */
 }
   
 
@@ -808,15 +807,11 @@ pre code {
     list-style: none;
     padding: 0;
     margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* ✅ aligne tous les enfants à droite */
-    text-align: right;      /* ✅ texte aligné à droite aussi */
+    align-items: center;
 }
 
 .footer-links li {
     margin-bottom: 12px;
-    width: 100%;
 }
 
 .footer-links li a {
@@ -824,7 +819,6 @@ pre code {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease-in;
-    display: inline-block;
 }
 
 .footer-links li a:hover {
