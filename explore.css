@@ -1028,7 +1028,7 @@ pre code {
         padding: 16px;
         max-width: 1100px;
         width: 100%;
-        box-sizing: border-box;
+        /*box-sizing: border-box;*/
     }
       
     .section-header,
@@ -1037,7 +1037,7 @@ pre code {
     .navbar,
     .nav-items {
         max-width: 100%;
-        box-sizing: border-box;
+        /*box-sizing: border-box;*/
     }
       
     .section-header {
