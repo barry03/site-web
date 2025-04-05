@@ -112,6 +112,47 @@
 
                 <a id="btn-dashboard" href="https://pypi-monitoring-pipelines-tkwvu4x8htfzernenaefap.streamlit.app/" class="btn" target="_blank">Voir le Dashboard interactif</a>
             </div>
+            
+            <!-- Méthodologie CI/CD avec animation & lien GitLab -->
+            <div class="card ci-cd-card">
+                <h2 id="ci-cd-title"><span class="emoji">⚙️</span> Méthodologie & CI/CD</h2>
+                <p id="ci-cd-text">
+                    Workflow entièrement automatisé et géré via GitLab CI/CD et Docker, avec séparation nette des environnements dev et prod.
+                </p>
+                
+                <!-- Commande affichée bien visible -->
+                <div class="deploy-command">
+                    <pre><code>./deploy.sh prod</code></pre>
+                </div>
+            
+                <!-- Conteneur du schéma Mermaid -->
+                <div class="ci-cd-diagram-container">
+                    <pre class="mermaid">
+                        graph LR
+                          A[Commit sur dev] -->|Trigger| B[Build Docker Image]
+                          B -->|Push to Registry| C[Docker Hub / GCP Artifact Registry]
+                          C -->|Merge Request Validé| D[Merge vers main]
+                          D -->|Trigger Déploiement| E[Déploiement sur GCP Cloud Run]
+                          E -->|🚀 App en ligne| F[Validation & Monitoring]
+            
+                          classDef success fill:#28a745,stroke:#fff,stroke-width:2px,color:#fff;
+                          classDef process fill:#007bff,stroke:#fff,stroke-width:2px,color:#fff;
+                          classDef warning fill:#ffc107,stroke:#fff,stroke-width:2px,color:#fff;
+            
+                          class A,B,C success;
+                          class D process;
+                          class E,F warning;
+                    </pre>
+                </div>
+            
+                <!-- Bouton aligné proprement -->
+                <div class="ci-cd-button">
+                    <a id="btn-ci-cd" href="https://gitlab.com/barrydjoulde/pypi-monitoring-pipeline/-/pipelines" target="_blank" class="btn-primary">
+                        Voir les logs CI/CD
+                    </a>
+                </div>
+            </div>            
+
         </div>
     </section>    
 

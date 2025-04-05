@@ -833,18 +833,6 @@ pre code {
         align-items: center;
         gap: 8px;
     }
-    /*
-    .logo-img {
-        max-width: 120px;
-        height: auto;
-    }
-      
-    .logo-db {
-        max-width: 130px;
-        display: block;
-        overflow: hidden;
-    }
-    */
 
     .burger-menu {
         display: block;
@@ -1017,8 +1005,6 @@ pre code {
         overflow-wrap: break-word;
     }
 
-    /* Étendre un peu cette carte en particulier */
-    /* Étend un peu la carte qui contient la galerie */
     /* Applique-le uniquement à cette section si besoin */
     #dashboards-section {
         overflow: hidden;
@@ -1043,7 +1029,7 @@ pre code {
     .dashboard-card {
         flex: 0 0 90%; /* ← largeur de chaque capture */
         scroll-snap-align: start;
-        background: #fff;
+        background: #f9f9f9;
         border-radius: 12px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         padding: 12px;
@@ -1066,6 +1052,74 @@ pre code {
         overflow: hidden;          /* ← cache les débordements */
         text-overflow: ellipsis;   /* ← ajoute des "..." si ça déborde */
     }
+
+    /* Bloc global CI/CD */
+    .ci-cd-card {
+        padding: 18px;
+        border-radius: 10px;
+        background: white;
+        margin: 0 auto;
+        width: calc(100% - 32px);
+        box-sizing: border-box;
+        max-width: 600px;
+    }
+    
+    /* Texte CI/CD */
+    .ci-cd-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    /* Commande */
+    .deploy-command {
+        margin-top: 16px;
+    }
+    
+    .deploy-command pre {
+        background: #f4f4f4;
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        overflow-x: auto;
+    }
+    
+    /* Diagramme */
+    .ci-cd-diagram-container {
+        overflow-x: auto;
+        margin-top: 16px;
+    }
+    
+    .ci-cd-diagram-container pre.mermaid {
+        min-width: 600px;
+        font-size: 1rem !important;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* Bouton */
+    .ci-cd-button {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .btn-primary {
+        width: 100%;
+        max-width: 400px;
+        font-size: 1rem;
+        padding: 10px 16px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 8px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    
 
     .emoji {
         /*margin-right: 8px;*/
