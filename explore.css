@@ -803,6 +803,37 @@ pre code {
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
+    body, html {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .main-container,
+    .section-header,
+    .card-container,
+    .card,
+    .dashboard-gallery,
+    .dashboard-card,
+    .ci-cd-diagram-container,
+    .navbar,
+    .nav-items {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+    
+    img,
+    video {
+        max-width: 100% !important;
+        height: auto;
+        display: block;
+    }
+    
+    .styled-list li {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
     .navbar {
         display: flex;
         padding: 10px 20px;
@@ -1003,16 +1034,6 @@ pre code {
         min-width: 280px;
         max-width: 90%;
         flex: 0 0 auto;
-    }
-
-    .card-container,
-    .card,
-    .dashboard-gallery,
-    .dashboard-card,
-    .section-header {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
     }
 
     .dashboard-gallery {
