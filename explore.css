@@ -972,6 +972,15 @@ pre code {
         touch-action: none;
     }
     */
+    .nav-links a {
+        border: 1px dashed red;
+        color: black !important;
+        background: yellow !important;
+        z-index: 99999;
+        position: relative;
+    }
+    
+
     .main-container {
         padding: 16px;
     }
@@ -992,6 +1001,13 @@ pre code {
     .section-header p {
         font-size: 0.95rem;
     }
+
+    /* Supprimer tout overflow parasite */
+    .card-container,
+    .main-container,
+    .section-header {
+        overflow: visible !important;
+    }
     
     .card-container {
         gap: 20px;
@@ -1000,7 +1016,6 @@ pre code {
         flex-direction: column;
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
     }
     
     .card {
