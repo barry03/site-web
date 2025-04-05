@@ -824,12 +824,6 @@ pre code {
         height: auto;
         display: block;
     }
-    
-    .styled-list li {
-        white-space: normal;
-        word-break: break-word;
-        overflow-wrap: break-word;
-    }
 
     .navbar {
         display: flex;
@@ -1028,47 +1022,50 @@ pre code {
     }
 
     /* Étendre un peu cette carte en particulier */
-    .card#dashboards-section {
-        margin: 0 -8px; /* permet à la galerie de s'étendre au bord sans débordement */
-        padding: 18px 12px;
-    }
+    /* Étend un peu la carte qui contient la galerie */
+    #dashboards-section.card {
+        margin: 0 -12px;
+        padding: 20px 0;
+        overflow: hidden;
+    } 
     
-    /* Galerie scrollable */
+    /* Galerie scrollable horizontale */
     .dashboard-gallery {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+        padding: 0 16px;
         gap: 16px;
-        padding: 8px 4px;
     }
     
-    /* Chaque dashboard-card */
+    /* Chaque carte dashboard scrollable */
     .dashboard-card {
-        flex: 0 0 85%; /* Largeur contrôlée */
+        flex: 0 0 85%;
         scroll-snap-align: start;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         background: #fff;
+        border-radius: 12px;
         padding: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         box-sizing: border-box;
     }
     
-    /* Image dans la card */
     .dashboard-card img {
         width: 100%;
         height: auto;
         border-radius: 8px;
     }
+      
     
     /* Titre de dashboard */
+    /*
     .dashboard-card h4 {
         font-size: 0.95rem;
         text-align: center;
         margin-top: 12px;
     }
-  
+    */
 
     .ci-cd-diagram-container {
         overflow-x: auto;
