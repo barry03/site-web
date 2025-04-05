@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
   
 body, html {
@@ -918,7 +919,6 @@ pre code {
     */ 
     .nav-items {
         position: fixed;
-        box-sizing: border-box;
         top: 0;
         left: 0;
         height: 100%;
@@ -1030,14 +1030,15 @@ pre code {
         width: 100%;
         /*box-sizing: border-box;*/
     }
-      
-    .section-header,
-    .card-container,
+
+    .main-container,
     .card,
-    .navbar,
-    .nav-items {
-        max-width: 100%;
-        /*box-sizing: border-box;*/
+    .card-container,
+    .section-header,
+    .footer,
+    .dashboard-card,
+    .ci-cd-card {
+        box-sizing: border-box;
     }
       
     .section-header {
