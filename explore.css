@@ -7,7 +7,6 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
   
 body {
@@ -19,6 +18,11 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 80px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
   
 /*
@@ -41,23 +45,17 @@ body {
     padding-top: 80px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html {
     overflow-x: hidden;
 }
 */
-/*
+
 img,
 video {
   max-width: 100%;
   height: auto;
 }
-*/
+
 /*
 html {
     scroll-behavior: smooth;
@@ -831,7 +829,7 @@ pre code {
   display: none;
 }
 
-/*
+
 #background-video {
     position: fixed;
     right: 0;
@@ -845,25 +843,24 @@ pre code {
     opacity: 0.2; 
     pointer-events: none; 
 }
-*/ 
+
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
-    /*
+    
     body, html {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }    
-    */
-    /*
+    
     img,
     video {
         max-width: 100% !important;
         height: auto;
         display: block;
     }
-    */
+    
     .navbar {
         display: flex;
         padding: 10px 20px;
@@ -1204,8 +1201,6 @@ pre code {
     .btn-primary:hover {
         background-color: #0056b3;
     }
-    
-
     .emoji {
         font-family: system-ui, 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
         font-size: 1.4rem;
