@@ -40,30 +40,53 @@
 
     <!-- Conteneur principal -->
     <section class="cv-container">
+        <!-- FRENCH VERSION -->
         <div class="cv-box">
             <h2>📄 French Version</h2>
             <p class="cv-description"><i class="fas fa-file-alt"></i> Un résumé détaillant mon parcours et mes compétences en Data Engineering.</p>
+        
+            <!-- WRAPPER AVEC EN-TÊTE STYLÉ -->
+            <div class="iframe-wrapper">
+            <div class="fake-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
             <iframe src="files/CV_Barry_FR.pdf" class="cv-frame"></iframe>
+            </div>
+        
             <p id="cv-fr" class="cv-update-date"></p>
-    
+        
             <div class="cv-buttons">
-                <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Partagez le profil </button>
-                <a href="files/CV_Barry_FR.pdf" download class="btn-download" onclick="gtag('event', 'cv_download', { cv_version: 'fr' });">📥 Télécharger</a>
+            <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Partagez le profil</button>
+            <a href="files/CV_Barry_FR.pdf" download class="btn-download" onclick="gtag('event', 'cv_download', { cv_version: 'fr' });">📥 Télécharger</a>
             </div>
         </div>
+  
     
+        <!-- ENGLISH VERSION -->
         <div class="cv-box">
             <h2>📄 English Version</h2>
             <p class="cv-description"><i class="fas fa-file-alt"></i> English resume showcasing my experience in Big Data & Cloud Solutions.</p>
+        
+            <div class="iframe-wrapper">
+            <div class="fake-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
             <iframe src="files/CV_Barry_EN.pdf" class="cv-frame"></iframe>
+            </div>
+        
             <p id="cv-en" class="cv-update-date"></p>
-    
+        
             <div class="cv-buttons">
-                <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_EN.pdf')">📋 Share profil</button>
-                <a href="files/CV_Barry_EN.pdf" download class="btn-download"
+            <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_EN.pdf')">📋 Share profil</button>
+            <a href="files/CV_Barry_EN.pdf" download class="btn-download"
                 onclick="gtag('event', 'cv_download', { cv_version: 'en' });">📥 Download</a>
-            </div> 
+            </div>
         </div>
+  
     </section>
     
     
