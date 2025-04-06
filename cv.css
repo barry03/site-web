@@ -202,3 +202,106 @@ body.dark-mode {
     width: 18px;
     height: auto;
 }
+
+
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 15px;
+      padding: 0 10px;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 15px;
+      gap: 10px;
+    }
+  
+    .navbar h1 {
+      font-size: 1.1rem;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .toggle-dark-mode {
+      align-self: flex-end;
+      font-size: 0.9rem;
+      padding: 6px 10px;
+      margin-top: 5px;
+    }
+  
+    .cv-container {
+      flex-direction: column;
+      padding: 20px 0;
+      gap: 30px;
+    }
+  
+    .cv-box {
+      width: 100%;
+      padding: 20px 16px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+  
+    .cv-box h2 {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+  
+    .cv-description {
+      font-size: 0.95rem;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+  
+    .cv-frame {
+      height: 400px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .cv-update-date {
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 8px;
+    }
+  
+    .cv-buttons {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  
+    .btn-copy,
+    .btn-download {
+      width: 90%;
+      max-width: 300px;
+      font-size: 0.9rem;
+      padding: 10px 16px;
+    }
+  
+    .btn-copy i,
+    .btn-download i {
+      font-size: 1rem;
+    }
+  
+    .back-button {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+    
+    body.dark-mode .cv-description,
+    body.dark-mode .cv-update-date {
+    color: #ccc;
+    }
+
+    body.dark-mode .btn-copy {
+    background: #444;
+    color: #eee;
+    }
+
+}
+  
