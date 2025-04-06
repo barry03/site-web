@@ -383,6 +383,7 @@ body {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .competences-list ul li {
@@ -393,12 +394,20 @@ body {
     width: 100%;
     white-space: nowrap; /* Empêche le retour à la ligne */
 }
-
-.competences-list span {
-    flex-grow: 1; /* Permet au texte de s'étendre naturellement */
-    font-size: 16px; /* Augmente la taille du texte */
+.competences-list li span {
+    flex: 1;
+    font-size: 1rem;
+    white-space: nowrap;
     font-weight: 500;
 }
+
+/*
+.competences-list span {
+    flex-grow: 1; 
+    font-size: 16px; 
+    font-weight: 500;
+}
+*/
 
 .competences-list li::before {
     content: "✔️";
@@ -461,31 +470,31 @@ body {
     height: auto;
 }
 
-
-/* Corrige l'affichage des barres de progression */
 .progress-bar {
-    position: relative;
-    width: 100%;
-    height: 12px;
+    flex: 1.2;
+    max-width: 300px;
+    height: 10px;
     background: #e0e0e0;
-    border-radius: 8px;
-    overflow: visible; /* Permet d'afficher les pourcentages au-dessus */
-    max-width: 270px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
 }
+
+
 
 /* Assure que la barre s'affiche correctement */
 .progress {
     height: 100%;
-    border-radius: 8px;
-    width: 0;
-    transition: width 1.5s ease-in-out;
-    position: relative; /* Pour que le pourcentage soit bien positionné */
-    min-width: 10%; /* Évite qu'elle soit invisible */
+    border-radius: 5px;
+    position: relative;
+    transition: width 0.4s ease;
 }
+
+
 
 /* Correction des couleurs */
 .progress.blue {
-    background: linear-gradient(90deg, #4a90e2, #0056b3);
+    background: linear-gradient(90deg, #4f7df9, #5468ff);
 }
 .progress.purple {
     background: linear-gradient(90deg, #a66dd4, #6a1b9a);
@@ -503,18 +512,14 @@ body {
 /* Correction du positionnement des pourcentages */
 .progress-value {
     position: absolute;
-    top: -20px; /* Monte le texte */
-    left: 100%; /* À la fin de la barre */
-    transform: translateX(-50%);
-    font-size: 20px;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
     font-weight: bold;
-    color: #333;
-    background: none; /* Enlève le fond blanc */
-    padding: 0; /* Supprime l’espacement */
-    border-radius: 0; /* Enlève l’arrondi */
-    box-shadow: none; /*  Enlève l’ombre */
-    text-shadow: none; /* Supprime l’effet d’ombre */
+    color: #fff;
 }
+
 .tech-grid img {
     width: 40px;
     height: 50px;
