@@ -14,7 +14,7 @@ const translations = {
         "hero-btn-explore": "Pourquoi moi ?",
         
         // compétences
-        "skills-title": "🧠 Compétences & Stack Tech",
+        "skills-title": "🧑‍💻 Compétences & Stack",
         "skills-subtitle": "Mes Compétences",
         "skill-1": "📊 Modélisation & Data Processing",
         "skill-2": "🔄 Développement de pipelines ETL",
@@ -160,7 +160,7 @@ const translations = {
         "hero-btn-explore": "Why me?",
 
         // COMPETENCES Section
-        "skills-title": "🧠 Skills & Technical Stack",
+        "skills-title": "🧑‍💻 Skills & Technical Stack",
         "skills-subtitle": "My Skills",
         "skill-1": "📊 Modeling & Data Processing",
         "skill-2": "🔄 ETL Pipeline Development",
