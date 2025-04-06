@@ -223,27 +223,33 @@ body.dark-mode {
         z-index: 1000;
     }
     
-    /* Titre centré sous la navbar */
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: bold;
-        margin: 70px auto 20px auto;
         color: #3a3a70;
         text-align: center;
+        margin: 20px auto 10px auto; /* ⬅️ réduit l’espace en haut & en bas */
+        padding: 0 16px; /* ⬅️ garde une petite marge sur les côtés */
     }
-  
+      
     .toggle-dark-mode {
         background: #f0f0f0;
         color: #007bff;
-        border: none;
+        font-size: 0.95rem;
+        padding: 6px 12px;
+        border-radius: 6px;
+        max-width: 48%;
+        text-align: center;
+        margin-left: auto;  /* 👈 pousse à droite mais garde une marge */
+        margin-right: 8px;  /* 👈 évite qu’il colle la bordure */
     }
       
-  
+      
     .cv-container {
       flex-direction: column;
       padding: 20px 0;
       gap: 30px;
-      padding-top: 140px; /* ← espace supplémentaire sous la navbar */
+      padding-top: 100px; /* au lieu de 140px */
     }
   
     .cv-box {
