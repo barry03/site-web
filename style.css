@@ -381,10 +381,10 @@ body {
 .competences-list li {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 12px; /* ⬅️ Ajuste l'espace entre texte & barre ici */
-    margin-bottom: 14px;
+    gap: 8px; /* ✅ Réduit l’espace entre texte et barre */
+    margin-bottom: 12px;
 }
+  
   
 
 .competences-list ul li {
@@ -397,11 +397,10 @@ body {
 }
 .competences-list li span {
     font-size: 1rem;
-    font-weight: 500;
     white-space: nowrap;
+    margin-right: 4px; /* ✅ Optionnel, encore plus de contrôle */
 }
   
-
 /*
 .competences-list span {
     flex-grow: 1; 
@@ -472,10 +471,9 @@ body {
 }
 
 .progress-bar {
-    width: 100%;
-    max-width: 200px; /* ⬅️ Ajuste ici la taille idéale */
+    width: 180px; /* ⬅️ Tu peux augmenter/diminuer ici selon ta ligne */
     height: 10px;
-    background-color: #eee;
+    background: #eee;
     border-radius: 6px;
     overflow: hidden;
     position: relative;
