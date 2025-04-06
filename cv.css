@@ -203,7 +203,6 @@ body.dark-mode {
     height: auto;
 }
 
-
 @media screen and (max-width: 768px) {
     body {
       font-size: 15px;
@@ -214,35 +213,29 @@ body.dark-mode {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si pas assez de place */
-        gap: 8px;
-        padding: 12px 16px;
+        padding: 12px 16px; /* ESPACE INTERNE GAUCHE/DROITE */
         background: white;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         position: fixed;
-        width: 100%;
         top: 0;
         left: 0;
+        right: 0;
         z-index: 1000;
     }
     
-    .navbar h1 {
-        flex: 1;
+    /* Titre centré sous la navbar */
+    h1 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 70px auto 20px auto;
+        color: #3a3a70;
         text-align: center;
-        font-size: 1.2rem;
-        margin: 0;
     }
   
     .toggle-dark-mode {
-        background: #f1f1f1;
+        background: #f0f0f0;
+        color: #007bff;
         border: none;
-        padding: 6px 12px;
-        font-size: 0.9rem;
-        border-radius: 6px;
-        white-space: nowrap;
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
       
   
@@ -285,20 +278,23 @@ body.dark-mode {
     }
   
     .cv-buttons {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
     }
+      
   
     .btn-copy,
     .btn-download {
-      width: 90%;
-      max-width: 300px;
-      font-size: 0.9rem;
-      padding: 10px 16px;
+        width: 80%;
+        max-width: 240px;
+        font-size: 0.85rem;
+        padding: 8px 12px;
     }
+
   
     .btn-copy i,
     .btn-download i {
@@ -307,11 +303,19 @@ body.dark-mode {
   
     .back-button,
     .toggle-dark-mode {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-        flex: 1 1 auto;                /* ← adaptatif */
-        max-width: 50%;
-    } 
+        font-size: 0.95rem;
+        padding: 6px 12px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .back-button {
+        color: #007bff;
+        background: none;
+        font-weight: bold;
+    }
 
     body.dark-mode .cv-description,
     body.dark-mode .cv-update-date {
