@@ -211,16 +211,19 @@ body.dark-mode {
     }
   
     .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px 15px;
-      gap: 10px;
+        flex-direction: row;            /* <- pour les garder sur la même ligne */
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;                /* <- au cas où ça déborde */
+        padding: 10px 16px;
+        gap: 8px;
     }
   
     .navbar h1 {
-      font-size: 1.1rem;
-      text-align: center;
-      width: 100%;
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
     }
   
     .toggle-dark-mode {
@@ -234,6 +237,7 @@ body.dark-mode {
       flex-direction: column;
       padding: 20px 0;
       gap: 30px;
+      padding-top: 140px; /* ← espace supplémentaire sous la navbar */
     }
   
     .cv-box {
@@ -288,11 +292,14 @@ body.dark-mode {
       font-size: 1rem;
     }
   
-    .back-button {
-      font-size: 0.9rem;
-      margin-bottom: 5px;
-    }
-    
+    .back-button,
+    .toggle-dark-mode {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+        flex: 1 1 auto;                /* ← adaptatif */
+        max-width: 50%;
+    } 
+
     body.dark-mode .cv-description,
     body.dark-mode .cv-update-date {
     color: #ccc;
