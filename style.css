@@ -463,27 +463,28 @@ body {
 }
 
 .progress-bar {
-    width: 160px; /* ✅ Peut être 170–180 selon ton goût */
-    flex-shrink: 0; /* ✅ Empêche de rétrécir quand manque de place */
-    height: 10px;
-    background: #eee;
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
+    width: 180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
 }
+  
 .progress {
-    height: 100%;
-    border-radius: 6px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding-right: 6px;
+    width: 100%;
+    height: 10px;
+    border-radius: 6px;
 }
   
 .progress-value {
-    font-size: 0.8rem;
-    color: white;
+    font-size: 0.85rem;
+    color: #666;
     font-weight: bold;
 }
 
