@@ -24,7 +24,20 @@ body.dark-mode {
     color: #fff;
 }
 
+.toggle-dark-mode {
+    background: #f0f0f0;
+    color: #007bff;
+    border: 1px solid #ccc; /* ✅ fine bordure grise */
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
 /* Bouton Mode Sombre bien contenu */
+/*
 .toggle-dark-mode {
     background: #f0f0f0;
     border: none;
@@ -37,8 +50,11 @@ body.dark-mode {
     text-overflow: ellipsis;
     margin-left: auto;
 }
+*/
 .toggle-dark-mode:hover {
-    background: #ddd;
+    background: #e6e6e6;
+    border-color: #aaa;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Barre de navigation */
@@ -57,15 +73,19 @@ body.dark-mode {
 }
   
 
-/* Centrage propre du titre */
-.h1 {
-    margin: 0 auto;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #3a3a70;
-    text-align: center;
-    padding-top: 80px; /* ou autre selon ta navbar height */
+@media screen and (min-width: 769px) {
+    h1 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #3a3a70;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 100px; /* espace sous navbar */
+      padding-left: 16px;
+      padding-right: 16px;
+    }
 }
+  
 
 .back-button {
     text-decoration: none;
