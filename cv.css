@@ -228,8 +228,8 @@ body.dark-mode {
         font-weight: bold;
         color: #3a3a70;
         text-align: center;
-        margin: 20px auto 10px auto; /* ⬅️ réduit l’espace en haut & en bas */
-        padding: 0 16px; /* ⬅️ garde une petite marge sur les côtés */
+        margin: 0px auto 16px auto; /* ⬅️ réduit l’espace en haut & en bas */
+        padding: 70px 16px 0; /* ⬅️ garde une petite marge sur les côtés */
     }
       
     .toggle-dark-mode {
@@ -237,11 +237,11 @@ body.dark-mode {
         color: #007bff;
         font-size: 0.95rem;
         padding: 6px 12px;
-        border-radius: 6px;
+        /*border-radius: 6px;*/
         max-width: 48%;
         text-align: center;
         margin-left: auto;  /* 👈 pousse à droite mais garde une marge */
-        margin-right: 8px;  /* 👈 évite qu’il colle la bordure */
+        margin-right: 12px;  /* 👈 évite qu’il colle la bordure */
     }
       
       
@@ -249,7 +249,6 @@ body.dark-mode {
       flex-direction: column;
       padding: 20px 0;
       gap: 30px;
-      padding-top: 100px; /* au lieu de 140px */
     }
   
     .cv-box {
