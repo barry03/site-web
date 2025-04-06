@@ -14,7 +14,7 @@ const translations = {
         "hero-btn-explore": "Pourquoi moi ?",
         
         // compétences
-        "skills-title": "🧠 Compétences & Stack Technique",
+        "skills-title": "🧠 Compétences & Stack Tech",
         "skills-subtitle": "Mes Compétences",
         "skill-1": "📊 Modélisation & Data Processing",
         "skill-2": "🔄 Développement de pipelines ETL",
