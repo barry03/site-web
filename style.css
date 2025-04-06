@@ -379,12 +379,13 @@ body {
 }
 
 .competences-list li {
-    font-size: 14px;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 12px; /* ⬅️ Ajuste l'espace entre texte & barre ici */
+    margin-bottom: 14px;
 }
+  
 
 .competences-list ul li {
     display: flex;
@@ -395,11 +396,11 @@ body {
     white-space: nowrap; /* Empêche le retour à la ligne */
 }
 .competences-list li span {
-    flex: 1;
     font-size: 1rem;
-    white-space: nowrap;
     font-weight: 500;
+    white-space: nowrap;
 }
+  
 
 /*
 .competences-list span {
@@ -471,23 +472,28 @@ body {
 }
 
 .progress-bar {
-    flex: 1.2;
-    max-width: 300px;
+    width: 100%;
+    max-width: 200px; /* ⬅️ Ajuste ici la taille idéale */
     height: 10px;
-    background: #e0e0e0;
-    border-radius: 5px;
+    background-color: #eee;
+    border-radius: 6px;
     overflow: hidden;
     position: relative;
 }
-
-
-
-/* Assure que la barre s'affiche correctement */
 .progress {
     height: 100%;
-    border-radius: 5px;
+    border-radius: 6px;
     position: relative;
-    transition: width 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 6px;
+}
+  
+.progress-value {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
 }
 
 
@@ -509,16 +515,6 @@ body {
     background: linear-gradient(90deg, #ffeb3b, #fbc02d);
 }
 
-/* Correction du positionnement des pourcentages */
-.progress-value {
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #fff;
-}
 
 .tech-grid img {
     width: 40px;
