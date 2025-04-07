@@ -99,21 +99,20 @@ body {
 }
 
 .logo-db {
-    text-decoration: none !important; /* Supprime le soulignement */
-    font-size: 2rem; /* Taille légèrement plus grande */
-    font-weight: bold;
-    font-family: 'Dancing Script', cursive;
-    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
 }
-
+/*
 .logo-db span:first-child {
-    color: #7D5FB2; /* Violet */
+    color: #7D5FB2;
 }
 
 .logo-db span:last-child {
-    color: #0056b3; /* Bleu */
+    color: #0056b3;
 }
-
+*/
 .btn-link {
     text-decoration: none;
     color: #4a90e2;
