@@ -768,7 +768,7 @@ video {
         font-size: 1rem;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
         padding: 8px;
         border-radius: 6px;
         background: none;
@@ -792,6 +792,20 @@ video {
     }
     .hobby-card:nth-child(even) {
         animation-delay: 1.25s;
+    }
+
+    /* Emoji uniquement (tout ce qui n’est pas le span = l’emoji ici) */
+    .hobby-card span {
+        font-size: 1rem; /* ← texte normal */
+    }
+    
+    /* Grossit juste l’emoji */
+    .hobby-card {
+        font-size: 1.8rem; /* ← emoji plus gros */
+    }
+    
+    .hobby-card span {
+        font-size: 1rem; /* ← remet le texte à sa taille normale */
     }
   
     /* Articles externes */
@@ -837,7 +851,7 @@ video {
     }
       
     .btn-link:hover {
-        background: #7D5FB2;
+        background: white;
     }
   
 }
