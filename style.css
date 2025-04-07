@@ -20,6 +20,15 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
+
+.logo-db span:first-child {
+    color: #7D5FB2; /* Violet */
+}
+
+.logo-db span:last-child {
+    color: #0056b3; /* Bleu */
+}
+
 /* Cacher les boutons sur explore.html et blog.html */
 /*
 @media screen and (min-width: 769px) {
