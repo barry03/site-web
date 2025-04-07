@@ -620,10 +620,6 @@ video {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        background: red !important;
-    }
-      
     img,
     video {
         max-width: 100% !important;
