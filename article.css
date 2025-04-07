@@ -1,0 +1,68 @@
+@media screen and (max-width: 768px) {
+    body.article-page {
+      background: #fff;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .main-container {
+      padding: 24px 16px;
+      margin: 0 auto;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  
+    h1#article-header {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+  
+    #article-description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    #article-content {
+      font-size: 1rem;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+  
+    /* Bouton retour */
+    #nav-back {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 16px;
+      background: #7D5FB2;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+  
+    #nav-back:hover {
+      background: #6a4bbd;
+    }
+  
+    /* Si Dev.to utilise beaucoup de code blocks */
+    #article-content pre {
+      background: #f4f4f4;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+  
+    #article-content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 12px auto;
+    }
+  }
+  
