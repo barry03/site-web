@@ -228,16 +228,24 @@
             // Vérification des nouvelles sources
             checkNewVeille(totalSources);
         }
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.classList.add("show");
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 4000); // disparaît après 4 secondes
+        }
         
         function checkNewVeille(currentCount) {
             let oldCount = localStorage.getItem("veilleCount") || 0;
-        
+
             if (currentCount > oldCount) {
-                alert("📢 Une nouvelle source de veille technologique a été ajoutée !");
+                showToast("📢 Une nouvelle source de veille technologique a été ajoutée !");
                 localStorage.setItem("veilleCount", currentCount);
             }
         }
-        
+
         loadVeilleData(); // Exécution du script
     </script>
 
@@ -335,6 +343,8 @@
     </script>    
 
     <script src="translations.js"></script>
+
+    <div id="toast" class="toast">📢 Une nouvelle source de veille ajoutée !</div>
     
 </body>
 </html>

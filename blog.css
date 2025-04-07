@@ -618,6 +618,28 @@ video {
     opacity: 0.2; 
     pointer-events: none; 
 }
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7D5FB2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, bottom 0.4s ease;
+    z-index: 9999;
+}
+.toast.show {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 40px;
+}
+  
 
 @media screen and (max-width: 768px) {
     body {
@@ -683,11 +705,17 @@ video {
         word-break: break-word;
         overflow-wrap: break-word;
     }
+
+    .section-header {
+        margin-bottom: 16px; /* ↓ Ajuste à ta convenance */
+        padding: 0 16px;
+    }
     /* Header principal */
     .section-header h1 {
         font-size: 1.4rem;
         text-align: center;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+        margin-top: 0;
     }
     
     .section-header p {
@@ -834,7 +862,7 @@ video {
     }
     
     .btn-link {
-        background: #7D5FB2;
+        background: white;
         padding: 10px 14px;
         text-decoration: none;
         border-radius: 6px;
@@ -853,5 +881,81 @@ video {
     .btn-link:hover {
         background: white;
     }
+
+    /* === Veille Technologique - section blog === */
+    #veille-title {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    #veille-description {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #444;
+    }
+    
+    .veille-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    /* Chaque bloc de veille (podcast, newsletter, etc.) */
+    .veille-cards .card {
+        padding: 16px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    
+    /* Titres des blocs : 🎙 Podcasts, 📺 YouTube etc */
+    .veille-cards .card h2 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        color: #3A3A70;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    /* Liste des sources */
+    .styled-list.no-check {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* Chaque source : icône + nom */
+    .styled-list.no-check li {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* espace entre l'icône et le texte */
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    .styled-list.no-check li img.icon {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        margin: 0; /* ← enlève tout décalage vertical */
+    }    
+    
+    /* Lien vers la ressource */
+    .styled-list.no-check li a {
+        text-decoration: none;
+        color: #5468ff;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+    
+    .styled-list.no-check li a:hover {
+        color: #3a3a70;
+    }
+  
   
 }
