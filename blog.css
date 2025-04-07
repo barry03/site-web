@@ -44,6 +44,22 @@ video {
     text-decoration: none;
 }
 
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #7D5FB2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: none;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+    background: #6a4bbd;
+}
+
 .btn-link {
     text-decoration: none;
     color: #4a90e2;

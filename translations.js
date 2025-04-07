@@ -142,7 +142,7 @@ const translations = {
         "welcome-overlay": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀",
 
         "quote-1": "💬 « Les paroles sont bon marché. Montrez-moi le code. » – Linus Torvalds",
-        "quote-2": "⚙️ « La simplicité est l’âme de l’efficacité. » – Austin Freeman"
+        "quote-2": "💬 « La simplicité est l’âme de l’efficacité. » – Austin Freeman"
 
     },
     "en": {
@@ -288,7 +288,7 @@ const translations = {
         "welcome-overlay": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀",
 
         "quote-1": "💬 “Talk is cheap. Show me the code.” – Linus Torvalds",
-        "quote-2": "⚙️ “Simplicity is the soul of efficiency.” – Austin Freeman"
+        "quote-2": "💬 “Simplicity is the soul of efficiency.” – Austin Freeman"
     }
 };
 
