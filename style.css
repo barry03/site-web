@@ -20,14 +20,23 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
-
-.logo-db span:first-child {
-    color: #7D5FB2; /* Violet */
+/*
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #3A3A70;
 }
-
-.logo-db span:last-child {
-    color: #0056b3; /* Bleu */
+  
+.brand-name .by {
+    color: #7D5FB2;
+    font-weight: 500;
 }
+  
+.brand-name .db {
+    color: #3A3A70;
+    font-weight: 700;
+}
+*/
 
 /* Cacher les boutons sur explore.html et blog.html */
 /*
