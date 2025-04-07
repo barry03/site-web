@@ -854,20 +854,12 @@ pre code {
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
-    /*
-    body, html {
-        width: 100%;
-        max-width: 100%;
-    }   
-    */ 
-    /*
     img,
     video {
         max-width: 100% !important;
         height: auto;
         display: block;
     }
-    */
     .navbar {
         display: flex;
         padding: 10px 20px;
@@ -1290,8 +1282,46 @@ pre code {
     .footer-links li a:hover {
         color: #4053d9;
     }
-      
-      
+    /* === BLOG PAGE === */
+    .blog-page .navbar {
+        justify-content: space-between;
+        padding: 12px 16px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    
+    .blog-page .nav-left {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .blog-page .logo-db {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        gap: 2px;
+    }
+    
+    .blog-page .language-switcher {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .blog-page .lang-btn {
+        width: 24px;
+        height: auto;
+        cursor: pointer;
+    }
 }
   
   /* ======= DESKTOP NAVIGATION ======= */
