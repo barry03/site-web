@@ -956,6 +956,63 @@ video {
     .styled-list.no-check li a:hover {
         color: #3a3a70;
     }
-  
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 32px 16px;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+    
+    .footer-left {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .footer-left h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        color: #3A3A70;
+    }
+    
+    .footer-left p {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 16px;
+    }
+    
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+    
+    .footer-icons a i {
+        font-size: 1.6rem;
+        transition: transform 0.2s ease;
+    }
+    
+    .footer-icons a:hover i {
+        transform: scale(1.15);
+    }
+    
+    /* Citations */
+    .footer-quotes {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 12px;
+    }
+    
+    .footer-quotes blockquote {
+        font-size: 0.95rem;
+        font-style: italic;
+        color: #333;
+        margin: 0;
+        line-height: 1.4;
+    }    
   
 }
