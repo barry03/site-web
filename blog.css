@@ -656,7 +656,7 @@ video {
     /* === BLOG INTERNE === */
 
     .main-container {
-        padding: 50px 16px 24px; /* ← au lieu de 80px */
+        padding: 20px 16px 24px; /* ← au lieu de 80px */
         margin-top: 0;
         text-align: center;
     }
@@ -722,24 +722,28 @@ video {
     }
     
     .btn {
-        display: inline-block;
-        padding: 10px 16px;
+        display: block;
+        margin: 20px auto 0;
+        padding: 10px 18px;
         font-size: 0.95rem;
         background: #7D5FB2;
-        color: #fff;
+        color: white;
         border-radius: 6px;
-        text-decoration: none;
         text-align: center;
-        width: 100%;
-        margin-top: 10px;
+        text-decoration: none;
+        width: fit-content;
+        min-width: 160px;
+        max-width: 220px;
     }
+      
     
     /* Hobbies */
     .hobbies-container {
-        padding: 16px;
-        background: #fafafa;
-        border-radius: 10px;
+        padding: 0;
+        background: none;
+        border: none;
     }
+      
     
     .hobbies-container h2 {
         font-size: 1.2rem;
@@ -753,23 +757,43 @@ video {
     }
     
     .hobbies-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* ← 2 colonnes */
+        gap: 16px;
+        justify-items: center;
+        margin-top: 16px;
     }
-    
+      
     .hobby-card {
-        background: #fff;
-        padding: 10px 14px;
-        border-radius: 8px;
-        font-size: 0.95rem;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        font-size: 1rem;
         display: flex;
         align-items: center;
         gap: 8px;
+        padding: 8px;
+        border-radius: 6px;
+        background: none;
+        box-shadow: none;
+        animation: floatWave 2.5s ease-in-out infinite;
+        will-change: transform;
+    }
+    /* Animation "vague" */
+    @keyframes floatWave {
+        0%, 100% {
+        transform: translateY(0px);
+        }
+        50% {
+        transform: translateY(-6px);
+        }
     }
     
+    /* Décalage alternatif pour vague fluide */
+    .hobby-card:nth-child(odd) {
+        animation-delay: 0s;
+    }
+    .hobby-card:nth-child(even) {
+        animation-delay: 1.25s;
+    }
+  
     /* Articles externes */
     .external-articles {
         padding: 16px;
@@ -796,17 +820,24 @@ video {
     }
     
     .btn-link {
-        background: #f0f0f0;
+        background: #7D5FB2;
         padding: 10px 14px;
         text-decoration: none;
         border-radius: 6px;
         font-size: 0.95rem;
-        color: #333;
+        color: white;
         text-align: center;
+      
+        /* ↓ Centrage + taille contenue */
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        min-width: 160px;
+        max-width: 240px;
     }
-    
+      
     .btn-link:hover {
-        background: #e0e0e0;
+        background: #7D5FB2;
     }
   
 }
