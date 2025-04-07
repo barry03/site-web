@@ -34,16 +34,19 @@
   
     /* Bouton retour */
     #nav-back {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 16px;
-      background: #7D5FB2;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      font-weight: bold;
+        display: block; /* ← s'assure qu'il prend toute la largeur */
+        margin: 24px auto 20px auto; /* ← ajoute un espace au-dessus et le centre */
+        padding: 10px 16px;
+        background: #7D5FB2;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: bold;
+        text-align: center;
+        width: fit-content;
     }
+      
   
     #nav-back:hover {
       background: #6a4bbd;

@@ -5,7 +5,7 @@ const translations = {
         "nav-projects": "Projets",
         "nav-contact": "Contactez-moi",
         "nav-blog": "Blog & Veille",
-        "nav-back": "← Retour",
+        "nav-back": "🔙 Retour au blog",
 
         // HERO Section
         "hero-title": "Data Engineer | Spécialiste ETL & Big Data",
@@ -151,7 +151,7 @@ const translations = {
         "nav-projects": "Projects",
         "nav-contact": "Contact Me",
         "nav-blog": "Blog & Insights",
-        "nav-back": "← Back",
+        "nav-back": "🔙 Back to the blog",
 
         // HERO Section
         "hero-title": "Data Engineer | ETL & Big Data Specialist",
