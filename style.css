@@ -520,6 +520,9 @@ body {
     will-change: transform;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+.tech-grid img[alt="databricks"] {
+    width: 80px; /* Taille plus grande pour Databricks */
+}
 
 /* Ajuste la taille et l’animation des icônes */
 /*
