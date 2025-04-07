@@ -101,9 +101,16 @@ body {
     font-weight: 500;
 }
 
-
 .logo-db {
-    font-size: 1.2rem; /* 👈 Réduit la taille globale */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+  
+/*
+.logo-db {
+    font-size: 1.2rem; 
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     text-decoration: none;
@@ -111,7 +118,7 @@ body {
     align-items: center;
     gap: 4px;
 }
-  
+*/  
 /*
 .logo-db span:first-child {
     color: #7D5FB2;
