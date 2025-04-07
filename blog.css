@@ -410,7 +410,21 @@ video {
 .btn-link:hover {
     color: #0056b3; /* Couleur plus foncée au survol */
 }
+/* Ajustement du bouton */
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
 
+.btn-primary:hover {
+    background-color: #0056b3;
+}
 /* Ajustement des cartes pour qu'elles s'alignent bien */
 #veille-container {
     display: flex;
@@ -612,7 +626,7 @@ video {
         height: auto;
         display: block;
     }
-    
+
     /* === NAVBAR commune (de base) === */
     .navbar {
         display: flex;
@@ -651,4 +665,138 @@ video {
     .lang-btn:hover {
         transform: scale(1.1);
     }
+
+    /* === BLOG INTERNE === */
+
+    .main-container {
+        padding: 24px 16px;
+        margin-top: 100px; /* espace sous la navbar */
+    }
+    
+    /* Header principal */
+    .section-header h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+        text-align: center;
+        color: #555;
+    }
+    
+    /* Bloc principal verticalisé */
+    .blog-content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    /* Article interne */
+    .article-container {
+        padding: 16px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    
+    .article-container h2 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+    
+    .article-container p {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        background: #7D5FB2;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* Hobbies */
+    .hobbies-container {
+        padding: 16px;
+        background: #fafafa;
+        border-radius: 10px;
+    }
+    
+    .hobbies-container h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .hobbies-container p {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+        color: #444;
+    }
+    
+    .hobbies-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+    
+    .hobby-card {
+        background: #fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    /* Articles externes */
+    .external-articles {
+        padding: 16px;
+        background: #fff;
+        border-radius: 10px;
+    }
+    
+    .external-articles h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .external-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .external-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
+    }
+    
+    .btn-link {
+        background: #f0f0f0;
+        padding: 10px 14px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        color: #333;
+        text-align: center;
+    }
+    
+    .btn-link:hover {
+        background: #e0e0e0;
+    }
+  
 }
