@@ -103,12 +103,15 @@ body {
 
 
 .logo-db {
-    text-decoration: none !important; /* Supprime le soulignement */
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Dancing Script', cursive;
-    text-transform: uppercase;
+    font-size: 1.2rem; /* 👈 Réduit la taille globale */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
+  
 /*
 .logo-db span:first-child {
     color: #7D5FB2;
@@ -1512,6 +1515,9 @@ body {
         font-size: 13px;
         color: green;
         text-align: center;
+    }
+    .logo-db {
+        font-size: 1rem;
     }
       
 }
