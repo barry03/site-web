@@ -496,10 +496,6 @@ body {
     max-width: 270px;
 }
 
-  
-
-
-
 /* Correction des couleurs */
 .progress.blue {
     background: linear-gradient(90deg, #4f7df9, #5468ff);
@@ -517,10 +513,9 @@ body {
     background: linear-gradient(90deg, #ffeb3b, #fbc02d);
 }
 
-
 .tech-grid img {
     width: 40px;
-    height: 50px;
+    height: auto;
     animation: floatWave 2.5s ease-in-out infinite;
     will-change: transform;
     transition: transform 0.3s ease, opacity 0.3s ease;
