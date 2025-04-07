@@ -1322,6 +1322,139 @@ pre code {
         height: auto;
         cursor: pointer;
     }
+    
+    /* === BLOG INTERNE === */
+    .blog-page .main-container {
+        padding: 24px 16px;
+        margin-top: 100px; /* espace sous la navbar */
+    }
+    
+    /* Header principal */
+    .blog-page .section-header h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    
+    .blog-page .section-header p {
+        font-size: 1rem;
+        text-align: center;
+        color: #555;
+    }
+    
+    /* Bloc principal verticalisé */
+    .blog-page .blog-content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    /* Article interne */
+    .blog-page .article-container {
+        padding: 16px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    
+    .blog-page .article-container h2 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+    
+    .blog-page .article-container p {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+    
+    .blog-page .btn {
+        display: inline-block;
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        background: #7D5FB2;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* Hobbies */
+    .blog-page .hobbies-container {
+        padding: 16px;
+        background: #fafafa;
+        border-radius: 10px;
+    }
+    
+    .blog-page .hobbies-container h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .blog-page .hobbies-container p {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+        color: #444;
+    }
+    
+    .blog-page .hobbies-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+    
+    .blog-page .hobby-card {
+        background: #fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    /* Articles externes */
+    .blog-page .external-articles {
+        padding: 16px;
+        background: #fff;
+        border-radius: 10px;
+    }
+    
+    .blog-page .external-articles h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .blog-page .external-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .blog-page .external-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
+    }
+    
+    .blog-page .btn-link {
+        background: #f0f0f0;
+        padding: 10px 14px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        color: #333;
+        text-align: center;
+    }
+    
+    .blog-page .btn-link:hover {
+        background: #e0e0e0;
+    }
+  
 }
   
   /* ======= DESKTOP NAVIGATION ======= */
