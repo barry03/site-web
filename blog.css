@@ -620,6 +620,10 @@ video {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+
     img,
     video {
         max-width: 100% !important;
@@ -648,31 +652,26 @@ video {
         text-decoration: none;
         white-space: nowrap;
     }
-      
-    .language-switcher {
-        display: flex;
-        gap: 10px;
-    }
-      
-    .lang-btn {
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-        border-radius: 50%;
-        transition: transform 0.2s ease;
-    }
-      
-    .lang-btn:hover {
-        transform: scale(1.1);
-    }
 
     /* === BLOG INTERNE === */
 
     .main-container {
-        padding: 24px 16px;
-        margin-top: 100px; /* espace sous la navbar */
+        padding: 80px 16px 24px; /* ↓ réduit l’espace en haut */
+        margin-top: 0;
+        text-align: center;
     }
-    
+      
+    .section-header,
+    .article-container,
+    .hobbies-container,
+    .external-articles {
+        text-align: center;
+        margin: 0 auto;
+    }
+    h1, h2, h3, p, span {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
     /* Header principal */
     .section-header h1 {
         font-size: 1.4rem;
