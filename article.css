@@ -29,7 +29,7 @@
     }
   
     .main-container {
-        padding: 80px 16px 24px; /* ↑ Ajoute un espace en haut pour laisser respirer le bouton */
+        padding: 10px 16px 24px; /* ↑ Ajoute un espace en haut pour laisser respirer le bouton */
         margin: 0 auto;
         max-width: 100%;
         box-sizing: border-box;
