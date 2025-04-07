@@ -29,10 +29,10 @@
     }
   
     .main-container {
-      padding: 24px 16px;
-      margin: 0 auto;
-      max-width: 100%;
-      box-sizing: border-box;
+        padding: 80px 16px 24px; /* ↑ Ajoute un espace en haut pour laisser respirer le bouton */
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
     }
   
     h1#article-header {
