@@ -469,8 +469,12 @@
             window.addEventListener("scroll", revealOnScroll);
             window.addEventListener("scroll", animateProgressBars);
 
-            revealOnScroll();
-            animateProgressBars();
+            // Déclenche les animations une première fois après un petit délai
+            setTimeout(() => {
+                revealOnScroll();
+                animateProgressBars();
+            }, 300); // tu peux augmenter/diminuer selon ton ressenti
+
             // Une fois joué, ne le refait pas pour cette session
             sessionStorage.setItem("indexScrollPlayed", "true");
 

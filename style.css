@@ -1142,6 +1142,8 @@ body {
         white-space: nowrap;
         text-decoration: none;
         transition: background 0.3s;
+        width: auto;
+        align-self: flex-start; /* 🔄 le colle à gauche comme les autres */
     }
     
     .cta-button:hover {
