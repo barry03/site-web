@@ -1140,9 +1140,12 @@ body {
         white-space: nowrap;
         text-decoration: none;
         transition: background 0.3s;
-        width: 100%; /* 🔄 même largeur que les langues */
-        box-sizing: border-box; /* 🔒 garantit que padding est pris en compte */
     }
+    .language-switcher,
+    .cta-button {
+        width: 100%;
+    }
+
     
     .cta-button:hover {
         background: #563d7c;

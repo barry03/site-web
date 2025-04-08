@@ -32,7 +32,7 @@ h1#article-header {
     }
   
     .main-container {
-        padding: 220px 16px 24px; /* ↑ Ajoute un espace en haut pour laisser respirer le bouton */
+        padding: 205px 16px 24px; /* ↑ Ajoute un espace en haut pour laisser respirer le bouton */
         margin: 0 auto;
         max-width: 100%;
         box-sizing: border-box;
