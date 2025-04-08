@@ -844,12 +844,11 @@ pre code {
     .tooltip-text {
         position: fixed; /* ✅ ignore le flux local pour un placement global */
         bottom: auto;
-        top: 30%; /* Ajuste en fonction de la position désirée */
+        top: 80%; /* Ajuste en fonction de la position désirée */
         left: 50%;
         transform: translate(-50%, -50%);
-        max-width: 90%;
+        max-width: 280px;
         min-width: 220px;
-        width: 280px;
         font-size: 0.8rem;
         text-align: left;
         background-color: #333;
