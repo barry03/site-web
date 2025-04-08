@@ -506,26 +506,24 @@ video {
     color: #333;
 }
 
-#btn-dashboard {
-    display: inline-block;
-    vertical-align: middle; /* ➕ pour bien aligner avec l’emoji ❓ */
-    margin-bottom: 12px;     /* optionnel : tu peux ajuster ou supprimer */
-    margin-right: 4px;       /* ➕ espace entre le bouton et le ❓ */
+.dashboard-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
 }
-.btn ~ .info-tooltip {
-    margin-left: 8px;
-    font-size: 1.1rem;
+  
+.info-tooltip {
+    font-size: 1.2rem;
     cursor: help;
     color: #7D5FB2;
-    vertical-align: middle;
     transition: transform 0.2s ease;
+    line-height: 1;
 }
   
-.btn ~ .info-tooltip:hover {
+.info-tooltip:hover {
     transform: scale(1.2);
-}
-  
-  
+}  
   
 /* Bouton interactif */
 .btn {
