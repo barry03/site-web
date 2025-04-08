@@ -507,9 +507,10 @@ video {
 }
 
 .dashboard-actions {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 8px; /* ↕️ espace entre bouton et l’icône */
     margin-top: 25px;
 }
   
@@ -519,11 +520,12 @@ video {
     color: #7D5FB2;
     transition: transform 0.2s ease;
     line-height: 1;
+    text-align: center;
 }
   
 .info-tooltip:hover {
     transform: scale(1.2);
-}  
+}
   
 /* Bouton interactif */
 .btn {
