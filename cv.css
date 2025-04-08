@@ -25,17 +25,21 @@ body.dark-mode {
 }
 
 .toggle-dark-mode {
-    background: #eee;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    margin-left: 15px;
+    background: #f0f0f0;
+    color: #007bff;
+    border: 1px solid #ccc; /* fine bordure grise */
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .toggle-dark-mode:hover {
-    background: #ddd;
+    background: #e6e6e6;
+    border-color: #aaa;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Barre de navigation */
@@ -43,22 +47,42 @@ body.dark-mode {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 40px;
     background: white;
-    padding: 15px 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 1000;
 }
+  
 
-.navbar h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #3a3a70;
-    margin: 0 auto;
+@media screen and (min-width: 769px) {
+    h1 {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #3a3a70;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 100px; /* espace sous navbar */
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    h1 {
+        background: linear-gradient(90deg, #7D5FB2, #5468FF);
+        background-clip: text;                /* version standard */
+        -webkit-background-clip: text;        /* pour Chrome/Safari */
+        -webkit-text-fill-color: transparent; /* masque le texte pour laisser voir le gradient */
+    }
+    
+    /* En mode sombre */
+    body.dark-mode h1 {
+        color: #b3aaff; /* violet pâle lumineux */
+    }
 }
+  
 
 .back-button {
     text-decoration: none;
@@ -99,6 +123,11 @@ body.dark-mode {
     font-style: italic;
 }
 
+/* En mode sombre : couleur plus lumineuse */
+body.dark-mode .cv-description {
+    color: #d0caff; /* doux violet clair lisible */
+}
+
 /* Icône avant la description */
 .cv-description i {
     margin-right: 8px;
@@ -120,12 +149,15 @@ body.dark-mode {
     margin-top: 5px;
 }
 
-
 .cv-box h2 {
     font-size: 1.2rem;
     font-weight: bold;
     color: #3a3a70;
     margin-bottom: 15px;
+}
+/* Mode sombre : une couleur violette douce */
+body.dark-mode .cv-box h2 {
+    color: #c2b8f0;
 }
 
 /* Style de l'aperçu du CV */
@@ -137,8 +169,8 @@ body.dark-mode {
 }
 
 .cv-frame:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.005); /* plus doux */
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .cv-loader {
@@ -202,3 +234,178 @@ body.dark-mode {
     width: 18px;
     height: auto;
 }
+
+.iframe-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    background: white;
+    margin-top: 10px;
+}
+  
+.fake-header {
+    height: 30px;
+    background: #e5e5e5;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 8px;
+}
+  
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+  
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+  
+
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 15px;
+      padding: 0 10px;
+    }
+  
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px; /* ESPACE INTERNE GAUCHE/DROITE */
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
+    h1 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #3a3a70;
+        text-align: center;
+        margin: 0px auto 16px auto; /* ⬅réduit l’espace en haut & en bas */
+        padding: 70px 16px 0; /* garde une petite marge sur les côtés */
+    }
+    body.dark-mode h1 {
+        color: #b3aaff; /*violet pâle lumineux */
+    }
+      
+    .toggle-dark-mode {
+        background: #f0f0f0;
+        color: #007bff;
+        font-size: 0.95rem;
+        padding: 6px 12px;
+        /*border-radius: 6px;*/
+        max-width: 48%;
+        text-align: center;
+        margin-left: auto;  /* pousse à droite mais garde une marge */
+        margin-right: 16px;  /* évite qu’il colle la bordure */
+    }
+      
+      
+    .cv-container {
+      flex-direction: column;
+      padding: 20px 0;
+      gap: 30px;
+    }
+  
+    .cv-box {
+      width: 100%;
+      padding: 20px 16px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+  
+    .cv-box h2 {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    body.dark-mode .cv-box h2 {
+        color: #c2b8f0;
+    }
+  
+    .cv-description {
+      font-size: 0.95rem;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    /* En mode sombre : couleur plus lumineuse */
+    body.dark-mode .cv-description {
+        color: #d0caff; /* doux violet clair lisible */
+    }
+  
+    .cv-frame {
+      height: 400px;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .cv-frame:hover {
+        transform: scale(1.005); /* plus doux */
+        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+    }    
+  
+    .cv-update-date {
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 8px;
+    }
+  
+    .cv-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+      
+  
+    .btn-copy,
+    .btn-download {
+        width: 80%;
+        max-width: 240px;
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+  
+    .btn-copy i,
+    .btn-download i {
+      font-size: 1rem;
+    }
+  
+    .back-button,
+    .toggle-dark-mode {
+        font-size: 0.95rem;
+        padding: 6px 12px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .back-button {
+        color: #007bff;
+        background: none;
+        font-weight: bold;
+    }
+
+    body.dark-mode .cv-description,
+    body.dark-mode .cv-update-date {
+    color: #ccc;
+    }
+
+    body.dark-mode .btn-copy {
+    background: #444;
+    color: #eee;
+    }
+
+}
+  

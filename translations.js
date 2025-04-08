@@ -5,16 +5,20 @@ const translations = {
         "nav-projects": "Projets",
         "nav-contact": "Contactez-moi",
         "nav-blog": "Blog & Veille",
-        "nav-back": "← Retour",
+        "nav-back": "🔙 Retour au blog",
+
+        //CV
+        "cv-retour": "← Retour",
+        "cv-sombre" : "🌙 Mode Sombre",
 
         // HERO Section
         "hero-title": "Data Engineer | Spécialiste ETL & Big Data",
         "hero-description": "Passionné par la gestion et la valorisation des données, je conçois des solutions robustes pour l'ingestion, la transformation et l'analyse de grands volumes de données. Mon expertise couvre l'ETL, le Big Data et le Cloud Computing.",
         "hero-btn-cv": "📄 Voir mon CV",
-        "hero-btn-explore": "Pourquoi moi ? Découvrez-le !",
+        "hero-btn-explore": "Pourquoi moi ?",
         
         // compétences
-        "skills-title": "Compétences & Stack Technique",
+        "skills-title": "🧑‍💻 Compétences & Stack",
         "skills-subtitle": "Mes Compétences",
         "skill-1": "📊 Modélisation & Data Processing",
         "skill-2": "🔄 Développement de pipelines ETL",
@@ -24,7 +28,7 @@ const translations = {
         "stack-title": "Stack Technique",
 
         // PROJETS Section
-        "projects-title": "Projets",
+        "projects-title": "🗂️ Projets",
         "project-1-title": "Oncopole Claudis Rigaud",
         "project-1-description": "Optimisation et structuration des données pour la recherche en oncologie.",
         "project-2-title": "Aristid Retail Technology",
@@ -54,18 +58,18 @@ const translations = {
         // cas d'etude
         "page-title": "Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)",
         "page-subtitle": "Découvrez en détails ma méthodologie pour la création d'un pipeline de données scalable.",
-        "context-title": "Contexte & Objectifs",
+        "context-title": "🎯 Contexte & Objectifs",
         "context-text": "Analyse des données publiques issues de PyPI sur les téléchargements de packages Python, avec un pipeline automatisé sur GCP et Streamlit.",
         "context-point-1": "Collecte automatique via Composer (Airflow)",
         "context-point-2": "Traitement SQL avec BigQuery",
         "context-point-3": "Dashboard interactif Streamlit",
         "context-point-4": "Automatisation CI/CD via GitLab et Docker",
-        "dashboards-title": "Dashboards & Visualisations",
+        "dashboards-title": "📊 Dashboards & Visualisations",
         "dashboards-text": "Quelques exemples concrets des dashboards interactifs réalisés :",
         "dashboard-country-title": "Téléchargements par Pays",
         "dashboard-project-title": "Top Projets PyPI téléchargés",
         "btn-dashboard": "Voir le Dashboard interactif",
-        "ci-cd-title": "Méthodologie & CI/CD",
+        "ci-cd-title": "⚙️ Méthodologie & CI/CD",
         "ci-cd-text": "Workflow entièrement automatisé et géré via GitLab CI/CD et Docker, avec séparation nette des environnements dev et prod.",
         "btn-ci-cd": "Voir les logs CI/CD",
 
@@ -139,7 +143,10 @@ const translations = {
         "iqvia-tech-title": "📦 Technologies",
         "modal-3-tech": "Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence",
 
-        "welcome-overlay": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀"
+        "welcome-overlay": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀",
+
+        "quote-1": "💬 « Les paroles sont bon marché. Montrez-moi le code. » – Linus Torvalds",
+        "quote-2": "💬 « La simplicité est l’âme de l’efficacité. » – Austin Freeman"
 
     },
     "en": {
@@ -148,16 +155,20 @@ const translations = {
         "nav-projects": "Projects",
         "nav-contact": "Contact Me",
         "nav-blog": "Blog & Insights",
-        "nav-back": "← Back",
+        "nav-back": "🔙 Back to the blog",
+
+        //CV
+        "cv-retour": "← Back",
+        "cv-sombre" : "🌙 Dark mode",
 
         // HERO Section
         "hero-title": "Data Engineer | ETL & Big Data Specialist",
         "hero-description": "Passionate about data management and enhancement, I design robust solutions for ingestion, transformation, and analysis of large volumes of data. My expertise covers ETL, Big Data, and Cloud Computing.",
         "hero-btn-cv": "📄 View my CV",
-        "hero-btn-explore": "Why me? Find out!",
+        "hero-btn-explore": "Why me?",
 
         // COMPETENCES Section
-        "skills-title": "Skills & Technical Stack",
+        "skills-title": "🧑‍💻 Skills & Technical Stack",
         "skills-subtitle": "My Skills",
         "skill-1": "📊 Modeling & Data Processing",
         "skill-2": "🔄 ETL Pipeline Development",
@@ -167,7 +178,7 @@ const translations = {
         "stack-title": "Technical Stack",
 
         // PROJETS Section
-        "projects-title": "Projects",
+        "projects-title": "🗂️ Projects",
         "project-1-title": "Oncopole Claudis Rigaud",
         "project-1-description": "Optimization and structuring of data for oncology research.",
         "project-2-title": "Aristid Retail Technology",
@@ -196,18 +207,18 @@ const translations = {
         // use case
         "page-title": "Case Study: Analysis of PyPI Downloads (GCP & Streamlit)",
         "page-subtitle": "Discover in detail my methodology for creating a scalable data pipeline.",
-        "context-title": "Context & Objectives",
+        "context-title": "🎯 Context & Objectives",
         "context-text": "Analysis of public PyPI data on Python package downloads, with an automated pipeline on GCP and Streamlit.",
         "context-point-1": "Automatic data collection via Composer (Airflow)",
         "context-point-2": "SQL processing with BigQuery",
         "context-point-3": "Interactive dashboard with Streamlit",
         "context-point-4": "CI/CD automation via GitLab and Docker",
-        "dashboards-title": "Dashboards & Visualizations",
+        "dashboards-title": "📊 Dashboards & Visualizations",
         "dashboards-text": "Some concrete examples of interactive dashboards created:",
         "dashboard-country-title": "Downloads by Country",
         "dashboard-project-title": "Most Downloaded PyPI Projects",
         "btn-dashboard": "View Interactive Dashboard",
-        "ci-cd-title": "Methodology & CI/CD",
+        "ci-cd-title": "⚙️ Methodology & CI/CD",
         "ci-cd-text": "Fully automated workflow managed via GitLab CI/CD and Docker, with a clear separation between dev and prod environments.",
         "btn-ci-cd": "View CI/CD Logs",
 
@@ -282,7 +293,10 @@ const translations = {
         "iqvia-tech-title": "📦 Technologies",
         "modal-3-tech": "Talend, PostgreSQL, Oracle, GitLabCI, Jenkins, Jira/Confluence",
 
-        "welcome-overlay": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀"
+        "welcome-overlay": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀",
+
+        "quote-1": "💬 “Talk is cheap. Show me the code.” – Linus Torvalds",
+        "quote-2": "💬 “Simplicity is the soul of efficiency.” – Austin Freeman"
     }
 };
 
@@ -291,7 +305,7 @@ function applyTranslations(lang) {
     console.log("🌍 Application de la langue :", lang);
 
     const elementsToTranslate = [
-        "nav-about", "nav-skills", "nav-projects", "nav-contact", "nav-blog", "nav-back",
+        "nav-about", "nav-skills", "nav-projects", "nav-contact", "nav-blog", "nav-back", "cv-retour", "cv-sombre",
         "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore",
         "skills-title", "skills-subtitle", "skill-1", "skill-2",
         "skill-3", "skill-4", "skill-5", "stack-title", "projects-title", "project-1-title", "project-1-description", "project-2-title",
@@ -307,7 +321,7 @@ function applyTranslations(lang) {
         "oncopole-objective-title", "oncopole-objective-text", "oncopole-missions-title", "oncopole-task-1", "oncopole-task-2", "oncopole-task-3",
         "oncopole-task-4", "oncopole-tech-title", "modal-1-tech", "aristid-objective-title", "aristid-objective-text", "aristid-missions-title",
         "aristid-task-1", "aristid-task-2", "aristid-task-3", "aristid-task-4", "aristid-tech-title", "modal-2-tech", "iqvia-objective-title",
-        "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech"
+        "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2"
 
     ];
 
@@ -340,24 +354,34 @@ function setLanguage(lang) {
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Langue enregistrée :", localStorage.getItem("selectedLanguage"));
 
-    const frButton = document.getElementById("fr-btn");
-    const enButton = document.getElementById("en-btn");
+    const langSelect = document.getElementById("language-select");
 
-    // Vérifier si on est sur index.html avant d'ajouter les eventListeners
-    if (frButton && enButton) {
-        frButton.addEventListener("click", () => setLanguage("fr"));
-        enButton.addEventListener("click", () => setLanguage("en"));
+    if (langSelect) {
+        langSelect.addEventListener("change", (e) => {
+            const selectedLang = e.target.value;
+            setLanguage(selectedLang);
+        });
     }
 
+
+    // 🚀 Correction : Forcer "fr" si c'est la première visite
     // 🚀 Correction : Forcer "fr" si c'est la première visite
     let savedLanguage = localStorage.getItem("selectedLanguage");
 
-    if (!savedLanguage) {  
-        savedLanguage = "fr";  // Par défaut FR la première fois
+    if (!savedLanguage) {
+        savedLanguage = "fr";
         localStorage.setItem("selectedLanguage", "fr");
     }
 
+    // ✅ Ajoute ceci juste ici 👇
+    if (langSelect) {
+        langSelect.value = savedLanguage;
+    }
+
+    // Applique les traductions
     applyTranslations(savedLanguage);
+
+    
 
     // Affichage de l’overlay de bienvenue
     const overlay = document.getElementById("welcome-overlay");

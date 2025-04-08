@@ -2,12 +2,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Technique - Djoulde Barry</title>
-    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="blog.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ00TBQ7SX"></script>
     <script>
@@ -38,27 +40,27 @@
                 <span>D</span><span>B</span>
             </a>         
             -->   
-            <a href="explore.html" class="back-button" id="nav-back">← Retour</a>
-
+            <!--<a href="explore.html" class="back-button" id="nav-back">← Retour</a>-->
+            <a href="explore.html" class="logo-db">
+                <span style="color: #6D28D9; font-weight: 600;">Build</span><span style="color:#7D5FB2; font-weight: 600;">By</span><strong style="color:#3A3A70;">DB</strong>
+            </a>
         </div>
 
-        <div class="language-switcher">
-            <img src="images/icons/fr-flag.png" id="fr-btn" class="lang-btn" alt="Français">
-            <img src="images/icons/en-flags.png" id="en-btn" class="lang-btn" alt="English">
+        <div class="nav-right">
+            <a href="index.html#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
+            <div class="language-switcher">
+              <div class="custom-select-wrapper">
+                <span class="globe-icon">🌐</span>
+                <select id="language-select" class="lang-select">
+                  <option value="fr">Français</option>
+                  <option value="en">English (US)</option>
+                </select>
+              </div>
+            </div>
         </div>
-        
-        <!--
-        <ul class="nav-links">
-            <li><a href="index.html#about">À propos</a></li>
-            <li><a href="index.html#competences">Compétences</a></li>
-            <li><a href="index.html#projects">Projets</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
-            <li><a href="blog.html#veille">Veille Technologique</a></li>
-        </ul>
-        -->
     </nav>
 
-    <video autoplay muted loop id="background-video">
+    <video autoplay muted loop playsinline preload="auto" id="background-video">
         <source src="videos/background.mp4" type="video/mp4">
         Votre navigateur ne supporte pas les vidéos.
     </video>
@@ -226,16 +228,24 @@
             // Vérification des nouvelles sources
             checkNewVeille(totalSources);
         }
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.classList.add("show");
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 4000); // disparaît après 4 secondes
+        }
         
         function checkNewVeille(currentCount) {
             let oldCount = localStorage.getItem("veilleCount") || 0;
-        
+
             if (currentCount > oldCount) {
-                alert("📢 Une nouvelle source de veille technologique a été ajoutée !");
+                showToast("📢 Une nouvelle source de veille technologique a été ajoutée !");
                 localStorage.setItem("veilleCount", currentCount);
             }
         }
-        
+
         loadVeilleData(); // Exécution du script
     </script>
 
@@ -258,9 +268,9 @@
     
         <!-- Ajout d'une section citations -->
         <div class="footer-quotes">
-            <blockquote>“Talk is cheap. Show me the code.” – Linus Torvalds</blockquote>
+            <blockquote id="quote-1">“💬 Talk is cheap. Show me the code.” – Linus Torvalds</blockquote>
             <!--<blockquote>“Programs must be written for people to read, and only incidentally for machines to execute.” – Harold Abelson</blockquote>-->
-            <blockquote>“Simplicity is the soul of efficiency.” – Austin Freeman</blockquote>
+            <blockquote id="quote-2">“💬 Simplicity is the soul of efficiency.” – Austin Freeman</blockquote>
         </div>
     </footer>
     
@@ -333,6 +343,8 @@
     </script>    
 
     <script src="translations.js"></script>
+
+    <div id="toast" class="toast">📢 Une nouvelle source de veille ajoutée !</div>
     
 </body>
 </html>

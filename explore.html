@@ -2,15 +2,18 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Cas d'étude : Analyse téléchargements PyPI (GCP & Streamlit)</title>
     <link rel="stylesheet" href="explore.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJ00TBQ7SX"></script>
     <script>
@@ -29,35 +32,48 @@
     </script>
   
 </head>
-<body>
+<body class="home">
     <nav class="navbar">
         <div class="nav-left">
-            <a href="index.html" class="logo-db">
-                <span>D</span><span>B</span>
-            </a>            
+          <!-- Burger avant le logo -->
+          <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>          
+          <a href="index.html" class="logo-db">
+            <span style="color: #6D28D9; font-weight: 600;">Build</span><span style="color:#7D5FB2; font-weight: 600;">By</span><strong style="color:#3A3A70;">DB</strong>
+          </a>
         </div>
-
-        <!-- Menu standard pour ordinateur -->
-        <ul class="nav-links">
+      
+        <div class="nav-items">
+          <ul class="nav-links">
             <li><a id="nav-about" href="index.html#about">À propos</a></li>
             <li><a id="nav-skills" href="index.html#competences">Compétences & Stack</a></li>
             <li><a id="nav-projects" href="index.html#projects">Projets</a></li>
             <li><a id="nav-blog" href="blog.html">Blog & Veille</a></li>
-        </ul>
-
-        <div class="language-switcher">
-            <img src="images/icons/fr-flag.png" id="fr-btn" class="lang-btn" alt="Français">
-            <img src="images/icons/en-flags.png" id="en-btn" class="lang-btn" alt="English">
+          </ul>
+      
+          <div class="nav-right">
+            <a href="index.html#contact" class="cta-button" id="nav-contact">Contactez-moi</a>
+            <div class="language-switcher">
+              <div class="custom-select-wrapper">
+                <span class="globe-icon">🌐</span>
+                <select id="language-select" class="lang-select">
+                  <option value="fr">Français</option>
+                  <option value="en">English (US)</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        
     </nav>
-
-    <video autoplay muted loop id="background-video">
+    
+    <video autoplay muted loop playsinline preload="auto" id="background-video">
         <source src="videos/background.mp4" type="video/mp4">
         Votre navigateur ne supporte pas les vidéos.
     </video>
-    <!-- Section titre attractif -->
+
     <section class="main-container">
         <div class="section-header">
             <h1 id="page-title">Cas d'étude : Analyse des téléchargements PyPI (GCP & Streamlit)</h1>
@@ -80,7 +96,7 @@
                 </ul>
             </div>
             <!-- Dashboards & Visualisations -->
-            <div class="card">
+            <div class="card" id="dashboards-section">
                 <h2 id="dashboards-title"><span class="emoji">📊</span> Dashboards & Visualisations</h2>
                 <p id="dashboards-text">Quelques exemples concrets des dashboards interactifs réalisés :</p>
 
@@ -98,7 +114,7 @@
 
                 <a id="btn-dashboard" href="https://pypi-monitoring-pipelines-tkwvu4x8htfzernenaefap.streamlit.app/" class="btn" target="_blank">Voir le Dashboard interactif</a>
             </div>
-
+            
             <!-- Méthodologie CI/CD avec animation & lien GitLab -->
             <div class="card ci-cd-card">
                 <h2 id="ci-cd-title"><span class="emoji">⚙️</span> Méthodologie & CI/CD</h2>
@@ -139,22 +155,6 @@
                 </div>
             </div>            
 
-            <!-- Scripts Mermaid & Lottie -->
-            <script type="module">
-                import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
-                mermaid.initialize({ startOnLoad: true });
-            </script>
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
-            <script>
-                var animation = lottie.loadAnimation({
-                    container: document.getElementById("ci-cd-animation"),
-                    renderer: "svg",
-                    loop: true,
-                    autoplay: true,
-                    path: "https://assets3.lottiefiles.com/packages/lf20_kqshxuij.json" 
-                });                  
-            </script>
         </div>
     </section>    
 
@@ -189,13 +189,76 @@
         </div>
 
     </footer>
+
+    
+    <script type="module">
+        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            mermaid.initialize({ startOnLoad: true });
-        });
+        var animation = lottie.loadAnimation({
+            container: document.getElementById("ci-cd-animation"),
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            path: "https://assets3.lottiefiles.com/packages/lf20_kqshxuij.json" 
+        });                  
     </script>
 
     <script src="translations.js"></script>
 
+    <script>
+        const burgerMenu = document.getElementById("burger-menu");
+        const navItems = document.querySelector(".nav-items");
+      
+        burgerMenu.addEventListener("click", function (e) {
+          e.stopPropagation();
+          navItems.classList.toggle("open");
+      
+          if (navItems.classList.contains("open")) {
+            document.addEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.add("no-scroll");
+          } else {
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
+          }
+        });
+      
+        function closeMenuOnClickOutside(e) {
+          if (!navItems.contains(e.target) && !burgerMenu.contains(e.target)) {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
+          }
+        }
+      
+        const navLinks = document.querySelectorAll(".nav-links a");
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
+          });
+        });
+      
+        const contactButton = document.getElementById("nav-contact");
+        if (contactButton) {
+          contactButton.addEventListener("click", () => {
+            navItems.classList.remove("open");
+            document.removeEventListener("click", closeMenuOnClickOutside);
+            document.body.classList.remove("no-scroll");
+          });
+        }
+      
+        // Ne déclenche Mermaid que s’il est présent
+        document.addEventListener("DOMContentLoaded", function () {
+          if (typeof mermaid !== "undefined") {
+            mermaid.initialize({ startOnLoad: true });
+          }
+        });
+    </script>
+ 
 </body>
 </html>

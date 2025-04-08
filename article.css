@@ -1,0 +1,96 @@
+#nav-back {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+  
+  background: none; /* Supprime la couleur de fond */
+  color: #7D5FB2; /* ou autre couleur cohérente avec ton design */
+  padding: 4px 8px; /* Rendu plus compact */
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none; /* Supprime la bordure */
+  box-shadow: none; /* Supprime l’ombre */
+}
+h1#article-header {
+  margin-top: 48px; /* évite qu’il soit collé au bouton */
+}
+  
+#nav-back:hover {
+    background: #6a4bbd;
+}
+  
+  
+
+@media screen and (max-width: 768px) {
+    body.article-page {
+      background: #fff;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .main-container {
+        padding: 205px 16px 24px; /* ↑ Ajoute un espace en haut pour laisser respirer le bouton */
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+  
+    h1#article-header {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+  
+    #article-description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    #article-content {
+      font-size: 1rem;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+  
+    /* Bouton retour */
+    #nav-back {
+        display: block; /* ← s'assure qu'il prend toute la largeur */
+        margin: 24px auto 20px auto; /* ← ajoute un espace au-dessus et le centre */
+        padding: 10px 16px;
+        background: #7D5FB2;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: bold;
+        text-align: center;
+        width: fit-content;
+    }
+      
+  
+    #nav-back:hover {
+      background: #6a4bbd;
+    }
+  
+    /* Si Dev.to utilise beaucoup de code blocks */
+    #article-content pre {
+      background: #f4f4f4;
+      padding: 12px;
+      overflow-x: auto;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+  
+    #article-content img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 12px auto;
+    }
+  }
+  

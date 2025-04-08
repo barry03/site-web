@@ -31,37 +31,62 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="index.html" class="back-button">← Retour</a>
-        <button class="toggle-dark-mode" onclick="toggleDarkMode()">🌙 Mode Sombre</button>
-        <h1>Mon CV/My Resume</h1>
+        <a href="index.html" class="back-button" id="cv-retour">← Retour</a>
+        <button class="toggle-dark-mode" id="cv-sombre" onclick="toggleDarkMode()">🌙 Mode Sombre</button>
     </nav>
+      
+    <h1>Mon CV/My Resume</h1> 
+      
 
     <!-- Conteneur principal -->
     <section class="cv-container">
+        <!-- FRENCH VERSION -->
         <div class="cv-box">
             <h2>📄 French Version</h2>
             <p class="cv-description"><i class="fas fa-file-alt"></i> Un résumé détaillant mon parcours et mes compétences en Data Engineering.</p>
+        
+            <!-- WRAPPER AVEC EN-TÊTE STYLÉ -->
+            <div class="iframe-wrapper">
+            <div class="fake-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
             <iframe src="files/CV_Barry_FR.pdf" class="cv-frame"></iframe>
+            </div>
+        
             <p id="cv-fr" class="cv-update-date"></p>
-    
+        
             <div class="cv-buttons">
-                <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Partagez le profil </button>
-                <a href="files/CV_Barry_FR.pdf" download class="btn-download" onclick="gtag('event', 'cv_download', { cv_version: 'fr' });">📥 Télécharger</a>
+            <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_FR.pdf')">📋 Partagez le profil</button>
+            <a href="files/CV_Barry_FR.pdf" download class="btn-download" onclick="gtag('event', 'cv_download', { cv_version: 'fr' });">📥 Télécharger</a>
             </div>
         </div>
+  
     
+        <!-- ENGLISH VERSION -->
         <div class="cv-box">
             <h2>📄 English Version</h2>
             <p class="cv-description"><i class="fas fa-file-alt"></i> English resume showcasing my experience in Big Data & Cloud Solutions.</p>
-            <iframe src="files/CV_Barry_EN.pdf" class="cv-frame"></iframe>
+        
+            <div class="iframe-wrapper">
+            <div class="fake-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <iframe src="files/CV_Barry_EN_DataEngineer.pdf" class="cv-frame"></iframe>
+            </div>
+        
             <p id="cv-en" class="cv-update-date"></p>
-    
+        
             <div class="cv-buttons">
-                <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_EN.pdf')">📋 Share profil</button>
-                <a href="files/CV_Barry_EN.pdf" download class="btn-download"
+            <button class="btn-copy" onclick="copyCvLink('files/CV_Barry_EN_DataEngineer.pdf')">📋 Share profil</button>
+            <a href="files/CV_Barry_EN_DataEngineer.pdf" download class="btn-download"
                 onclick="gtag('event', 'cv_download', { cv_version: 'en' });">📥 Download</a>
-            </div> 
+            </div>
         </div>
+  
     </section>
     
     
@@ -70,7 +95,7 @@
             // Liste des fichiers CV
             const cvs = [
                 { id: "cv-fr", file: "files/CV_Barry_FR.pdf", recentId: "recent-update-fr" },
-                { id: "cv-en", file: "files/CV_Barry_EN.pdf", recentId: "recent-update-en" }
+                { id: "cv-en", file: "files/CV_Barry_EN_DataEngineer.pdf", recentId: "recent-update-en" }
             ];
     
             cvs.forEach(cv => {
@@ -126,6 +151,8 @@
             }
         });
     </script>    
+
+    <script src="translations.js"></script>
 
 </body>
 </html>
