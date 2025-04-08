@@ -844,7 +844,7 @@ pre code {
     .tooltip-text {
         top: auto;
         bottom: 125%; /* au-dessus du */
-        left: 60%; /* Poussé un peu plus vers le centre */
+        left: 70%; /* Poussé un peu plus vers le centre */
         transform: translateX(-50%);
         max-width: 260px;
         font-size: 0.75rem;
