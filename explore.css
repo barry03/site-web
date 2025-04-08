@@ -506,12 +506,25 @@ video {
     color: #333;
 }
 
+
 .dashboard-actions {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px; /* ↕️ espace entre bouton et l’icône */
+    justify-content: center; /* centre horizontalement l'ensemble */
+    align-items: center;      /* aligne verticalement */
+    gap: 10px;                /* espace entre bouton et icône */
     margin-top: 25px;
+}
+  
+#btn-dashboard {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #5468ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    min-width: 150px;
+    font-size: 0.95rem;
 }
   
 .info-tooltip {
@@ -519,13 +532,12 @@ video {
     cursor: help;
     color: #7D5FB2;
     transition: transform 0.2s ease;
-    line-height: 1;
-    text-align: center;
 }
   
 .info-tooltip:hover {
     transform: scale(1.2);
 }
+  
   
 /* Bouton interactif */
 .btn {
