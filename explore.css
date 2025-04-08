@@ -528,7 +528,7 @@ video {
 /* Bouton interactif */
 .btn {
     display: inline-block;
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     width: auto;
     padding: 10px 15px;
     background-color: #5468ff;
