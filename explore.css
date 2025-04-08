@@ -845,13 +845,13 @@ pre code {
         position: relative;
     }
     .tooltip-text {
-        left: 60% !important;                /* Centré horizontalement */
+        left: 50vw !important;                /* Centré horizontalement */
         transform: translateX(-50%) !important; /* Centre le tooltip par rapport à l’icône */
         bottom: 125%;                        /* Affiche au-dessus */
         top: auto;                           /* Annule le top */
-        font-size: 0.78rem;                  /* Texte un peu plus petit */
-        min-width: 220px;
-        max-width: 280px;                    /* Étirement léger */
+        font-size: 0.75rem;                  /* Texte un peu plus petit */
+        min-width: 240px;
+        max-width: 290px;                    /* Étirement léger */
         white-space: normal;
         word-break: break-word;
         text-align: left;
