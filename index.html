@@ -68,6 +68,10 @@
                 <li><a href="#about" id="nav-about">À propos</a></li>
                 <li><a href="#competences" id="nav-skills">Compétences & Stack</a></li>
                 <li><a href="#projects" id="nav-projects">Projets</a></li>
+                <li class="mobile-only-link">
+                    <a id="nav-blog" href="blog.html">Blog & Veille</a>
+                </li>
+                  
             </ul>
 
             <div class="nav-right">
@@ -465,6 +469,8 @@
             window.addEventListener("scroll", revealOnScroll);
             window.addEventListener("scroll", animateProgressBars);
 
+            revealOnScroll();
+            animateProgressBars();
             // Une fois joué, ne le refait pas pour cette session
             sessionStorage.setItem("indexScrollPlayed", "true");
 
