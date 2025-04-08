@@ -842,13 +842,14 @@ pre code {
 
 @media screen and (max-width: 768px) {
     .tooltip-text {
-        left: 50% !important;
-        bottom: 130%; /* un peu plus d'espace au-dessus de ℹ*/
-        transform: translateX(-50%) !important;
+        top: auto;
+        bottom: 125%; /* au-dessus du ℹ️ */
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 260px;
+        font-size: 0.75rem;
         text-align: center;
-        font-size: 0.8rem;           /* ➖ texte légèrement réduit */
-        padding: 6px 10px;           /* ➖ padding plus fin */
-        max-width: 280px;            /* ➖ moins large = plus compact */
+        padding: 6px 10px;
         line-height: 1.4;
     }
 
