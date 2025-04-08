@@ -841,21 +841,25 @@ pre code {
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
-    .tooltip-wrapper {
-        position: relative;
-    }
     .tooltip-text {
-        left: 50vw !important;                /* Centré horizontalement */
-        transform: translateX(-50%) !important; /* Centre le tooltip par rapport à l’icône */
-        bottom: 125%;                        /* Affiche au-dessus */
-        top: auto;                           /* Annule le top */
-        font-size: 0.75rem;                  /* Texte un peu plus petit */
-        min-width: 240px;
-        max-width: 290px;                    /* Étirement léger */
+        position: fixed; /* ✅ ignore le flux local pour un placement global */
+        bottom: auto;
+        top: 60%; /* Ajuste en fonction de la position désirée */
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 280px;
+        min-width: 220px;
+        font-size: 0.75rem;
+        text-align: left;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 6px;
         white-space: normal;
         word-break: break-word;
-        text-align: left;
-        padding: 10px;
+        line-height: 1.5;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        z-index: 9999;
     }
 
     img,
