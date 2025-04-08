@@ -69,6 +69,14 @@ body.dark-mode {
       padding-left: 16px;
       padding-right: 16px;
     }
+
+    h1 {
+        background: linear-gradient(90deg, #7D5FB2, #5468FF);
+        background-clip: text;                /* 👈 version standard */
+        -webkit-background-clip: text;        /* 👈 pour Chrome/Safari */
+        -webkit-text-fill-color: transparent; /* 👈 masque le texte pour laisser voir le gradient */
+    }
+    
     /* En mode sombre */
     body.dark-mode h1 {
         color: #b3aaff; /* 💜 violet pâle lumineux */
@@ -113,6 +121,11 @@ body.dark-mode {
     text-align: center;
     margin-bottom: 10px;
     font-style: italic;
+}
+
+/* En mode sombre : couleur plus lumineuse */
+body.dark-mode .cv-description {
+    color: #d0caff; /* 💜 doux violet clair lisible */
 }
 
 /* Icône avant la description */
@@ -281,6 +294,9 @@ body.dark-mode .cv-box h2 {
         margin: 0px auto 16px auto; /* ⬅️ réduit l’espace en haut & en bas */
         padding: 70px 16px 0; /* ⬅️ garde une petite marge sur les côtés */
     }
+    body.dark-mode h1 {
+        color: #b3aaff; /* 💜 violet pâle lumineux */
+    }
       
     .toggle-dark-mode {
         background: #f0f0f0;
@@ -313,11 +329,18 @@ body.dark-mode .cv-box h2 {
       text-align: center;
       margin-bottom: 8px;
     }
+    body.dark-mode .cv-box h2 {
+        color: #c2b8f0;
+    }
   
     .cv-description {
       font-size: 0.95rem;
       text-align: center;
       margin-bottom: 8px;
+    }
+    /* En mode sombre : couleur plus lumineuse */
+    body.dark-mode .cv-description {
+        color: #d0caff; /* 💜 doux violet clair lisible */
     }
   
     .cv-frame {
