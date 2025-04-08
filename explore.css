@@ -506,13 +506,19 @@ video {
     color: #333;
 }
 
-.info-tooltip {
-    display: inline-block;
-    margin-left: 8px;
-    cursor: help;
+#btn-dashboard + .info-tooltip {
+    margin-left: 8px; /* espace entre le bouton et le point d'interrogation */
     font-size: 1.1rem;
+    cursor: help;
+    color: #7D5FB2;
     vertical-align: middle;
+    transition: transform 0.2s ease;
 }
+  
+#btn-dashboard + .info-tooltip:hover {
+    transform: scale(1.2);
+}
+  
   
 /* Bouton interactif */
 .btn {
