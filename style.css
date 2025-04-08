@@ -20,33 +20,7 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
-/*
-.brand-name {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    color: #3A3A70;
-}
-  
-.brand-name .by {
-    color: #7D5FB2;
-    font-weight: 500;
-}
-  
-.brand-name .db {
-    color: #3A3A70;
-    font-weight: 700;
-}
-*/
 
-/* Cacher les boutons sur explore.html et blog.html */
-/*
-@media screen and (min-width: 769px) {
-    body:not(.home) .nav-right,
-    body:not(.home) .language-switcher {
-      display: none;
-    }
-}
-*/
 .emoji {
     font-size: 1.3rem;
     margin-right: 6px;
@@ -107,27 +81,6 @@ body {
     font-weight: 500;
     text-decoration: none;
 }
-  
-/*
-.logo-db {
-    font-size: 1.2rem; 
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-*/  
-/*
-.logo-db span:first-child {
-    color: #7D5FB2;
-}
-
-.logo-db span:last-child {
-    color: #0056b3;
-}
-*/
 
 .logo-img {
     height: 50px; /* ou 40px selon ton header */
@@ -420,14 +373,6 @@ body {
     white-space: nowrap;
     margin-right: 4px; /* Optionnel, à ajuster selon ton rendu */
 }
-  
-/*
-.competences-list span {
-    flex-grow: 1; 
-    font-size: 16px; 
-    font-weight: 500;
-}
-*/
 
 .competences-list li::before {
     content: "✔️";
@@ -462,18 +407,7 @@ body {
     align-items: center;
     text-align: center;
 }
-/*
-.stack-technique {
-    width: 45%;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    position: relative;
-    margin-left: 40px;
-    flex-shrink: 0;
-    align-items: center;
-}
-*/
+
 .stack-technique img {
     width: 50px; /* Réduction des logos */
     height: auto;
@@ -551,16 +485,6 @@ body {
 .tech-grid img[alt="databricks"] {
     width: 80px; /* Taille plus grande pour Databricks */
 }
-
-/* Ajuste la taille et l’animation des icônes */
-/*
-.tech-grid img {
-    width: 40px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-}
-*/
 /* Tooltip */
 .tech-grid img::after {
     content: attr(alt);
@@ -593,11 +517,7 @@ body {
     opacity: 0.85;
     transform: scale(1.1) translateY(-10px);
 }
-/*
-.tech-grid img:hover {
-    transform: scale(1.1);
-}
-*/
+
 /* Variation de délai pour créer l'effet de vague */
 .tech-grid img:nth-child(odd) {
     animation-delay: 0s;
@@ -1124,7 +1044,7 @@ body {
         flex-direction: column;
         gap: 12px;
         align-items: flex-start;
-        padding-left: 16px; /* ← Même valeur que le reste de ton menu */
+        padding-left: 14px; /* ← Même valeur que le reste de ton menu */
         padding-right: 16px;
         padding-bottom: calc(32px + env(safe-area-inset-bottom));
     }
@@ -1363,10 +1283,6 @@ body {
 
     .tech-grid img {
         max-width: 40px;
-        /*
-        width: 100%;
-        height: auto;
-        */
         object-fit: contain;
         width: 36px;
         height: 40px;
@@ -1546,11 +1462,10 @@ body {
     }
       
 }
-/*
+
 @media screen and (max-width: 350px) {
     .tech-grid {
       grid-template-columns: repeat(3, 1fr);
     }
 }
-*/
 
