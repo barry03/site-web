@@ -269,6 +269,28 @@
           }
         });
     </script>
+
+    <script>
+        // gestion de mobile du tooltip
+        const icon = document.getElementById("tooltip-icon");
+        const tooltip = document.getElementById("tooltip-text");
+      
+        // Toggle le tooltip sur clic (tap)
+        icon.addEventListener("click", () => {
+          const isVisible = tooltip.style.visibility === "visible";
+          tooltip.style.visibility = isVisible ? "hidden" : "visible";
+          tooltip.style.opacity = isVisible ? "0" : "1";
+        });
+      
+        // Ferme si on clique ailleurs (optionnel mais propre)
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest(".tooltip-wrapper")) {
+            tooltip.style.visibility = "hidden";
+            tooltip.style.opacity = "0";
+          }
+        });
+    </script>      
+
  
 </body>
 </html>

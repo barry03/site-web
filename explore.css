@@ -520,33 +520,36 @@ video {
     line-height: 1;
 }
 
-
 .tooltip-wrapper {
     position: relative;
     display: inline-block;
 }
-
+  
 .tooltip-text {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    bottom: 125%; /* au-dessus de l'icône */
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 120%; /* décalage vers la droite */
+    transform: translateY(-50%);
     background-color: #333;
     color: #fff;
     padding: 8px 12px;
     border-radius: 6px;
-    white-space: nowrap;
+    white-space: normal; /* autorise les retours à la ligne */
+    max-width: 240px;
     font-size: 0.85rem;
     transition: opacity 0.2s ease-in-out;
     z-index: 10;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-
+  
 .tooltip-wrapper:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
 }
+  
 
 /* Bouton interactif */
 .btn {
