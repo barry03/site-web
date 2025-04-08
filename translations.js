@@ -7,6 +7,10 @@ const translations = {
         "nav-blog": "Blog & Veille",
         "nav-back": "🔙 Retour au blog",
 
+        //CV
+        "cv-retour": "← Retour",
+        "cv-sombre" : "🌙 Mode Sombre",
+
         // HERO Section
         "hero-title": "Data Engineer | Spécialiste ETL & Big Data",
         "hero-description": "Passionné par la gestion et la valorisation des données, je conçois des solutions robustes pour l'ingestion, la transformation et l'analyse de grands volumes de données. Mon expertise couvre l'ETL, le Big Data et le Cloud Computing.",
@@ -153,6 +157,10 @@ const translations = {
         "nav-blog": "Blog & Insights",
         "nav-back": "🔙 Back to the blog",
 
+        //CV
+        "cv-retour": "← Back",
+        "cv-sombre" : "🌙 Dark mode",
+
         // HERO Section
         "hero-title": "Data Engineer | ETL & Big Data Specialist",
         "hero-description": "Passionate about data management and enhancement, I design robust solutions for ingestion, transformation, and analysis of large volumes of data. My expertise covers ETL, Big Data, and Cloud Computing.",
@@ -297,7 +305,7 @@ function applyTranslations(lang) {
     console.log("🌍 Application de la langue :", lang);
 
     const elementsToTranslate = [
-        "nav-about", "nav-skills", "nav-projects", "nav-contact", "nav-blog", "nav-back",
+        "nav-about", "nav-skills", "nav-projects", "nav-contact", "nav-blog", "nav-back", "cv-retour", "cv-sombre",
         "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore",
         "skills-title", "skills-subtitle", "skill-1", "skill-2",
         "skill-3", "skill-4", "skill-5", "stack-title", "projects-title", "project-1-title", "project-1-description", "project-2-title",
