@@ -843,8 +843,8 @@ pre code {
 @media screen and (max-width: 768px) {
     .tooltip-text {
         top: auto;
-        bottom: 125%; /* au-dessus du ℹ️ */
-        left: 50%;
+        bottom: 125%; /* au-dessus du */
+        left: 60%; /* Poussé un peu plus vers le centre */
         transform: translateX(-50%);
         max-width: 260px;
         font-size: 0.75rem;
