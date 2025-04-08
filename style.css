@@ -1140,9 +1140,11 @@ body {
         white-space: nowrap;
         text-decoration: none;
         transition: background 0.3s;
+        margin-left: 0; /* ← au cas où */
+        width: auto;
+        align-self: flex-start;
     }
-    .language-switcher,
-    .cta-button {
+    .language-switcher{
         width: 100%;
     }
 
