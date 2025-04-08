@@ -506,8 +506,13 @@ video {
     color: #333;
 }
 
+#btn-dashboard {
+    display: inline-block; /* ✅ permet au ❓ de s'afficher à droite */
+    margin-bottom: 12px;    /* optionnel pour l’espacement en dessous */
+}
+  
 #btn-dashboard + .info-tooltip {
-    margin-left: 8px; /* espace entre le bouton et le point d'interrogation */
+    margin-left: 8px;
     font-size: 1.1rem;
     cursor: help;
     color: #7D5FB2;
@@ -518,6 +523,7 @@ video {
 #btn-dashboard + .info-tooltip:hover {
     transform: scale(1.2);
 }
+  
   
   
 /* Bouton interactif */
