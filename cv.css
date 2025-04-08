@@ -36,21 +36,6 @@ body.dark-mode {
     white-space: nowrap;
 }
 
-/* Bouton Mode Sombre bien contenu */
-/*
-.toggle-dark-mode {
-    background: #f0f0f0;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    white-space: nowrap;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-left: auto;
-}
-*/
 .toggle-dark-mode:hover {
     background: #e6e6e6;
     border-color: #aaa;
@@ -83,6 +68,10 @@ body.dark-mode {
       padding-top: 100px; /* espace sous navbar */
       padding-left: 16px;
       padding-right: 16px;
+    }
+    /* En mode sombre */
+    body.dark-mode h1 {
+        color: #b3aaff; /* 💜 violet pâle lumineux */
     }
 }
   
@@ -147,12 +136,15 @@ body.dark-mode {
     margin-top: 5px;
 }
 
-
 .cv-box h2 {
     font-size: 1.2rem;
     font-weight: bold;
     color: #3a3a70;
     margin-bottom: 15px;
+}
+/* Mode sombre : une couleur violette douce */
+body.dark-mode .cv-box h2 {
+    color: #c2b8f0;
 }
 
 /* Style de l'aperçu du CV */
