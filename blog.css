@@ -684,8 +684,7 @@ video {
         z-index: 1000;
     }
     .logo-db {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.5rem; /* ou 1.2rem si tu veux un peu plus */
         font-weight: bold;
         text-decoration: none;
         white-space: nowrap;

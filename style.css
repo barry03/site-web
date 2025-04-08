@@ -1129,6 +1129,7 @@ body {
         padding-left: 16px; /* ← Même valeur que le reste de ton menu */
         padding-right: 16px;
         padding-bottom: calc(32px + env(safe-area-inset-bottom));
+        max-width: 240px; /* ou autre valeur raisonnable */
     }
       
     /* Bouton */
@@ -1142,8 +1143,8 @@ body {
         white-space: nowrap;
         text-decoration: none;
         transition: background 0.3s;
-        width: auto;
-        align-self: flex-start; /* 🔄 le colle à gauche comme les autres */
+        width: 100%; /* 🔄 même largeur que les langues */
+        box-sizing: border-box; /* 🔒 garantit que padding est pris en compte */
     }
     
     .cta-button:hover {
