@@ -509,35 +509,41 @@ video {
 
 .dashboard-actions {
     display: flex;
-    justify-content: center; /* centre horizontalement l'ensemble */
-    align-items: center;      /* aligne verticalement */
-    gap: 10px;                /* espace entre bouton et icône */
+    justify-content: center;
+    align-items: center;       /* 🔥 assure l'alignement vertical */
+    gap: 14px;                 /* 🔧 espace plus net entre les deux */
     margin-top: 25px;
 }
   
 #btn-dashboard {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 18px;
     background-color: #5468ff;
-    color: #fff;
+    color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: background-color 0.3s;
-    min-width: 150px;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    min-width: 220px;
 }
   
 .info-tooltip {
-    font-size: 1.2rem;
+    font-size: 1.4rem;         /* 🔧 ajuste la taille pour mieux s'aligner */
+    line-height: 1;
     cursor: help;
     color: #7D5FB2;
     transition: transform 0.2s ease;
+    margin-top: 2px;           /* 🪄 petit tweak pour caler parfaitement */
 }
   
 .info-tooltip:hover {
     transform: scale(1.2);
 }
   
+  
+.info-tooltip:hover {
+    transform: scale(1.2);
+}
   
 /* Bouton interactif */
 .btn {
