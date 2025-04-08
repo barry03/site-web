@@ -1037,9 +1037,9 @@ body {
         white-space: nowrap;
     }
       
-    /* 👇 Affichage des boutons en bas du drawer */
+    /* Affichage des boutons en bas du drawer */
     .nav-right {
-        margin-top: auto; /* 👈 pousse vers le bas du drawer */
+        margin-top: auto; /* pousse vers le bas du drawer */
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -1218,7 +1218,7 @@ body {
 
     .competences-list ul li {
         display: flex;
-        align-items: center; /* ✔️ et texte alignés verticalement */
+        align-items: center; /* et texte alignés verticalement */
         gap: 8px;
         margin-bottom: 20px;
         flex-wrap: wrap;

@@ -72,9 +72,9 @@ body.dark-mode {
 
     h1 {
         background: linear-gradient(90deg, #7D5FB2, #5468FF);
-        background-clip: text;                /* 👈 version standard */
-        -webkit-background-clip: text;        /* 👈 pour Chrome/Safari */
-        -webkit-text-fill-color: transparent; /* 👈 masque le texte pour laisser voir le gradient */
+        background-clip: text;                /* version standard */
+        -webkit-background-clip: text;        /* pour Chrome/Safari */
+        -webkit-text-fill-color: transparent; /* masque le texte pour laisser voir le gradient */
     }
     
     /* En mode sombre */
@@ -289,11 +289,11 @@ body.dark-mode .cv-box h2 {
         font-weight: bold;
         color: #3a3a70;
         text-align: center;
-        margin: 0px auto 16px auto; /* ⬅️ réduit l’espace en haut & en bas */
-        padding: 70px 16px 0; /* ⬅️ garde une petite marge sur les côtés */
+        margin: 0px auto 16px auto; /* ⬅réduit l’espace en haut & en bas */
+        padding: 70px 16px 0; /* garde une petite marge sur les côtés */
     }
     body.dark-mode h1 {
-        color: #b3aaff; /* 💜 violet pâle lumineux */
+        color: #b3aaff; /*violet pâle lumineux */
     }
       
     .toggle-dark-mode {
@@ -304,8 +304,8 @@ body.dark-mode .cv-box h2 {
         /*border-radius: 6px;*/
         max-width: 48%;
         text-align: center;
-        margin-left: auto;  /* 👈 pousse à droite mais garde une marge */
-        margin-right: 16px;  /* 👈 évite qu’il colle la bordure */
+        margin-left: auto;  /* pousse à droite mais garde une marge */
+        margin-right: 16px;  /* évite qu’il colle la bordure */
     }
       
       
@@ -338,7 +338,7 @@ body.dark-mode .cv-box h2 {
     }
     /* En mode sombre : couleur plus lumineuse */
     body.dark-mode .cv-description {
-        color: #d0caff; /* 💜 doux violet clair lisible */
+        color: #d0caff; /* doux violet clair lisible */
     }
   
     .cv-frame {

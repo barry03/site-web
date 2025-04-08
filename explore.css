@@ -26,36 +26,6 @@ body {
     flex-direction: column;
     padding-top: 80px;
 }
-/*
-* {
-    box-sizing: border-box;
-  }
-*/
-
-/*
-html {
-    scroll-behavior: smooth;
-}
-body, html {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-body {
-    font-size: 14px;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #e3eaf8, #ffffff);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px;
-}
-
-html {
-    overflow-x: hidden;
-}
-*/
 
 img,
 video {
@@ -63,30 +33,6 @@ video {
   height: auto;
 }
 
-/*
-html {
-    scroll-behavior: smooth;
-}
-body, html {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden; 
-}
-
-
-body {
-    font-size: 14px;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #e3eaf8, #ffffff);
-    background-size: cover;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px;
-}
-*/
 .article-page .main-container {
     position: relative;
     top: -95px; /* Remonte le contenu de 30px */
@@ -104,15 +50,7 @@ body {
     font-weight: 500;
     text-decoration: none;
 }
-/*
-.logo-db span:first-child {
-    color: #7D5FB2;
-}
 
-.logo-db span:last-child {
-    color: #0056b3;
-}
-*/
 .btn-link {
     text-decoration: none;
     color: #4a90e2;
@@ -680,7 +618,6 @@ pre code {
     width: 100% !important;
     max-width: 1100px !important; /* Largeur augmentée */
     overflow: hidden !important; /* Supprime le scroll vertical */
-    /*transform: scale(1.2) !important;*/ /* Zoom forcé */
     transform: none !important; /* Enlève le zoom qui dépasse */
 }
 
@@ -1069,7 +1006,7 @@ pre code {
         width: 100%;
         height: auto;
         border-radius: 8px;
-        object-fit: contain; /* ← au cas où l’image dépasse */
+        object-fit: contain; /* au cas où l’image dépasse */
         display: block;
     }
       
@@ -1077,9 +1014,9 @@ pre code {
         font-size: 0.95rem;
         text-align: center;
         margin-top: 12px;
-        white-space: nowrap;       /* ← évite le retour à la ligne trop tôt */
-        overflow: hidden;          /* ← cache les débordements */
-        text-overflow: ellipsis;   /* ← ajoute des "..." si ça déborde */
+        white-space: nowrap;       /* évite le retour à la ligne trop tôt */
+        overflow: hidden;          /* cache les débordements */
+        text-overflow: ellipsis;   /* ajoute des "..." si ça déborde */
     }
 
     /* Bloc global CI/CD */
