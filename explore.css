@@ -536,13 +536,18 @@ video {
     color: #fff;
     padding: 8px 12px;
     border-radius: 6px;
-    white-space: normal; /* autorise les retours à la ligne */
-    max-width: 240px;
     font-size: 0.85rem;
     transition: opacity 0.2s ease-in-out;
     z-index: 10;
     text-align: left;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+    /* ✅ uniquement une fois chacune */
+    max-width: 340px;
+    min-width: 200px;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.5;
 }
   
 .tooltip-wrapper:hover .tooltip-text {
