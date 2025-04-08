@@ -507,11 +507,12 @@ video {
 }
 
 #btn-dashboard {
-    display: inline-block; /* ✅ permet au ❓ de s'afficher à droite */
-    margin-bottom: 12px;    /* optionnel pour l’espacement en dessous */
+    display: inline-block;
+    vertical-align: middle; /* ➕ pour bien aligner avec l’emoji ❓ */
+    margin-bottom: 12px;     /* optionnel : tu peux ajuster ou supprimer */
+    margin-right: 4px;       /* ➕ espace entre le bouton et le ❓ */
 }
-  
-#btn-dashboard + .info-tooltip {
+.btn ~ .info-tooltip {
     margin-left: 8px;
     font-size: 1.1rem;
     cursor: help;
@@ -520,7 +521,7 @@ video {
     transition: transform 0.2s ease;
 }
   
-#btn-dashboard + .info-tooltip:hover {
+.btn ~ .info-tooltip:hover {
     transform: scale(1.2);
 }
   
