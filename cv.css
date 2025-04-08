@@ -27,7 +27,7 @@ body.dark-mode {
 .toggle-dark-mode {
     background: #f0f0f0;
     color: #007bff;
-    border: 1px solid #ccc; /* ✅ fine bordure grise */
+    border: 1px solid #ccc; /* fine bordure grise */
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 0.95rem;
@@ -79,7 +79,7 @@ body.dark-mode {
     
     /* En mode sombre */
     body.dark-mode h1 {
-        color: #b3aaff; /* 💜 violet pâle lumineux */
+        color: #b3aaff; /* violet pâle lumineux */
     }
 }
   
@@ -125,7 +125,7 @@ body.dark-mode {
 
 /* En mode sombre : couleur plus lumineuse */
 body.dark-mode .cv-description {
-    color: #d0caff; /* 💜 doux violet clair lisible */
+    color: #d0caff; /* doux violet clair lisible */
 }
 
 /* Icône avant la description */
@@ -169,10 +169,8 @@ body.dark-mode .cv-box h2 {
 }
 
 .cv-frame:hover {
-    outline: 2px solid #7D5FB2;
-    outline-offset: 4px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
-    transform: none;
+    transform: scale(1.005); /* plus doux */
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .cv-loader {
@@ -348,6 +346,10 @@ body.dark-mode .cv-box h2 {
       width: 100%;
       margin-top: 10px;
     }
+    .cv-frame:hover {
+        transform: scale(1.005); /* plus doux */
+        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.12);
+    }    
   
     .cv-update-date {
       font-size: 0.85rem;
