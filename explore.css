@@ -836,10 +836,19 @@ pre code {
     opacity: 0.2; 
     pointer-events: none; 
 }
+  
 
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
+    .tooltip-text {
+        left: 50% !important;         /* centre horizontalement */
+        top: auto !important;
+        bottom: 125%;                 /* au-dessus de l'icône */
+        transform: translateX(-50%) !important;
+        text-align: center;
+    }
+
     img,
     video {
         max-width: 100% !important;
