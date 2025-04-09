@@ -146,7 +146,9 @@ const translations = {
         "welcome-overlay": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀",
 
         "quote-1": "💬 « Les paroles sont bon marché. Montrez-moi le code. » – Linus Torvalds",
-        "quote-2": "💬 « La simplicité est l’âme de l’efficacité. » – Austin Freeman"
+        "quote-2": "💬 « La simplicité est l’âme de l’efficacité. » – Austin Freeman",
+
+        "text-toolip": "Lorsque vous ouvrez le dashboard, cliquez sur 'Yes, get this app back up!' si un message s'affiche. Veillez patientez svp!"
 
     },
     "en": {
@@ -296,7 +298,9 @@ const translations = {
         "welcome-overlay": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀",
 
         "quote-1": "💬 “Talk is cheap. Show me the code.” – Linus Torvalds",
-        "quote-2": "💬 “Simplicity is the soul of efficiency.” – Austin Freeman"
+        "quote-2": "💬 “Simplicity is the soul of efficiency.” – Austin Freeman",
+
+        "text-toolip": "When you open the dashboard, click 'Yes, get this app back up!' if a message appears. Please be patient!"
     }
 };
 
@@ -321,7 +325,8 @@ function applyTranslations(lang) {
         "oncopole-objective-title", "oncopole-objective-text", "oncopole-missions-title", "oncopole-task-1", "oncopole-task-2", "oncopole-task-3",
         "oncopole-task-4", "oncopole-tech-title", "modal-1-tech", "aristid-objective-title", "aristid-objective-text", "aristid-missions-title",
         "aristid-task-1", "aristid-task-2", "aristid-task-3", "aristid-task-4", "aristid-tech-title", "modal-2-tech", "iqvia-objective-title",
-        "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2"
+        "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2",
+        "text-toolip"
 
     ];
 
