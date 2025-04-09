@@ -505,10 +505,61 @@ video {
     text-align: center;
     color: #333;
 }
+  
+
+.dashboard-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px; /* Espace entre le bouton et l’icône */
+    margin-top: 25px;
+}
+  
+.info-tooltip {
+    font-size: 1.3rem;
+    cursor: help;
+    line-height: 1;
+}
+
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 120%; /* décalage vers la droite */
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+    /* ✅ uniquement une fois chacune */
+    max-width: 340px;
+    min-width: 200px;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.5;
+}
+  
+.tooltip-wrapper:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+  
+
 /* Bouton interactif */
 .btn {
     display: inline-block;
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     width: auto;
     padding: 10px 15px;
     background-color: #5468ff;
@@ -785,10 +836,32 @@ pre code {
     opacity: 0.2; 
     pointer-events: none; 
 }
+  
 
 /* ========= NAVIGATION BURGER FIXÉE ========= */
 
 @media screen and (max-width: 768px) {
+    .tooltip-text {
+        position: fixed; /* ✅ ignore le flux local pour un placement global */
+        bottom: auto;
+        top: 80%; /* Ajuste en fonction de la position désirée */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 280px;
+        min-width: 220px;
+        font-size: 0.8rem;
+        text-align: left;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 6px;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.5;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        z-index: 9999;
+    }
+
     img,
     video {
         max-width: 100% !important;

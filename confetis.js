@@ -1,4 +1,4 @@
-// Confettis uniquement à la première visite de la session sur index.html
+// Confettis à la première visite de la session sur la page d'accueil
 window.addEventListener("DOMContentLoaded", () => {
     const hasSeenConfetti = sessionStorage.getItem("confettiShown");
 

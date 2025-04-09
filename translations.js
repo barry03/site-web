@@ -44,6 +44,8 @@ const translations = {
         "modal-2-title": "Aristid Retail Technology",
         "modal-3-title": "IQVIA",
 
+        "proj-date":"Oct. 2024 – En cours",
+
         // Descriptions des modals
         "modal-1-description": "Conception et mise en œuvre de pipelines de données scalables sur GCP.",
         "modal-2-description": "Mise en place de pipelines de données optimisés pour le traitement des flux concurrentiels.",
@@ -146,7 +148,9 @@ const translations = {
         "welcome-overlay": "👋 Bienvenue sur mon portfolio ! Faites défiler pour découvrir mon univers 🚀",
 
         "quote-1": "💬 « Les paroles sont bon marché. Montrez-moi le code. » – Linus Torvalds",
-        "quote-2": "💬 « La simplicité est l’âme de l’efficacité. » – Austin Freeman"
+        "quote-2": "💬 « La simplicité est l’âme de l’efficacité. » – Austin Freeman",
+
+        "text-toolip": "Lorsque vous ouvrez le dashboard, cliquez sur 'Yes, get this app back up!' si un message s'affiche. Veillez patientez svp!"
 
     },
     "en": {
@@ -193,6 +197,8 @@ const translations = {
         "modal-1-title": "Oncopole Claudis Rigaud",
         "modal-2-title": "Aristid Retail Technology",
         "modal-3-title": "IQVIA",
+
+        "proj-date":"Since Oct. 2024 – Present",
 
         // Descriptions of modals
         "modal-1-description": "Design and implementation of scalable data pipelines on GCP.",
@@ -296,7 +302,9 @@ const translations = {
         "welcome-overlay": "👋 Welcome to my portfolio! Feel free to scroll and explore the content below 🚀",
 
         "quote-1": "💬 “Talk is cheap. Show me the code.” – Linus Torvalds",
-        "quote-2": "💬 “Simplicity is the soul of efficiency.” – Austin Freeman"
+        "quote-2": "💬 “Simplicity is the soul of efficiency.” – Austin Freeman",
+
+        "text-toolip": "When you open the dashboard, click 'Yes, get this app back up!' if a message appears. Please be patient!"
     }
 };
 
@@ -307,7 +315,7 @@ function applyTranslations(lang) {
     const elementsToTranslate = [
         "nav-about", "nav-skills", "nav-projects", "nav-contact", "nav-blog", "nav-back", "cv-retour", "cv-sombre",
         "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore",
-        "skills-title", "skills-subtitle", "skill-1", "skill-2",
+        "skills-title", "skills-subtitle", "skill-1", "skill-2", "proj-date",
         "skill-3", "skill-4", "skill-5", "stack-title", "projects-title", "project-1-title", "project-1-description", "project-2-title",
         "project-2-description", "project-3-title", "project-3-description", "btn-project-1", "btn-project-2", "btn-project-3", "modal-1-title",
         "modal-2-title", "modal-3-title", "modal-1-description", "modal-2-description", "modal-3-description", "modal-1-tech", "modal-2-tech", "modal-3-tech",
@@ -321,7 +329,8 @@ function applyTranslations(lang) {
         "oncopole-objective-title", "oncopole-objective-text", "oncopole-missions-title", "oncopole-task-1", "oncopole-task-2", "oncopole-task-3",
         "oncopole-task-4", "oncopole-tech-title", "modal-1-tech", "aristid-objective-title", "aristid-objective-text", "aristid-missions-title",
         "aristid-task-1", "aristid-task-2", "aristid-task-3", "aristid-task-4", "aristid-tech-title", "modal-2-tech", "iqvia-objective-title",
-        "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2"
+        "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2",
+        "text-toolip"
 
     ];
 
