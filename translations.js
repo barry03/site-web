@@ -44,6 +44,8 @@ const translations = {
         "modal-2-title": "Aristid Retail Technology",
         "modal-3-title": "IQVIA",
 
+        "proj-date":"Oct. 2024 – En cours",
+
         // Descriptions des modals
         "modal-1-description": "Conception et mise en œuvre de pipelines de données scalables sur GCP.",
         "modal-2-description": "Mise en place de pipelines de données optimisés pour le traitement des flux concurrentiels.",
@@ -196,6 +198,8 @@ const translations = {
         "modal-2-title": "Aristid Retail Technology",
         "modal-3-title": "IQVIA",
 
+        "proj-date":"Since Oct. 2024 – Present",
+
         // Descriptions of modals
         "modal-1-description": "Design and implementation of scalable data pipelines on GCP.",
         "modal-2-description": "Implementation of optimized data pipelines for competitive price processing.",
@@ -311,7 +315,7 @@ function applyTranslations(lang) {
     const elementsToTranslate = [
         "nav-about", "nav-skills", "nav-projects", "nav-contact", "nav-blog", "nav-back", "cv-retour", "cv-sombre",
         "hero-title", "hero-subtitle", "hero-description", "hero-btn-cv", "hero-btn-explore",
-        "skills-title", "skills-subtitle", "skill-1", "skill-2",
+        "skills-title", "skills-subtitle", "skill-1", "skill-2", "proj-date",
         "skill-3", "skill-4", "skill-5", "stack-title", "projects-title", "project-1-title", "project-1-description", "project-2-title",
         "project-2-description", "project-3-title", "project-3-description", "btn-project-1", "btn-project-2", "btn-project-3", "modal-1-title",
         "modal-2-title", "modal-3-title", "modal-1-description", "modal-2-description", "modal-3-description", "modal-1-tech", "modal-2-tech", "modal-3-tech",
