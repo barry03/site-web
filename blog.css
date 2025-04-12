@@ -667,7 +667,7 @@ video {
 }
 
 .ai-title {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     margin-top: 20px;
     margin-bottom: 6px;
 }
@@ -1090,5 +1090,38 @@ button:hover {
         margin: 0;
         line-height: 1.4;
     }    
-  
+
+    .ai-title {
+        font-size: 1.4rem;
+        margin-top: 16px;
+    }
+    
+    .ai-desc {
+        font-size: 0.95rem;
+        margin-bottom: 16px;
+    }
+    
+    #ai-question {
+        font-size: 0.95rem;
+        padding: 10px;
+        min-height: 70px;
+    }
+    
+    button {
+        font-size: 0.95rem;
+        padding: 10px 14px;
+        width: 100%;
+    }
+    
+    .ai-result {
+        padding: 14px;
+        font-size: 0.95rem;
+        margin-top: 16px;
+    }
+    
+    .ai-assistant-section {
+        margin: 20px 10px 60px;
+        max-width: 100%;
+    }
+      
 }

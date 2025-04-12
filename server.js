@@ -16,13 +16,13 @@ app.post("/ask", async (req, res) => {
       {
         model: "gpt-3.5-turbo",
         messages: [
-          {
-            role: "system",
-            content:
-              "Tu es un assistant spécialisé dans la veille technologique, tu donnes des réponses concises, fiables et actuelles.",
-          },
-          { role: "user", content: question },
+            {
+              role: "system",
+              content: "Tu es un assistant expert en veille technologique. Donne des réponses détaillées, précises, et faciles à comprendre, même pour les étudiants."
+            },
+            { role: "user", content: question + " Donne une réponse complète avec exemples si possible." }
         ],
+          
       },
       {
         headers: {
