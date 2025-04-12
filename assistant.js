@@ -21,7 +21,7 @@ async function askGPT() {
       });
   
       const data = await response.json();
-      const result = data.answer; // c'est .answer ici, pas .choices[0]
+      const result = data.answer;
       resultDiv.innerHTML = result;
     } catch (error) {
       console.error(error);
