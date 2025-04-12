@@ -716,7 +716,7 @@ button:hover {
     text-align: left;
     font-size: 1rem;
     color: #2c2c2c;
-    line-height: 1.6;
+    line-height: 1.45;
     white-space: pre-wrap;
 }
 
@@ -725,25 +725,23 @@ button:hover {
 .ai-result h3 {
     color: #7D5FB2;
     font-weight: bold;
-    margin: 12px 0 6px;
+    margin: 8px 0 4px;
 }
 
 .ai-result li p {
     margin: 0;
     padding: 0;
-    line-height: 1.5;
+    line-height: 1.3;
 }
 
 .ai-result ol,
 .ai-result ul {
   padding-left: 1.2rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 4px 0;
 }
 
-
 .ai-result li {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .ai-result code {
@@ -1166,15 +1164,42 @@ button:hover {
         width: 100%;
     }
     
-    .ai-result {
-        padding: 14px;
-        font-size: 0.95rem;
-        margin-top: 16px;
-    }
-    
     .ai-assistant-section {
         margin: 20px 10px 60px;
         max-width: 100%;
+    }
+
+    .ai-result {
+        padding: 12px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .ai-result h1,
+    .ai-result h2,
+    .ai-result h3 {
+        font-size: 1.1rem;
+        margin: 6px 0 4px;
+    }
+    
+    .ai-result pre {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+    
+    .ai-result code {
+        font-size: 0.85rem;
+        padding: 2px 5px;
+    }
+    
+    .ai-result ol,
+    .ai-result ul {
+        padding-left: 1rem;
+        margin: 2px 0;
+    }
+    
+    .ai-result li {
+        margin-bottom: 3px;
     }
       
 }
