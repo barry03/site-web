@@ -708,6 +708,7 @@ button:hover {
 
 .ai-result {
     margin-top: 20px;
+    margin-bottom: 24px; /* 👈 ici */
     background: #ffffff;
     padding: 16px;
     border-radius: 6px;
@@ -724,43 +725,51 @@ button:hover {
 .ai-result h3 {
     color: #7D5FB2;
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.ai-result h1,
-.ai-result h2,
-.ai-result h3 {
-  margin: 12px 0 6px;
+    margin: 12px 0 6px;
 }
 
-.ai-result p {
-    margin: 10px 0;
-    line-height: 1.6;
+.ai-result li p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 }
+
+.ai-result ol,
+.ai-result ul {
+  padding-left: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 
 .ai-result li {
     margin-bottom: 6px;
 }
 
 .ai-result code {
-    background-color: #f4f4f4;
+    background-color: #eee;
+    color: #d63384;
     padding: 2px 6px;
     border-radius: 4px;
     font-family: 'Courier New', monospace;
     font-size: 0.95rem;
-    color: #d63384;
+    line-height: 1.4;
 }
+  
 
 .ai-result pre {
-    background-color: #1e1e1e;
+    background-color: #2d2d2d;
     color: #f8f8f2;
-    padding: 12px 16px;
-    border-radius: 6px;
+    padding: 16px;
+    border-radius: 8px;
     overflow-x: auto;
-    margin: 12px 0;
+    margin: 16px 0;
     font-size: 0.95rem;
     line-height: 1.5;
+    font-family: 'Courier New', monospace;
+    max-width: 100%;
 }
+  
 
 @media screen and (max-width: 768px) {
     body {
