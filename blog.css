@@ -727,9 +727,19 @@ button:hover {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+.ai-result h1,
+.ai-result h2,
+.ai-result h3 {
+  margin: 12px 0 6px;
+}
 
 .ai-result p {
-    margin: 12px 0;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.ai-result li {
+    margin-bottom: 6px;
 }
 
 .ai-result code {
@@ -751,7 +761,6 @@ button:hover {
     font-size: 0.95rem;
     line-height: 1.5;
 }
-
 
 @media screen and (max-width: 768px) {
     body {

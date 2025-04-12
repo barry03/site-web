@@ -23,6 +23,11 @@ async function askGPT() {
       const data = await response.json();
       const result = data.answer;
       resultDiv.innerHTML = marked.parse(result);
+      // Appliquer coloration syntaxique aux blocs de code
+      document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightElement(block);
+    });
+
     } catch (error) {
       console.error(error);
       resultDiv.innerHTML = "Erreur lors de la requête. Réessaie plus tard 😥";
