@@ -188,6 +188,16 @@
         </div>
     </section>
 
+    <section class="ai-assistant-section">
+        <h3 class="ai-title">🤖 Assistant de Veille Tech</h3>
+        <p class="ai-desc">Posez une question sur une techno, outil ou tendance pour obtenir une réponse en temps réel.</p>
+      
+        <textarea id="ai-question" placeholder="Ex: Quelles sont les nouveautés sur Apache Iceberg ?"></textarea>
+        <button onclick="askGPT()">Lancer la recherche 🔍</button>
+      
+        <div id="ai-answer" class="ai-result"></div>
+    </section>
+
     <script>
         async function loadVeilleData() {
             const response = await fetch("veille.json"); // Chargement du JSON
@@ -345,6 +355,8 @@
     <script src="translations.js"></script>
 
     <div id="toast" class="toast">📢 Une nouvelle source de veille ajoutée !</div>
-    
+
+    <script src="server.js"></script>
+
 </body>
 </html>
