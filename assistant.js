@@ -22,7 +22,7 @@ async function askGPT() {
   
       const data = await response.json();
       const result = data.answer;
-      resultDiv.innerHTML = result;
+      resultDiv.innerHTML = marked.parse(result);
     } catch (error) {
       console.error(error);
       resultDiv.innerHTML = "Erreur lors de la requête. Réessaie plus tard 😥";

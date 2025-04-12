@@ -708,15 +708,39 @@ button:hover {
 
 .ai-result {
     margin-top: 20px;
-    background: #fff;
-    padding: 18px;
+    background: #f3f3f3;
+    padding: 20px;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #dcdcdc;
     text-align: left;
     font-size: 1rem;
-    white-space: pre-line;
-    color: #333;
+    color: #222;
+    white-space: pre-wrap;
+    line-height: 1.6;
 }
+
+.ai-result h1, .ai-result h2, .ai-result h3 {
+    margin-top: 16px;
+    color: #6a4bbd;
+}
+
+.ai-result code {
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.95rem;
+}
+
+.ai-result pre {
+    background: #1e1e1e;
+    color: #f8f8f2;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 
 @media screen and (max-width: 768px) {
     body {
