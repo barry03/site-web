@@ -10,7 +10,7 @@ async function askGPT() {
     resultDiv.innerHTML = "Chargement de la réponse...⏳";
   
     try {
-      const response = await fetch("https://portfolio-wla3.onrender.com/ask", {
+        const response = await fetch("https://portfolio-wla3.onrender.com/ask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
