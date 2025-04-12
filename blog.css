@@ -708,37 +708,48 @@ button:hover {
 
 .ai-result {
     margin-top: 20px;
-    background: #f3f3f3;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #dcdcdc;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
     text-align: left;
     font-size: 1rem;
-    color: #222;
-    white-space: pre-wrap;
+    color: #2c2c2c;
     line-height: 1.6;
+    white-space: pre-wrap;
 }
 
-.ai-result h1, .ai-result h2, .ai-result h3 {
-    margin-top: 16px;
-    color: #6a4bbd;
+.ai-result h1,
+.ai-result h2,
+.ai-result h3 {
+    color: #7D5FB2;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ai-result p {
+    margin: 12px 0;
 }
 
 .ai-result code {
-    background-color: #eee;
-    padding: 2px 4px;
+    background-color: #f4f4f4;
+    padding: 2px 6px;
     border-radius: 4px;
-    font-family: monospace;
+    font-family: 'Courier New', monospace;
     font-size: 0.95rem;
+    color: #d63384;
 }
 
 .ai-result pre {
-    background: #1e1e1e;
+    background-color: #1e1e1e;
     color: #f8f8f2;
-    padding: 12px;
+    padding: 12px 16px;
     border-radius: 6px;
     overflow-x: auto;
-    font-family: 'Courier New', Courier, monospace;
+    margin: 12px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 
