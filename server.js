@@ -32,9 +32,13 @@ app.post("/ask", async (req, res) => {
       }
     );
 
+    console.log("Réponse OpenAI:", response.data);
     res.json({ answer: response.data.choices[0].message.content });
   } catch (error) {
     console.error(error.response?.data || error.message);
+    console.log("Question reçue :", question);
+    console.log("Clé API:", process.env.OPENAI_API_KEY ? "✔️ présente" : "❌ absente");
+
     res.status(500).json({ error: "Erreur lors de l’appel à OpenAI." });
   }
 });
