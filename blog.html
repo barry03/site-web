@@ -191,12 +191,12 @@
     </section>
 
     <section class="ai-assistant-section">
-        <h2 class="ai-title">🤖 Assistant de Veille Tech</h2>
-        <p class="ai-desc">Posez une question sur une techno, outil ou tendance pour obtenir une réponse en temps réel.</p>
+        <h2 class="ai-title" id="robot-v">🤖 Assistant de Veille Tech</h2>
+        <p class="ai-desc" id="robot-desc">Posez une question sur une techno, outil ou tendance pour obtenir une réponse en temps réel.</p>
       
         <textarea id="ai-question" placeholder="Ex: Quelles sont les nouveautés sur Apache Spark ?"></textarea>
         <br>
-        <button onclick="askGPT()">Lancer la recherche 🔍</button>
+        <button onclick="askGPT()" id="ia-button">Lancer la recherche 🔍</button>
       
         <div id="ai-answer" class="ai-result"></div>
     </section>

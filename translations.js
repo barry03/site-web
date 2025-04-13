@@ -150,7 +150,11 @@ const translations = {
         "quote-1": "💬 « Les paroles sont bon marché. Montrez-moi le code. » – Linus Torvalds",
         "quote-2": "💬 « La simplicité est l’âme de l’efficacité. » – Austin Freeman",
 
-        "text-toolip": "Lorsque vous ouvrez le dashboard, cliquez sur 'Yes, get this app back up!' si un message s'affiche. Veillez patientez svp!"
+        "text-toolip": "Lorsque vous ouvrez le dashboard, cliquez sur 'Yes, get this app back up!' si un message s'affiche. Veillez patientez svp!",
+        "robot-v": "🤖 Assistant de Veille Tech",
+        "robot-desc": "Posez une question sur une techno, outil ou tendance pour obtenir une réponse en temps réel.",
+        "ai-question": "Ex: Quelles sont les nouveautés sur Apache Spark ?",
+        "ia-button": "Lancer la recherche 🔍"
 
     },
     "en": {
@@ -304,7 +308,11 @@ const translations = {
         "quote-1": "💬 “Talk is cheap. Show me the code.” – Linus Torvalds",
         "quote-2": "💬 “Simplicity is the soul of efficiency.” – Austin Freeman",
 
-        "text-toolip": "When you open the dashboard, click 'Yes, get this app back up!' if a message appears. Please be patient!"
+        "text-toolip": "When you open the dashboard, click 'Yes, get this app back up!' if a message appears. Please be patient!",
+        "robot-v": "🤖 Tech Watch Assistant",
+        "robot-desc": "Ask a question about a technology, tool or trend to get a real-time answer.",
+        "ai-question": "Ex: What's new in Apache Spark?",
+        "ia-button": "Start search 🔍"
     }
 };
 
@@ -330,7 +338,7 @@ function applyTranslations(lang) {
         "oncopole-task-4", "oncopole-tech-title", "modal-1-tech", "aristid-objective-title", "aristid-objective-text", "aristid-missions-title",
         "aristid-task-1", "aristid-task-2", "aristid-task-3", "aristid-task-4", "aristid-tech-title", "modal-2-tech", "iqvia-objective-title",
         "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2",
-        "text-toolip"
+        "text-toolip", "robot-v", "robot-desc", "ai-question", "ia-button"
 
     ];
 
