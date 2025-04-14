@@ -23,11 +23,25 @@ body.dark-mode {
     background: #444;
     color: #fff;
 }
+/* 👇 Style du texte "Mode sombre" à gauche */
+.dark-mode-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+  
+  /* 👇 Colore la lune en noir */
+.toggle-icon.moon {
+    color: black;
+}
+  
+
 .dark-mode-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: auto;
+    /*gap: 12px;*/
 }
   
 #dark-toggle {
@@ -82,7 +96,7 @@ body.dark-mode {
 }
 
 #dark-toggle:checked + .toggle-label .toggle-ball {
-    transform: translateX(34px); /* au lieu de 30px */
+    transform: translateX(36px); /* au lieu de 30px */
 }
 
 .toggle-label:hover {
