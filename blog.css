@@ -503,6 +503,7 @@ video {
     flex: 2;
     max-width: 60%;
     flex-wrap: nowrap;
+    padding-top: 10px;
 }
 
 .quote-widget {
@@ -513,9 +514,10 @@ video {
     background-color: #7D5FB2;
     color: white;
     border: none;
-    padding: 10px 16px;
-    border-radius: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
     font-weight: bold;
+    font-size: 0.85rem;
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -540,6 +542,9 @@ video {
 }
   
 .footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1 1 250px;
     min-width: 250px;
 }
