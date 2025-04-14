@@ -155,7 +155,8 @@ const translations = {
         "robot-desc": "Posez une question sur une techno, outil ou tendance pour obtenir une réponse en temps réel.",
         "ai-question": "Ex: Quelles sont les nouveautés sur Apache Spark ?",
         "ia-button": "Lancer la recherche 🔍",
-        "quote-citation": "💡 Une autre citation tech ?"
+        "quote-citation": "💡 Une autre citation tech ?",
+        "footer-res": "📅 Réserver un créneau"
 
     },
     "en": {
@@ -314,7 +315,8 @@ const translations = {
         "robot-desc": "Ask a question about a technology, tool or trend to get a real-time answer.",
         "ai-question": "Ex: What's new in Apache Spark?",
         "ia-button": "Start search 🔍",
-        "quote-citation": "💡 Another tech quote?"
+        "quote-citation": "💡 Another tech quote?",
+        "footer-res": "📅 Book a slot"
     }
 };
 
@@ -340,7 +342,7 @@ function applyTranslations(lang) {
         "oncopole-task-4", "oncopole-tech-title", "modal-1-tech", "aristid-objective-title", "aristid-objective-text", "aristid-missions-title",
         "aristid-task-1", "aristid-task-2", "aristid-task-3", "aristid-task-4", "aristid-tech-title", "modal-2-tech", "iqvia-objective-title",
         "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2",
-        "text-toolip", "robot-v", "robot-desc", "ai-question", "ia-button", "quote-citation"
+        "text-toolip", "robot-v", "robot-desc", "ai-question", "ia-button", "quote-citation", "footer-res"
 
     ];
 
