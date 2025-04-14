@@ -852,25 +852,34 @@ body {
 .contact-title-wrapper {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     flex-wrap: wrap;
 }
   
 .calendly-link {
-    color: #4a4a4a;
+    color: #7D5FB2;              /* violet pour contraster */
+    font-weight: 600;
+    font-size: 1.1rem;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
   
 .calendly-link:hover {
-    color: #7D5FB2;
-    text-decoration: underline;
+    color: #5c3d99;              /* un peu plus foncé au hover */
+    text-decoration: none;       /* plus de souligné */
+}
+  
+.contact-title {
+    color: #2c2c2c;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
   
 .separator {
     color: #888;
     font-style: italic;
+    font-size: 0.95rem;
     padding: 0 6px;
 }
   
