@@ -826,7 +826,7 @@ body {
 .contact-title-wrapper {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 25px;
     flex-wrap: wrap;
     margin-bottom: 14px;
 }
