@@ -822,7 +822,7 @@ body {
     align-items: center;
     gap: 14px;
 }
-  
+/*
 .contact-title-wrapper {
     display: flex;
     align-items: center;
@@ -841,13 +841,40 @@ body {
     font-size: 0.8rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    white-space: nowrap; /* empêche le bouton de s'étendre */
+    white-space: nowrap;
 }
 
 .calendly-btn:hover {
     background-color: #6a4bbd;
 }
+*/
 
+.contact-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+  
+.calendly-link {
+    color: #4a4a4a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+  
+.calendly-link:hover {
+    color: #7D5FB2;
+    text-decoration: underline;
+}
+  
+.separator {
+    color: #888;
+    font-style: italic;
+    padding: 0 6px;
+}
+  
+  
 
 /* Champs du formulaire */
 .contact-form {
@@ -978,12 +1005,43 @@ body {
   
 
 @media screen and (max-width: 768px) {
+    /*
     .contact-title-wrapper {
         flex-direction: column;
         align-items: flex-start;
         gap: 6px;
     }
-
+    */
+    .contact-title-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+    }
+    
+    .calendly-link {
+        order: -1;
+        font-weight: 600;
+        text-decoration: underline;
+        color: #7D5FB2;
+        font-size: 1rem;
+    }
+    
+    .separator {
+        order: 0;
+        font-size: 0.9rem;
+        color: #777;
+        margin: 4px 0;
+        display: block;
+        text-align: center;
+    }
+    
+    .contact-title {
+        order: 1;
+        font-size: 1rem;
+        margin: 0;
+    }
     .navbar {
         display: flex;
         padding: 10px 20px;
