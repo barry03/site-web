@@ -156,7 +156,8 @@ const translations = {
         "ai-question": "Ex: Quelles sont les nouveautés sur Apache Spark ?",
         "ia-button": "Lancer la recherche 🔍",
         "quote-citation": "💡 Une autre citation tech ?",
-        "footer-res": "📅 Réserver un créneau"
+        "footer-res": "📅 Réserver un créneau",
+        "footer-sep": "ou"
 
     },
     "en": {
@@ -316,7 +317,8 @@ const translations = {
         "ai-question": "Ex: What's new in Apache Spark?",
         "ia-button": "Start search 🔍",
         "quote-citation": "💡 Another tech quote?",
-        "footer-res": "📅 Book a slot"
+        "footer-res": "📅 Book a slot",
+        "footer-sep": "or"
     }
 };
 
@@ -342,7 +344,7 @@ function applyTranslations(lang) {
         "oncopole-task-4", "oncopole-tech-title", "modal-1-tech", "aristid-objective-title", "aristid-objective-text", "aristid-missions-title",
         "aristid-task-1", "aristid-task-2", "aristid-task-3", "aristid-task-4", "aristid-tech-title", "modal-2-tech", "iqvia-objective-title",
         "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2",
-        "text-toolip", "robot-v", "robot-desc", "ai-question", "ia-button", "quote-citation", "footer-res"
+        "text-toolip", "robot-v", "robot-desc", "ai-question", "ia-button", "quote-citation", "footer-res", "footer-sep"
 
     ];
 
