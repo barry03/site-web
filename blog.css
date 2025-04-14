@@ -503,11 +503,12 @@ video {
     flex: 2;
     max-width: 60%;
     flex-wrap: nowrap;
-    padding-top: 10px;
+    padding-top: 20px;
+    margin-top: 10px;
 }
 
 .quote-widget {
-    margin-top: 8px;
+    margin-top: 4px;
 }
   
 .quote-widget button {
