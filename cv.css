@@ -28,6 +28,7 @@ body.dark-mode {
     font-size: 0.9rem;
     font-weight: 500;
     color: #333;
+    margin-right: 10px; /* 👈 Décalage ajouté ici */
 }
   
   /* 👇 Colore la lune en noir */
@@ -52,12 +53,12 @@ body.dark-mode {
     position: relative;
     display: flex;
     align-items: center;
-    width: 50px;
+    width: 46px;
     height: 24px;
     background-color: #ccc;
     border-radius: 50px;
     cursor: pointer;
-    padding: 0 5px;
+    padding: 0 4px;
     transition: background-color 0.3s ease;
 }
 
@@ -80,10 +81,10 @@ body.dark-mode {
 
 .toggle-ball {
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
     background: white;
     border-radius: 50%;
     transition: transform 0.3s ease;
@@ -96,7 +97,7 @@ body.dark-mode {
 }
 
 #dark-toggle:checked + .toggle-label .toggle-ball {
-    transform: translateX(36px); /* au lieu de 30px */
+    transform: translateX(22px); /* au lieu de 30px */
 }
 
 .toggle-label:hover {
