@@ -823,29 +823,31 @@ body {
     gap: 14px;
 }
   
+.contact-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
 .calendly-btn {
     background-color: #7D5FB2;
     color: white;
-    padding: 8px 14px;
-    font-weight: bold;
     border: none;
-    border-radius: 6px;
-    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
+    white-space: nowrap; /* empêche le bouton de s'étendre */
 }
+
 .calendly-btn:hover {
     background-color: #6a4bbd;
 }
-  
 
-/* Ajout d'un titre au formulaire */
-.contact-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
 
 /* Champs du formulaire */
 .contact-form {
