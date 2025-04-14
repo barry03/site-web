@@ -497,11 +497,11 @@ video {
 .footer-quotes {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* reste aligné en haut */
     gap: 30px;
     text-align: center;
     flex: 2;
-    max-width: 60%;
+    max-width: 100%;
     flex-wrap: nowrap;
     padding-top: 20px;
     margin-top: 10px;
@@ -524,6 +524,10 @@ video {
 
 .quote-widget {
     margin-top: 10px;
+    min-height: 100px; /* fix une hauteur pour éviter les sauts */
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 .quote-widget button:focus,
@@ -538,9 +542,11 @@ video {
 }
   
 .quote-result {
-    margin-top: 6px;
+    min-height: 50px; /* garantit une hauteur constante */
+    margin-top: 10px;
     font-style: italic;
     color: #4a4a4a;
+    transition: opacity 0.3s ease;
 }
   
 
