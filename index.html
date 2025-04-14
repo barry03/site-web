@@ -289,14 +289,15 @@
         <!-- Partie droite avec le formulaire -->
         <div class="footer-right">
             <div class="contact-title-wrapper">
-                <p class="contact-title" id="footer-contact-title">Envoyez-moi un message 📩</p>
-                <button
-                    class="calendly-btn"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barrydjoulde15'}); return false;" id="footer-res">
+                <p class="contact-title" id="footer-contact-title">
+                  Envoyez-moi un message 📩 
+                  <span class="separator">|</span>
+                  <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/barrydjoulde15'}); return false;" class="calendly-link">
                     📅 Réserver un créneau
-                </button>
-
+                  </a>
+                </p>
             </div>
+              
                      
             <form id="contact-form" class="contact-form" action="https://formspree.io/f/xbldweqo" method="POST" novalidate>
                 <input type="text" id="name" name="name" placeholder="Votre nom" required>

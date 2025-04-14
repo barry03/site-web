@@ -1182,6 +1182,22 @@ button:hover {
         line-height: 1.4;
     }    
 
+    .quote-widget {
+        width: 100%;
+    }
+
+    .quote-widget button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        width: 100%; /* ou auto si tu préfères */
+        text-align: center;
+    }
+    
+    .quote-result {
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
+
     .ai-title {
         font-size: 1.4rem;
         margin-top: 16px;
