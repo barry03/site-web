@@ -25,12 +25,11 @@ body.dark-mode {
 }
 
 
-
 .dark-mode-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: auto; /* pousse à droite dans la nav */
+    margin-left: auto;
 }
   
 #dark-toggle {
@@ -38,24 +37,30 @@ body.dark-mode {
 }
   
 .toggle-label {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 60px;
     height: 30px;
-    background: #ccc;
+    background-color: #ccc;
     border-radius: 30px;
-    padding: 4px;
     cursor: pointer;
-    position: relative;
-    transition: background 0.3s ease;
+    padding: 0 6px;
+    transition: background-color 0.3s ease;
 }
   
 .toggle-icon {
-    font-size: 14px;
-    width: 20px;
-    text-align: center;
-    z-index: 1;
+    font-size: 16px;
+    z-index: 2;
+    pointer-events: none;
+}
+  
+.toggle-label .toggle-icon:first-child {
+    margin-right: auto;
+}
+  
+.toggle-label .toggle-icon:last-child {
+    margin-left: auto;
 }
   
 .toggle-ball {
@@ -67,16 +72,17 @@ body.dark-mode {
     background: white;
     border-radius: 50%;
     transition: transform 0.3s ease;
-    z-index: 2;
+    z-index: 1;
 }
   
 #dark-toggle:checked + .toggle-label {
-    background: #4ade80; /* vert clair activé */
+    background-color: #4ade80;
 }
   
 #dark-toggle:checked + .toggle-label .toggle-ball {
     transform: translateX(30px);
 }
+  
   
 /*
 .toggle-dark-mode {
