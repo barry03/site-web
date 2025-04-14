@@ -847,6 +847,14 @@ body {
     font-weight: normal;
     padding: 0 6px;
 }
+
+.calendly-link {
+    color: red !important;
+    background: yellow !important;
+    font-size: 1rem !important;
+    display: inline !important;
+}
+
 /*
 .calendly-btn {
     background-color: #7D5FB2;
