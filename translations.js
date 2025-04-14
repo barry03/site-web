@@ -365,6 +365,11 @@ function applyTranslations(lang) {
     if (welcomeOverlayMessage) {
         welcomeOverlayMessage.innerText = translations[lang]["welcome-overlay"];
     }
+    // Ajout flèche uniquement après traduction
+    const footerTitle = document.getElementById("footer-contact-title");
+    if (footerTitle && !footerTitle.innerHTML.includes("⬇️")) {
+        footerTitle.innerHTML += ' <span class="down-arrow">⬇️</span>';
+    }
 
 }
 
