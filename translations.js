@@ -353,15 +353,19 @@ function applyTranslations(lang) {
             if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
                 element.placeholder = translations[lang][id];
             } else {
-                // Cas spécial : on ajoute la flèche animée uniquement sur ce champ
-                if (id === "footer-contact-title") {
-                    element.innerHTML = `${translations[lang][id]} <span class="down-arrow">⬇️</span>`;
-                } else {
-                    element.innerText = translations[lang][id];
-                }
+                // 👇 Affiche juste le texte sans flèche
+                element.innerText = translations[lang][id];
             }
         }
     });
+    //Animation pour plutard
+    /*
+    if (id === "footer-contact-title") {
+        element.innerHTML = `${translations[lang][id]} <span class="down-arrow">⬇️</span>`;
+    } else {
+        element.innerText = translations[lang][id];
+    }
+    */
 
     const welcomeOverlayMessage = document.getElementById("welcome-message");
     if (welcomeOverlayMessage) {
