@@ -822,32 +822,6 @@ body {
     align-items: center;
     gap: 14px;
 }
-/*
-.contact-title-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
-}
-
-.calendly-btn {
-    background-color: #7D5FB2;
-    color: white;
-    border: none;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    white-space: nowrap;
-}
-
-.calendly-btn:hover {
-    background-color: #6a4bbd;
-}
-*/
 
 .contact-title-wrapper {
     display: flex;
@@ -883,6 +857,21 @@ body {
     padding: 0 6px;
 }
   
+.down-arrow {
+    font-size: 1.2rem;
+    margin-left: 6px;
+    animation: bounce 1.2s infinite;
+}
+  
+/* Petite animation rebond */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+}
   
 
 /* Champs du formulaire */
