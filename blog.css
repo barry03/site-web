@@ -700,6 +700,7 @@ video {
     background: none;
     box-shadow: none;
     border-radius: 0;
+    margin-bottom: 10px;
 }
 
 .ai-title {
