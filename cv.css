@@ -24,10 +24,65 @@ body.dark-mode {
     color: #fff;
 }
 
+
+
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; /* pousse à droite dans la nav */
+}
+  
+#dark-toggle {
+    display: none;
+}
+  
+.toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 30px;
+    padding: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+  
+.toggle-icon {
+    font-size: 14px;
+    width: 20px;
+    text-align: center;
+    z-index: 1;
+}
+  
+.toggle-ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+  
+#dark-toggle:checked + .toggle-label {
+    background: #4ade80; /* vert clair activé */
+}
+  
+#dark-toggle:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px);
+}
+  
+/*
 .toggle-dark-mode {
     background: #f0f0f0;
     color: #007bff;
-    border: 1px solid #ccc; /* fine bordure grise */
+    border: 1px solid #ccc; 
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 0.95rem;
@@ -41,7 +96,7 @@ body.dark-mode {
     border-color: #aaa;
     transition: all 0.3s ease-in-out;
 }
-
+*/
 /* Barre de navigation */
 .navbar {
     display: flex;

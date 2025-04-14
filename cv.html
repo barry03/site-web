@@ -32,7 +32,14 @@
     <!-- Navigation -->
     <nav class="navbar">
         <a href="index.html" class="back-button" id="cv-retour">← Retour</a>
-        <button class="toggle-dark-mode" id="cv-sombre" onclick="toggleDarkMode()">🌙 Mode Sombre</button>
+        <div class="dark-mode-toggle">
+            <input type="checkbox" id="dark-toggle" onchange="toggleDarkMode()" />
+            <label for="dark-toggle" class="toggle-label">
+              <span class="toggle-icon">🌞</span>
+              <span class="toggle-ball"></span>
+              <span class="toggle-icon">🌙</span>
+            </label>
+        </div>
     </nav>
       
     <h1>Mon CV/My Resume</h1> 
