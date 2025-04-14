@@ -506,10 +506,6 @@ video {
     padding-top: 20px;
     margin-top: 10px;
 }
-
-.quote-widget {
-    margin-top: 10px;
-}
   
 .quote-widget button {
     background-color: #7D5FB2;
@@ -521,9 +517,16 @@ video {
     font-size: 0.85rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    margin-top: 16px;
+    margin-top: 20px;
     outline: none;
     box-shadow: none;
+}
+
+.quote-widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .quote-widget button:focus,
