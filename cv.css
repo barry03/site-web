@@ -82,7 +82,7 @@ body.dark-mode {
 }
 
 #dark-toggle:checked + .toggle-label .toggle-ball {
-    transform: translateX(30px); /* au lieu de 30px */
+    transform: translateX(34px); /* au lieu de 30px */
 }
 
 .toggle-label:hover {
