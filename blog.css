@@ -511,6 +511,34 @@ video {
     flex-wrap: nowrap;
 }
 
+.quote-widget {
+    margin-top: 16px;
+    text-align: center;
+}
+  
+.quote-widget button {
+    background: #7D5FB2;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+  
+.quote-widget button:hover {
+    background: #6a4bbd;
+}
+  
+.quote-result {
+    margin-top: 12px;
+    font-style: italic;
+    color: #444;
+}
+  
+
 /* Style des citations */
 .footer-quotes blockquote {
     font-style: italic;

@@ -286,6 +286,11 @@
             <!--<blockquote>“Programs must be written for people to read, and only incidentally for machines to execute.” – Harold Abelson</blockquote>-->
             <blockquote id="quote-2">“💬 Simplicity is the soul of efficiency.” – Austin Freeman</blockquote>
         </div>
+
+        <div class="quote-widget">
+            <button onclick="showTechQuote()">💡 Une autre citation tech ?</button>
+            <p id="quote-result" class="quote-result"></p>
+        </div>
     </footer>
     
     <!--
@@ -366,6 +371,22 @@
     <script>
         hljs.highlightAll();
     </script>
+
+    <script>
+        const techQuotes = [
+        "🔧 \"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.\" – Martin Fowler",
+        "💻 \"Code is like humor. When you have to explain it, it’s bad.\"",
+        "📊 \"In God we trust. All others must bring data.\" – W. Edwards Deming",
+        "🧠 \"First, solve the problem. Then, write the code.\" – John Johnson",
+        "🔥 \"Programs must be written for people to read, and only incidentally for machines to execute.\" – Hal Abelson"
+        ];
+    
+        function showTechQuote() {
+        const quote = techQuotes[Math.floor(Math.random() * techQuotes.length)];
+        document.getElementById("quote-result").textContent = quote;
+        }
+    </script>
+  
 
 </body>
 </html>
