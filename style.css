@@ -826,36 +826,11 @@ body {
 .contact-title-wrapper {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 25px;
     flex-wrap: wrap;
+    margin-bottom: 14px;
 }
 
-.calendly-link {
-    color: #4a4a4a;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.calendly-link:hover {
-    color: #7D5FB2;
-    text-decoration: underline;
-}
-
-.separator {
-    color: #999;
-    font-weight: normal;
-    padding: 0 6px;
-}
-
-.calendly-link {
-    color: red !important;
-    background: yellow !important;
-    font-size: 1rem !important;
-    display: inline !important;
-}
-
-/*
 .calendly-btn {
     background-color: #7D5FB2;
     color: white;
@@ -866,9 +841,9 @@ body {
     font-size: 0.8rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    white-space: nowrap;
+    white-space: nowrap; /* empêche le bouton de s'étendre */
 }
-*/
+
 .calendly-btn:hover {
     background-color: #6a4bbd;
 }
@@ -1007,23 +982,6 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 6px;
-    }
-    
-    .separator {
-        display: none; /* Cache le “|” ou “ou” pour éviter l’encombrement */
-    }
-    
-    .calendly-link {
-        padding: 0;
-        font-size: 0.9rem;
-        background: none;
-        border: none;
-        color: #7D5FB2;
-        text-decoration: underline;
-    }
-    
-    .calendly-link:hover {
-        text-decoration: none;
     }
 
     .navbar {
