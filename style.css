@@ -861,7 +861,7 @@ body {
     display: inline-block;     /* nécessaire pour que l’animation fonctionne */
     font-size: 1.2rem;
     margin-left: 6px;
-    animation: bounce 1.2s infinite;
+    /*animation: bounce 1.2s infinite;*/
 }
 
 @keyframes bounce {
