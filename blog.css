@@ -484,20 +484,14 @@ video {
     height: 20px;
 }
 
-/* Correction du footer */
 .footer {
-    width: 100%; /* Assure que le footer couvre toute la largeur */
-    position: relative; /* Fixe le footer en bas */
-    bottom: 0; /* Le colle bien en bas */
-    left: 0; /* Le colle bien à gauche */
-    right: 0; /* Le colle bien à droite */
-    padding: 20px 50px; /* Ajuste les paddings pour ne pas écraser le contenu */
-    background-color: #f0f3ff; 
-    border-top: 2px solid #e1e8ff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box; /* Empêche les débordements */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f2f4ff;
 }
 /* Citations */
 .footer-quotes {
@@ -512,47 +506,42 @@ video {
 }
 
 .quote-widget {
-    margin-top: 16px;
-    text-align: center;
+    margin-top: 8px;
 }
   
 .quote-widget button {
-    background: #7D5FB2;
+    background-color: #7D5FB2;
     color: white;
-    padding: 8px 14px;
     border: none;
+    padding: 10px 16px;
     border-radius: 8px;
-    font-size: 0.95rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
 }
   
 .quote-widget button:hover {
-    background: #6a4bbd;
+    background-color: #6a4bbd;
 }
   
 .quote-result {
-    margin-top: 12px;
+    margin-top: 6px;
     font-style: italic;
-    color: #444;
+    color: #4a4a4a;
 }
   
 
-/* Style des citations */
 .footer-quotes blockquote {
     font-style: italic;
-    font-size: 0.9rem;
-    color: #444;
-    min-width: 220px;
+    margin: 4px 0;
+    color: #333;
+    max-width: 280px;
+    text-align: left;
 }
   
-/* Section gauche du footer */
 .footer-left {
-    max-width: 40%;
-    padding: 10px 0;
-    flex: 1;
-    align-items: flex-start; /* Aligne le contenu sur la gauche */
+    flex: 1 1 250px;
+    min-width: 250px;
 }
 
 .footer-left h3 {
@@ -583,11 +572,11 @@ video {
 }
   
 .footer-right {
-    flex: 1;
+    flex: 2 1 400px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* reste aligné à droite */
-    text-align: center;    /* mais texte centré */
+    align-items: flex-start;
+    gap: 10px;
 }
   
 
