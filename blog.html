@@ -288,28 +288,10 @@
         </div>
 
         <div class="quote-widget">
-            <button onclick="showTechQuote()">💡 Une autre citation tech ?</button>
+            <button onclick="showTechQuote()" id="quote-citation">💡 Une autre citation tech ?</button>
             <p id="quote-result" class="quote-result"></p>
         </div>
     </footer>
-    
-    <!--
-    <script>
-        // Liste de citations inspirantes pour les devs
-        const quotes = [
-            "“Code is like humor. When you have to explain it, it’s bad.” – Cory House",
-            "“First, solve the problem. Then, write the code.” – John Johnson",
-            "“The best way to predict the future is to invent it.” – Alan Kay",
-            "“Simplicity is the soul of efficiency.” – Austin Freeman",
-            "“Talk is cheap. Show me the code.” – Linus Torvalds",
-            "“Your most unhappy customers are your greatest source of learning.” – Bill Gates",
-            "“The function of good software is to make the complex appear simple.” – Grady Booch"
-        ];
-    
-        // Afficher une citation aléatoire
-        document.getElementById("quote").innerText = quotes[Math.floor(Math.random() * quotes.length)];
-    </script>
-    -->
     <script>
         async function fetchLatestArticle() {
             try {
