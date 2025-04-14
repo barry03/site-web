@@ -508,9 +508,6 @@ video {
 }
 
 .quote-widget {
-    display: flex;
-    flex-direction: column;
-    justify-content: column;
     margin-top: 10px;
 }
   
@@ -524,7 +521,16 @@ video {
     font-size: 0.85rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    margin-top: 12px;
+    margin-top: 16px;
+    outline: none;
+    box-shadow: none;
+}
+
+.quote-widget button:focus,
+.quote-widget button:active {
+  outline: none;
+  box-shadow: none;
+  transform: none; /* empêche les déformations */
 }
   
 .quote-widget button:hover {
