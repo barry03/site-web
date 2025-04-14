@@ -858,8 +858,8 @@ body {
   
 .calendly-link {
     color: #7D5FB2;              /* violet pour contraster */
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 500;
+    font-size: 1rem;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -873,7 +873,7 @@ body {
 .contact-title {
     color: #2c2c2c;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
   
 .separator {
