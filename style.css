@@ -858,6 +858,7 @@ body {
 }
   
 .down-arrow {
+    display: inline-block;     /* nécessaire pour que l’animation fonctionne */
     font-size: 1.2rem;
     margin-left: 6px;
     animation: bounce 1.2s infinite;
@@ -868,11 +869,10 @@ body {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(4px);
+        transform: translateY(6px);  /* un petit rebond visible */
     }
 }
 
-  
 
 /* Champs du formulaire */
 .contact-form {
