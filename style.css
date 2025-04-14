@@ -826,19 +826,19 @@ body {
 .contact-title-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 18px;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 .calendly-btn {
     background-color: #7D5FB2;
     color: white;
     border: none;
-    padding: 6px 12px;
+    padding: 4px 10px;
     border-radius: 4px;
-    font-weight: bold;
-    font-size: 0.85rem;
+    font-weight: 600;
+    font-size: 0.8rem;
     cursor: pointer;
     transition: background 0.3s ease;
     white-space: nowrap; /* empêche le bouton de s'étendre */
