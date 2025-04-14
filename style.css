@@ -817,6 +817,28 @@ body {
     text-align: left;
 }
 
+.footer-right-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+  
+.calendly-btn {
+    background-color: #7D5FB2;
+    color: white;
+    padding: 8px 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.calendly-btn:hover {
+    background-color: #6a4bbd;
+}
+  
+
 /* Ajout d'un titre au formulaire */
 .contact-title {
     font-size: 18px;
