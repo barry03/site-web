@@ -345,32 +345,28 @@ function applyTranslations(lang) {
         "aristid-task-1", "aristid-task-2", "aristid-task-3", "aristid-task-4", "aristid-tech-title", "modal-2-tech", "iqvia-objective-title",
         "iqvia-objective-text", "iqvia-missions-title", "iqvia-task-1", "iqvia-task-2", "iqvia-task-3", "iqvia-tech-title", "modal-3-tech", "quote-1", "quote-2",
         "text-toolip", "robot-v", "robot-desc", "ai-question", "ia-button", "quote-citation", "footer-res", "footer-sep"
-
     ];
 
     elementsToTranslate.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
-            // 🎯 Si c’est un champ input ou textarea
             if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
                 element.placeholder = translations[lang][id];
-            }
-            // Sinon texte standard
-            else {
-                element.innerText = translations[lang][id];
+            } else {
+                // Cas spécial : on ajoute la flèche animée uniquement sur ce champ
+                if (id === "footer-contact-title") {
+                    element.innerHTML = `${translations[lang][id]} <span class="down-arrow">⬇️</span>`;
+                } else {
+                    element.innerText = translations[lang][id];
+                }
             }
         }
     });
+
     const welcomeOverlayMessage = document.getElementById("welcome-message");
     if (welcomeOverlayMessage) {
         welcomeOverlayMessage.innerText = translations[lang]["welcome-overlay"];
     }
-    // Ajout flèche uniquement après traduction
-    const footerTitle = document.getElementById("footer-contact-title");
-    if (footerTitle && !footerTitle.innerHTML.includes("⬇️")) {
-        footerTitle.innerHTML += ' <span class="down-arrow">⬇️</span>';
-    }
-
 }
 
 // Met à jour la langue et l'enregistre dans localStorage

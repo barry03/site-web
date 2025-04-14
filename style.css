@@ -862,8 +862,7 @@ body {
     margin-left: 6px;
     animation: bounce 1.2s infinite;
 }
-  
-/* Petite animation rebond */
+
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -872,6 +871,7 @@ body {
         transform: translateY(4px);
     }
 }
+
   
 
 /* Champs du formulaire */
