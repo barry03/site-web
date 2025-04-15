@@ -39,40 +39,52 @@ function confettiCanvas(canvas) {
         return {
             x: Math.random() * width,
             y: Math.random() * height - height,
-            r: Math.random() * 6 + 4,
+            r: Math.random() * 8 + 6, // taille augmentée
             d: Math.random() * 30 + 10,
-            color: `hsl(${Math.random() * 360}, 70%, 60%)`,
-            tilt: Math.random() * 10 - 10,
+            color: `hsl(${Math.random() * 360}, 90%, 60%)`,
+            tilt: Math.random() * 10 - 5,
             tiltAngle: 0,
             tiltAngleIncrement: Math.random() * 0.1 + 0.05,
+            shape: Math.random() > 0.5 ? "circle" : "rect"
         };
     }
+    
 
     function draw() {
         context.clearRect(0, 0, width, height);
         particles.forEach(p => {
             context.beginPath();
-            context.lineWidth = p.r / 2;
+            context.fillStyle = p.color;
             context.strokeStyle = p.color;
-            context.moveTo(p.x + p.tilt + p.r / 3, p.y);
-            context.lineTo(p.x + p.tilt, p.y + p.tilt + p.r);
-            context.stroke();
+    
+            if (p.shape === "circle") {
+                context.arc(p.x + p.tilt, p.y, p.r / 2, 0, Math.PI * 2);
+                context.fill();
+            } else {
+                context.save();
+                context.translate(p.x + p.tilt, p.y);
+                context.rotate(p.tiltAngle);
+                context.fillRect(-p.r / 2, -p.r / 2, p.r, p.r * 0.6);
+                context.restore();
+            }
         });
+    
         update();
     }
+    
 
     function update() {
         particles.forEach(p => {
             p.tiltAngle += p.tiltAngleIncrement;
-            p.y += (Math.cos(p.d) + 3 + p.r / 2) * 0.5;
-            p.tilt = Math.sin(p.tiltAngle) * 15;
-
-            if (p.y > height) {
+            p.y += 2 + p.r * 0.2; // chute plus naturelle
+            p.tilt = Math.sin(p.tiltAngle) * 12;
+    
+            if (p.y > height + 20) {
                 p.x = Math.random() * width;
-                p.y = -10;
+                p.y = -20;
             }
         });
-    }
+    }    
 
     let animationFrame;
     function loop() {

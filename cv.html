@@ -32,7 +32,15 @@
     <!-- Navigation -->
     <nav class="navbar">
         <a href="index.html" class="back-button" id="cv-retour">← Retour</a>
-        <button class="toggle-dark-mode" id="cv-sombre" onclick="toggleDarkMode()">🌙 Mode Sombre</button>
+        <div class="dark-mode-toggle">
+            <span class="dark-mode-label" id="cv-sombre">🌙 Mode sombre</span>
+            <input type="checkbox" id="dark-toggle" onchange="toggleDarkMode()" />
+            <label for="dark-toggle" class="toggle-label">
+              <span class="toggle-icon">🌞</span>
+              <span class="toggle-ball"></span>
+              <span class="toggle-icon moon">🌙</span>
+            </label>
+        </div>
     </nav>
       
     <h1>Mon CV/My Resume</h1> 
@@ -89,68 +97,77 @@
   
     </section>
     
-    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Liste des fichiers CV
-            const cvs = [
-                { id: "cv-fr", file: "files/CV_Djoulde_DataEngineer_FR.pdf", recentId: "recent-update-fr" },
-                { id: "cv-en", file: "files/CV_Djoulde_DataEngineer_EN.pdf", recentId: "recent-update-en" }
-            ];
-    
-            cvs.forEach(cv => {
-                fetch(cv.file, { method: 'HEAD' })
-                    .then(response => {
-                        let lastModified = response.headers.get("Last-Modified");
-                        if (lastModified) {
-                            let date = new Date(lastModified);
-                            let formattedDate = date.toLocaleDateString("fr-FR", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric"
-                            });
-    
-                            document.getElementById(cv.id).textContent = `Dernière mise à jour : ${formattedDate}`;
-                            
-                            // Vérifie si la mise à jour est récente (moins de 3 mois)
-                            let today = new Date();
-                            let diffTime = Math.abs(today - date);
-                            let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-                            
-                            if (diffDays <= 90) {
-                                document.getElementById(cv.recentId).textContent = "🚀 Mise à jour récente";
-                            }
-                        }
-                    })
-                    .catch(error => console.log("Erreur lors de la récupération de la date :", error));
-            });
-
-            document.querySelectorAll(".cv-frame").forEach((iframe) => {
-                iframe.style.display = "block"; // Afficher directement les CV
-            });
-        });
-
-        function copyCvLink(fileUrl) {
-            let fullUrl = window.location.origin + "/" + fileUrl;
-            navigator.clipboard.writeText(fullUrl).then(() => {
-                alert("📋 Link copied : " + fullUrl);
-            }).catch(err => {
-                console.error("Erreur lors de la copie du lien", err);
-            });
-        }
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-            let mode = document.body.classList.contains("dark-mode") ? "dark" : "light";
-            localStorage.setItem("theme", mode);
-        }
-
-        // Conserve le mode choisi par l'utilisateur
-        document.addEventListener("DOMContentLoaded", function () {
-            if (localStorage.getItem("theme") === "dark") {
+          // 🌙 Appliquer dark mode si déjà activé
+          if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+            const darkToggle = document.getElementById("dark-toggle");
+            if (darkToggle) darkToggle.checked = true;
+          }
+      
+          // 🌙 Gestion du dark mode toggle
+          const toggle = document.getElementById("dark-toggle");
+          if (toggle) {
+            toggle.addEventListener("change", () => {
+              if (toggle.checked) {
                 document.body.classList.add("dark-mode");
-            }
+                localStorage.setItem("theme", "dark");
+              } else {
+                document.body.classList.remove("dark-mode");
+                localStorage.setItem("theme", "light");
+              }
+            });
+          }
+      
+          // 📄 Gestion des dates des fichiers CV
+          const cvs = [
+            { id: "cv-fr", file: "files/CV_Djoulde_DataEngineer_FR.pdf", recentId: "recent-update-fr" },
+            { id: "cv-en", file: "files/CV_Djoulde_DataEngineer_EN.pdf", recentId: "recent-update-en" }
+          ];
+      
+          cvs.forEach(cv => {
+            fetch(cv.file, { method: 'HEAD' })
+              .then(response => {
+                let lastModified = response.headers.get("Last-Modified");
+                if (lastModified) {
+                  let date = new Date(lastModified);
+                  let formattedDate = date.toLocaleDateString("fr-FR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                  });
+      
+                  document.getElementById(cv.id).textContent = `Dernière mise à jour : ${formattedDate}`;
+      
+                  // 🚀 Badge récent si < 90 jours
+                  let today = new Date();
+                  let diffTime = Math.abs(today - date);
+                  let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                  if (diffDays <= 90) {
+                    document.getElementById(cv.recentId).textContent = "🚀 Mise à jour récente";
+                  }
+                }
+              })
+              .catch(error => console.log("Erreur lors de la récupération de la date :", error));
+          });
+      
+          // 🔽 Afficher tous les CV
+          document.querySelectorAll(".cv-frame").forEach((iframe) => {
+            iframe.style.display = "block";
+          });
         });
-    </script>    
+      
+        // 📋 Copier le lien du CV
+        function copyCvLink(fileUrl) {
+          let fullUrl = window.location.origin + "/" + fileUrl;
+          navigator.clipboard.writeText(fullUrl).then(() => {
+            alert("📋 Link copied : " + fullUrl);
+          }).catch(err => {
+            console.error("Erreur lors de la copie du lien", err);
+          });
+        }
+    </script>
 
     <script src="translations.js"></script>
 

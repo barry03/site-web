@@ -174,7 +174,6 @@ body {
     background-color: white;
     cursor: pointer;
 }
-  
 
 .cta-button {
     background: #7D5FB2;
@@ -202,7 +201,7 @@ body {
     padding: 40px 10%;
     margin-top: -10px;
 }
-
+   
 .hero-description {
     display: block;
     font-size: 1rem;
@@ -214,7 +213,13 @@ body {
     text-overflow: ellipsis;
     white-space: normal;
 }
-
+/*
+.hero-image img {
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    clip-path: ellipse(48% 60% at 50% 50%);
+}
+*/
 .hero-content {
     max-width: 50%;
 }
@@ -322,6 +327,7 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
 }
 
 .competences-container {
@@ -817,13 +823,62 @@ body {
     text-align: left;
 }
 
-/* Ajout d'un titre au formulaire */
-.contact-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+.footer-right-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
+
+.contact-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+  
+.calendly-link {
+    color: #7D5FB2;              /* violet pour contraster */
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+  
+.calendly-link:hover {
+    color: #5c3d99;              /* un peu plus foncé au hover */
+    text-decoration: none;       /* plus de souligné */
+}
+  
+.contact-title {
+    color: #2c2c2c;
+    font-weight: 500;
+    font-size: 1rem;
+}
+  
+.separator {
+    color: #888;
+    font-style: italic;
+    font-size: 0.95rem;
+    padding: 0 6px;
+}
+  
+.down-arrow {
+    display: inline-block;     /* nécessaire pour que l’animation fonctionne */
+    font-size: 1.2rem;
+    margin-left: 6px;
+    /*animation: bounce 1.2s infinite;*/
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);  /* un petit rebond visible */
+    }
+}
+
 
 /* Champs du formulaire */
 .contact-form {
@@ -954,6 +1009,44 @@ body {
   
 
 @media screen and (max-width: 768px) {
+    .contact-title-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        text-align: center;
+    }
+    
+    .calendly-link {
+        font-size: 1rem;
+        color: #7D5FB2;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .calendly-link:hover {
+        color: #5c3d99;
+        text-decoration: none;
+    }
+    
+    .contact-title {
+        font-size: 1rem;
+        color: #2c2c2c;
+        font-weight: 500;
+    }
+    
+    .separator {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-style: italic;
+        color: #888;
+        font-size: 0.95rem;
+    }
+    .contact-title {
+        order: 1;
+        font-size: 1rem;
+        margin: 0;
+    }
     .navbar {
         display: flex;
         padding: 10px 20px;
