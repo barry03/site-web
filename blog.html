@@ -354,25 +354,7 @@
         hljs.highlightAll();
     </script>
 
-    <script>
-        const quotes = [
-            `"In God we trust. All others must bring data." – W. Edwards Deming`,
-            `"Code is like humor. When you have to explain it, it’s bad."`,
-            `"Premature optimization is the root of all evil." – Donald Knuth`,
-            ];
-
-            document.querySelector(".quote-widget button").addEventListener("click", () => {
-            const quoteResult = document.querySelector(".quote-result");
-            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-            quoteResult.style.opacity = 0;
-            setTimeout(() => {
-                quoteResult.textContent = randomQuote;
-                quoteResult.style.opacity = 1;
-            }, 300);
-        });
-
-    </script>
+    <script src="citation.js"></script>
   
 </body>
 </html>

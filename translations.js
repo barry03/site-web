@@ -9,7 +9,7 @@ const translations = {
 
         //CV
         "cv-retour": "← Retour",
-        "cv-sombre" : "🌙 Mode Sombre",
+        "cv-sombre" : "🌙 Mode sombre",
 
         // HERO Section
         "hero-title": "Data Engineer | Spécialiste ETL & Big Data",
