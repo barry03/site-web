@@ -170,27 +170,21 @@
         </div>
     </section>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const progressCircles = document.querySelectorAll(".skill-progress");
+        document.addEventListener("DOMContentLoaded", () => {
+            const skillCards = document.querySelectorAll(".skill-card");
         
-          progressCircles.forEach(circle => {
-            const radius = circle.r.baseVal.value;
-            const circumference = 2 * Math.PI * radius;
-            const percent = parseInt(circle.dataset.percent);
+            skillCards.forEach(card => {
+            const value = card.dataset.percentage;
+            const progress = card.querySelector(".circular-progress");
         
-            circle.style.strokeDasharray = `${circumference} ${circumference}`;
-            circle.style.strokeDashoffset = circumference;
-        
-            // Animation (retardée pour effet progressif)
+            // Animation simple au chargement
             setTimeout(() => {
-              const offset = circumference - (percent / 100) * circumference;
-              circle.style.strokeDashoffset = offset;
-            }, 500);
-          });
+                progress.style.setProperty("--value", value);
+            }, 300);
+            });
         });
     </script>
         
-      
     
     <!-- Section Projets -->
     <section id="projects" class="projects-section">
