@@ -213,13 +213,13 @@ body {
     text-overflow: ellipsis;
     white-space: normal;
 }
-
+/*
 .hero-image img {
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     clip-path: ellipse(48% 60% at 50% 50%);
 }
-
+*/
 .hero-content {
     max-width: 50%;
 }
