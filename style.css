@@ -213,9 +213,10 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    /*background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));*/
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)); /* plus foncé au début, léger vers la fin */
     z-index: 1;
-}
+  }
+  
 
 .hero-description {
     display: block;
@@ -233,7 +234,13 @@ body {
     max-width: 50%;
     position: relative;
     z-index: 2;
-    color: white;
+    color: #fff;
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+  color: #fff;
 }
 
 .hero h1 {
@@ -339,6 +346,11 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-image: url('images/big-remove.png'); /* ton image actuelle */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
     
 }
 
