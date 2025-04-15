@@ -201,17 +201,6 @@ body {
     padding: 40px 10%;
     margin-top: -10px;
 }
-
-.hero {
-    background-image: url('images/im.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-img.hero-img {
-    mask-image: radial-gradient(white 90%, transparent);
-    -webkit-mask-image: radial-gradient(white 90%, transparent);
-}
    
   
 .hero-description {
