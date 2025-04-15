@@ -201,7 +201,43 @@ body {
     align-items: center;
     padding: 40px 10%;
     margin-top: -10px;
+    background-image: url('images/tof.jpg'); /* ou le bon chemin */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
+
+.hero {
+    position: relative;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('images/tof.jpg'); /* ou le bon chemin */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.4); /* voile blanc semi-transparent */
+    z-index: 1;
+}
+
+/* Pour que ton contenu passe AU-DESSUS du fond flouté */
+.hero-content,
+.hero-image {
+    position: relative;
+    z-index: 2;
+}
+
 
 .hero-description {
     display: block;
