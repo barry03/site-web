@@ -121,73 +121,76 @@
 
     <!-- Section Compétences & Stack Technique -->
     <section id="competences" class="competences-section">
-        <h2 id="skills-title"><span class="emoji">🧑‍💻</span> Compétences & Stack</h2>
-        <div class="competences-container">
-            <div class="competences-list">
-                <h3 id="skills-subtitle">Mes Compétences</h3>
-                <ul>
-                    <li>
-                        <span id="skill-1">📊 Modélisation & Data Processing</span>
-                        <div class="progress-bar">
-                            <div class="progress blue" data-width="90">
-                                <span class="progress-value">90%</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span id="skill-2">🔄 Développement de pipelines ETL</span>
-                        <div class="progress-bar">
-                            <div class="progress purple" data-width="90">
-                                <span class="progress-value">90%</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span id="skill-3">📡 Big Data & Cloud (AWS, GCP)</span>
-                        <div class="progress-bar">
-                            <div class="progress orange" data-width="75">
-                                <span class="progress-value">75%</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span id="skill-4">⚙️ Automatisation & CI/CD</span>
-                        <div class="progress-bar">
-                            <div class="progress green" data-width="70">
-                                <span class="progress-value">80%</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <span id="skill-5">📈 Data Visualisation (Power BI)</span>
-                        <div class="progress-bar">
-                            <div class="progress yellow" data-width="60">
-                                <span class="progress-value">60%</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+        <h2 class="section-title">🧑‍💻 Compétences & Stack</h2>
+      
+        <div class="competences-modern-grid">
+          <!-- Compétences avec Progress Bars Circulaires -->
+          <div class="skills-cards">
+            <h3 class="subtitle">Mes Compétences</h3>
+            <div class="skill-card" data-percentage="90">
+              <div class="circular-progress" style="--value: 90"></div>
+              <p>📊 Modélisation & Data Processing</p>
             </div>
-            
-            <div class="stack-technique">
-                <h3 id="stack-title">Stack Technique</h3>
-                <div class="tech-grid">
-                    <img src="images/tech/python.png" alt="Python" title="Python">
-                    <img src="images/tech/sql.png" alt="SQL" title="SQL">
-                    <img src="images/tech/postgre.png" alt="PostgreSQL" title="PostgreSQL">
-                    <img src="images/tech/sparkbis.png" alt="spark" title="Spark" class="big-tech">
-                    <img src="images/tech/google-cloud.png" alt="GCP" title="google-cloud GCP">
-                    <img src="images/tech/airflobis.png" alt="airflow" title="Airflow">
-                    <img src="images/tech/kafka.png" alt="kafka" title="Kafka" class="big-tech">
-                    <img src="images/tech/dockerbis.png" alt="docker" title="Docker">
-                    <img src="images/tech/awsbis.png" alt="aws" title="Cloud AWS" class="big-tech">
-                    <img src="images/tech/talend.png" alt="talend" title="Talend" class="big-tech">
-                    <img src="images/tech/databis.png" alt="databricks" title="Databricks">
-                    <img src="images/tech/powerbis.png" alt="powerbi" title="PowerBi" class="big-tech">
-                </div>
+            <div class="skill-card" data-percentage="90">
+              <div class="circular-progress" style="--value: 90"></div>
+              <p>🔄 Développement de pipelines ETL</p>
             </div>
+            <div class="skill-card" data-percentage="75">
+              <div class="circular-progress" style="--value: 75"></div>
+              <p>📡 Big Data & Cloud (AWS, GCP)</p>
+            </div>
+            <div class="skill-card" data-percentage="80">
+              <div class="circular-progress" style="--value: 80"></div>
+              <p>⚙️ Automatisation & CI/CD</p>
+            </div>
+            <div class="skill-card" data-percentage="60">
+              <div class="circular-progress" style="--value: 60"></div>
+              <p>📈 Data Visualisation (Power BI)</p>
+            </div>
+          </div>
+      
+          <!-- Stack technique avec Hover et Nom -->
+          <div class="stack-tech-icons">
+            <h3 class="subtitle">Stack Technique</h3>
+            <div class="stack-icon-grid">
+              <div class="tech-item"><img src="images/tech/python.png" alt="Python"><span>Python</span></div>
+              <div class="tech-item"><img src="images/tech/sql.png" alt="SQL"><span>SQL</span></div>
+              <div class="tech-item"><img src="images/tech/postgre.png" alt="PostgreSQL"><span>PostgreSQL</span></div>
+              <div class="tech-item"><img src="images/tech/sparkbis.png" alt="Spark"><span>Spark</span></div>
+              <div class="tech-item"><img src="images/tech/google-cloud.png" alt="GCP"><span>GCP</span></div>
+              <div class="tech-item"><img src="images/tech/airflobis.png" alt="Airflow"><span>Airflow</span></div>
+              <div class="tech-item"><img src="images/tech/kafka.png" alt="Kafka"><span>Kafka</span></div>
+              <div class="tech-item"><img src="images/tech/dockerbis.png" alt="Docker"><span>Docker</span></div>
+              <div class="tech-item"><img src="images/tech/awsbis.png" alt="AWS"><span>AWS</span></div>
+              <div class="tech-item"><img src="images/tech/talend.png" alt="Talend"><span>Talend</span></div>
+              <div class="tech-item"><img src="images/tech/databis.png" alt="Databricks"><span>Databricks</span></div>
+              <div class="tech-item"><img src="images/tech/powerbis.png" alt="Power BI"><span>Power BI</span></div>
+            </div>
+          </div>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const progressCircles = document.querySelectorAll(".skill-progress");
+        
+          progressCircles.forEach(circle => {
+            const radius = circle.r.baseVal.value;
+            const circumference = 2 * Math.PI * radius;
+            const percent = parseInt(circle.dataset.percent);
+        
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.style.strokeDashoffset = circumference;
+        
+            // Animation (retardée pour effet progressif)
+            setTimeout(() => {
+              const offset = circumference - (percent / 100) * circumference;
+              circle.style.strokeDashoffset = offset;
+            }, 500);
+          });
+        });
+    </script>
+        
+      
     
     <!-- Section Projets -->
     <section id="projects" class="projects-section">

@@ -310,240 +310,124 @@ body {
     transform: scale(1.05);
 }
 
-/* SECTION COMPÉTENCES & STACK TECHNIQUE */
+/*Compétences*/
+/* ---------- Section Container ---------- */
 .competences-section {
+    padding: 60px 20px;
+    background-color: #f9f9fe;
+    text-align: center;
+  }
+  
+  .competences-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+  }
+  
+  /* ---------- Circular Skill Cards ---------- */
+  .skill-card {
+    width: 140px;
+    height: 160px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 20px; /* Ajoute de l’espace sous la section Hero */
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.competences-container {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 30px 8%;
-}
-
-.competences-container.show,
-.stack-technique.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.competences-list, .stack-technique {
-    flex: 1;
-    width: 45%;
-    text-align: left;
-    padding: 15px;
-}
-
-.competences-list h3, .stack-technique h3 {
-    font-size: 1.2rem;
-    color: #3a3a70;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.competences-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.competences-list li {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* Légère séparation entre texte et barre */
-    white-space: nowrap;
-    margin-bottom: 12px;
-    width: auto;
-}
-
-.competences-list li span {
-    font-size: 1rem;
-    white-space: nowrap;
-    margin-right: 4px; /* Optionnel, à ajuster selon ton rendu */
-}
-
-.competences-list li::before {
-    content: "✔️";
-    margin-right: 10px;
-    color: #7D5FB2;
-}
-
-.competences-container,
-.stack-technique {
-    opacity: 0;
-    transform: translateY(40px); /* Décale vers le bas */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Style de la grille */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-    position: relative;
-    margin-top: 15px;
-    width: fit-content;
-}
-.stack-technique {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.stack-technique img {
-    width: 50px; /* Réduction des logos */
-    height: auto;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.stack-technique img:hover {
-    transform: scale(1.1) rotate(5deg);
-    opacity: 0.8;
-}
-
-.stack-technique img.big-tech {
-    width: 85px !important; /* Augmente la taille des icônes spécifiques */
-    height: auto;
-}
-
-.progress-value {
-    position: absolute;
-    top: -20px;
-    left: 100%;
-    transform: translateX(-50%);
-    font-size: 20px;
-    /*font-weight: bold;*/
-    color: #333;
-    background: none;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    text-shadow: none;
-}
-
-.progress {
-    height: 100%;
-    border-radius: 8px;
-    width: 0;
-    transition: width 1.5s ease-in-out;
-    position: relative;
-    min-width: 10%;
-}
-
-.progress-bar {
-    position: relative;
-    width: 100%;
-    height: 12px;
-    background: #e0e0e0;
-    border-radius: 8px;
-    overflow: visible;
-    max-width: 270px;
-}
-
-/* Correction des couleurs */
-.progress.blue {
-    background: linear-gradient(90deg, #4f7df9, #5468ff);
-}
-.progress.purple {
-    background: linear-gradient(90deg, #a66dd4, #6a1b9a);
-}
-.progress.orange {
-    background: linear-gradient(90deg, #ffa726, #f57c00);
-}
-.progress.green {
-    background: linear-gradient(90deg, #66bb6a, #2e7d32);
-}
-.progress.yellow {
-    background: linear-gradient(90deg, #ffeb3b, #fbc02d);
-}
-
-.tech-grid img {
-    width: 40px;
-    height: auto;
-    animation: floatWave 2.5s ease-in-out infinite;
-    will-change: transform;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.tech-grid img[alt="databricks"] {
-    width: 80px; /* Taille plus grande pour Databricks */
-}
-/* Tooltip */
-.tech-grid img::after {
-    content: attr(alt);
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-}
-/* Icônes spécifiques un peu plus grandes */
-.tech-grid img.big-tech {
-    width: 60px;
-    height: auto;
-}
-/* Affichage du tooltip au survol */
-.tech-grid img:hover::after {
-    opacity: 1;
-    visibility: visible;
-}
-/* Hover (ajoute un petit effet, mais ne casse pas l’animation) */
-.tech-grid img:hover {
-    opacity: 0.85;
-    transform: scale(1.1) translateY(-10px);
-}
-
-/* Variation de délai pour créer l'effet de vague */
-.tech-grid img:nth-child(odd) {
-    animation-delay: 0s;
-}
-.tech-grid img:nth-child(even) {
-    animation-delay: 1.25s;
+    transition: transform 0.3s ease;
   }
   
-@keyframes floatWave {
-    0%, 100% {
-        transform: translateY(0px);
+  .skill-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .skill-chart {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .skill-chart svg {
+    transform: rotate(-90deg);
+  }
+  
+  .skill-chart circle {
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+  }
+  
+  .skill-bg {
+    stroke: #eee;
+  }
+  
+  .skill-progress {
+    stroke: #7D5FB2;
+    transition: stroke-dashoffset 1s ease-out;
+  }
+  
+  .skill-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    max-width: 120px;
+  }
+  
+  /* ---------- Stack Grid Modern ---------- */
+  .stack-technique {
+    max-width: 800px;
+  }
+  
+  #stack-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #3a3a70;
+  }
+  
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .tech-grid img {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+  }
+  
+  .tech-grid img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ---------- Responsive ---------- */
+  @media screen and (max-width: 768px) {
+    .competences-container {
+      flex-direction: column;
+      align-items: center;
     }
-    50% {
-        transform: translateY(-12px);
+  
+    .skill-card {
+      width: 120px;
+      height: 140px;
     }
-}
-
-/* SECTION PROJETS */
-.competences-container, .projects-container {
-    max-width: 85%; /* Réduction de la largeur */
-    margin: auto;
-}
-
-.competences-section h2, .projects-section h2 {
-    font-size: 22px; /* Au lieu de 2.2rem */
-}
+  
+    .skill-chart {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .skill-label {
+      font-size: 0.8rem;
+    }
+  }
+  
 
 .projects-section {
     text-align: center;
