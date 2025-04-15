@@ -200,7 +200,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 10%;
-    /*margin-top: -10px;*/
+    margin-top: -10px;
     background-image: url('images/pexels-goumb.jpg'); /* ton image actuelle */
     background-size: cover;
     background-position: center;
