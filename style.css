@@ -201,7 +201,7 @@ body {
     align-items: center;
     padding: 40px 10%;
     margin-top: -10px;
-    background-image: url('images/pexels-goumb.jpg'); /* ton image actuelle */
+    background-image: url('images/big-remove.png'); /* ton image actuelle */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -213,7 +213,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)); /* plus foncé au début, léger vers la fin */
+    /*background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));*/
     z-index: 1;
   }
   
@@ -346,11 +346,6 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-image: url('images/big-remove.png'); /* ton image actuelle */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
     
 }
 
