@@ -194,31 +194,19 @@ body {
 
 /* 3. Hero Section */
 .hero {
-    position: relative;
-    padding: 4rem 2rem;
     display: flex;
-    align-items: center;
+    height: auto;
+    max-height: 500px; /* Bloque la hauteur max */
     justify-content: space-between;
-    background-image: url('images/tof.jpg'); /* ton image actuelle */
+    align-items: center;
+    padding: 40px 10%;
+    margin-top: -10px;
+    background-image: url('pexels-goumb.jpg'); /* ton image actuelle */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
 }
-
-.hero-content,
-.hero-image {
-    position: relative;
-    z-index: 2;
-}
-
-/* Pour que ton contenu passe AU-DESSUS du fond flouté */
-.hero-content,
-.hero-image {
-    position: relative;
-    z-index: 2;
-}
-
 
 .hero-description {
     display: block;
