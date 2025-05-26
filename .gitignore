@@ -1,0 +1,12 @@
+# Environnement virtuel
+venv/
+.env/
+
+# Dossiers spécifiques Streamlit
+.streamlit/secrets.toml
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
